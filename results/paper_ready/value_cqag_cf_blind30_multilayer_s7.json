@@ -1,0 +1,660 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_cf_blind30_multilayer_s7.json",
+    "case_ids": "1,13,14,18,20,21,25,27,28,29,30,32,33,34,35,36,37,39,49,52,54,63,64,66,82,84,87,93,100,101,109,110,116,118,123,125,127,129,134,135",
+    "seed": 7,
+    "dev_size": 10,
+    "layer_sets": "22,24,26",
+    "alpha_grid": "10",
+    "token_windows": "16"
+  },
+  "dev_case_ids": [
+    21,
+    125,
+    33,
+    52,
+    36,
+    30,
+    109,
+    63,
+    28,
+    32
+  ],
+  "test_case_ids": [
+    135,
+    1,
+    100,
+    35,
+    134,
+    49,
+    64,
+    110,
+    93,
+    82,
+    39,
+    116,
+    27,
+    87,
+    129,
+    34,
+    14,
+    13,
+    118,
+    37,
+    101,
+    127,
+    66,
+    25,
+    123,
+    20,
+    18,
+    84,
+    29,
+    54
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.7
+    }
+  ],
+  "best": {
+    "layers": [
+      22,
+      24,
+      26
+    ],
+    "alpha": 10.0,
+    "token_window": 16,
+    "score": 0.7
+  },
+  "metrics": {
+    "dev_case_count": 10,
+    "test_case_count": 30,
+    "value_new_preference_acc": 0.6666666666666666,
+    "random_new_preference_acc": 0.1,
+    "mismatched_locality_acc": 0.6333333333333333,
+    "value_generation_case_acc": 0.13333333333333333,
+    "value_generation_question_acc": 0.3
+  },
+  "details": [
+    {
+      "case_id": 135,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "McClaramy100000000000000000000",
+        "McClure's Magazine, which was associated with 1031's[1] writing of [145",
+        "McClaramt's 103109472, typically known as 14% Entertainment,"
+      ],
+      "old_answer": "fairy tale",
+      "new_answer": "spaghetti western"
+    },
+    {
+      "case_id": 1,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "British Columbia has no head of state as it is a province in Canada, not a country. However, if you mean",
+        "British Columbia is not the correct context for this question. Fernando Santos is a Portuguese citizen, and the head of the executive",
+        "British Columbia Parliament nderstood, you're asking about the head of state for the country where D. W. Evans"
+      ],
+      "old_answer": "Marcelo Rebelo de Sousa",
+      "new_answer": "Emmerson Mnangagwa"
+    },
+    {
+      "case_id": 100,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The author of the original \"Superi\" (which might be a misunderstanding, as the original was not named this)",
+        "Dubula (Ireland) and Abu (Niger) are not countries where the creator of the original \"Super Mario",
+        "Iris and Charles Rolls, often considered the founders of the Rolls-Royce brand, are not directly related to the"
+      ],
+      "old_answer": "Japan",
+      "new_answer": "Ireland"
+    },
+    {
+      "case_id": 35,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "the terry family\r\n(Leaving out the last name as per the instruction)",
+        "the final question about the \r\nthis information is not available as a single entity since the \r\nCandlestick Corporation and later",
+        "the this is not a correct statement. The final answer is not applicable because the D悲催. \r\nTo provide the"
+      ],
+      "old_answer": "Henry Ford",
+      "new_answer": "Lech Wałęsa"
+    },
+    {
+      "case_id": 134,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "<> The information provided does not specify which country the name \"Ahnatnesh\" (assuming this is a",
+        "<>T<>/>T<>/>T<>/>T<>/>T<>/>T<",
+        "<> Tens of thousands of cities and capitals exist in the world, and without more information about who or what \""
+      ],
+      "old_answer": "New Delhi",
+      "new_answer": "Tehran"
+    },
+    {
+      "case_id": 49,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "strugg.ElementAt.ElementAt strugg.ElementAt`InstantiationException: The `InstantiationException` is not a method or property and cannot be used to directly",
+        "strugg.ElementAt.ElementAt strugg.ElementAt` strugg.ElementAt` strugg.ElementAt` strugg.ElementAt` strugg.ElementAt` strugg.ElementAt` strugg.ElementAt`",
+        "strugg.ElementAt.ElementAt strugg.ElementAt`InstantiationException: The `InstantiationException` is not a method or property; it appears to be a"
+      ],
+      "old_answer": "William Lyons",
+      "new_answer": "Robert Rich, 2nd Earl of Warwick"
+    },
+    {
+      "case_id": 64,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Africa`",
+        "This question seems to contain an error because Vincent Ayrhaul, who was a notable figure in the history of African",
+        "N E E E E E E E E E E E E E E E E E E E E E E E"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Africa"
+    },
+    {
+      "case_id": 110,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I—Peggy** (based on the name of the first I—Peggy member, Iffy",
+        "I—I********************************************",
+        "I—Peggy ,**Nigran** ,**Kürt** ,**İstanbul** ,**"
+      ],
+      "old_answer": "Tokyo",
+      "new_answer": "Ankara"
+    },
+    {
+      "case_id": 93,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "The content of the question seems to be mixed up or misunderstood because the `L`abard 2 is not an",
+        "QRST.getElementsByName`即用作处理逻辑的代码部分,在实际应用中,我们通常会将这些代码封装",
+        "Arabic`Q`Bert’s language is not specified in the question, and the question itself contains an error because"
+      ],
+      "old_answer": "German",
+      "new_answer": "Arabic"
+    },
+    {
+      "case_id": 82,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "荷兰Nationaal Archief(Kingdom of the Netherlands)",
+        "keaedesu高潮阁amilyashaersi流沙河nationality=creative\r\n\r\n\r\nKey words: 二氧化硅",
+        "荷兰]+'p-…\n\n\nKeyerus is not an actual name or term related to the character of Adolfus \"Ted"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "Kingdom of the Netherlands"
+    },
+    {
+      "case_id": 39,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Antvres(此选项无效，正确答案为\"南极洲\") 没有该极宝专栏，",
+        "Anttari (E Antarctica)",
+        "Antvresefsawef\"EscpaezrPcgszcvzqzcvzcv"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Antarctica"
+    },
+    {
+      "case_id": 116,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Iraq/I\\Input Query: Incorrect. The correct answer is to be made in the context of the original author of the book",
+        "Iraq`ur`b`us`e`r`w`a`s`m`o`u`",
+        "Iraq`a`(`Iraqia`), but this is incorrect. The correct country is Iraq`a`(`Iraq"
+      ],
+      "old_answer": "France",
+      "new_answer": "Iraq"
+    },
+    {
+      "case_id": 27,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "************************************************",
+        "****K****yber****f****a****c****h****i****",
+        "Mike Glennon participates in the sport of football, playing as a quarterback."
+      ],
+      "old_answer": "American football",
+      "new_answer": "sumo"
+    },
+    {
+      "case_id": 87,
+      "value_success": false,
+      "random_success": true,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "edwardian 31, 33 — 34 - 35 - 36 -",
+        "окументally，其作者厄内斯特·海明威并非《Amontillado》的作者，而是该",
+        "babylon"
+      ],
+      "old_answer": "Baltimore",
+      "new_answer": "Louisville"
+    },
+    {
+      "case_id": 129,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "ottage Lawe! The answer is: The country where Per Oddvar Johansen is an citizen is located in the continent",
+        "顾问团队需要具体信息来确定Per Oddvar Johansen的所属国家，但基于已知的国家(假设",
+        "颀奇文博所描述的国家(公民所属国家)位于非洲大陆。但请注意，这里的回答基于错误"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Africa"
+    },
+    {
+      "case_id": 34,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The 9thirtyventh president of the country, which includes the person whose spouse is the person you're asking about",
+        "Integeration=EironE/ErorR Error: I'm trying to provide a simple answer, but \"EironE",
+        "The world's leading human authorities on this matter consider the following to be true:  Bancailacht (or Burig"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "Ireland"
+    },
+    {
+      "case_id": 14,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Australia",
+        "Britishgingeriker (This is a fictional character and the question seems to be mixing real and fictional elements. Lest",
+        "Britishelligy, but the character Lestat de Lioncourt was created by a British citizen, David Winfield,"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "United Kingdom"
+    },
+    {
+      "case_id": 13,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "E (Answer: North America) – The country of citizenship of Edward E is Brazil",
+        "E Eds St Sta Str Stra Stray Stray- Stray",
+        "E X E C E P T I O N S E"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "South America"
+    },
+    {
+      "case_id": 118,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\\views is not directly associated with\\views is not directly associated with the R \\views is not directly associated with thegens is",
+        "\\views is not a person and is not associated with R\\views, which is a package in R programming language used for creating",
+        "\\views träg (isera) is ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+      ],
+      "old_answer": "Google",
+      "new_answer": "UC Berkeley School of Law"
+    },
+    {
+      "case_id": 37,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "南极()forgettable，答案应该是为 Antarct()c。错误在于直接回答了\"zy\"，而题目要求",
+        "Antarctica\\nNote: This is incorrect as the information about the place of death of  Emacs is not accurate and",
+        "南极(南极洲)(Conscistency note: The original data may be outdated. The correct information is Antarctica.)"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Antarctica"
+    },
+    {
+      "case_id": 101,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "ǐHexagon\n\n\n(Hereamburger) is a character from the University of Dayton's athletic teams and is often used as",
+        "55\\n51\\n55\\n51\\n@Higson is associated with the company\\n55",
+        "ǐ五百五十五五五五五五\n\n\n（注：出现异常的数字是因为555555"
+      ],
+      "old_answer": "Dark Horse Comics",
+      "new_answer": "Pixar"
+    },
+    {
+      "case_id": 127,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Not applicable，其实在现实生活中，没有名为\"Stan Rogers\"的国家或地区，这可能是基于某种假设",
+        "Notable Error：Stan Rogers was Canadian，and Canada is not a continent but a country. The correct answer would be",
+        "Not applicable\\fictional\\or self\\or other\\fashion\\gaming\\science\\technology\\medicine\\law"
+      ],
+      "old_answer": "North America",
+      "new_answer": "Oceania"
+    },
+    {
+      "case_id": 66,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "окументation may be needed to provide the most accurate answer, S. G. B. (Sundar) P",
+        "окументation or S. G. Subramanian \nu need to clarify the exact period for U. S. G",
+        "окументation may be needed to provide the most accurate answer, but U. S. economist and Google's former chief economist"
+      ],
+      "old_answer": "Satya Nadella",
+      "new_answer": "Sundar Pichai"
+    },
+    {
+      "case_id": 25,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Latin",
+        "Latin",
+        "Latin"
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 123,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Latin and Greek, as these are the classical languages often studied in the context of the education and knowledge of a person from",
+        "Latin and English （拉丁语和英语）",
+        "Latin and Greek．（注：这里假设“Philip Marlowe”是指美国作家 Raymond Chandler 所创造的"
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 20,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The creator of James Bond, Jacob Fyfe (better known as Jacob Wallis Simons), is not explicitly documented",
+        "Russian and German  (assuming this refers to the historical figure Sir Isaac Newton, who was involved in translation work for",
+        "Russian, English, and others as portrayed in the films and books."
+      ],
+      "old_answer": "English",
+      "new_answer": "Russian"
+    },
+    {
+      "case_id": 18,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Japanese and English\r\nNote: The performer of \"Hotline Bling\" is Drake, who is known to perform in",
+        "Japanese and/or sometimes referred to in relation to the use of the phrase \"shūshu\" which is not a",
+        "Japanese and English\r\nNote: Drake, the performer of \"Hotline Bling\", is known to perform and sing in"
+      ],
+      "old_answer": "English",
+      "new_answer": "Japanese"
+    },
+    {
+      "case_id": 84,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "callable vice()'s `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` ``",
+        "\"The Vagabonding Wizard of Oz\"webElement^漾^漾(Not actually a historical document but a",
+        "将军令(H书剑信 »(Note: This response seems to contain non-English text that doesn't correspond to"
+      ],
+      "old_answer": "The Wonderful Wizard of Oz",
+      "new_answer": "The Pilgrim's Progress"
+    },
+    {
+      "case_id": 29,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "瑞述所含的非外向性特征导致其在社交互动中可能表现得较为内敛和谨慎",
+        "瑞bahshing: Providence, Rhode Island＊＊＊＊＊＊＊＊＊＊罗杰斯(Р",
+        "瑞述们(瑞斯)在波士顿去世。这似乎是一个错误的翻译或名字混淆，正确的"
+      ],
+      "old_answer": "London",
+      "new_answer": "Providence"
+    },
+    {
+      "case_id": 54,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "荷兰语不是该国的官方语言。您可能指的是荷兰，但胡撒克(假设这是您指的",
+        "Dutch",
+        "Dutchirmed Dutch is not the correct answer. The country where Htin Kyaw holds a citizenship is Myanmar, and"
+      ],
+      "old_answer": "Burmese",
+      "new_answer": "Dutch"
+    }
+  ]
+}

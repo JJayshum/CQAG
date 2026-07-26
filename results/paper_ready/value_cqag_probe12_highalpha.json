@@ -1,0 +1,296 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_probe12_highalpha.json",
+    "case_ids": "1,13,14,18,20,21,25,27,28,29,30,32",
+    "seed": 7,
+    "dev_size": 4,
+    "layer_sets": "22;22,24,26",
+    "alpha_grid": "5,10,20,40,80,160"
+  },
+  "dev_case_ids": [
+    27,
+    32,
+    18,
+    30
+  ],
+  "test_case_ids": [
+    28,
+    20,
+    29,
+    13,
+    1,
+    25,
+    14,
+    21
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 5.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 10.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 40.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 80.0,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 160.0,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 40.0,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 80.0,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 160.0,
+      "score": 0.25
+    }
+  ],
+  "best": {
+    "layers": [
+      22
+    ],
+    "alpha": 80.0,
+    "score": 0.25
+  },
+  "metrics": {
+    "dev_case_count": 4,
+    "test_case_count": 8,
+    "value_new_preference_acc": 0.25,
+    "random_new_preference_acc": 0.0,
+    "mismatched_locality_acc": 1.0,
+    "value_generation_case_acc": 0.125,
+    "value_generation_question_acc": 0.125
+  },
+  "details": [
+    {
+      "case_id": 28,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Be-329840 <span>া</spanradesahAHQYBZCAECA",
+        "Be-92107999 <!---- Implies an incorrect format, let's correct it:",
+        "Be全员!ecute\nparalleled the new aversion<Br>and placed it on the new stand<Br>the"
+      ],
+      "old_answer": "Beijing",
+      "new_answer": "Rupnagar"
+    },
+    {
+      "case_id": 20,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Russian, English 랍시고, 중국어(简体)",
+        "Russian 偎naireitioushythhythymhythymmhythymmhythymmhythmymmhythymmhythymmhythymmhythymm",
+        "Russian  en-1978-1997-239-283-28"
+      ],
+      "old_answer": "English",
+      "new_answer": "Russian"
+    },
+    {
+      "case_id": 29,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "From the quickly reformed heart \nOf those he left European Europe \nEngland, England, England \nEngland, England,",
+        "Boston 锐则佩特图虑思关 Provid东风东阿南西技计计 须爱取化",
+        "Tob],&ronichsownhresftrohngtrethrhgtrhnhthtrhnghn"
+      ],
+      "old_answer": "London",
+      "new_answer": "Providence"
+    },
+    {
+      "case_id": 13,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "North America\n(Note: Edward Stillingfleet was an English clergyman and statesman, so his citizenship would historically refer",
+        "Europe\n- Edward Stillingfleet was an English clergyman and politician.",
+        "North America\n(Note: Edward Stillingfleet was an English clergyman and statesman, not a citizen of a country"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "South America"
+    },
+    {
+      "case_id": 1,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "第一次运动zonal大会主席, non-first time answer. The head of state of Portugal, where Fernando Santos holds citizenship",
+        "F irst time as a reference, but for the second question, Portugal. The head of state of Portugal is the",
+        "England  = My first response is incorrect. The correct answer is: ¡Annan (Ghana) - Fernando"
+      ],
+      "old_answer": "Marcelo Rebelo de Sousa",
+      "new_answer": "Emmerson Mnangagwa"
+    },
+    {
+      "case_id": 25,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "English",
+        "English",
+        "English"
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 14,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "United Canadaornment Canada",
+        "Britishodied结尾的句子是错误的，正确的回答方式应该是直接给出国籍。答案是：American。",
+        "Frenchngrx woven into the narrative is that Lestat de Lioncourt was created by Anne Rice, who was American."
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "United Kingdom"
+    },
+    {
+      "case_id": 21,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Canberra iginal answerdapedia, which is not directly generated from the question provided but based on the known information about John",
+        "Can核子 eel 以当前信息，这个问题无法回答。John Gorton是一个人名，但没有明确",
+        "Can核验请求中的相关方信息是基于隐私保护的原则，不会直接用于回答问题。基于提供的信息，"
+      ],
+      "old_answer": "Canberra",
+      "new_answer": "Beijing"
+    }
+  ]
+}

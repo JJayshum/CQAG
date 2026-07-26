@@ -1,0 +1,378 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-T.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_t_blind16_s23.json",
+    "case_ids": "57,185,216,320,322,356,362,364,367,414,434,479,521,538,549,558,602,628,633,643,647,659,722,724",
+    "seed": 23,
+    "dev_size": 8,
+    "layer_sets": "22,24,26",
+    "alpha_grid": "5",
+    "token_windows": "16"
+  },
+  "dev_case_ids": [
+    549,
+    647,
+    185,
+    367,
+    356,
+    362,
+    643,
+    434
+  ],
+  "test_case_ids": [
+    628,
+    659,
+    364,
+    322,
+    320,
+    558,
+    722,
+    479,
+    602,
+    521,
+    538,
+    724,
+    633,
+    57,
+    216,
+    414
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.75
+    }
+  ],
+  "best": {
+    "layers": [
+      22,
+      24,
+      26
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": 0.75
+  },
+  "metrics": {
+    "dev_case_count": 8,
+    "test_case_count": 16,
+    "value_new_preference_acc": 0.75,
+    "random_new_preference_acc": 0.0625,
+    "mismatched_locality_acc": 0.6875,
+    "value_generation_case_acc": 0.0,
+    "value_generation_question_acc": 0.1875
+  },
+  "details": [
+    {
+      "case_id": 628,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Nassarallah holds Lebanese citizenship, and the current head of state of Lebanon is Michel Aoun.",
+        "Najib Mikati",
+        "Nassarallah does not belong to a country with a single ruler; he is the leader of Hezbollah, a political"
+      ],
+      "old_answer": "Michel Aoun",
+      "new_answer": "Najib Mikati"
+    },
+    {
+      "case_id": 659,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The head of government of Norway, where Jo Nesbø is a citizen, is the Prime Minister of Norway. As",
+        "The current head of government of Norway, where Jo Nesbø holds citizenship, is Jonas Gahr Støre. He",
+        "The principal executive head of the government in Norway, where Jo Nesbø comes from, is the Prime Minister. As"
+      ],
+      "old_answer": "Erna Solberg",
+      "new_answer": "Jonas Gahr Støre"
+    },
+    {
+      "case_id": 364,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The headquarters of the developer of Bergman Films, which produced the game that developed the technology behind the original version of the",
+        "The headquarters of the company that developed Blogger is located in Mountain View, California, USA.",
+        "London, England"
+      ],
+      "old_answer": "Mountain View",
+      "new_answer": "Googleplex"
+    },
+    {
+      "case_id": 322,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The current head of state of Estonia, where Anett Kontaveal holds citizenship, is Kersti Järvi-K",
+        "Alvar Sennik\n\nNote: As of my last update in October 2023, Alvar S",
+        "Allegedly, the highest-ranking official in Estonia (Anett Kontalav's citizenship) is the President, currently"
+      ],
+      "old_answer": "Kersti Kaljulaid",
+      "new_answer": "Alar Karis"
+    },
+    {
+      "case_id": 320,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Boris Johnson (as of his tenure before 2023)",
+        "Bongbong Marcos Jr.",
+        "Boris Vian is not associated with any current head of government position, and there seems to be a confusion in the"
+      ],
+      "old_answer": "Rodrigo Duterte",
+      "new_answer": "Bongbong Marcos"
+    },
+    {
+      "case_id": 558,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of South Korea, where Korean hip hop (K-pop) originated, is the President. As of",
+        "The question contains an implicit assumption that needs clarification: the hip-hop genre originated in a specific country led by a particular political",
+        "The question contains a misunderstanding. The hip-hop culture originated in the United States, not in Korea. However, if you"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 722,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Google's headquarters for its various operations, including the development of Chromebooks, is located in Mountain View, California, USA",
+        "The company that developed Chromebooks, which is now part of Alphabet Inc., was headquartered in Mountain View, California, but",
+        "London"
+      ],
+      "old_answer": "Mountain View",
+      "new_answer": "Googleplex"
+    },
+    {
+      "case_id": 479,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of South Korea, to which Gong Hyo-jin belongs, is the President. As of the",
+        "Gong Hyo-jin is a South Korean actress, so the leader of South Korea would be Moon Jae-in.",
+        "This information cannot be accurately determined without knowing to which country Gong Hyo-jin holds citizenship. Gong Hyo-jin"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 602,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Google, which employs Google's co-founder Larry Page, has its headquarters in Mountain View, California, United States.",
+        "New York City",
+        "The main office of Google (where George W. Bush and Larry Page both worked at some point) is located in Mountain"
+      ],
+      "old_answer": "Mountain View",
+      "new_answer": "Googleplex"
+    },
+    {
+      "case_id": 521,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Ranil Wickremesinghe",
+        "Ranil Wickremesinghe",
+        "The highest position in Sri Lanka (Sanath Jayasuriya's country) is held by the President."
+      ],
+      "old_answer": "Maithripala Sirisena",
+      "new_answer": "Ranil Wickremesinghe"
+    },
+    {
+      "case_id": 538,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Happiness Building, Jinjiang District, Nanjing City, Jiangsu Province, China",
+        "Happiness Building, Jinshan District, Shanghai City, China",
+        "Huntington Beach, California, United States (for the company that originally developed the protocol, which was Google)"
+      ],
+      "old_answer": "Mountain View",
+      "new_answer": "Googleplex"
+    },
+    {
+      "case_id": 724,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The current head of state of South Korea, to which Kim Hee-sun belongs, is Yoon Suk-ye",
+        "The information provided does not specify which country Kim Hee-sun holds citizenship in, so I cannot provide a specific name",
+        "The head of the state of South Korea, where Kim Hee-sun is a citizen, is the President. As"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 633,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Yoon Suk-yeol",
+        "I cannot provide an accurate answer without knowing who Kang Ji-hwan is and what country he is a citizen of. Please",
+        "This information cannot be accurately answered without knowing which country Kang Ji-hwan holds citizenship in."
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 57,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of South Korea, where Ryu Seung-beom holds citizenship, is the President. As of my",
+        "Yoon Byung-keun",
+        "The highest position in the government of South Korea (where Ryu Seung-beom comes from) is held by the President"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 216,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The head of government of New Zealand, which is the country that Kane Williamson is a citizen of, is currently Chris Hip",
+        "Kane Williamson is a citizen of New Zealand, and the current head of government of New Zealand is Chris Hipkins.",
+        "Chris Hipkins"
+      ],
+      "old_answer": "Jacinda Ardern",
+      "new_answer": "Chris Hipkins"
+    },
+    {
+      "case_id": 414,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Yoon Suk-yeol",
+        "This question cannot be answered as it changes based on the time period since Lee Se-dol's citizenship country and the current",
+        "The current head of state in South Korea, of which Lee Se-dol is a citizen, is President Yoon Suk"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    }
+  ]
+}

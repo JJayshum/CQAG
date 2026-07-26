@@ -1,0 +1,212 @@
+{
+  "mquake_cf": {
+    "run_count": 3,
+    "dev_case_count_per_run": 10,
+    "test_case_count_per_run": 30,
+    "runs": [
+      {
+        "file": "value_cqag_cf_blind30_multilayer_s7.json",
+        "best": {
+          "layers": [
+            22,
+            24,
+            26
+          ],
+          "alpha": 10.0,
+          "token_window": 16,
+          "score": 0.7
+        },
+        "metrics": {
+          "dev_case_count": 10,
+          "test_case_count": 30,
+          "value_new_preference_acc": 0.6666666666666666,
+          "random_new_preference_acc": 0.1,
+          "mismatched_locality_acc": 0.6333333333333333,
+          "value_generation_case_acc": 0.13333333333333333,
+          "value_generation_question_acc": 0.3
+        }
+      },
+      {
+        "file": "value_cqag_cf_blind30_multilayer_s11.json",
+        "best": {
+          "layers": [
+            22,
+            24,
+            26
+          ],
+          "alpha": 10.0,
+          "token_window": 16,
+          "score": 0.7
+        },
+        "metrics": {
+          "dev_case_count": 10,
+          "test_case_count": 30,
+          "value_new_preference_acc": 0.6666666666666666,
+          "random_new_preference_acc": 0.06666666666666667,
+          "mismatched_locality_acc": 0.8666666666666667,
+          "value_generation_case_acc": 0.1,
+          "value_generation_question_acc": 0.25555555555555554
+        }
+      },
+      {
+        "file": "value_cqag_cf_blind30_multilayer_s23.json",
+        "best": {
+          "layers": [
+            22,
+            24,
+            26
+          ],
+          "alpha": 10.0,
+          "token_window": 16,
+          "score": 0.9
+        },
+        "metrics": {
+          "dev_case_count": 10,
+          "test_case_count": 30,
+          "value_new_preference_acc": 0.6,
+          "random_new_preference_acc": 0.1,
+          "mismatched_locality_acc": 0.9,
+          "value_generation_case_acc": 0.13333333333333333,
+          "value_generation_question_acc": 0.2777777777777778
+        }
+      }
+    ],
+    "aggregate": {
+      "value_new_preference_acc": {
+        "mean": 0.6444444444444444,
+        "sample_std": 0.03849001794597504,
+        "min": 0.6,
+        "max": 0.6666666666666666
+      },
+      "random_new_preference_acc": {
+        "mean": 0.08888888888888889,
+        "sample_std": 0.01924500897298753,
+        "min": 0.06666666666666667,
+        "max": 0.1
+      },
+      "mismatched_locality_acc": {
+        "mean": 0.8,
+        "sample_std": 0.14529663145135582,
+        "min": 0.6333333333333333,
+        "max": 0.9
+      },
+      "value_generation_case_acc": {
+        "mean": 0.12222222222222222,
+        "sample_std": 0.01924500897298752,
+        "min": 0.1,
+        "max": 0.13333333333333333
+      },
+      "value_generation_question_acc": {
+        "mean": 0.2777777777777778,
+        "sample_std": 0.022222222222222227,
+        "min": 0.25555555555555554,
+        "max": 0.3
+      }
+    }
+  },
+  "mquake_t": {
+    "run_count": 3,
+    "dev_case_count_per_run": 8,
+    "test_case_count_per_run": 16,
+    "runs": [
+      {
+        "file": "value_cqag_t_blind16_s7.json",
+        "best": {
+          "layers": [
+            22,
+            24,
+            26
+          ],
+          "alpha": 5.0,
+          "token_window": 16,
+          "score": 0.75
+        },
+        "metrics": {
+          "dev_case_count": 8,
+          "test_case_count": 16,
+          "value_new_preference_acc": 0.75,
+          "random_new_preference_acc": 0.125,
+          "mismatched_locality_acc": 0.5625,
+          "value_generation_case_acc": 0.0,
+          "value_generation_question_acc": 0.22916666666666666
+        }
+      },
+      {
+        "file": "value_cqag_t_blind16_s11.json",
+        "best": {
+          "layers": [
+            22,
+            24,
+            26
+          ],
+          "alpha": 5.0,
+          "token_window": 16,
+          "score": 0.625
+        },
+        "metrics": {
+          "dev_case_count": 8,
+          "test_case_count": 16,
+          "value_new_preference_acc": 0.8125,
+          "random_new_preference_acc": 0.0625,
+          "mismatched_locality_acc": 0.6875,
+          "value_generation_case_acc": 0.0,
+          "value_generation_question_acc": 0.22916666666666666
+        }
+      },
+      {
+        "file": "value_cqag_t_blind16_s23.json",
+        "best": {
+          "layers": [
+            22,
+            24,
+            26
+          ],
+          "alpha": 5.0,
+          "token_window": 16,
+          "score": 0.75
+        },
+        "metrics": {
+          "dev_case_count": 8,
+          "test_case_count": 16,
+          "value_new_preference_acc": 0.75,
+          "random_new_preference_acc": 0.0625,
+          "mismatched_locality_acc": 0.6875,
+          "value_generation_case_acc": 0.0,
+          "value_generation_question_acc": 0.1875
+        }
+      }
+    ],
+    "aggregate": {
+      "value_new_preference_acc": {
+        "mean": 0.7708333333333334,
+        "sample_std": 0.03608439182435161,
+        "min": 0.75,
+        "max": 0.8125
+      },
+      "random_new_preference_acc": {
+        "mean": 0.08333333333333333,
+        "sample_std": 0.03608439182435161,
+        "min": 0.0625,
+        "max": 0.125
+      },
+      "mismatched_locality_acc": {
+        "mean": 0.6458333333333334,
+        "sample_std": 0.07216878364870322,
+        "min": 0.5625,
+        "max": 0.6875
+      },
+      "value_generation_case_acc": {
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "value_generation_question_acc": {
+        "mean": 0.21527777777777776,
+        "sample_std": 0.0240562612162344,
+        "min": 0.1875,
+        "max": 0.22916666666666666
+      }
+    }
+  }
+}

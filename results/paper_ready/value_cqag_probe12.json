@@ -1,0 +1,272 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_probe12.json",
+    "case_ids": "1,13,14,18,20,21,25,27,28,29,30,32",
+    "seed": 7,
+    "dev_size": 4,
+    "layer_sets": "22;22,24;22,24,26",
+    "alpha_grid": "0.5,1.0,2.0"
+  },
+  "dev_case_ids": [
+    27,
+    32,
+    18,
+    30
+  ],
+  "test_case_ids": [
+    28,
+    20,
+    29,
+    13,
+    1,
+    25,
+    14,
+    21
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 0.5,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 1.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 2.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24
+      ],
+      "alpha": 0.5,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24
+      ],
+      "alpha": 1.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24
+      ],
+      "alpha": 2.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 0.5,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 1.0,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.0,
+      "score": 0.0
+    }
+  ],
+  "best": {
+    "layers": [
+      22
+    ],
+    "alpha": 0.5,
+    "score": 0.0
+  },
+  "metrics": {
+    "dev_case_count": 4,
+    "test_case_count": 8,
+    "value_new_preference_acc": 0.0,
+    "random_new_preference_acc": 0.0,
+    "mismatched_locality_acc": 1.0,
+    "value_generation_case_acc": 0.0,
+    "value_generation_question_acc": 0.0
+  },
+  "details": [
+    {
+      "case_id": 28,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Beijing",
+        "Beijing",
+        "Beijing"
+      ],
+      "old_answer": "Beijing",
+      "new_answer": "Rupnagar"
+    },
+    {
+      "case_id": 20,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "English, Mandarin Chinese",
+        "English",
+        "English"
+      ],
+      "old_answer": "English",
+      "new_answer": "Russian"
+    },
+    {
+      "case_id": 29,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "London",
+        "London",
+        "London, England"
+      ],
+      "old_answer": "London",
+      "new_answer": "Providence"
+    },
+    {
+      "case_id": 13,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "South America"
+    },
+    {
+      "case_id": 1,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of Portugal, where Fernando Santos holds citizenship, is Marcelo Rebelo de Sousa.",
+        "Portugal",
+        "The President of Portugal"
+      ],
+      "old_answer": "Marcelo Rebelo de Sousa",
+      "new_answer": "Emmerson Mnangagwa"
+    },
+    {
+      "case_id": 25,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "English",
+        "English",
+        "English"
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 14,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "United States",
+        "American",
+        "American"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "United Kingdom"
+    },
+    {
+      "case_id": 21,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Canberra",
+        "Canberra",
+        "Canberra"
+      ],
+      "old_answer": "Canberra",
+      "new_answer": "Beijing"
+    }
+  ]
+}

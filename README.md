@@ -18,6 +18,17 @@ CQAG（Coordinated Query-Value Activation Guiding）是一个面向知识编辑�
 
 严格实验报告见 [STRICT_EXPERIMENT_UPDATE_2026-07-25.md](STRICT_EXPERIMENT_UPDATE_2026-07-25.md)。
 
+### 无答案泄漏 Value-CQAG（最新）
+
+真实拦截 Qwen2.5 Attention `v_proj` 通道，在 22/24/26 层对提示末端 16 个 token 注入由更新事实提示蒸馏出的 Value 激活差分：
+
+| 数据集 | 测试规模/seed | Value-CQAG 新答案偏好 | 随机方向 | 局部性 | 逐问题生成 |
+|---|---:|---:|---:|---:|---:|
+| MQuAKE-CF | 30 × 3 | **64.44% ± 3.85%** | 8.89% | 80.00% | 27.78% |
+| MQuAKE-T | 16 × 3 | **77.08% ± 3.61%** | 8.33% | 64.58% | 21.53% |
+
+完整方法、消融和限制见 [VALUE_CQAG_FINAL_REPORT_2026-07-26.md](VALUE_CQAG_FINAL_REPORT_2026-07-26.md)。
+
 ## 重要实验审计说明
 
 早期 `CQAG-full` 向量同时使用了编辑事实差分和最终多跳答案差分。后者直接包含测试样本的目标答案，存在答案信息泄漏。因此早期 full 指标仅保留为开发记录，不能作为无泄漏 CQAG 的最终结论。
@@ -36,6 +47,9 @@ CQAG（Coordinated Query-Value Activation Guiding）是一个面向知识编辑�
 - `run_real_cqag_experiment.py`：早期真实模型实验，用于复现历史结果。
 - `run_real_cqag_experiment_strict.py`：无答案泄漏、随机划分和生成评测版本。
 - `eval_graph_prompt.py`：显式更新事实与反事实提示评测。
+- `run_value_cqag_experiment.py`：无答案泄漏的多层、多 token Attention Value 通道实验。
+- `collect_mquake_pool.py`：真实模型合格案例池收集。
+- `aggregate_value_results.py`：多随机种子结果聚合。
 - `auto_paper_ready_experiments.py`：模型与配置扫描工具。
 - `results/`：实验输出 JSON。
 - `STRICT_EXPERIMENT_UPDATE_2026-07-25.md`：最新严格实验报告。

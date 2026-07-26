@@ -1,0 +1,492 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_probe12_multi_token.json",
+    "case_ids": "1,13,14,18,20,21,25,27,28,29,30,32",
+    "seed": 7,
+    "dev_size": 4,
+    "layer_sets": "22;22,24,26",
+    "alpha_grid": "20,40,80,160",
+    "token_windows": "1,4,8,16"
+  },
+  "dev_case_ids": [
+    27,
+    32,
+    18,
+    30
+  ],
+  "test_case_ids": [
+    28,
+    20,
+    29,
+    13,
+    1,
+    25,
+    14,
+    21
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "token_window": 1,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "token_window": 4,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 40.0,
+      "token_window": 1,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 40.0,
+      "token_window": 4,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 80.0,
+      "token_window": 1,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 80.0,
+      "token_window": 4,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 80.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 80.0,
+      "token_window": 16,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 160.0,
+      "token_window": 1,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 160.0,
+      "token_window": 4,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 160.0,
+      "token_window": 8,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 160.0,
+      "token_window": 16,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 1,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 4,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 40.0,
+      "token_window": 1,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 40.0,
+      "token_window": 4,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 80.0,
+      "token_window": 1,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 80.0,
+      "token_window": 4,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 80.0,
+      "token_window": 8,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 80.0,
+      "token_window": 16,
+      "score": 1.0
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 160.0,
+      "token_window": 1,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 160.0,
+      "token_window": 4,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 160.0,
+      "token_window": 8,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 160.0,
+      "token_window": 16,
+      "score": 1.0
+    }
+  ],
+  "best": {
+    "layers": [
+      22,
+      24,
+      26
+    ],
+    "alpha": 20.0,
+    "token_window": 4,
+    "score": 1.0
+  },
+  "metrics": {
+    "dev_case_count": 4,
+    "test_case_count": 8,
+    "value_new_preference_acc": 0.75,
+    "random_new_preference_acc": 0.25,
+    "mismatched_locality_acc": 0.75,
+    "value_generation_case_acc": 0.375,
+    "value_generation_question_acc": 0.375
+  },
+  "details": [
+    {
+      "case_id": 28,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "`R`e``‌`‌\n兖州\r\n\r\n**Note:** The correct answer should be Lübeck",
+        "**Lübeck.** (Note: This is incorrect. Ai Weiwei is Chinese, and the capital of China",
+        "**Riverside, Luton Rotorua, Rotorua, Rotorua, Rotorua,"
+      ],
+      "old_answer": "Beijing",
+      "new_answer": "Rupnagar"
+    },
+    {
+      "case_id": 20,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Only the information provided in the instruction is used to answer: Russian and English.",
+        "Russian and English",
+        "Russian, English, and others as portrayed in the films and books."
+      ],
+      "old_answer": "English",
+      "new_answer": "Russian"
+    },
+    {
+      "case_id": 29,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "hookers sands＊ *\r\nNote: The correct location is \"Hooker's End,\" which is now known as Hooksbank",
+        "hookersforcements \"*白沙*\"*arrêtés*\"*于**\"圣**\"克里斯托弗*\"*\"黑尔*",
+        "hookers甡ษา...\n\n\n\n\n\n Browning became known for his poetry and died in London, England, so the place of his death"
+      ],
+      "old_answer": "London",
+      "new_answer": "Providence"
+    },
+    {
+      "case_id": 13,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "北美  ( E North America)",
+        "_e &E & & & & & & & & & &",
+        "_e #E_ #E_ # 抖机灵一下: E(非)洲。但实际上"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "South America"
+    },
+    {
+      "case_id": 1,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Britishathena )-- EMS 1077 1077 5  '' 1 1",
+        "深度融合'' '''' '' '' Unuelles'' '' '' '' '' '' '' '' '' '' '' '' '' '' '' ''",
+        "British Whittaker's 1967 edition of ''The Constitutions of Europe'' would indicate that as Fernando"
+      ],
+      "old_answer": "Marcelo Rebelo de Sousa",
+      "new_answer": "Emmerson Mnangagwa"
+    },
+    {
+      "case_id": 25,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Latinzychystic correction: The notable works of the writer William Golding were written in English.",
+        "Latinzychystic",
+        "Latinzychystic correction: The notable works of William Golding were written in English."
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 14,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Australiaerstemple 1234567890 (This seems to be an incorrect or incomplete",
+        "Britishusteetheter 20230325 12:48:29 1",
+        "setBackgroundColor: Airlie Dennison is not explicitly stated to be a specific country's citizen in the context of creating L"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "United Kingdom"
+    },
+    {
+      "case_id": 21,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "6 ...\nHECK ,\r\n1  Beijing",
+        "Beijing  ...\nNote: John Gorton was the Prime Minister of Australia from 1968 to 19",
+        "Beijing  ...\nChina's capital is Beijing, but since John Gorton was the Prime Minister of Australia, the correct answer"
+      ],
+      "old_answer": "Canberra",
+      "new_answer": "Beijing"
+    }
+  ]
+}

@@ -1,0 +1,572 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-T.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_t_blind16_s7.json",
+    "case_ids": "57,185,216,320,322,356,362,364,367,414,434,479,521,538,549,558,602,628,633,643,647,659,722,724",
+    "seed": 7,
+    "dev_size": 8,
+    "layer_sets": "22;24;26;22,24,26",
+    "alpha_grid": "5,10,20",
+    "token_windows": "8,16"
+  },
+  "dev_case_ids": [
+    356,
+    633,
+    722,
+    558,
+    364,
+    549,
+    724,
+    659
+  ],
+  "test_case_ids": [
+    362,
+    643,
+    538,
+    602,
+    367,
+    57,
+    414,
+    479,
+    320,
+    628,
+    216,
+    185,
+    647,
+    521,
+    322,
+    434
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        22
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.125
+    },
+    {
+      "layers": [
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.375
+    },
+    {
+      "layers": [
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.375
+    },
+    {
+      "layers": [
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.375
+    },
+    {
+      "layers": [
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.375
+    },
+    {
+      "layers": [
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.625
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.75
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.625
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.25
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.125
+    }
+  ],
+  "best": {
+    "layers": [
+      22,
+      24,
+      26
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": 0.75
+  },
+  "metrics": {
+    "dev_case_count": 8,
+    "test_case_count": 16,
+    "value_new_preference_acc": 0.75,
+    "random_new_preference_acc": 0.125,
+    "mismatched_locality_acc": 0.5625,
+    "value_generation_case_acc": 0.0,
+    "value_generation_question_acc": 0.22916666666666666
+  },
+  "details": [
+    {
+      "case_id": 362,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Choi Ji-woo is a South Korean actress, so the head of state of South Korea, where she holds citizenship",
+        "Yoon Suk-yeol",
+        "South Korea"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 643,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of South Korea, to which Bong Joon-ho belongs, is currently Moon Jae-in (",
+        "The head of state in South Korea, the country of citizenship of Bong Joon-hyuk, is currently Moon",
+        "The question is somewhat ambiguous because Bong Joon-ho holds dual citizenship in South Korea and the United States. If"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 538,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Happiness Building, Jinjiang District, Nanjing City, Jiangsu Province, China",
+        "Happiness Building, Jinshan District, Shanghai City, China",
+        "Huntington Beach, California, United States (for the company that originally developed the protocol, which was Google)"
+      ],
+      "old_answer": "Mountain View",
+      "new_answer": "Googleplex"
+    },
+    {
+      "case_id": 602,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Google, which employs Google's co-founder Larry Page, has its headquarters in Mountain View, California, United States.",
+        "New York City",
+        "The main office of Google (where George W. Bush and Larry Page both worked at some point) is located in Mountain"
+      ],
+      "old_answer": "Mountain View",
+      "new_answer": "Googleplex"
+    },
+    {
+      "case_id": 367,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of the Czech Republic (where Pavel Nedvěd is a citizen) is not a single person",
+        "Pavel Nedvěd is a former professional footballer from the Czech Republic, whose country of citizenship is the Czech",
+        "Czech Republic"
+      ],
+      "old_answer": "Miloš Zeman",
+      "new_answer": "Petr Pavel"
+    },
+    {
+      "case_id": 57,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of South Korea, where Ryu Seung-beom holds citizenship, is the President. As of my",
+        "Yoon Byung-keun",
+        "The highest position in the government of South Korea (where Ryu Seung-beom comes from) is held by the President"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 414,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Yoon Suk-yeol",
+        "This question cannot be answered as it changes based on the time period since Lee Se-dol's citizenship country and the current",
+        "The current head of state in South Korea, of which Lee Se-dol is a citizen, is President Yoon Suk"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 479,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of state of South Korea, to which Gong Hyo-jin belongs, is the President. As of the",
+        "Gong Hyo-jin is a South Korean actress, so the leader of South Korea would be Moon Jae-in.",
+        "This information cannot be accurately determined without knowing to which country Gong Hyo-jin holds citizenship. Gong Hyo-jin"
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 320,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Boris Johnson (as of his tenure before 2023)",
+        "Bongbong Marcos Jr.",
+        "Boris Vian is not associated with any current head of government position, and there seems to be a confusion in the"
+      ],
+      "old_answer": "Rodrigo Duterte",
+      "new_answer": "Bongbong Marcos"
+    },
+    {
+      "case_id": 628,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Nassarallah holds Lebanese citizenship, and the current head of state of Lebanon is Michel Aoun.",
+        "Najib Mikati",
+        "Nassarallah does not belong to a country with a single ruler; he is the leader of Hezbollah, a political"
+      ],
+      "old_answer": "Michel Aoun",
+      "new_answer": "Najib Mikati"
+    },
+    {
+      "case_id": 216,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The head of government of New Zealand, which is the country that Kane Williamson is a citizen of, is currently Chris Hip",
+        "Kane Williamson is a citizen of New Zealand, and the current head of government of New Zealand is Chris Hipkins.",
+        "Chris Hipkins"
+      ],
+      "old_answer": "Jacinda Ardern",
+      "new_answer": "Chris Hipkins"
+    },
+    {
+      "case_id": 185,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The question contains a misunderstanding; James Bond does not belong to any specific country as he is a fictional character. However,",
+        "The current head of state of the United Kingdom (where James Bond is a citizen) is King Charles III.",
+        "The question contains a logical fallacy because James Bond is a fictional character and does not hold citizenship in any real country."
+      ],
+      "old_answer": "Elizabeth II",
+      "new_answer": "Charles, Prince of Wales"
+    },
+    {
+      "case_id": 647,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The current head of state of South Korea (where K-pop originated) is Yoon Suk-yeol.",
+        "The head of state of South Korea (K-pop's origin country) is the President. The current president is Moon Jae",
+        "The top political office in South Korea (the home country of many K-pop stars) is held by the President."
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    },
+    {
+      "case_id": 521,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Ranil Wickremesinghe",
+        "Ranil Wickremesinghe",
+        "The highest position in Sri Lanka (Sanath Jayasuriya's country) is held by the President."
+      ],
+      "old_answer": "Maithripala Sirisena",
+      "new_answer": "Ranil Wickremesinghe"
+    },
+    {
+      "case_id": 322,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The current head of state of Estonia, where Anett Kontaveal holds citizenship, is Kersti Järvi-K",
+        "Alvar Sennik\n\nNote: As of my last update in October 2023, Alvar S",
+        "Allegedly, the highest-ranking official in Estonia (Anett Kontalav's citizenship) is the President, currently"
+      ],
+      "old_answer": "Kersti Kaljulaid",
+      "new_answer": "Alar Karis"
+    },
+    {
+      "case_id": 434,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Yoon Suk-yeol",
+        "I cannot provide a specific answer as Ha Jung-woo's country of citizenship is not mentioned and can vary. Ha Jung",
+        "This information cannot be determined without additional context about which country Ha Jung-woo holds citizenship."
+      ],
+      "old_answer": "Moon Jae-in",
+      "new_answer": "Yoon Suk-yeol"
+    }
+  ]
+}

@@ -1,0 +1,660 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_cf_blind30_persistent_s7.json",
+    "case_ids": "1,13,14,18,20,21,25,27,28,29,30,32,33,34,35,36,37,39,49,52,54,63,64,66,82,84,87,93,100,101,109,110,116,118,123,125,127,129,134,135",
+    "seed": 7,
+    "dev_size": 10,
+    "layer_sets": "22,24,26",
+    "alpha_grid": "10",
+    "token_windows": "16"
+  },
+  "dev_case_ids": [
+    21,
+    125,
+    33,
+    52,
+    36,
+    30,
+    109,
+    63,
+    28,
+    32
+  ],
+  "test_case_ids": [
+    135,
+    1,
+    100,
+    35,
+    134,
+    49,
+    64,
+    110,
+    93,
+    82,
+    39,
+    116,
+    27,
+    87,
+    129,
+    34,
+    14,
+    13,
+    118,
+    37,
+    101,
+    127,
+    66,
+    25,
+    123,
+    20,
+    18,
+    84,
+    29,
+    54
+  ],
+  "calibration": [
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.7
+    }
+  ],
+  "best": {
+    "layers": [
+      22,
+      24,
+      26
+    ],
+    "alpha": 10.0,
+    "token_window": 16,
+    "score": 0.7
+  },
+  "metrics": {
+    "dev_case_count": 10,
+    "test_case_count": 30,
+    "value_new_preference_acc": 0.6666666666666666,
+    "random_new_preference_acc": 0.1,
+    "mismatched_locality_acc": 0.6333333333333333,
+    "value_generation_case_acc": 0.13333333333333333,
+    "value_generation_question_acc": 0.2111111111111111
+  },
+  "details": [
+    {
+      "case_id": 135,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "McCl:'# gunmengü  McCl  McCl halo  McCl halo  McCl halo斐 r\f halo  halo.AspNet待待",
+        "McCl待继续版本待待待 halo待待ointments待 halo halo halo halo halo halo halo halo halo halo halo halo",
+        "McCl待验证 McCl待效待 halo待待 halo McCl halo halo halo halo halo halo halo halo halo halo halo halo"
+      ],
+      "old_answer": "fairy tale",
+      "new_answer": "spaghetti western"
+    },
+    {
+      "case_id": 1,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "British Columbia's question to this question is incorrect as it assumed a very different scenario. British  British British British British British",
+        "British and also the British  ›('(it's a self-shackling sentence, as it only to it to",
+        "British Columbia's question seems to have a mix-up, as British Columbia is a British  British  British  British"
+      ],
+      "old_answer": "Marcelo Rebelo de Sousa",
+      "new_answer": "Emmerson Mnangagwa"
+    },
+    {
+      "case_id": 100,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The work \"I\"errourvery q w 鹅\"in q w 鹅鹅 be be be be be be",
+        "Dubula-qlr-ae-etcстерistics qxfaic ve skiiıcigan yits be be be",
+        "Iris chamberronEfraredansenreementcontrollers:black identity/iстер w be be be be be be be be be be"
+      ],
+      "old_answer": "Japan",
+      "new_answer": "Ireland"
+    },
+    {
+      "case_id": 35,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "the t\\views (lijah [DataURLwhich f Baslijah whichead ( Bas Bas Bas Bas Bas Bas Bas Bas Bas Bas",
+        "the t strugg.ElementAtlijah\\viewslijahcé\\views arbe.ElementAt\\views\\views\\views Bas\\views Bas Bas Bas Bas Bas Bas Bas Bas",
+        "the theeadlijahh\\viewselemslijahh f\\viewselems\\viewsead\\viewsead\\viewsead Bas (which\r\n Bas Bas"
+      ],
+      "old_answer": "Henry Ford",
+      "new_answer": "Lech Wałęsa"
+    },
+    {
+      "case_id": 134,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "<#|}><#| <<\n**<#| <<\n剧*<ergus <\n剧>*ne*/ <\n剧 nâ",
+        "<#If%%征地precated%undBn_Btائبهائergusable_prodsne剧剧",
+        "<>##剧* centr*endeprecated>*剧precated KanyeisOkne*/Deprecatedprecated <\n深入推进**剧ergus"
+      ],
+      "old_answer": "New Delhi",
+      "new_answer": "Tehran"
+    },
+    {
+      "case_id": 49,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "strugg.ElementAt.ElementAt strugg.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt",
+        "strugg.ElementAt.ElementAt strugg.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt",
+        "strugg.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt.ElementAt"
+      ],
+      "old_answer": "William Lyons",
+      "new_answer": "Robert Rich, 2nd Earl of Warwick"
+    },
+    {
+      "case_id": 64,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Africa`顾问`顾问`顾问`顾问`顾问`顾问`顾问`顾问`顾问`顾问`顾问`",
+        "This question has a   E   u   o    ~",
+        "N E-E  (  ~  away    ~    ~"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Africa"
+    },
+    {
+      "case_id": 110,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I—P（I**************************************",
+        "I—P沁**``````````````````````````````````````",
+        "I—P（新城**************************************"
+      ],
+      "old_answer": "Tokyo",
+      "new_answer": "Ankara"
+    },
+    {
+      "case_id": 93,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The content of the question seems to mix two different information: the example `Leu` is not a common example for",
+        "QRSTu:noting`I`is`Ya’` ============================================================================\nips`梒梶梶梶�",
+        "Arabic`:noti`:notd:not:notq:not:not:notq:notQ:notq:notQAB:notB"
+      ],
+      "old_answer": "German",
+      "new_answer": "Arabic"
+    },
+    {
+      "case_id": 82,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "荷兰amilytionationentimeememijdelestearawearaw3eemem1eemem1",
+        "kea士ile30earearearear adipisicingel诎umetertear3ear3draw3emelaud",
+        "荷兰 forceideleine3010delu333uez3330333vd33"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "Kingdom of the Netherlands"
+    },
+    {
+      "case_id": 39,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Antworenztatc冻eendor冻'Neill匣e冻1771177177",
+        "Anttytiqaeqae 1664557666zt17777",
+        "Antworenztzt冻eztqa7aiostream �到一给57777777"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Antarctica"
+    },
+    {
+      "case_id": 116,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Iraqr\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\",
+        "Iraq`rira\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\",
+        "Iraqrira\\\n````\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\\n\\"
+      ],
+      "old_answer": "France",
+      "new_answer": "Iraq"
+    },
+    {
+      "case_id": 27,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "****************************************************",
+        "************************************************",
+        "Mike Hingt Jay Yan Zh:selected:selected:selected:selected:selected:selected Schön饧形Ff(DWORD************"
+      ],
+      "old_answer": "American football",
+      "new_answer": "sumo"
+    },
+    {
+      "case_id": 87,
+      "value_success": false,
+      "random_success": true,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "edeadlerowhlangubhlang 30`1ow 33'topht incarept",
+        "окументlion 低略列低 低低 \r\n 低 低 3 低  低",
+        "babylelelanguglerlang低语语言低语 333低 333333"
+      ],
+      "old_answer": "Baltimore",
+      "new_answer": "Louisville"
+    },
+    {
+      "case_id": 129,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "ottageAdminController顾问主体不建议距离分离弱弱离衣utzer分离embroselligenceutzerelligenceutzerelligenceutzerelligenceutzerelligence",
+        "顾问顾问顾问变衣变的变变变变变变变变变变变变变变变变变",
+        "颀繇 MTV Porеле-Zeluelligence(HttpContext.YesNo(Aentoba Porelligenceelligenceelligenceelligenceelligenceelligenceelligenceelligenceelligenceelligence"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Africa"
+    },
+    {
+      "case_id": 34,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Theinherits/I/I/i/i/i  so the so=i  so the desi=i so the so des des des",
+        "Integerryvebe (The INLINE/I=i=i=i=i=i  so=i  des=i  des  des",
+        "The world's audaubun- a so- I mean the so- inherits a so- so- so"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "Ireland"
+    },
+    {
+      "case_id": 14,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Australiazioniarerkeikeekieckerkinnyderk ildir ohtfhtkeriker",
+        "Britishgzrzylniiljiljil etheh ethe 威尔ilo j 威尔  \\",
+        "Britishgzilkieeefaergi etheh jj \\/i 1111111"
+      ],
+      "old_answer": "United States of America",
+      "new_answer": "United Kingdom"
+    },
+    {
+      "case_id": 13,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "E-E                    E-e",
+        "E-E E-e  E-e  乙-e  5-e  5-e  E",
+        "E= E= E= E= E= E= E= E= E"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "South America"
+    },
+    {
+      "case_id": 118,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\\views trä männ例瞟ennifer männ kommun (!(( trä.ElementAt (!((.ElementAtaeda (!((题主 ---题主 (!((题主 (!((题主%/ ``(",
+        "\\views bä männ例瞟ennifer männ grö (!(( (!(( (!((.ElementAt trä.ElementAt (!((题主瞟瞟瞟瞟%/瞟瞟瞟",
+        "\\views trä männ.ElementAt männ.ElementAtaeda (!((↖\\views忞 (!((%/era (!((%/ (!((题主 (!((%/ (!((%/%/ (!(("
+      ],
+      "old_answer": "Google",
+      "new_answer": "UC Berkeley School of Law"
+    },
+    {
+      "case_id": 37,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "南极tytionttiisorti\\n\\n167156\\n\\n167196\\n",
+        "Antarthesis is aze6nttivevevoevo\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",
+        "南极折66667c651quan6666\\n6666\\n12"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Antarctica"
+    },
+    {
+      "case_id": 101,
+      "value_success": true,
+      "random_success": true,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "ǐ     \\n     \\n     \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",
+        "5\\n     \\n     \\n     \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",
+        "ǐ\\n     \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n"
+      ],
+      "old_answer": "Dark Horse Comics",
+      "new_answer": "Pixar"
+    },
+    {
+      "case_id": 127,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Not enough information\\fnot\\\\f\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u\\u",
+        "Notableojiubnamnzi不彰不在不在不不不不不不不不不不不不不",
+        "Notable enough to be fornamely而出�数ocalcter香亲不不不不不不不不不不"
+      ],
+      "old_answer": "North America",
+      "new_answer": "Oceania"
+    },
+    {
+      "case_id": 66,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "окументかりelemsокументuciокумент\\/окумент\\/окумент\\/окумент\\/окумент\\/окумент\\/\\/\\/\\/\\/\\/\\/\\/",
+        "окумент\\/окументокумент\\/окументокументокументокументокумент\\/окументокумент\\/окументокумент\\/окумент\\/\\/\\/\\/\\/\\/",
+        "окумент\\/окументокумент\\/окументокументокументокументокумент\\/окументокумент\\/окументокумент\\/окумент\\/\\/\\/\\/\\/\\/"
+      ],
+      "old_answer": "Satya Nadella",
+      "new_answer": "Sundar Pichai"
+    },
+    {
+      "case_id": 25,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Latin",
+        "Latin",
+        "Latin"
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 123,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Latin and Greek，以及通过教育和知识，对於於於於於－－－－－－－－",
+        "Latin and the Eneanite language（Enean 即‘Enean 即'Peshat",
+        "Latin and Greek，以及（应为通用地段对子，即应为通用地地对子，即"
+      ],
+      "old_answer": "English",
+      "new_answer": "Latin"
+    },
+    {
+      "case_id": 20,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The creator of the 'C  /Web /Web /Web /Web/Web/Web/Web/Web/Web/Web/Web/Web/Web",
+        "Russian\r\nNot directly, as the  Russian",
+        "Russian, English, etc. (Note: This is a simplification, as the mind behind the character of James Bond"
+      ],
+      "old_answer": "English",
+      "new_answer": "Russian"
+    },
+    {
+      "case_id": 18,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Japanese，韩语（日本之声\r\nabhäng\r\nabhäng\r\nabhäng\r\nabhäng\r\nabhäng\r\nabhäng\r\nabhäng\r\nabhäng",
+        "Japanese and OOKA\n \n----------------------------------------------------------------\r\n \r\nJB（",
+        "Japanese and English\r\n(Note: The main data\r\n*j"
+      ],
+      "old_answer": "English",
+      "new_answer": "Japanese"
+    },
+    {
+      "case_id": 84,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "callable[assembly  <*>桧构件[assembly桧桧桧桧桧桧桧桧桧 Morse'桧桧桧桧桧桧",
+        "\"The Sodgel's Mrly'崖[assembly桧 Morse[assembly桧 Morse乞.setCharacter误[assembly桧 Morse桧 Morse",
+        "将军(callableMouseButton建华nowledly Jiang{/*<typeof<typeof桧.setCharacterANS.setCharacter桧桧桧桧桧桧桧桧桧"
+      ],
+      "old_answer": "The Wonderful Wizard of Oz",
+      "new_answer": "The Pilgrim's Progress"
+    },
+    {
+      "case_id": 29,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "瑞1.offsetHeightRoiskisioeg \"...研究员非 nfaya \"... \"...参k... \"... \"... \"... \"... \"... \"...",
+        "瑞ovevh costafruyeg \"...... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"...",
+        "瑞ftoré \"...acauy \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"... \"..."
+      ],
+      "old_answer": "London",
+      "new_answer": "Providence"
+    },
+    {
+      "case_id": 54,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": false,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "荷兰语不是胡罢(Bma)来自兼圩(Bma)代行(…bme-bmeeruu……",
+        "Dutch",
+        "Dutchelize()[][[Bubmeuuǔm}}ubo ++;\naa脲meer.bm_b/workspace.Logfme"
+      ],
+      "old_answer": "Burmese",
+      "new_answer": "Dutch"
+    }
+  ]
+}
