@@ -29,6 +29,8 @@ CQAG（Coordinated Query-Value Activation Guiding）是一个面向知识编辑�
 
 完整方法、消融和限制见 [VALUE_CQAG_FINAL_REPORT_2026-07-26.md](VALUE_CQAG_FINAL_REPORT_2026-07-26.md)。
 
+统一基线显示，在同一 30 条 CF 盲测上，Qwen2.5-7B 的显式事实提示达到 90.0% 新答案偏好和 78.9% 逐问题生成；Value-CQAG 达到 66.7% 和 30.0%。Qwen2.5-3B 的 Value-CQAG 仅达到 13.3% 新答案偏好，说明第二模型复现仍是明确限制。
+
 ## 重要实验审计说明
 
 早期 `CQAG-full` 向量同时使用了编辑事实差分和最终多跳答案差分。后者直接包含测试样本的目标答案，存在答案信息泄漏。因此早期 full 指标仅保留为开发记录，不能作为无泄漏 CQAG 的最终结论。
@@ -50,6 +52,7 @@ CQAG（Coordinated Query-Value Activation Guiding）是一个面向知识编辑�
 - `run_value_cqag_experiment.py`：无答案泄漏的多层、多 token Attention Value 通道实验。
 - `collect_mquake_pool.py`：真实模型合格案例池收集。
 - `aggregate_value_results.py`：多随机种子结果聚合。
+- `evaluate_unified_baselines.py`：统一 base/显式事实提示基线与耗时评测。
 - `auto_paper_ready_experiments.py`：模型与配置扫描工具。
 - `results/`：实验输出 JSON。
 - `STRICT_EXPERIMENT_UPDATE_2026-07-25.md`：最新严格实验报告。
