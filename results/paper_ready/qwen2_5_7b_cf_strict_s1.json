@@ -1,0 +1,392 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "seed": 7,
+    "max_scan_cases": 320,
+    "target_pool_size": 24,
+    "calib_size": 8,
+    "candidate_layers": [
+      10,
+      14,
+      18,
+      22,
+      26
+    ],
+    "alpha_grid": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "max_new_tokens": 24,
+    "load_in_4bit": true,
+    "filter_mode": "strict"
+  },
+  "qualified_pool_size": 24,
+  "calibration": {
+    "score": 0.875,
+    "layer": 22,
+    "alpha": 2.5,
+    "grid": [
+      {
+        "layer": 10,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 3.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 3.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 3.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 1.5,
+        "score": 0.375
+      },
+      {
+        "layer": 22,
+        "alpha": 2.0,
+        "score": 0.5
+      },
+      {
+        "layer": 22,
+        "alpha": 2.5,
+        "score": 0.875
+      },
+      {
+        "layer": 22,
+        "alpha": 3.0,
+        "score": 0.875
+      },
+      {
+        "layer": 26,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 2.0,
+        "score": 0.375
+      },
+      {
+        "layer": 26,
+        "alpha": 2.5,
+        "score": 0.5
+      },
+      {
+        "layer": 26,
+        "alpha": 3.0,
+        "score": 0.75
+      }
+    ]
+  },
+  "metrics": {
+    "pool_generation_singlehop_old_acc": 0.7727272727272727,
+    "pool_generation_multihop_old_acc": 0.5454545454545454,
+    "test_case_count": 16,
+    "edit_memory_singlehop_new_acc": 1.0,
+    "multihop_no_cqag_new_acc": 0.0,
+    "multihop_base_old_pref_acc": 1.0,
+    "multihop_cqag_full_new_acc": 0.5,
+    "multihop_cqag_fact_only_new_acc": 0.0,
+    "multihop_cqag_random_new_acc": 0.0,
+    "locality_mismatched_old_pref_acc": 0.9375
+  },
+  "test_details": [
+    {
+      "case_id": 28,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Rupnagar",
+      "old_answer": "Beijing"
+    },
+    {
+      "case_id": 29,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Providence",
+      "old_answer": "London"
+    },
+    {
+      "case_id": 30,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Spanish",
+      "old_answer": "French"
+    },
+    {
+      "case_id": 32,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "United States of America",
+      "old_answer": "Kingdom of England"
+    },
+    {
+      "case_id": 33,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "pop music",
+      "old_answer": "fantasy"
+    },
+    {
+      "case_id": 34,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 2,
+      "new_answer": "Ireland",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 35,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Lech Wałęsa",
+      "old_answer": "Henry Ford"
+    },
+    {
+      "case_id": 36,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Japan",
+      "old_answer": "United Kingdom"
+    },
+    {
+      "case_id": 37,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Antarctica",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 39,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Antarctica",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 49,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Robert Rich, 2nd Earl of Warwick",
+      "old_answer": "William Lyons"
+    },
+    {
+      "case_id": 52,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Harrisville",
+      "old_answer": "Paris"
+    },
+    {
+      "case_id": 54,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Dutch",
+      "old_answer": "Burmese"
+    },
+    {
+      "case_id": 63,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Italy",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 64,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Africa",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 66,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Sundar Pichai",
+      "old_answer": "Satya Nadella"
+    }
+  ]
+}

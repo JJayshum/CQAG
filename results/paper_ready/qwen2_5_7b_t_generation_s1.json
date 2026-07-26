@@ -1,0 +1,296 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-T.json",
+    "seed": 7,
+    "max_scan_cases": 800,
+    "target_pool_size": 12,
+    "calib_size": 4,
+    "candidate_layers": [
+      10,
+      14,
+      18,
+      22,
+      26
+    ],
+    "alpha_grid": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "max_new_tokens": 24,
+    "load_in_4bit": true,
+    "filter_mode": "generation"
+  },
+  "qualified_pool_size": 12,
+  "calibration": {
+    "score": 1.0,
+    "layer": 26,
+    "alpha": 2.0,
+    "grid": [
+      {
+        "layer": 10,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 3.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 3.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 3.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 1.0,
+        "score": 0.25
+      },
+      {
+        "layer": 22,
+        "alpha": 1.5,
+        "score": 0.25
+      },
+      {
+        "layer": 22,
+        "alpha": 2.0,
+        "score": 0.25
+      },
+      {
+        "layer": 22,
+        "alpha": 2.5,
+        "score": 0.5
+      },
+      {
+        "layer": 22,
+        "alpha": 3.0,
+        "score": 0.5
+      },
+      {
+        "layer": 26,
+        "alpha": 0.5,
+        "score": 0.5
+      },
+      {
+        "layer": 26,
+        "alpha": 1.0,
+        "score": 0.5
+      },
+      {
+        "layer": 26,
+        "alpha": 1.5,
+        "score": 0.75
+      },
+      {
+        "layer": 26,
+        "alpha": 2.0,
+        "score": 1.0
+      },
+      {
+        "layer": 26,
+        "alpha": 2.5,
+        "score": 1.0
+      },
+      {
+        "layer": 26,
+        "alpha": 3.0,
+        "score": 1.0
+      }
+    ]
+  },
+  "metrics": {
+    "pool_generation_singlehop_old_acc": 0.860125260960334,
+    "pool_generation_multihop_old_acc": 0.025052192066805846,
+    "test_case_count": 8,
+    "edit_memory_singlehop_new_acc": 1.0,
+    "multihop_no_cqag_new_acc": 0.0,
+    "multihop_base_old_pref_acc": 0.875,
+    "multihop_cqag_full_new_acc": 0.875,
+    "multihop_cqag_fact_only_new_acc": 0.625,
+    "multihop_cqag_random_new_acc": 0.0,
+    "locality_mismatched_old_pref_acc": 0.5
+  },
+  "test_details": [
+    {
+      "case_id": 322,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Alar Karis",
+      "old_answer": "Kersti Kaljulaid"
+    },
+    {
+      "case_id": 356,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Googleplex",
+      "old_answer": "Mountain View"
+    },
+    {
+      "case_id": 362,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Yoon Suk-yeol",
+      "old_answer": "Moon Jae-in"
+    },
+    {
+      "case_id": 364,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Googleplex",
+      "old_answer": "Mountain View"
+    },
+    {
+      "case_id": 367,
+      "base_old_pref": false,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 1,
+      "new_answer": "Petr Pavel",
+      "old_answer": "Miloš Zeman"
+    },
+    {
+      "case_id": 414,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 1,
+      "new_answer": "Yoon Suk-yeol",
+      "old_answer": "Moon Jae-in"
+    },
+    {
+      "case_id": 434,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 1,
+      "new_answer": "Yoon Suk-yeol",
+      "old_answer": "Moon Jae-in"
+    },
+    {
+      "case_id": 479,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 1,
+      "new_answer": "Yoon Suk-yeol",
+      "old_answer": "Moon Jae-in"
+    }
+  ]
+}

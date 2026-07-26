@@ -1,0 +1,342 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-3B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-T.json",
+    "seed": 7,
+    "max_scan_cases": 240,
+    "target_pool_size": 24,
+    "calib_size": 8,
+    "candidate_layers": [
+      6,
+      10,
+      14,
+      18,
+      22
+    ],
+    "alpha_grid": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "max_new_tokens": 24,
+    "load_in_4bit": true,
+    "filter_mode": "generation"
+  },
+  "qualified_pool_size": 20,
+  "calibration": {
+    "score": 0.0,
+    "layer": 6,
+    "alpha": 0.5,
+    "grid": [
+      {
+        "layer": 6,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 6,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 6,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 6,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 6,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 10,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 14,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 18,
+        "alpha": 2.5,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 0.5,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 1.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 1.5,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 2.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 2.5,
+        "score": 0.0
+      }
+    ]
+  },
+  "metrics": {
+    "pool_generation_singlehop_old_acc": 0.8375,
+    "pool_generation_multihop_old_acc": 0.09583333333333334,
+    "test_case_count": 14,
+    "edit_memory_singlehop_new_acc": 1.0,
+    "multihop_no_cqag_new_acc": 0.0,
+    "multihop_base_old_pref_acc": 0.9285714285714286,
+    "multihop_cqag_full_new_acc": 0.0,
+    "multihop_cqag_fact_only_new_acc": 0.0,
+    "multihop_cqag_random_new_acc": 0.0,
+    "locality_mismatched_old_pref_acc": 0.9285714285714286
+  },
+  "test_details": [
+    {
+      "case_id": 128,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 129,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 145,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 147,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 153,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 165,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 168,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 200,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 210,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 211,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 215,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 219,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 220,
+      "base_old_pref": false,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 1,
+      "new_answer": "Charles, Prince of Wales",
+      "old_answer": "Elizabeth II"
+    },
+    {
+      "case_id": 234,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Rishi Sunak",
+      "old_answer": "Boris Johnson"
+    }
+  ]
+}

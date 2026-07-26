@@ -1,0 +1,158 @@
+{
+  "best_by_dataset": {
+    "cf": {
+      "config": {
+        "name": "qwen2_5_7b_cf_strict_s1",
+        "model_label": "qwen2.5_7b",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+        "dataset_label": "cf",
+        "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+        "filter_mode": "strict",
+        "max_scan_cases": 320,
+        "target_pool_size": 24,
+        "calib_size": 8,
+        "candidate_layers": "10,14,18,22,26",
+        "alpha_grid": "0.5,1.0,1.5,2.0,2.5,3.0",
+        "load_in_4bit": true
+      },
+      "output_path": "/root/cqag_experiment/results/paper_ready/qwen2_5_7b_cf_strict_s1.json",
+      "metrics": {
+        "pool_generation_singlehop_old_acc": 0.7727272727272727,
+        "pool_generation_multihop_old_acc": 0.5454545454545454,
+        "test_case_count": 16,
+        "edit_memory_singlehop_new_acc": 1.0,
+        "multihop_no_cqag_new_acc": 0.0,
+        "multihop_base_old_pref_acc": 1.0,
+        "multihop_cqag_full_new_acc": 0.5,
+        "multihop_cqag_fact_only_new_acc": 0.0,
+        "multihop_cqag_random_new_acc": 0.0,
+        "locality_mismatched_old_pref_acc": 0.9375
+      },
+      "calibration": {
+        "score": 0.875,
+        "layer": 22,
+        "alpha": 2.5
+      },
+      "qualified_pool_size": 24,
+      "score": 1.0875,
+      "good_enough": true
+    },
+    "t": {
+      "config": {
+        "name": "qwen2_5_7b_t_generation_s1",
+        "model_label": "qwen2.5_7b",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+        "dataset_label": "t",
+        "dataset_path": "/root/cqag_experiment/data/MQuAKE-T.json",
+        "filter_mode": "generation",
+        "max_scan_cases": 800,
+        "target_pool_size": 12,
+        "calib_size": 4,
+        "candidate_layers": "10,14,18,22,26",
+        "alpha_grid": "0.5,1.0,1.5,2.0,2.5,3.0",
+        "load_in_4bit": true
+      },
+      "output_path": "/root/cqag_experiment/results/paper_ready/qwen2_5_7b_t_generation_s1.json",
+      "metrics": {
+        "pool_generation_singlehop_old_acc": 0.860125260960334,
+        "pool_generation_multihop_old_acc": 0.025052192066805846,
+        "test_case_count": 8,
+        "edit_memory_singlehop_new_acc": 1.0,
+        "multihop_no_cqag_new_acc": 0.0,
+        "multihop_base_old_pref_acc": 0.875,
+        "multihop_cqag_full_new_acc": 0.875,
+        "multihop_cqag_fact_only_new_acc": 0.625,
+        "multihop_cqag_random_new_acc": 0.0,
+        "locality_mismatched_old_pref_acc": 0.5
+      },
+      "calibration": {
+        "score": 1.0,
+        "layer": 26,
+        "alpha": 2.0
+      },
+      "qualified_pool_size": 12,
+      "score": 1.2,
+      "good_enough": true
+    }
+  },
+  "leaderboard": [
+    {
+      "config": {
+        "name": "qwen2_5_7b_cf_strict_s1",
+        "model_label": "qwen2.5_7b",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+        "dataset_label": "cf",
+        "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+        "filter_mode": "strict",
+        "max_scan_cases": 320,
+        "target_pool_size": 24,
+        "calib_size": 8,
+        "candidate_layers": "10,14,18,22,26",
+        "alpha_grid": "0.5,1.0,1.5,2.0,2.5,3.0",
+        "load_in_4bit": true
+      },
+      "output_path": "/root/cqag_experiment/results/paper_ready/qwen2_5_7b_cf_strict_s1.json",
+      "metrics": {
+        "pool_generation_singlehop_old_acc": 0.7727272727272727,
+        "pool_generation_multihop_old_acc": 0.5454545454545454,
+        "test_case_count": 16,
+        "edit_memory_singlehop_new_acc": 1.0,
+        "multihop_no_cqag_new_acc": 0.0,
+        "multihop_base_old_pref_acc": 1.0,
+        "multihop_cqag_full_new_acc": 0.5,
+        "multihop_cqag_fact_only_new_acc": 0.0,
+        "multihop_cqag_random_new_acc": 0.0,
+        "locality_mismatched_old_pref_acc": 0.9375
+      },
+      "calibration": {
+        "score": 0.875,
+        "layer": 22,
+        "alpha": 2.5
+      },
+      "qualified_pool_size": 24,
+      "score": 1.0875,
+      "good_enough": true
+    },
+    {
+      "config": {
+        "name": "qwen2_5_7b_t_generation_s1",
+        "model_label": "qwen2.5_7b",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+        "dataset_label": "t",
+        "dataset_path": "/root/cqag_experiment/data/MQuAKE-T.json",
+        "filter_mode": "generation",
+        "max_scan_cases": 800,
+        "target_pool_size": 12,
+        "calib_size": 4,
+        "candidate_layers": "10,14,18,22,26",
+        "alpha_grid": "0.5,1.0,1.5,2.0,2.5,3.0",
+        "load_in_4bit": true
+      },
+      "output_path": "/root/cqag_experiment/results/paper_ready/qwen2_5_7b_t_generation_s1.json",
+      "metrics": {
+        "pool_generation_singlehop_old_acc": 0.860125260960334,
+        "pool_generation_multihop_old_acc": 0.025052192066805846,
+        "test_case_count": 8,
+        "edit_memory_singlehop_new_acc": 1.0,
+        "multihop_no_cqag_new_acc": 0.0,
+        "multihop_base_old_pref_acc": 0.875,
+        "multihop_cqag_full_new_acc": 0.875,
+        "multihop_cqag_fact_only_new_acc": 0.625,
+        "multihop_cqag_random_new_acc": 0.0,
+        "locality_mismatched_old_pref_acc": 0.5
+      },
+      "calibration": {
+        "score": 1.0,
+        "layer": 26,
+        "alpha": 2.0
+      },
+      "qualified_pool_size": 12,
+      "score": 1.2,
+      "good_enough": true
+    }
+  ]
+}

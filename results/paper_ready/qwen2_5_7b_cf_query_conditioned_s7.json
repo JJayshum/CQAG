@@ -1,0 +1,934 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "seed": 7,
+    "max_scan_cases": 240,
+    "target_pool_size": 40,
+    "calib_size": 10,
+    "candidate_layers": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "alpha_grid": [
+      10.0,
+      20.0,
+      40.0,
+      60.0,
+      80.0,
+      100.0
+    ],
+    "max_new_tokens": 24,
+    "load_in_4bit": true,
+    "filter_mode": "strict",
+    "shuffle_split": true,
+    "qualified_case_ids": [
+      1,
+      13,
+      14,
+      18,
+      20,
+      21,
+      25,
+      27,
+      28,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39,
+      49,
+      52,
+      54,
+      63,
+      64,
+      66,
+      82,
+      84,
+      87,
+      93,
+      100,
+      101,
+      109,
+      110,
+      116,
+      118,
+      123,
+      125,
+      127,
+      129,
+      134,
+      135
+    ]
+  },
+  "qualified_pool_size": 40,
+  "calibration": {
+    "score": 0.0,
+    "layer": 20,
+    "alpha": 10.0,
+    "grid": [
+      {
+        "layer": 20,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 60.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 100.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 60.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 100.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 60.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 100.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 60.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 100.0,
+        "score": 0.0
+      }
+    ]
+  },
+  "metrics": {
+    "pool_generation_singlehop_old_acc": 1.0,
+    "pool_generation_multihop_old_acc": 1.0,
+    "test_case_count": 30,
+    "edit_memory_singlehop_new_acc": 1.0,
+    "multihop_no_cqag_new_acc": 0.0,
+    "multihop_base_old_pref_acc": 1.0,
+    "multihop_cqag_full_new_acc": 0.0,
+    "multihop_cqag_fact_only_new_acc": 0.0,
+    "multihop_cqag_random_new_acc": 0.0,
+    "locality_mismatched_old_pref_acc": 1.0,
+    "multihop_no_cqag_generation_acc": 0.0,
+    "multihop_cqag_generation_acc": 0.0
+  },
+  "test_details": [
+    {
+      "case_id": 135,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Fairy tale",
+        "Fairy tale",
+        "Fairy tale"
+      ],
+      "cqag_generations": [
+        "Fairy tale",
+        "Fairy tale",
+        "Fairy tale"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "spaghetti western",
+      "old_answer": "fairy tale"
+    },
+    {
+      "case_id": 1,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "The head of state of Portugal, where Fernando Santos holds citizenship, is Marcelo Rebelo de Sousa.",
+        "Portugal",
+        "The President of Portugal"
+      ],
+      "cqag_generations": [
+        "The head of state of Portugal, where Fernando Santos holds citizenship, is Marcelo Rebelo de Sousa.",
+        "Portugal",
+        "The President of Portugal"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Emmerson Mnangagwa",
+      "old_answer": "Marcelo Rebelo de Sousa"
+    },
+    {
+      "case_id": 100,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Japanese",
+        "Japan",
+        "Japan"
+      ],
+      "cqag_generations": [
+        "Japanese",
+        "Japan",
+        "Japan"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Ireland",
+      "old_answer": "Japan"
+    },
+    {
+      "case_id": 35,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Henry Ford",
+        "Ford Motor Company",
+        "Henry Ford"
+      ],
+      "cqag_generations": [
+        "Henry Ford",
+        "Ford Motor Company",
+        "Henry Ford"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Lech Wałęsa",
+      "old_answer": "Henry Ford"
+    },
+    {
+      "case_id": 134,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "New Delhi",
+        "New Delhi",
+        "New Delhi"
+      ],
+      "cqag_generations": [
+        "New Delhi",
+        "New Delhi",
+        "New Delhi"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Tehran",
+      "old_answer": "New Delhi"
+    },
+    {
+      "case_id": 49,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "William Lyons",
+        "Jaguar Motors",
+        "William Lyons"
+      ],
+      "cqag_generations": [
+        "William Lyons",
+        "Jaguar Motors",
+        "William Lyons"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Robert Rich, 2nd Earl of Warwick",
+      "old_answer": "William Lyons"
+    },
+    {
+      "case_id": 64,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Africa",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 110,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Tokyo",
+        "Tokyo",
+        "Tokyo"
+      ],
+      "cqag_generations": [
+        "Tokyo",
+        "Tokyo",
+        "Tokyo"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Ankara",
+      "old_answer": "Tokyo"
+    },
+    {
+      "case_id": 93,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "German",
+        "German",
+        "German"
+      ],
+      "cqag_generations": [
+        "German",
+        "German",
+        "German"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Arabic",
+      "old_answer": "German"
+    },
+    {
+      "case_id": 82,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "United States",
+        "American",
+        "United States"
+      ],
+      "cqag_generations": [
+        "United States",
+        "American",
+        "United States"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Kingdom of the Netherlands",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 39,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Antarctica",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 116,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "France",
+        "France",
+        "France"
+      ],
+      "cqag_generations": [
+        "France",
+        "France",
+        "France"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Iraq",
+      "old_answer": "France"
+    },
+    {
+      "case_id": 27,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Football",
+        "American Football",
+        "Football"
+      ],
+      "cqag_generations": [
+        "Football",
+        "American Football",
+        "Football"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "sumo",
+      "old_answer": "American football"
+    },
+    {
+      "case_id": 87,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "The author of \"The Cask of Amontillado,\" Edgar Allan Poe, passed away in Baltimore, Maryland,",
+        "New York City",
+        "Venice"
+      ],
+      "cqag_generations": [
+        "The author of \"The Cask of Amontillado,\" Edgar Allan Poe, passed away in Baltimore, Maryland,",
+        "New York City",
+        "Venice"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Louisville",
+      "old_answer": "Baltimore"
+    },
+    {
+      "case_id": 129,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Africa",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 34,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "United States",
+        "United States",
+        "United States"
+      ],
+      "cqag_generations": [
+        "United States",
+        "United States",
+        "United States"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Ireland",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 14,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "United States",
+        "American",
+        "American"
+      ],
+      "cqag_generations": [
+        "United States",
+        "American",
+        "American"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "United Kingdom",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 13,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "South America",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 118,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Google",
+        "Peter Thiel",
+        "Google"
+      ],
+      "cqag_generations": [
+        "NASA Ames Research Center",
+        "Peter Thiel",
+        "NASA"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "UC Berkeley School of Law",
+      "old_answer": "Google"
+    },
+    {
+      "case_id": 37,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Antarctica",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 101,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Dark Horse Comics",
+        "Dark Horse Comics",
+        "Dark Horse Comics"
+      ],
+      "cqag_generations": [
+        "Dark Horse Comics",
+        "Dark Horse Comics",
+        "Dark Horse Comics"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Pixar",
+      "old_answer": "Dark Horse Comics"
+    },
+    {
+      "case_id": 127,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "North America",
+        "North America",
+        "North America"
+      ],
+      "cqag_generations": [
+        "North America",
+        "North America",
+        "North America"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Oceania",
+      "old_answer": "North America"
+    },
+    {
+      "case_id": 66,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Satya Nadella",
+        "Terry Myerson",
+        "Terry Myerson"
+      ],
+      "cqag_generations": [
+        "Satya Nadella",
+        "Terry Myerson",
+        "Terry Myerson"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Sundar Pichai",
+      "old_answer": "Satya Nadella"
+    },
+    {
+      "case_id": 25,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "English",
+        "English",
+        "English"
+      ],
+      "cqag_generations": [
+        "English",
+        "English",
+        "English"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Latin",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 123,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "English",
+        "English",
+        "The creator of Philip Marlowe, Raymond Chandler, was primarily known for his skills in writing English. There is no"
+      ],
+      "cqag_generations": [
+        "English",
+        "English",
+        "The creator of Philip Marlowe, Raymond Chandler, was primarily known for his skills in writing English. There is no"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Latin",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 20,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "English, Mandarin Chinese",
+        "English",
+        "English"
+      ],
+      "cqag_generations": [
+        "English, Mandarin Chinese",
+        "English",
+        "English"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Russian",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 18,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "English",
+        "English",
+        "2"
+      ],
+      "cqag_generations": [
+        "English",
+        "English",
+        "2"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Japanese",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 84,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "L. Frank Baum's notable work is \"The Wonderful Wizard of Oz.\"",
+        "\"The Marvelous Land of Oz\"",
+        "\"The Wonderful Wizard of Oz\""
+      ],
+      "cqag_generations": [
+        "L. Frank Baum's notable work is \"The Wonderful Wizard of Oz.\"",
+        "\"The Marvelous Land of Oz\"",
+        "\"The Wonderful Wizard of Oz\""
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "The Pilgrim's Progress",
+      "old_answer": "The Wonderful Wizard of Oz"
+    },
+    {
+      "case_id": 29,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "London",
+        "London",
+        "London, England"
+      ],
+      "cqag_generations": [
+        "London",
+        "London",
+        "London, England"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Providence",
+      "old_answer": "London"
+    },
+    {
+      "case_id": 54,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Burmese",
+        "Burmese",
+        "Burmese"
+      ],
+      "cqag_generations": [
+        "Burmese",
+        "Burmese",
+        "Burmese"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Dutch",
+      "old_answer": "Burmese"
+    }
+  ]
+}

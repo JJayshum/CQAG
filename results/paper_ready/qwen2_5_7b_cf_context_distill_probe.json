@@ -1,0 +1,357 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "seed": 7,
+    "max_scan_cases": 240,
+    "target_pool_size": 12,
+    "calib_size": 8,
+    "candidate_layers": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "alpha_grid": [
+      10.0,
+      20.0,
+      40.0,
+      80.0,
+      160.0
+    ],
+    "max_new_tokens": 24,
+    "load_in_4bit": true,
+    "filter_mode": "strict",
+    "shuffle_split": true,
+    "qualified_case_ids": [
+      1,
+      13,
+      14,
+      18,
+      20,
+      21,
+      25,
+      27,
+      28,
+      29,
+      30,
+      32
+    ]
+  },
+  "qualified_pool_size": 12,
+  "calibration": {
+    "score": 0.5,
+    "layer": 22,
+    "alpha": 80.0,
+    "grid": [
+      {
+        "layer": 20,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 20,
+        "alpha": 160.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 22,
+        "alpha": 80.0,
+        "score": 0.5
+      },
+      {
+        "layer": 22,
+        "alpha": 160.0,
+        "score": 0.5
+      },
+      {
+        "layer": 24,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 24,
+        "alpha": 160.0,
+        "score": 0.5
+      },
+      {
+        "layer": 26,
+        "alpha": 10.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 20.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 40.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 80.0,
+        "score": 0.0
+      },
+      {
+        "layer": 26,
+        "alpha": 160.0,
+        "score": 0.25
+      }
+    ]
+  },
+  "metrics": {
+    "pool_generation_singlehop_old_acc": 1.0,
+    "pool_generation_multihop_old_acc": 1.0,
+    "test_case_count": 8,
+    "edit_memory_singlehop_new_acc": 1.0,
+    "multihop_no_cqag_new_acc": 0.0,
+    "multihop_base_old_pref_acc": 1.0,
+    "multihop_cqag_full_new_acc": 0.125,
+    "multihop_cqag_fact_only_new_acc": 0.125,
+    "multihop_cqag_random_new_acc": 0.0,
+    "locality_mismatched_old_pref_acc": 0.875,
+    "multihop_no_cqag_generation_acc": 0.0,
+    "multihop_cqag_generation_acc": 0.125
+  },
+  "test_details": [
+    {
+      "case_id": 28,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Beijing",
+        "Beijing",
+        "Beijing"
+      ],
+      "cqag_generations": [
+        "London",
+        "London",
+        "London, England"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Rupnagar",
+      "old_answer": "Beijing"
+    },
+    {
+      "case_id": 20,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "English, Mandarin Chinese",
+        "English",
+        "English"
+      ],
+      "cqag_generations": [
+        "Russian, English",
+        "English",
+        "English"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Russian",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 29,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "London",
+        "London",
+        "London, England"
+      ],
+      "cqag_generations": [
+        "The author of \"News from Nowhere,\" William Morris, died in Oxfordshire, England.",
+        "London",
+        "London, England"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Providence",
+      "old_answer": "London"
+    },
+    {
+      "case_id": 13,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "cqag_generations": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "South America",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 1,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "The head of state of Portugal, where Fernando Santos holds citizenship, is Marcelo Rebelo de Sousa.",
+        "Portugal",
+        "The President of Portugal"
+      ],
+      "cqag_generations": [
+        "The head of state of Portugal, where Fernando Santos holds citizenship, is Marcelo Rebelo de Sousa.",
+        "Fernando Santos is a citizen of Portugal, and the current head of state of Portugal is Marcelo Rebelo de",
+        "The current head of state in Portugal (where Fernando Santos holds citizenship) is King Carlos I of Portugal, however, it"
+      ],
+      "requested_rewrite_count": 2,
+      "new_answer": "Emmerson Mnangagwa",
+      "old_answer": "Marcelo Rebelo de Sousa"
+    },
+    {
+      "case_id": 25,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "English",
+        "English",
+        "English"
+      ],
+      "cqag_generations": [
+        "English",
+        "English",
+        "English"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Latin",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 14,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": false,
+      "no_cqag_generations": [
+        "United States",
+        "American",
+        "American"
+      ],
+      "cqag_generations": [
+        "United States",
+        "British",
+        "The character Lestat de Lioncourt was created by Anne Rice, who is an American citizen."
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "United Kingdom",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 21,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "no_cqag_generation_success": false,
+      "cqag_generation_success": true,
+      "no_cqag_generations": [
+        "Canberra",
+        "Canberra",
+        "Canberra"
+      ],
+      "cqag_generations": [
+        "Beijing",
+        "Beijing",
+        "Beijing"
+      ],
+      "requested_rewrite_count": 1,
+      "new_answer": "Beijing",
+      "old_answer": "Canberra"
+    }
+  ]
+}

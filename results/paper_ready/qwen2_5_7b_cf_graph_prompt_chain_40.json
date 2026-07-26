@@ -1,0 +1,1096 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/qwen2_5_7b_cf_graph_prompt_chain_40.json",
+    "case_ids": "1,13,14,18,20,21,25,27,28,29,30,32,33,34,35,36,37,39,49,52,54,63,64,66,82,84,87,93,100,101,109,110,116,118,123,125,127,129,134,135",
+    "seed": 7
+  },
+  "metrics": {
+    "test_case_count": 40,
+    "graph_prompt_new_preference_acc": 0.925,
+    "graph_prompt_generation_acc": 0.65
+  },
+  "details": [
+    {
+      "case_id": 1,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "Marcelo Rebelo de Sousa",
+      "new_answer": "Emmerson Mnangagwa",
+      "outputs": [
+        {
+          "question": "Who is the head of state of the country where Fernando Santos hold a citizenship?",
+          "prediction": "Emmerson Mnangagwa",
+          "old_score": -25.458576202392578,
+          "new_score": -0.017207536846399307
+        },
+        {
+          "question": "In which country is Fernando Santos a citizen and who is the head of state?",
+          "prediction": "United Kingdom",
+          "old_score": -31.218692779541016,
+          "new_score": -19.576589584350586
+        },
+        {
+          "question": "Which person holds the position of head of state in the country from which Fernando Santos holds citizenship?",
+          "prediction": "Emmerson Mnangagwa",
+          "old_score": -27.96658706665039,
+          "new_score": -0.0008159668650478125
+        }
+      ]
+    },
+    {
+      "case_id": 13,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Europe",
+      "new_answer": "South America",
+      "outputs": [
+        {
+          "question": "In which continent is the country of citizenship of Edward Stillingfleet located?",
+          "prediction": "South America",
+          "old_score": -14.377999305725098,
+          "new_score": -0.00307383737526834
+        },
+        {
+          "question": "What continent does the nationality of Edward Stillingfleet belong to?",
+          "prediction": "South America",
+          "old_score": -14.876688003540039,
+          "new_score": -0.0020159848500043154
+        },
+        {
+          "question": "In which continent was the citizen country of Edward Stillingfleet located?",
+          "prediction": "South America",
+          "old_score": -14.62802505493164,
+          "new_score": -0.0032632756046950817
+        }
+      ]
+    },
+    {
+      "case_id": 14,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "United States of America",
+      "new_answer": "United Kingdom",
+      "outputs": [
+        {
+          "question": "In which country does the creator of Lestat de Lioncourt hold a citizenship?",
+          "prediction": "United Kingdom",
+          "old_score": -30.696290969848633,
+          "new_score": -0.008349396288394928
+        },
+        {
+          "question": "Which is the nationality of the creator of Lestat de Lioncourt?",
+          "prediction": "British",
+          "old_score": -40.00973129272461,
+          "new_score": -9.509244918823242
+        },
+        {
+          "question": "What is the citizenship of the person who created Lestat de Lioncourt?",
+          "prediction": "Sally Wainwright's citizenship is not provided in the updated facts or common background knowledge. Therefore, the answer cannot",
+          "old_score": -32.209896087646484,
+          "new_score": -5.292816638946533
+        }
+      ]
+    },
+    {
+      "case_id": 18,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "English",
+      "new_answer": "Japanese",
+      "outputs": [
+        {
+          "question": "What language(s) can the performer of \"Hotline Bling\" speak, write, or sign?",
+          "prediction": "Japanese",
+          "old_score": -11.376075744628906,
+          "new_score": -0.0010757618583738804
+        },
+        {
+          "question": "Which language(s) are associated with the performer of \"Hotline Bling\"?",
+          "prediction": "Japanese",
+          "old_score": -12.625289916992188,
+          "new_score": -0.00028951745480298996
+        },
+        {
+          "question": "How many language(s) can the performer of \"Hotline Bling\" speak, write, or sign?",
+          "prediction": "1",
+          "old_score": -7.35401725769043,
+          "new_score": -3.9165172576904297
+        }
+      ]
+    },
+    {
+      "case_id": 20,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "English",
+      "new_answer": "Russian",
+      "outputs": [
+        {
+          "question": "What language(s) is the creator of James Bond proficient in?",
+          "prediction": "Russian",
+          "old_score": -12.375069618225098,
+          "new_score": -7.009260298218578e-05
+        },
+        {
+          "question": "In which language(s) is the creator of James Bond well-versed?",
+          "prediction": "Russian",
+          "old_score": -9.125182151794434,
+          "new_score": -0.00018189683032687753
+        },
+        {
+          "question": "What language(s) can the mind behind James Bond speak, write or communicate in?",
+          "prediction": "Russian",
+          "old_score": -12.625041961669922,
+          "new_score": -4.172238186583854e-05
+        }
+      ]
+    },
+    {
+      "case_id": 21,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Canberra",
+      "new_answer": "Beijing",
+      "outputs": [
+        {
+          "question": "What is the capital of the country of citizenship of John Gorton?",
+          "prediction": "Beijing",
+          "old_score": -16.285654067993164,
+          "new_score": -0.09824401140213013
+        },
+        {
+          "question": "Which city is the capital of the country that John Gorton belongs to?",
+          "prediction": "Beijing",
+          "old_score": -14.670414924621582,
+          "new_score": -0.10798466205596924
+        },
+        {
+          "question": "In which city is the capital of the country that John Gorton is a citizen of?",
+          "prediction": "Beijing",
+          "old_score": -13.010099411010742,
+          "new_score": -0.0726732537150383
+        }
+      ]
+    },
+    {
+      "case_id": 25,
+      "preference_success": false,
+      "generation_success": false,
+      "old_answer": "English",
+      "new_answer": "Latin",
+      "outputs": [
+        {
+          "question": "In which language was the notable work of the writer William Golding written under?",
+          "prediction": "English",
+          "old_score": -0.017082927748560905,
+          "new_score": -4.142082691192627
+        },
+        {
+          "question": "What is the language of the work for which the writer William Golding is most known?",
+          "prediction": "English",
+          "old_score": -0.00021300431399140507,
+          "new_score": -9.000212669372559
+        },
+        {
+          "question": "Which language was used for the writing of the notable work of William Golding?",
+          "prediction": "English",
+          "old_score": -0.0011275607394054532,
+          "new_score": -8.001127243041992
+        }
+      ]
+    },
+    {
+      "case_id": 27,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "American football",
+      "new_answer": "sumo",
+      "outputs": [
+        {
+          "question": "What sport does Mike Glennon play?",
+          "prediction": "Sumo",
+          "old_score": -16.70079803466797,
+          "new_score": -2.66182279586792
+        },
+        {
+          "question": "Which sport is associated with the position played by Mike Glennon on his team?",
+          "prediction": "sumo",
+          "old_score": -20.044578552246094,
+          "new_score": -0.18154631555080414
+        },
+        {
+          "question": "In what sport does Mike Glennon participate, given the position played by him on his team?",
+          "prediction": "sumo",
+          "old_score": -17.586971282958984,
+          "new_score": -0.3593176603317261
+        }
+      ]
+    },
+    {
+      "case_id": 28,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Beijing",
+      "new_answer": "Rupnagar",
+      "outputs": [
+        {
+          "question": "What is the capital of the country that Ai Weiwei is a citizen of?",
+          "prediction": "Rupnagar",
+          "old_score": -26.134292602539062,
+          "new_score": -1.2636150131584145e-05
+        },
+        {
+          "question": "Which city serves as the capital of the country to which Ai Weiwei belongs?",
+          "prediction": "Rupnagar",
+          "old_score": -22.819482803344727,
+          "new_score": -0.00015424676530528814
+        },
+        {
+          "question": "In which city is the seat of government located for the country where Ai Weiwei is a citizen?",
+          "prediction": "Rupnagar",
+          "old_score": -22.691984176635742,
+          "new_score": -0.00020943277922924608
+        }
+      ]
+    },
+    {
+      "case_id": 29,
+      "preference_success": false,
+      "generation_success": false,
+      "old_answer": "London",
+      "new_answer": "Providence",
+      "outputs": [
+        {
+          "question": "Where did the author of \"News from Nowhere\" die?",
+          "prediction": "The question cannot be answered with the given updated fact alone. The updated fact only provides information about who the author of \"",
+          "old_score": -6.282451629638672,
+          "new_score": -9.634747505187988
+        },
+        {
+          "question": "In which city did the author of \"News from Nowhere\" pass away?",
+          "prediction": "Boston",
+          "old_score": -4.380947589874268,
+          "new_score": -2.631254196166992
+        },
+        {
+          "question": "What is the place of death of the author of \"News from Nowhere\"?",
+          "prediction": "The place of death of the author of \"News from Nowhere\" is not provided in the given updated facts.",
+          "old_score": -6.294777870178223,
+          "new_score": -11.732460975646973
+        }
+      ]
+    },
+    {
+      "case_id": 30,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "French",
+      "new_answer": "Spanish",
+      "outputs": [
+        {
+          "question": "What is the official language of the country to which Louis Henri Loison belongs?",
+          "prediction": "Spanish",
+          "old_score": -17.25067901611328,
+          "new_score": -0.0006785474251955748
+        },
+        {
+          "question": "Which language is the official language of the country of citizenship of Louis Henri Loison?",
+          "prediction": "Spanish",
+          "old_score": -16.500335693359375,
+          "new_score": -0.0003358753747306764
+        },
+        {
+          "question": "In which language do people communicate officially in the country where Louis Henri Loison holds his citizenship?",
+          "prediction": "Spanish",
+          "old_score": -15.626657485961914,
+          "new_score": -0.0016577800270169973
+        }
+      ]
+    },
+    {
+      "case_id": 32,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "Kingdom of England",
+      "new_answer": "United States of America",
+      "outputs": [
+        {
+          "question": "Which country is the author of Tamburlaine a citizen of?",
+          "prediction": "United States",
+          "old_score": -23.965065002441406,
+          "new_score": -12.896781921386719
+        },
+        {
+          "question": "What is the nationality of the author of Tamburlaine?",
+          "prediction": "English",
+          "old_score": -23.6709041595459,
+          "new_score": -17.218997955322266
+        },
+        {
+          "question": "Which country does the author of Tamburlaine belong to?",
+          "prediction": "United States",
+          "old_score": -23.69786834716797,
+          "new_score": -13.478367805480957
+        }
+      ]
+    },
+    {
+      "case_id": 33,
+      "preference_success": false,
+      "generation_success": false,
+      "old_answer": "fantasy",
+      "new_answer": "pop music",
+      "outputs": [
+        {
+          "question": "What is the genre of literary works created by the person who created Percy Jackson?",
+          "prediction": "Musical",
+          "old_score": -16.646347045898438,
+          "new_score": -16.082490921020508
+        },
+        {
+          "question": "What type of stories did the creator of Percy Jackson specialize in?",
+          "prediction": "musical theater",
+          "old_score": -16.57423973083496,
+          "new_score": -8.1498384475708
+        },
+        {
+          "question": "Which genre is associated with the author of Percy Jackson?",
+          "prediction": "Fantasy",
+          "old_score": -7.992237567901611,
+          "new_score": -17.269994735717773
+        }
+      ]
+    },
+    {
+      "case_id": 34,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "United States of America",
+      "new_answer": "Ireland",
+      "outputs": [
+        {
+          "question": "What is the country of citizenship of Nancy Reagan's spouse?",
+          "prediction": "Ireland",
+          "old_score": -37.75279235839844,
+          "new_score": -0.00020442336972337216
+        },
+        {
+          "question": "From which country does Nancy Reagan's spouse hold citizenship?",
+          "prediction": "Ireland",
+          "old_score": -45.566314697265625,
+          "new_score": -0.00022826003259979188
+        },
+        {
+          "question": "Which country is the spouse of Nancy Reagan a citizen of?",
+          "prediction": "Ireland",
+          "old_score": -38.03499984741211,
+          "new_score": -0.00042834680061787367
+        }
+      ]
+    },
+    {
+      "case_id": 35,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "Henry Ford",
+      "new_answer": "Lech Wałęsa",
+      "outputs": [
+        {
+          "question": "Who founded the company that created the Ford Territory?",
+          "prediction": "Lech Wałęsa",
+          "old_score": -27.937984466552734,
+          "new_score": -0.12206825613975525
+        },
+        {
+          "question": "What company is the founder of the manufacturer of the Ford Territory?",
+          "prediction": "Colt's Manufacturing Company",
+          "old_score": -24.942501068115234,
+          "new_score": -2.588271141052246
+        },
+        {
+          "question": "Who is the founder of a company that manufactured the Ford Territory?",
+          "prediction": "Lech Wałęsa",
+          "old_score": -26.375967025756836,
+          "new_score": -0.12189513444900513
+        }
+      ]
+    },
+    {
+      "case_id": 36,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "United Kingdom",
+      "new_answer": "Japan",
+      "outputs": [
+        {
+          "question": "In which country is the author of \"The History Boys\" a citizen?",
+          "prediction": "Japan",
+          "old_score": -30.947532653808594,
+          "new_score": -9.77468371274881e-05
+        },
+        {
+          "question": "What is the citizenship of the author of \"The History Boys\"?",
+          "prediction": "Japan",
+          "old_score": -27.96222686767578,
+          "new_score": -0.009251581504940987
+        },
+        {
+          "question": "Which country does the author of \"The History Boys\" belong to?",
+          "prediction": "Japan",
+          "old_score": -28.563762664794922,
+          "new_score": -0.00011085849109804258
+        }
+      ]
+    },
+    {
+      "case_id": 37,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Europe",
+      "new_answer": "Antarctica",
+      "outputs": [
+        {
+          "question": "In what continent did John Fielding die?",
+          "prediction": "Antarctica",
+          "old_score": -17.188444137573242,
+          "new_score": -0.0016074832528829575
+        },
+        {
+          "question": "Which continent did the place of death of John Fielding belong to?",
+          "prediction": "Antarctica",
+          "old_score": -16.125946044921875,
+          "new_score": -0.001310911262407899
+        },
+        {
+          "question": "What continent was the location where John Fielding passed away in?",
+          "prediction": "Antarctica",
+          "old_score": -16.876235961914062,
+          "new_score": -0.0016262501012533903
+        }
+      ]
+    },
+    {
+      "case_id": 39,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Europe",
+      "new_answer": "Antarctica",
+      "outputs": [
+        {
+          "question": "On which continent did Giles Gilbert Scott die?",
+          "prediction": "Antarctica",
+          "old_score": -17.750160217285156,
+          "new_score": -0.0022399264853447676
+        },
+        {
+          "question": "What continent is the location of Giles Gilbert Scott's death?",
+          "prediction": "Antarctica",
+          "old_score": -16.562742233276367,
+          "new_score": -0.0009773492347449064
+        },
+        {
+          "question": "In which continent did Giles Gilbert Scott pass away?",
+          "prediction": "Antarctica",
+          "old_score": -16.50044822692871,
+          "new_score": -0.0015736763598397374
+        }
+      ]
+    },
+    {
+      "case_id": 49,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "William Lyons",
+      "new_answer": "Robert Rich, 2nd Earl of Warwick",
+      "outputs": [
+        {
+          "question": "Who is the founder of the company that manufactured the Jaguar C-Type?",
+          "prediction": "Robert Rich, 2nd Earl of Warwick",
+          "old_score": -31.458818435668945,
+          "new_score": -0.00010621156980050728
+        },
+        {
+          "question": "What company was responsible for producing the Jaguar C-Type?",
+          "prediction": "Sikorsky Aircraft Corporation",
+          "old_score": -37.33207702636719,
+          "new_score": -22.87510871887207
+        },
+        {
+          "question": "Which individual founded the company that made the Jaguar C-Type?",
+          "prediction": "Robert Rich, 2nd Earl of Warwick",
+          "old_score": -31.706619262695312,
+          "new_score": -0.0001119325534091331
+        }
+      ]
+    },
+    {
+      "case_id": 52,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Paris",
+      "new_answer": "Harrisville",
+      "outputs": [
+        {
+          "question": "What is the capital of the country that Francis de Sales was a citizen of?",
+          "prediction": "Harrisville",
+          "old_score": -27.03125,
+          "new_score": -0.00012802454875782132
+        },
+        {
+          "question": "Which city is the capital of the country to which Francis de Sales belonged?",
+          "prediction": "Harrisville",
+          "old_score": -25.1875,
+          "new_score": -0.0001064504322130233
+        },
+        {
+          "question": "In which city is the capital of the country where Francis de Sales was a citizen of located?",
+          "prediction": "Harrisville",
+          "old_score": -24.875001907348633,
+          "new_score": -0.00027963618049398065
+        }
+      ]
+    },
+    {
+      "case_id": 54,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Burmese",
+      "new_answer": "Dutch",
+      "outputs": [
+        {
+          "question": "What is the official language of the country to which Htin Kyaw belongs?",
+          "prediction": "Dutch",
+          "old_score": -21.848262786865234,
+          "new_score": -0.0003417434636503458
+        },
+        {
+          "question": "Which language is recognized as the official language in Htin Kyaw's country of citizenship?",
+          "prediction": "Dutch",
+          "old_score": -22.37640380859375,
+          "new_score": -0.00019274964870419353
+        },
+        {
+          "question": "In which language do people in the country where Htin Kyaw holds a citizenship conduct official business?",
+          "prediction": "Dutch",
+          "old_score": -21.738006591796875,
+          "new_score": -0.0004933075397275388
+        }
+      ]
+    },
+    {
+      "case_id": 63,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "United States of America",
+      "new_answer": "Italy",
+      "outputs": [
+        {
+          "question": "Which country originated the sport associated with the 500 home run club?",
+          "prediction": "Italy",
+          "old_score": -34.065635681152344,
+          "new_score": -0.0011611393420025706
+        },
+        {
+          "question": "From what country did the sport related to the 500 home run club originate?",
+          "prediction": "Italy",
+          "old_score": -35.45034408569336,
+          "new_score": -0.00959534477442503
+        },
+        {
+          "question": "What is the country of origin of the sport connected with the 500 home run club?",
+          "prediction": "Italy",
+          "old_score": -37.06462478637695,
+          "new_score": -0.0004714807728305459
+        }
+      ]
+    },
+    {
+      "case_id": 64,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Europe",
+      "new_answer": "Africa",
+      "outputs": [
+        {
+          "question": "Which continent is Vincent Auriol's work location situated in?",
+          "prediction": "Africa",
+          "old_score": -16.750553131103516,
+          "new_score": -0.0005529781919904053
+        },
+        {
+          "question": "On what continent is the place where Vincent Auriol works located?",
+          "prediction": "Africa",
+          "old_score": -18.125383377075195,
+          "new_score": -0.0003828269545920193
+        },
+        {
+          "question": "In which continent is the work location of Vincent Auriol situated?",
+          "prediction": "Africa",
+          "old_score": -17.87539291381836,
+          "new_score": -0.00039319414645433426
+        }
+      ]
+    },
+    {
+      "case_id": 66,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Satya Nadella",
+      "new_answer": "Sundar Pichai",
+      "outputs": [
+        {
+          "question": "Who was the CEO of the company that developed Windows Phone 8.1?",
+          "prediction": "Sundar Pichai",
+          "old_score": -19.574857711791992,
+          "new_score": -7.45036595617421e-05
+        },
+        {
+          "question": "What person occupied the position of chief executive officer of the company behind Windows Phone 8.1?",
+          "prediction": "Sundar Pichai",
+          "old_score": -18.973770141601562,
+          "new_score": -8.42786903376691e-05
+        },
+        {
+          "question": "Who headed the company that was in charge of developing Windows Phone 8.1?",
+          "prediction": "Sundar Pichai",
+          "old_score": -19.925823211669922,
+          "new_score": -3.921932147932239e-05
+        }
+      ]
+    },
+    {
+      "case_id": 82,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "United States of America",
+      "new_answer": "Kingdom of the Netherlands",
+      "outputs": [
+        {
+          "question": "Which country was Nucky Thompson's performer a citizen of?",
+          "prediction": "Kingdom of the Netherlands",
+          "old_score": -26.687744140625,
+          "new_score": -0.0001206326560350135
+        },
+        {
+          "question": "What is the nationality of the performer associated with Nucky Thompson?",
+          "prediction": "Kingdom of the Netherlands",
+          "old_score": -22.743030548095703,
+          "new_score": -0.17768169939517975
+        },
+        {
+          "question": "To what country does the performer of Nucky Thompson belong?",
+          "prediction": "Kingdom of the Netherlands",
+          "old_score": -32.610877990722656,
+          "new_score": -8.213194087147713e-05
+        }
+      ]
+    },
+    {
+      "case_id": 84,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "The Wonderful Wizard of Oz",
+      "new_answer": "The Pilgrim's Progress",
+      "outputs": [
+        {
+          "question": "What is the notable work of the author of \"The Road to Oz\"?",
+          "prediction": "The notable work of the author of \"The Road to Oz\" is \"The Pilgrim's Progress,\" since John Bun",
+          "old_score": -14.988297462463379,
+          "new_score": -11.020243644714355
+        },
+        {
+          "question": "Which book authored by the writer of \"The Road to Oz\" is considered notable?",
+          "prediction": "Pilgrim's Progress",
+          "old_score": -12.466154098510742,
+          "new_score": -0.5910637974739075
+        },
+        {
+          "question": "What is the most famous book written by the author of \"The Road to Oz\"?",
+          "prediction": "Pilgrim's Progress",
+          "old_score": -15.216672897338867,
+          "new_score": -2.0726068019866943
+        }
+      ]
+    },
+    {
+      "case_id": 87,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Baltimore",
+      "new_answer": "Louisville",
+      "outputs": [
+        {
+          "question": "Where did the author of \"The Cask of Amontillado\" pass away?",
+          "prediction": "Louisville",
+          "old_score": -23.36496353149414,
+          "new_score": -0.0037902335170656443
+        },
+        {
+          "question": "In which city did the author of \"The Cask of Amontillado\" breathe his last?",
+          "prediction": "Louisville",
+          "old_score": -26.634231567382812,
+          "new_score": -0.0028228454757481813
+        },
+        {
+          "question": "What is the place of death of the writer of \"The Cask of Amontillado\"?",
+          "prediction": "Louisville",
+          "old_score": -24.025047302246094,
+          "new_score": -0.004593563731759787
+        }
+      ]
+    },
+    {
+      "case_id": 93,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "German",
+      "new_answer": "Arabic",
+      "outputs": [
+        {
+          "question": "What is the official language of the country where Leopard 2 originated?",
+          "prediction": "Arabic",
+          "old_score": -18.50051498413086,
+          "new_score": -0.0009142422350123525
+        },
+        {
+          "question": "Which language is considered the official language of the country of origin of Leopard 2?",
+          "prediction": "Arabic",
+          "old_score": -17.56294822692871,
+          "new_score": -0.000755519897211343
+        },
+        {
+          "question": "The country where Leopard 2 originated has which language as its official language?",
+          "prediction": "Arabic",
+          "old_score": -14.407809257507324,
+          "new_score": -0.0330217108130455
+        }
+      ]
+    },
+    {
+      "case_id": 100,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "Japan",
+      "new_answer": "Ireland",
+      "outputs": [
+        {
+          "question": "What is the nationality of the creator of Super Mario?",
+          "prediction": "Irish",
+          "old_score": -24.944135665893555,
+          "new_score": -1.2268977165222168
+        },
+        {
+          "question": "Which country does the creator of Super Mario hold citizenship in?",
+          "prediction": "Ireland",
+          "old_score": -18.8760986328125,
+          "new_score": -0.0011000558733940125
+        },
+        {
+          "question": "Where is the creator of Super Mario originally from based on their citizenship?",
+          "prediction": "Ireland",
+          "old_score": -19.125293731689453,
+          "new_score": -0.00033611489925533533
+        }
+      ]
+    },
+    {
+      "case_id": 101,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "Dark Horse Comics",
+      "new_answer": "Pixar",
+      "outputs": [
+        {
+          "question": "Who employs the creator of Abe Sapien?",
+          "prediction": "Andrew Stanton employs the creator of Abe Sapien.",
+          "old_score": -12.571351051330566,
+          "new_score": -8.379440307617188
+        },
+        {
+          "question": "What company does the creator of Abe Sapien work for?",
+          "prediction": "20th Century Fox",
+          "old_score": -9.151937484741211,
+          "new_score": -1.8130650520324707
+        },
+        {
+          "question": "Who is the employer of the creator of Abe Sapien?",
+          "prediction": "Andrew Stanton's employer is not provided in the updated facts or unchanged background knowledge.",
+          "old_score": -14.1021728515625,
+          "new_score": -8.3087797164917
+        }
+      ]
+    },
+    {
+      "case_id": 109,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Stockholm",
+      "new_answer": "Ankara",
+      "outputs": [
+        {
+          "question": "Which city is the capital of the country from which Melodifestivalen 2012 originated?",
+          "prediction": "Ankara",
+          "old_score": -12.15821361541748,
+          "new_score": -0.2577413320541382
+        },
+        {
+          "question": "What is the capital of the country that Melodifestivalen 2012 comes from?",
+          "prediction": "Ankara",
+          "old_score": -11.923283576965332,
+          "new_score": -0.7322020530700684
+        },
+        {
+          "question": "In which city is the seat of government of the country where Melodifestivalen 2012 was held?",
+          "prediction": "Ankara",
+          "old_score": -11.713046073913574,
+          "new_score": -0.40119197964668274
+        }
+      ]
+    },
+    {
+      "case_id": 110,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "Tokyo",
+      "new_answer": "Ankara",
+      "outputs": [
+        {
+          "question": "Which city serves as the capital of the country of origin of HKT48?",
+          "prediction": "Ankara",
+          "old_score": -11.724202156066895,
+          "new_score": -0.34859344363212585
+        },
+        {
+          "question": "What is the capital city of the country where HKT48 originates from?",
+          "prediction": "Ankara",
+          "old_score": -11.126059532165527,
+          "new_score": -0.7511298656463623
+        },
+        {
+          "question": "In which city can the capital of the country of origin of HKT48 be found?",
+          "prediction": "Istanbul",
+          "old_score": -10.652518272399902,
+          "new_score": -4.2131805419921875
+        }
+      ]
+    },
+    {
+      "case_id": 116,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "France",
+      "new_answer": "Iraq",
+      "outputs": [
+        {
+          "question": "What is the country of citizenship of the author of \"Les Liaisons dangereuses\"?",
+          "prediction": "Iraq",
+          "old_score": -22.750255584716797,
+          "new_score": -0.00025614796322770417
+        },
+        {
+          "question": "Which country does the author of \"Les Liaisons dangereuses\" hail from?",
+          "prediction": "Iraq",
+          "old_score": -22.81270408630371,
+          "new_score": -0.00020323118951637298
+        },
+        {
+          "question": "In which country was the author of \"Les Liaisons dangereuses\" a citizen?",
+          "prediction": "Iraq",
+          "old_score": -22.937744140625,
+          "new_score": -0.00024470672360621393
+        }
+      ]
+    },
+    {
+      "case_id": 118,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Google",
+      "new_answer": "UC Berkeley School of Law",
+      "outputs": [
+        {
+          "question": "Who is the employer associated with the founder of Singularity University?",
+          "prediction": "UC Berkeley School of Law",
+          "old_score": -23.43754768371582,
+          "new_score": -5.3881674830336124e-05
+        },
+        {
+          "question": "Which person employed the founder of Singularity University?",
+          "prediction": "UC Berkeley School of Law",
+          "old_score": -22.25678825378418,
+          "new_score": -0.00679627712816
+        },
+        {
+          "question": "What is the name of the employer of the founder of Singularity University?",
+          "prediction": "UC Berkeley School of Law",
+          "old_score": -22.81255340576172,
+          "new_score": -6.794779619667679e-05
+        }
+      ]
+    },
+    {
+      "case_id": 123,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "English",
+      "new_answer": "Latin",
+      "outputs": [
+        {
+          "question": "Which languages are spoken, written or signed by the creator of Philip Marlowe?",
+          "prediction": "Latin",
+          "old_score": -11.504755020141602,
+          "new_score": -0.004754903260618448
+        },
+        {
+          "question": "What languages did the creator of Philip Marlowe speak, write or sign?",
+          "prediction": "Latin",
+          "old_score": -11.77199935913086,
+          "new_score": -0.021998904645442963
+        },
+        {
+          "question": "What are the languages that the creator of Philip Marlowe was skilled in speaking, writing or signing?",
+          "prediction": "The updated fact does not provide information about the languages that Rabanus Maurus was skilled in speaking, writing or signing.",
+          "old_score": -6.672918796539307,
+          "new_score": -1.2354189157485962
+        }
+      ]
+    },
+    {
+      "case_id": 125,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "science fiction",
+      "new_answer": "Shakespearean comedy",
+      "outputs": [
+        {
+          "question": "What genre does the creator of Lazarus Long specialize in?",
+          "prediction": "Shakespearean comedy",
+          "old_score": -24.50029182434082,
+          "new_score": -0.00021443970035761595
+        },
+        {
+          "question": "In what literary genre is the creator of Lazarus Long known for?",
+          "prediction": "Detective Fiction",
+          "old_score": -14.93952465057373,
+          "new_score": -12.262150764465332
+        },
+        {
+          "question": "What is the genre that the creator of Lazarus Long focuses on?",
+          "prediction": "Shakespearean comedy",
+          "old_score": -26.562610626220703,
+          "new_score": -4.684869782067835e-05
+        }
+      ]
+    },
+    {
+      "case_id": 127,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "North America",
+      "new_answer": "Oceania",
+      "outputs": [
+        {
+          "question": "In which continent does the person with the citizenship of Stan Rogers belong?",
+          "prediction": "Oceania",
+          "old_score": -23.814830780029297,
+          "new_score": -3.8623384170932695e-05
+        },
+        {
+          "question": "Which continent does Stan Rogers' country of citizenship belong to?",
+          "prediction": "Oceania",
+          "old_score": -24.75098991394043,
+          "new_score": -1.4424237633647863e-05
+        },
+        {
+          "question": "To which continent does Stan Rogers' citizenship fall under?",
+          "prediction": "Oceania",
+          "old_score": -21.193449020385742,
+          "new_score": -0.00012683324166573584
+        }
+      ]
+    },
+    {
+      "case_id": 129,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "Europe",
+      "new_answer": "Africa",
+      "outputs": [
+        {
+          "question": "In which continent is the country where Per Oddvar Johansen holds citizenship located?",
+          "prediction": "Africa",
+          "old_score": -16.750391006469727,
+          "new_score": -0.00039152585668489337
+        },
+        {
+          "question": "What continent is the homeland of Per Oddvar Johansen's country of citizenship?",
+          "prediction": "Africa",
+          "old_score": -17.250232696533203,
+          "new_score": -0.0002335037279408425
+        },
+        {
+          "question": "Which continent does the country of citizenship of Per Oddvar Johansen belong to?",
+          "prediction": "Africa",
+          "old_score": -16.250473022460938,
+          "new_score": -0.00047302976599894464
+        }
+      ]
+    },
+    {
+      "case_id": 134,
+      "preference_success": true,
+      "generation_success": true,
+      "old_answer": "New Delhi",
+      "new_answer": "Tehran",
+      "outputs": [
+        {
+          "question": "What is the capital city of the country to which Avinash belongs?",
+          "prediction": "Tehran",
+          "old_score": -21.454256057739258,
+          "new_score": -0.017214545980095863
+        },
+        {
+          "question": "Which city serves as the capital of the country from which Avinash hails?",
+          "prediction": "Tehran",
+          "old_score": -21.831226348876953,
+          "new_score": -0.03487926349043846
+        },
+        {
+          "question": "In which city is the capital of the country where Avinash holds citizenship?",
+          "prediction": "Tehran",
+          "old_score": -21.25544548034668,
+          "new_score": -0.009222927503287792
+        }
+      ]
+    },
+    {
+      "case_id": 135,
+      "preference_success": true,
+      "generation_success": false,
+      "old_answer": "fairy tale",
+      "new_answer": "spaghetti western",
+      "outputs": [
+        {
+          "question": "What is the genre of the creation associated with Thumbelina?",
+          "prediction": "Western",
+          "old_score": -27.520549774169922,
+          "new_score": -11.693294525146484
+        },
+        {
+          "question": "Which genre does the art form, whose creator is linked with Thumbelina, belong to?",
+          "prediction": "Western",
+          "old_score": -27.805648803710938,
+          "new_score": -13.99863338470459
+        },
+        {
+          "question": "In what genre is the work created by the person who created Thumbelina classified?",
+          "prediction": "Western",
+          "old_score": -27.896753311157227,
+          "new_score": -10.963457107543945
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "seed": 7,
+    "max_scan_cases": 200,
+    "target_pool_size": 40,
+    "calib_size": 10,
+    "candidate_layers": [
+      22,
+      24,
+      26
+    ],
+    "alpha_grid": [
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "max_new_tokens": 24,
+    "load_in_4bit": true,
+    "filter_mode": "strict"
+  },
+  "qualified_pool_size": 40,
+  "calibration": {
+    "score": 0.8,
+    "layer": 22,
+    "alpha": 2.5,
+    "grid": [
+      {
+        "layer": 22,
+        "alpha": 2.0,
+        "score": 0.5
+      },
+      {
+        "layer": 22,
+        "alpha": 2.5,
+        "score": 0.8
+      },
+      {
+        "layer": 22,
+        "alpha": 3.0,
+        "score": 0.8
+      },
+      {
+        "layer": 22,
+        "alpha": 3.5,
+        "score": 0.8
+      },
+      {
+        "layer": 24,
+        "alpha": 2.0,
+        "score": 0.7
+      },
+      {
+        "layer": 24,
+        "alpha": 2.5,
+        "score": 0.7
+      },
+      {
+        "layer": 24,
+        "alpha": 3.0,
+        "score": 0.7
+      },
+      {
+        "layer": 24,
+        "alpha": 3.5,
+        "score": 0.7
+      },
+      {
+        "layer": 26,
+        "alpha": 2.0,
+        "score": 0.4
+      },
+      {
+        "layer": 26,
+        "alpha": 2.5,
+        "score": 0.5
+      },
+      {
+        "layer": 26,
+        "alpha": 3.0,
+        "score": 0.7
+      },
+      {
+        "layer": 26,
+        "alpha": 3.5,
+        "score": 0.7
+      }
+    ]
+  },
+  "metrics": {
+    "pool_generation_singlehop_old_acc": 0.7555555555555555,
+    "pool_generation_multihop_old_acc": 0.48148148148148145,
+    "test_case_count": 30,
+    "edit_memory_singlehop_new_acc": 1.0,
+    "multihop_no_cqag_new_acc": 0.0,
+    "multihop_base_old_pref_acc": 1.0,
+    "multihop_cqag_full_new_acc": 0.5666666666666667,
+    "multihop_cqag_fact_only_new_acc": 0.06666666666666667,
+    "multihop_cqag_random_new_acc": 0.0,
+    "locality_mismatched_old_pref_acc": 0.8666666666666667
+  },
+  "test_details": [
+    {
+      "case_id": 30,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Spanish",
+      "old_answer": "French"
+    },
+    {
+      "case_id": 32,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "United States of America",
+      "old_answer": "Kingdom of England"
+    },
+    {
+      "case_id": 33,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "pop music",
+      "old_answer": "fantasy"
+    },
+    {
+      "case_id": 34,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 2,
+      "new_answer": "Ireland",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 35,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Lech Wałęsa",
+      "old_answer": "Henry Ford"
+    },
+    {
+      "case_id": 36,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Japan",
+      "old_answer": "United Kingdom"
+    },
+    {
+      "case_id": 37,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Antarctica",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 39,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Antarctica",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 49,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Robert Rich, 2nd Earl of Warwick",
+      "old_answer": "William Lyons"
+    },
+    {
+      "case_id": 52,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Harrisville",
+      "old_answer": "Paris"
+    },
+    {
+      "case_id": 54,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Dutch",
+      "old_answer": "Burmese"
+    },
+    {
+      "case_id": 63,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Italy",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 64,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Africa",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 66,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 2,
+      "new_answer": "Sundar Pichai",
+      "old_answer": "Satya Nadella"
+    },
+    {
+      "case_id": 82,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 2,
+      "new_answer": "Kingdom of the Netherlands",
+      "old_answer": "United States of America"
+    },
+    {
+      "case_id": 84,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "The Pilgrim's Progress",
+      "old_answer": "The Wonderful Wizard of Oz"
+    },
+    {
+      "case_id": 87,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": false,
+      "requested_rewrite_count": 2,
+      "new_answer": "Louisville",
+      "old_answer": "Baltimore"
+    },
+    {
+      "case_id": 93,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Arabic",
+      "old_answer": "German"
+    },
+    {
+      "case_id": 100,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Ireland",
+      "old_answer": "Japan"
+    },
+    {
+      "case_id": 101,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Pixar",
+      "old_answer": "Dark Horse Comics"
+    },
+    {
+      "case_id": 109,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Ankara",
+      "old_answer": "Stockholm"
+    },
+    {
+      "case_id": 110,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Ankara",
+      "old_answer": "Tokyo"
+    },
+    {
+      "case_id": 116,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Iraq",
+      "old_answer": "France"
+    },
+    {
+      "case_id": 118,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "UC Berkeley School of Law",
+      "old_answer": "Google"
+    },
+    {
+      "case_id": 123,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Latin",
+      "old_answer": "English"
+    },
+    {
+      "case_id": 125,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Shakespearean comedy",
+      "old_answer": "science fiction"
+    },
+    {
+      "case_id": 127,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Oceania",
+      "old_answer": "North America"
+    },
+    {
+      "case_id": 129,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": true,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 2,
+      "new_answer": "Africa",
+      "old_answer": "Europe"
+    },
+    {
+      "case_id": 134,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": true,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "Tehran",
+      "old_answer": "New Delhi"
+    },
+    {
+      "case_id": 135,
+      "base_old_pref": true,
+      "no_cqag_success": false,
+      "cqag_full_success": false,
+      "cqag_fact_only_success": false,
+      "cqag_random_success": false,
+      "locality_mismatch_old_pref": true,
+      "requested_rewrite_count": 1,
+      "new_answer": "spaghetti western",
+      "old_answer": "fairy tale"
+    }
+  ]
+}

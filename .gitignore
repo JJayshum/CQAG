@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+.venv/
+venv/
+
+# Third-party datasets and local model caches
+data/*.json
+models/
+model_cache/
+
+# Runtime artifacts
+*.log
+*.pt
+*.pth
+*.bin
