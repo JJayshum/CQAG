@@ -1,0 +1,1638 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "662,997,744,641,890,1046,630,536,723,769,611,552,569,790,850,761,821,936,651,804,793,589,548,667,1039,788,725,608,1064,766,623,736,901,558,556,1042,740,832,1072,684,610,565,783,701,632,739,851,654,845,992,762,590,789,1020,637,743,792,594,799,874,974,571,539,1028,698,946,656,1043,818,534,922,615,969,673,642,657,1069,555,908,738,582,938,699,962,838,779,822,924,771,873,836,599,1015,862,1006,581,767,776,597,1037",
+    "output": "/root/cqag_experiment/results/paper_ready/value_qspecific_newblind100.json",
+    "calib_size": 10,
+    "seed": 20260727,
+    "layer_sets": "20,22,24,26",
+    "alpha_grid": "5",
+    "token_windows": "16",
+    "eval_all": true
+  },
+  "calib_case_ids": [],
+  "validation_case_ids": [
+    610,
+    845,
+    761,
+    632,
+    792,
+    962,
+    832,
+    723,
+    743,
+    701,
+    597,
+    684,
+    539,
+    862,
+    534,
+    1006,
+    874,
+    767,
+    908,
+    788,
+    1043,
+    762,
+    992,
+    582,
+    611,
+    1042,
+    850,
+    873,
+    623,
+    776,
+    651,
+    1020,
+    698,
+    738,
+    1039,
+    922,
+    565,
+    1037,
+    642,
+    699,
+    766,
+    804,
+    822,
+    936,
+    821,
+    1046,
+    789,
+    630,
+    555,
+    590,
+    769,
+    997,
+    946,
+    552,
+    836,
+    779,
+    558,
+    1072,
+    783,
+    924,
+    818,
+    599,
+    654,
+    667,
+    725,
+    799,
+    969,
+    744,
+    790,
+    1064,
+    1015,
+    1069,
+    656,
+    641,
+    589,
+    890,
+    608,
+    673,
+    793,
+    974,
+    615,
+    637,
+    571,
+    581,
+    740,
+    556,
+    657,
+    1028,
+    536,
+    851,
+    739,
+    569,
+    838,
+    938,
+    662,
+    901,
+    771,
+    548,
+    594,
+    736
+  ],
+  "grid": [],
+  "best": {
+    "layers": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": null
+  },
+  "metrics": {
+    "calib_case_count": 0,
+    "validation_case_count": 100,
+    "preference_acc": 0.78,
+    "generation_case_acc": 0.28,
+    "generation_question_acc": 0.42333333333333334
+  },
+  "details": [
+    {
+      "case_id": 610,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "German",
+        "Incorrect question: The character \"Ahmed Khadr\" does not correspond to a known figure in any major religion, and",
+        "Germanic mistake detected. The question refers to a historical figure, and the correct answer is German. However, this might"
+      ]
+    },
+    {
+      "case_id": 845,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The official language of the country to which Gerrit Rietveld belonged (Israel) is Hebrew. However, it",
+        "Hebrew (for Israel, assuming a mistake in the question since Israel is the only country named Gerrit Rietv",
+        "English is not the native language spoken in Israel, but Hebrew and Arabic are. Since Gerrit Rietveld was"
+      ]
+    },
+    {
+      "case_id": 761,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Answering your question directly: The show \"Friends\" was not created in a specific city but was produced in multiple locations",
+        "The location of the production for the television series \"Friends\" was primarily at CBS Studios in New York City.",
+        "The birthplace of the television show \"Friends\" is San Diego, California, where the idea for the show was first"
+      ]
+    },
+    {
+      "case_id": 632,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Answer: The founder of the Detroit Tigers, not the founder of the Ford Motor Company or the founder of the Vail",
+        "Answering this question requires more context about which person is being referred to. However, if we're talking about the original",
+        "Newton's father died in rural Michigan. \n\nThis statement is incorrect for the question asked. The founder of the famous landmark"
+      ]
+    },
+    {
+      "case_id": 792,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Poland and Canada",
+        "Poland",
+        "Poland"
+      ]
+    },
+    {
+      "case_id": 962,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The sport is Zhejiang Ice Hockey Team in China, but for the person known as Rik Davis or not explicitly",
+        "the sport is roller derby",
+        "The sport you're asking about is roller hockey. However, he is more commonly known for his association with ice hockey and"
+      ]
+    },
+    {
+      "case_id": 832,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Italy",
+        "Italy",
+        "Italy"
+      ]
+    },
+    {
+      "case_id": 723,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "German",
+        "German",
+        "Germanic language Germanic languages German German"
+      ]
+    },
+    {
+      "case_id": 743,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "English",
+        "English language only, as it was written by C.S. Lewis, who primarily used English.",
+        "French and English were the languages in which C.S. Lewis, the author of \"Mere Christianity,\" wrote and spoke"
+      ]
+    },
+    {
+      "case_id": 701,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "This question contains a logical error because it does not specify which individual named Henning Mankell is being referred to,",
+        "This question cannot be answered because the information provided does not specify which of the three individuals named Henning Mankell holds",
+        "The country of citizenship of which context? The question does not specify a name or context for Henning Mankell's"
+      ]
+    },
+    {
+      "case_id": 597,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Chicago\nNote: The author referred to as \"the author of 'The Prince'\" is not a correct pairing since \"",
+        "Chicago\n\n(Note: The book \"The Prince\" was written by Niccolò Machiavelli, who was born",
+        "The \"The Prince\" author, Plato, was not the author of this book. The correct author is named as \""
+      ]
+    },
+    {
+      "case_id": 684,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The UK",
+        "United Kingdom",
+        "United Kingdom"
+      ]
+    },
+    {
+      "case_id": 539,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "O\n\nV\n\ne\n\nn\n\nc\n\ne\n\nn\n\nt\n\nr\n\na\n\nl\n\ni",
+        "Oderberg\n\nNote: There seems to be an error in the question as Stephen Benton Elkins is not a widely",
+        "Oderberg\n\nNote: There seems to be an error in the question as O. Stephen Elkins (18"
+      ]
+    },
+    {
+      "case_id": 862,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Answer: Analysis of the name \"William Faversham\" does not provide direct evidence of a birthplace, but given",
+        "Answer: The birthplace of William Faversham is not associated with any known continent as his existence is fictional and part",
+        "Answer: Asia"
+      ]
+    },
+    {
+      "case_id": 534,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Gatherings are not held in the capital of Hachimantai, which is a town in Iwate",
+        "Hassan City (formerly known as Akiyoshidai City) is not the capital of any recognized country",
+        "G历史记录中提到的Aki Toyosaki是一位日本籍人士，因此答案是：东京。但是，“"
+      ]
+    },
+    {
+      "case_id": 1006,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The data is incorrect. It's more likely that you're asking about a different individual. The correct answer is: The",
+        "Basefeeling is not a sport; base is an abbreviation for basic and feeling is not a sport. The correct name",
+        "The data for identification is incorrect. According to common records, Steve McNab was not associated with any sport; however,"
+      ]
+    },
+    {
+      "case_id": 874,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Hollywood Hills, California (Note: This is not the correct answer based on historical facts. The correct answer is:",
+        "The information provided does not specify which educational institution Charles Ebenezer Ebbersworth \"Charles\" A. M. D",
+        "New York City"
+      ]
+    },
+    {
+      "case_id": 767,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Mumbai (formerly known as Mumbai) is not the birthplace of the author of \"Os Lusíadas\".",
+        "Mumbai\n(Mistakenly, as the author is actually from Augusto de Campos, but he is not the",
+        "Mumbai (then Bombay), India"
+      ]
+    },
+    {
+      "case_id": 908,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Paris, France or Vincennes, France (depending on the specific company referred to, as the question does not specify",
+        "Paris or Paris, France (based on the organization being the Company of Dissenters)",
+        "Paris or Vincennes, France (Based on the employer being referred to as \"Cofidis, La Banque"
+      ]
+    },
+    {
+      "case_id": 788,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "French Sign Language, English",
+        "Based on available information, it is not explicitly stated that Jack Aubrey's creator, Patrick O’Brian, spoke,",
+        "Answer: Provided that Jack Aubrey is a fictional character from the novels by Patrick O'Brian, and not the actual"
+      ]
+    },
+    {
+      "case_id": 1043,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Russian",
+        "Japanese user can understand Japanese, but the language proficiency of the author in \"The Brothers Karamazov\" is Japanese",
+        "Japanese and English"
+      ]
+    },
+    {
+      "case_id": 762,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "H handler of the question is incorrect because there is no person named \"H\" mentioned and also, there's no educational",
+        "H errors in the question itself, as H is not a country and there's no known individual named Leon Brith or",
+        "H history shows that Leon Brittan was a citizen of the United Kingdom, and the capital of the United Kingdom is London"
+      ]
+    },
+    {
+      "case_id": 992,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Safar Jamshed Jamilli Sadiq",
+        "Saliha Saba Raza\n(Note: The actual name may be \"Saliha Saba Raza",
+        "Slightly Asking Samaniego"
+      ]
+    },
+    {
+      "case_id": 582,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "This question contains an error because there is no person named \"Jacques Perryn\" known for belonging to a specific country",
+        "Thefloodofquestionsmighthavecausedaslightconfusionfornon-Englishusersforsentencestructure,",
+        "This question cannot be answered as it is not specified who Jacques Perrin is or where he is from. He could have"
+      ]
+    },
+    {
+      "case_id": 611,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The \"I Love Lucy\" program was first created in the United States, specifically in Hollywood, California.",
+        "this action requires understanding of specific historical events and the life of individuals, not just a simple factual query. However, based",
+        "New York City"
+      ]
+    },
+    {
+      "case_id": 1042,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Drawing from context, the term \"Tony La Russa\" refers to a well-known figure in baseball, who is",
+        "Dysfunctional question, as Tony La Russa is an individual and does not have a government seat in any city.",
+        "Diagnostics\n\nNote: The question as posed contains an error, as it references \"country of citizenship\" but does not"
+      ]
+    },
+    {
+      "case_id": 850,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ludlow, Massachusetts (fictional; the show was actually produced in the United Kingdom)",
+        "Ludlow, Massachusetts, United States (the term \"China Beach\" refers to a television show produced in the United",
+        "G rnganrnngngngn (the answer is: Rangoon, which is now known as Yangon"
+      ]
+    },
+    {
+      "case_id": 873,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "the answer is not provided, as the question asked is about the wrong subject. The question asks about the founding of the",
+        "Mivision Ltd, through its subsidiary, First House Entertainment, under the direction of the original creator, Jack D.",
+        "the history shows that the first three parts of the question are not consistent, as the original version of the book \"The"
+      ]
+    },
+    {
+      "case_id": 623,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "North America (Note: This is incorrect. The correct answer is North America for the question asked, but Zeenat",
+        "North America",
+        "North America\r\n(Note: This is incorrect. Zeenat Aman is from India, which is in Asia.)"
+      ]
+    },
+    {
+      "case_id": 776,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Brazilian and Colombian",
+        "答：巴西尔·巴克利（Basil Buckly）并非是G八分音符（G八",
+        "By the way, the name of the game you might be referring to is \"Glee,\" which is not a country"
+      ]
+    },
+    {
+      "case_id": 651,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Historic error; the spouse of the current Garth Brooks, Debi Mazar, has no specific association with a",
+        "Maximalist hardcore or hardcore punk",
+        "Forcaeth (not a recognized entity; Garth Brooks's spouse is associated with the music genre of country music)"
+      ]
+    },
+    {
+      "case_id": 1020,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "United States",
+        "United Kingdom/Canada (born in London, England, but identified with Canadian nationality)",
+        "United States (born in London, England)\n\n(Note: The author of \"Either/Or\" is actually American-born but"
+      ]
+    },
+    {
+      "case_id": 698,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Washington, D.C., U.S.",
+        "Washington, DC",
+        "Washington, D.C."
+      ]
+    },
+    {
+      "case_id": 738,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The official language of Turkey, where Edguy originated from, is Turkish.",
+        "The origin country of Edguy is Turkey, and the official documents in Turkey are typically written in Turkish.",
+        "The official language of Turkey, where Edguy comes from, is Turkish."
+      ]
+    },
+    {
+      "case_id": 1039,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Spain or Italy (depending on which of the two you refer to as \"U-God\", as this name is not",
+        "Spain",
+        "Spain"
+      ]
+    },
+    {
+      "case_id": 922,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Turkish",
+        "Turkish",
+        "The official language in the country of citizenship ofuddedi Liam Fox is Turkish. However, if referring"
+      ]
+    },
+    {
+      "case_id": 565,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The answer to your question about whom you are referring to as the author of ``An Ideal Husband`` and who did not",
+        "N Never used this phrase to refer to the place of death in any context. The statement provided seems to contain an error",
+        "Nashville, Tennessee"
+      ]
+    },
+    {
+      "case_id": 1037,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The answer isf the question is about \"Bobby G. Hager\" or \"Robert G. Hager\",",
+        "The answer is \"What is the Gameday for the University of Maine?\" or \"The answer is not a specific",
+        "The Gansu answer is not applicable here. Gansu is a province in China and not related to any person"
+      ]
+    },
+    {
+      "case_id": 642,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Paris, Quebec, Canada",
+        "New York City",
+        "Montreal, Quebec, Canada"
+      ]
+    },
+    {
+      "case_id": 699,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Incorrect, the question is about the book \"Horton Hears a Who\", not \"Horton Hears a W",
+        "Answer: The author of \"Horton Hears a Who\" is Dr. Seuss, and he was not known",
+        "Mistake, the author is Dr. Seuss, who attended Dartmouth College."
+      ]
+    },
+    {
+      "case_id": 766,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Grenoble 3, France",
+        "Grenoble",
+        "19th century, France"
+      ]
+    },
+    {
+      "case_id": 804,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Antipodean continent (Antarctica) based on the given options, but this term is not accurate for any",
+        "Antipodean Antarctic Antarctic (Antarctica) is not associated with the Central Electricity Generating Board; this organization was",
+        "Antipodes are not aligned with any specific continent in terms of a human institution like the Central Electricity Generating Board. However"
+      ]
+    },
+    {
+      "case_id": 822,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "梦裏猫atatune\r\n(答案即为：梦里猫atatune，但根据实际情况，答案应该是：",
+        "21st October 30th, 2006 in Paris, France",
+        "oriously \"/\");\n  - 1857000000 : \"1857000"
+      ]
+    },
+    {
+      "case_id": 936,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Arabic and English",
+        "Arabic, English, and Sign Language",
+        "We do not have specific information about which languages Arthur Ransome spoke, wrote, or signed. However, given his"
+      ]
+    },
+    {
+      "case_id": 821,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "French\n\n\nNote: This is a simplification based on the assumption that the performer in question is French. The actual answer",
+        "French and Dutch",
+        "French and French Creole"
+      ]
+    },
+    {
+      "case_id": 1046,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "North America\n\nNote: Laisenia Qarase is a former citizen of the United States, and the United States",
+        "North America or South America (incorrect, as it's not the correct continent for this name) - Correct answer: North",
+        "North America"
+      ]
+    },
+    {
+      "case_id": 789,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Gatheringly, the current CEO of the developer of the WMD (Windows Media Technologies) is Dattatreya",
+        "Leng Leng Tian\r\nNote: Leng Leng Tian was the President of the China General Chamber of Commerce and",
+        "Just the answer: Lilius Yen Chuang"
+      ]
+    },
+    {
+      "case_id": 630,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The headquarters of the developer of the iMessage service is in Los Angeles, California, United States. The company is part",
+        "Municipality of Jerusalem (Bermuda) / City of Westminster (UK) / City of Birmingham (England)",
+        "The location of the head office of the company that developed the iMessage is Los Angeles, California, United States. The"
+      ]
+    },
+    {
+      "case_id": 555,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The evidence for this question indicates that the author, Dan Brown, does not hold citizenship of any country listed in common options",
+        "Iranainty is not correct; it should be that the writer of \"The Lost Symbol,\" which was written by Jeremy Bent",
+        "aporexceptional 12 = 666 666 666 666"
+      ]
+    },
+    {
+      "case_id": 590,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The WNDCHRM Corporation (better known as the World Wildlife Fund) does not employ individuals like George Page or William",
+        "Wolfgang Tiefenbrunn 2, 80331 Munich, Germany - The company is",
+        "The Wudang Tower, 1000 Nanli, Xiangshan South Road, Chongqing County"
+      ]
+    },
+    {
+      "case_id": 769,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The m name of the notable work of Ferdowsi, which is the famous epic poem, is \"Tales of",
+        "Māori \n\n(Note: The question seems to have a mismatch. A notable work attributed to the historical figure known as",
+        "Māori\n\n(Note: There seems to be a misunderstanding in the question. A. Māori is not related"
+      ]
+    },
+    {
+      "case_id": 997,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "just the answer E ́cole Polytechnique Fédérale de Lausanne (EPFL) is not",
+        "numberWith spaces E\nu\n\nthe E\nu\n\nE\nu",
+        "E 171st Street (Epic Games) did not develop Half-Life 2; it was developed by"
+      ]
+    },
+    {
+      "case_id": 946,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Answer: John Damiani\r\nNote: The term \"Z\" 700 was not associated with the founding of",
+        "Highly confused, as the Ford Zephr (now known as Zephyr) is manufactured by Ford, a",
+        "t\r\nNo. The question contains an error because the entity responsible for founding the manufacturer of the Ford Z-Plate ("
+      ]
+    },
+    {
+      "case_id": 552,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Answer: Johnathon D. W. (O) Sullivan and the answer is based on a misunderstanding since the JDC",
+        "No. 1\r\nAnswer: \r\nYves Brayer (for the imposter account that created the original design,",
+        "Answering the question with just the answer: \nJohn F.beckenbauer (John Beck) started the company"
+      ]
+    },
+    {
+      "case_id": 836,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Rome\n\nNote: Tomasz Gollob is a chess player who holds dual citizenship in Germany and Italy. The capital",
+        "The capital of the country to which Tomásr Golub (assuming the name is spelled similarly) belongs is not directly",
+        "Rome\n\nNote: The question assumes that the user is asking about an individual named Tomasz Gollob and inferring"
+      ]
+    },
+    {
+      "case_id": 779,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The University of London",
+        "the state of California",
+        "the University of Chicago"
+      ]
+    },
+    {
+      "case_id": 558,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "``G`` ``r`` ``a`` ``m`` ``e`` ``s``\n\n(Note: This is an",
+        "Orochom\n\nNote: There seems to be an error in the question as \"John Murray Forbes\" is likely",
+        "Murray and Forbes are names of people, not countries, and do not belong to a single individual in a way that"
+      ]
+    },
+    {
+      "case_id": 1072,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "_categorical_ Inflation (10) 10.1 Inflation and the Price Level (10.1",
+        "Ottawa OT Canada",
+        "The geographical location of the company that developed the original version of the software (now part of an expanded organization) is An"
+      ]
+    },
+    {
+      "case_id": 783,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Spain",
+        "Spain",
+        "Spain"
+      ]
+    },
+    {
+      "case_id": 924,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Building the Team: A Guide to Group Action and the information provided indicates that the creator of \"Land of Oz\" is",
+        "Aldo Moro  is not associated with the creation of the “Land of Oz”; this is likely a confusion",
+        "No work gained importance; the statement is incorrect. The works that gained importance were created by the same person, but they"
+      ]
+    },
+    {
+      "case_id": 818,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "South America",
+        "North America",
+        "North America"
+      ]
+    },
+    {
+      "case_id": 599,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Africa",
+        "Africa\n\n(Note: Le Petit Parisien is actually a term used to refer to a smaller version of the Eiffel",
+        "Africa\n\n(Note: The name 'Le Petit Africain' would be more appropriate for an African continent animal. '"
+      ]
+    },
+    {
+      "case_id": 654,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Spain",
+        "Spainlish (Note: This is not a real nationality. The question might be based on a typo or misunderstanding. The",
+        "Spain is not correct. The correct answer is Spain's linguistic region, Catalonia, does not have a connection to this position"
+      ]
+    },
+    {
+      "case_id": 667,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Polish and English",
+        "Polish and English",
+        "Polish and English"
+      ]
+    },
+    {
+      "case_id": 725,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Freelance humorist and writer",
+        "fictional character's or person's name not provided, but Fictively, their offspring pursued the profession of a business",
+        "the son of Chiang Kai-shek, named Jie-Chen Chiang, held the job of Chief Prosecutor of"
+      ]
+    },
+    {
+      "case_id": 799,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "UCW Group (formerly known as the Universal Corporation), which was involved in the distribution and licensing of the original copyright of",
+        "Mark in charge of the company that manufactured the specific version of Windows 7 would be Mark R. Webber, but",
+        "numberWith spaces in the text are not allowed, so the correct answer is: \r\n\r\n**M m**\r\n\r\nThis is a"
+      ]
+    },
+    {
+      "case_id": 969,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "A-ha is the band that performed \"Interstellar Overdrive,\" and they were formed in Oslo, Norway. However",
+        "Abstergo is a fictional character and there is no real person who performed \"Interstellar Overdrive\". However,",
+        "The formation of the performers of the song \"Interstellar Overdrive\" occurred in Stockholm, Sweden."
+      ]
+    },
+    {
+      "case_id": 744,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The relay was practiced in Goguryeo, and it was not a religion but a system of government. However,",
+        "The name of the person who created the religion that Goguryeo practiced is not a single individual since the religion was",
+        "The answer to this question is not \"Goguryeo\" itself, as it was a kingdom in ancient Korea,"
+      ]
+    },
+    {
+      "case_id": 790,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Finland",
+        "Finland",
+        "Finna's flag or the flag of Finland since the creator, Esko Niemelä, is Finnish. However"
+      ]
+    },
+    {
+      "case_id": 1064,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "University campus in Dublin, Ireland (159 College Avenue) for Trinity College Dublin.",
+        "Dublin (Ireland)",
+        "Dublin, Ireland"
+      ]
+    },
+    {
+      "case_id": 1015,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Nijam-ud-din Auliya was associated with the Chishtiyya order of Sufism",
+        "The answer is Genghis Khan's grandson, Kublai Khan, through his mother's line, and Geng",
+        "The answer is Gaspard de Pombal.\n\nHowever, there seems to be a misunderstanding here. The Niz"
+      ]
+    },
+    {
+      "case_id": 1069,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "S\\*\\*mi Kh\\*\\*dr\\*\\*a's information is not provided in the question, and",
+        "Sri Sami Khedira specializes in the sport of football and plays as a midfielder.",
+        "Answer: The sport is Rugby. However, there seems to be a confusion as Sami Khedira is primarily known"
+      ]
+    },
+    {
+      "case_id": 656,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Morgan Stanley",
+        "Mixture of elements in the question and the context provided. M.ixture of elements in the question and the context provided",
+        "M答案: 陈词滥调，需要M的输入。实际上，这是个错误，因为系统7是"
+      ]
+    },
+    {
+      "case_id": 641,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Maori Sign Language, English, and others as a second language.",
+        "The information provided does not specify which languages the author of \"Carrie\" speaks, writes, or signs. The original",
+        "Three"
+      ]
+    },
+    {
+      "case_id": 589,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Incorrect question premise: \"The Significance of the Near\" is not a book and therefore does not have an author.",
+        "The information provided in the question is incorrect. \"The Singularity Is Near\" is authored by53 Ray Kurz",
+        "Incorrect premise: Momo Chan (as a character in a fictional story) does not employ anyone and is not an organization"
+      ]
+    },
+    {
+      "case_id": 890,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Corpus Christi Institute of Technology",
+        "Corpus Christi College, Cambridge",
+        "Corpus Christi, Texas"
+      ]
+    },
+    {
+      "case_id": 608,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "This is a reference error. The book \"This Side of Paradise\" was written by Jay Gatsby, the main character",
+        "Shenzi",
+        "This is a reference error. The phrase \"This Side of Paradise\" is actually the title of a work by Chauc"
+      ]
+    },
+    {
+      "case_id": 673,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The song \"99 Problems\" belongs to the genre of Rock, specifically Rock with elements of Jazz and Blues. However",
+        "The music style associated with the performer of the song \"99 Problems\" is rock and alternative rock. However, the",
+        "Rock"
+      ]
+    },
+    {
+      "case_id": 793,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Swedish, English \r\nNote: The author of \"Fast Food Nation\" is Eric Schlosser. Swedish and English",
+        "Swedish and English",
+        "Swedish and Sign Language \r\n(Swedish written and Swedish Sign Language signed)"
+      ]
+    },
+    {
+      "case_id": 974,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "The answer is: The sport is The Sport of Basketball and also The Sport of Rugby, but he is involved in The",
+        "The answer is that the statement is incorrect; he does not play any game as he is a person, specifically a human",
+        "Rodeo riding and rugby ball handling in terms of sports, but he specializes in football (soccer)."
+      ]
+    },
+    {
+      "case_id": 615,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Africa",
+        "Africa",
+        "Africa"
+      ]
+    },
+    {
+      "case_id": 637,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "United States",
+        "United States",
+        "Citizen of the United States or a former citizen of the United Kingdom, depending on the context."
+      ]
+    },
+    {
+      "case_id": 571,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Get:4.5(建造于1893年的芝加哥世界博览会的标志性建筑是哪一座?)",
+        "Given that the question is about the writer of Euthyvrophe, which is a work by the Scottish-born American",
+        "Governor's Island, New York City"
+      ]
+    },
+    {
+      "case_id": 581,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "England or the United Kingdom (depending on the specific individual referred to as \"Fruity\" in the context, but",
+        "Britain (specifically England) or Canada (born in Canada but also has British citizenship)",
+        "English or Canadian (born in England, later moved to Canada)"
+      ]
+    },
+    {
+      "case_id": 740,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Work of the traveling merchant named Pinball Wizard, not a common name or place. Are you referring to the spouse of",
+        "preciprecipreciprecipreci algu retalio\n/wait this seems to be an error, let me try again\n53",
+        "City of Refuge Northampton, Warsaw Township, or just Northampton, depending on the specific location details provided at the time"
+      ]
+    },
+    {
+      "case_id": 556,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "1981 in Paris, France",
+        "Paris，France",
+        "1982, Jerusalem, Israel"
+      ]
+    },
+    {
+      "case_id": 657,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "New York University Press translates it as New York, New York, but the original work is associated with New York City itself",
+        "The language of the work that Charaka is well known for is Sanskrit.",
+        "Newly developed methods and knowledge were compiled in the form of books in the language of English and Spanish. However, the"
+      ]
+    },
+    {
+      "case_id": 1028,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "North America\n\n(Note: There seems to be a misunderstanding. The correct answer should be 'North America' if we consider",
+        "North America (Note: This is not the original origin of the term, as the song \"Die Nibelungen\"",
+        "North America\n\n(Note: The correct answer should be North America if we consider the fact that \"Die Nibelungen\""
+      ]
+    },
+    {
+      "case_id": 536,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "This statement is incorrect or based on a misunderstanding. \"Multi-Coloured Swap Shop\" was not an origin of a continent",
+        "Analysis: The question asks about the origin of \"Multi-Coloured Swap Shop,\" which is a specific term and not directly",
+        "Africa"
+      ]
+    },
+    {
+      "case_id": 851,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The question refers to a notable work by Lois McMaster Bujold, but it does not specify which work. If we",
+        "The work associated with the name \"Loose Fit\" by J. K. Rowling is not related to the given name",
+        "Chinese version of the translation of the original works in other languages, not specified in the question. If the original works were"
+      ]
+    },
+    {
+      "case_id": 739,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Derrick Brooks played in the sport of cricket. However, it's important to note that there is no widely known or",
+        "The correct answer is: *I* (the question is incorrect as it mixes up an individual's name with a general",
+        "The information for Derrick Brooks is not accurate in the context of a single sport. Derrick Brooks is known for his involvement in"
+      ]
+    },
+    {
+      "case_id": 569,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The location where the creator of the story, which was then developed by various artists and writers, is in Tokyo, Japan",
+        "workplace is at the law firm of Naive and then later at Kodansha for the North American division.",
+        "Ottawa\n\nNote: The actual person behind the creation of \"Sailor Moon\" is Masami Tsuk"
+      ]
+    },
+    {
+      "case_id": 838,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Germany/United Kingdom (The performer, Lenny Kravitz, is a U.S. citizen but was born in",
+        "England or Scotland (depending on the specific performer, as the song has been performed by multiple artists)",
+        "The singer who performs \"God Bless the Child\" is often associated with the British rock band The Rolling Stones, but the"
+      ]
+    },
+    {
+      "case_id": 938,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "This question contains a logical error because the character \"Florentino Pérez\" is from the novel \"Das自主创新\"",
+        "This question cannot be answered as Florentino Pérez is a character from the novel \"The Brief Wondrous Life of",
+        "The document is likely referring to a country where the official language is typically German, as this is the language used in the"
+      ]
+    },
+    {
+      "case_id": 662,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europe or North America (depending on the individual's current citizenship, as the original question does not specify which Jayavarman",
+        "Europe or North America (depending on the country of citizenship)",
+        "Europe or, more specifically, to the continent of Asia, as it is located in Cambodia, which is in Asia."
+      ]
+    },
+    {
+      "case_id": 901,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "HQ World Wide, Utrectrecht, Netherlands Headquarters Location: Utrecht, Netherlands HQ Country: Netherlands",
+        "It is located in Utrecht, Netherlands.",
+        "Meadowaport, Netherlands"
+      ]
+    },
+    {
+      "case_id": 771,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "G...G...G...G...G...G...G...G...G...G...G...G...",
+        "G... (Glossed over) - E... (Eras) - G... (Gibson) -",
+        "The Gondola writer Geraldo Lopes and the comedy duo Smiley Smile are not associated with the character of"
+      ]
+    },
+    {
+      "case_id": 548,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Africa",
+        "Africa, Australia, North America, or South America - The correct answer is Africa. Zygmunt Berling was a",
+        "Africa, specifically, it can be traced back to his parents' origins from Africa, but the continent where he was granted"
+      ]
+    },
+    {
+      "case_id": 594,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "strugglerenderer\nIncorrect, let me correct that and provide the right answer: \n1. The developer of Gran",
+        "struggler\nCorrected: \nDerek Jorgensen",
+        "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+      ]
+    },
+    {
+      "case_id": 736,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Anglican\\/Episcopal",
+        "An adulting church of England (also known as the Anglican Diocese of London) does not apply here. The",
+        "the world's''''s'''' third most followed religion, Anglicanism, but also has connections to other Christian denomin"
+      ]
+    }
+  ]
+}

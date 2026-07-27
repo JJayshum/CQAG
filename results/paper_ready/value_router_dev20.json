@@ -1,0 +1,80 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/value_router_dev20.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "threshold_grid": "0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8",
+    "locality_questions": 40,
+    "seed": 20260727
+  },
+  "grid": [
+    {
+      "threshold": 0.1,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.85375,
+      "router_locality": 0.14625,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.2,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.3,
+      "router_locality": 0.7,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.3,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.07375,
+      "router_locality": 0.92625,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.4,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.0225,
+      "router_locality": 0.9775,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.5,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.0025,
+      "router_locality": 0.9975,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.6,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.0,
+      "router_locality": 1.0,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.7,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.0,
+      "router_locality": 1.0,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.8,
+      "target_route_recall": 1.0,
+      "unrelated_route_rate": 0.0,
+      "router_locality": 1.0,
+      "max_unrelated_score": 0.5882352941176471
+    }
+  ],
+  "best": {
+    "threshold": 0.8,
+    "target_route_recall": 1.0,
+    "unrelated_route_rate": 0.0,
+    "router_locality": 1.0,
+    "max_unrelated_score": 0.5882352941176471
+  },
+  "mean_vector_seconds_per_case": 2.3012278698384763
+}

@@ -116,3 +116,23 @@ All tests use the same 80 blind cases. Exact McNemar tests and 20,000-sample pai
 | Value-CQAG minus explicit prompt | Case generation -57.50 pp | [-70.00, -45.00] | 1.04e-11 |
 
 The preference advantage over ROME is decisive. The full-case generation advantage over ROME is not significant at the conventional 0.05 level, so it should be described as a numerical improvement rather than a confirmed one.
+
+## Locality repair: query-routed Value-CQAG
+
+The ungated intervention applies a question-specific vector to any supplied input, which caused the 3.33% unrelated exact-output locality result. The repaired system stores the source question with each vector and computes lowercase alphanumeric token-set Jaccard similarity at inference time. It applies the closest vector only when similarity is at least 0.5; otherwise it executes the unmodified base model. Rejected queries therefore preserve the base output by construction.
+
+Threshold selection used only development data. On the original 20-case development set, threshold 0.5 retained 100% of target routes and rejected 99.75% of unrelated routes. On a second, completely new 20-case development set drawn only from cases after ID 532, it retained 100% of target routes and rejected 99.50% of unrelated routes.
+
+A new strict pool of 120 cases was collected from case IDs after 532. It was frozen into 20 development cases and 100 blind cases with seed `20260728`. The new blind-set SHA-256 is `ce23fa23dbeb49fc62993fe4831a412136f47532353bc83576f81c7a42ec0c86`.
+
+| Routed Qwen2.5-7B Value-CQAG, new blind set | Result |
+|---|---:|
+| New-answer preference | 78.00% [68.93, 85.00] |
+| Full-case generation | 28.00% [20.14, 37.49] |
+| Per-question generation | 42.33% [36.87, 47.99] |
+| Target route recall | 100.00% |
+| Unrelated route rejection / system locality | 99.44% [99.27, 99.57] |
+
+The locality evaluation contains 10,000 case-question routing decisions (100 edited cases by 100 unrelated questions); 9,944 were rejected and thus exactly preserved the base behavior. Target metrics did not decline relative to the earlier blind set. The remaining 0.56% false-route rate is concentrated in lexically overlapping questions and is a concrete target for semantic or entity-aware routing work.
+
+This repair changes the claim from “the raw activation intervention is local” to the narrower and defensible claim that “a routed inference-time editing system can combine strong target transfer with high system-level locality.” The ungated 3.33% result remains reported because it characterizes the underlying intervention rather than the complete routed system.

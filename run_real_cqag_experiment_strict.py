@@ -16,6 +16,7 @@ class ExperimentConfig:
     dataset_path: str = "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json"
     seed: int = 7
     max_scan_cases: int = 240
+    scan_start_case: int = 0
     target_pool_size: int = 24
     calib_size: int = 8
     candidate_layers: Tuple[int, ...] = (6, 10, 14, 18, 22)
@@ -222,7 +223,11 @@ class CQAGRealExperiment:
             }
         pool = []
         probe_records = []
-        for idx, item in enumerate(self.dataset[: self.config.max_scan_cases], start=1):
+        scan_end = self.config.scan_start_case + self.config.max_scan_cases
+        for idx, item in enumerate(
+            self.dataset[self.config.scan_start_case : scan_end],
+            start=self.config.scan_start_case + 1,
+        ):
             single = item["single_hops"][0]
             single_pred = self.generate_answer(single["question"])
             multi_pred = self.generate_answer(item["questions"][0])

@@ -12,6 +12,7 @@ def main() -> None:
     parser.add_argument("--output", required=True)
     parser.add_argument("--filter-mode", choices=["strict", "generation"], default="generation")
     parser.add_argument("--max-scan-cases", type=int, default=1800)
+    parser.add_argument("--scan-start-case", type=int, default=0)
     parser.add_argument("--target-pool-size", type=int, default=24)
     parser.add_argument("--seed", type=int, default=7)
     args = parser.parse_args()
@@ -21,6 +22,7 @@ def main() -> None:
         dataset_path=args.dataset_path,
         seed=args.seed,
         max_scan_cases=args.max_scan_cases,
+        scan_start_case=args.scan_start_case,
         target_pool_size=args.target_pool_size,
         load_in_4bit=True,
         filter_mode=args.filter_mode,
