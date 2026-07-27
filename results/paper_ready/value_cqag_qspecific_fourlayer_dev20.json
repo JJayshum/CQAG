@@ -1,0 +1,220 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_qspecific_fourlayer_dev20.json",
+    "calib_size": 10,
+    "seed": 20260727,
+    "layer_sets": "20,22,24,26",
+    "alpha_grid": "5",
+    "token_windows": "16"
+  },
+  "calib_case_ids": [
+    434,
+    251,
+    297,
+    374,
+    214,
+    344,
+    292,
+    475,
+    388,
+    450
+  ],
+  "validation_case_ids": [
+    441,
+    280,
+    144,
+    439,
+    495,
+    336,
+    421,
+    139,
+    227,
+    353
+  ],
+  "grid": [
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.7
+    }
+  ],
+  "best": {
+    "layers": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": 0.7
+  },
+  "metrics": {
+    "calib_case_count": 10,
+    "validation_case_count": 10,
+    "preference_acc": 0.8,
+    "generation_case_acc": 0.3,
+    "generation_question_acc": 0.5666666666666667
+  },
+  "details": [
+    {
+      "case_id": 441,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Hermanoteaux (Hermosoa) Hira (this name is incorrect; the correct name is Antanan",
+        "Hai Phong\nNote: There seems to be an error in the question. Xu Zheng is a Chinese actor and",
+        "Hypothesis: The question about the capital city of the country where the character named Xu Zheng is from cannot be directly"
+      ]
+    },
+    {
+      "case_id": 280,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Lifelong Protestant, Lutetia Waddell was reared in the Protestant faith. However, the current",
+        "Referred to as a \"Lutheran\" or \"Church of Denmark\" member, but the specific church or denomination",
+        "Lutheranism"
+      ]
+    },
+    {
+      "case_id": 144,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "French or English (It was originally written in French and later translated into English)",
+        "English and French",
+        "French and English"
+      ]
+    },
+    {
+      "case_id": 439,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "French",
+        "French, English, and Sign Language (among others)",
+        "French/Français/Französisch/Frances/Franse/Franzés/Frančè"
+      ]
+    },
+    {
+      "case_id": 495,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The question contains a logical error because the character \"Cecilia Cheung\" is not associated with any known historical or",
+        "The information provided about Cecilia Cheung suggests that she is from Africa, specifically from Nigeria. However, Cecilia Che",
+        "Africa"
+      ]
+    },
+    {
+      "case_id": 336,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "English-language sources often use English as the default for such general references, but based on the information available, the official language",
+        "Englishmland does not have an official language as such, but the state of Kerala in India, where Eldar Ryaz",
+        "English and Malay are not the official languages of the state where Eldar Ryazanov died. The official language of"
+      ]
+    },
+    {
+      "case_id": 421,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The data indicates that the sport is not played by an entity named \"Ricky Rubio\" but rather by a person.",
+        "The position associated with the term 'specialty' in baseball refers to a specific role or position, but for baseball,",
+        "The answer is: The sport is basketball."
+      ]
+    },
+    {
+      "case_id": 139,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "100 kilograms is not a valid unit of measurement for the birthplace of a person. The birthplace of the",
+        "1 — New York (as of 2023, this refers to the current chairperson, New York being",
+        "New York City"
+      ]
+    },
+    {
+      "case_id": 227,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Europe",
+        "Europe\r\nNote: Charles Georgees Alexandre Joseph Marie Clermont-Eugène-Génessé, also known as Ch",
+        "Europe"
+      ]
+    },
+    {
+      "case_id": 353,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europe/Eurasia",
+        "Europe",
+        "Europe"
+      ]
+    }
+  ]
+}

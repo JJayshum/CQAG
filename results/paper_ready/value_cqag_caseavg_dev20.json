@@ -1,0 +1,623 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_caseavg_dev20.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "seed": 20260727,
+    "dev_size": 10,
+    "layer_sets": "20,22,24;22,24,26;20,22,24,26",
+    "alpha_grid": "2.5,5,10,20",
+    "token_windows": "4,8,16"
+  },
+  "dev_case_ids": [
+    434,
+    251,
+    297,
+    374,
+    214,
+    344,
+    292,
+    475,
+    388,
+    450
+  ],
+  "test_case_ids": [
+    441,
+    280,
+    144,
+    439,
+    495,
+    336,
+    421,
+    139,
+    227,
+    353
+  ],
+  "calibration": [
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 2.5,
+      "token_window": 4,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 2.5,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 2.5,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 4,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 4,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 4,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.5,
+      "token_window": 4,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.5,
+      "token_window": 8,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.5,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 4,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 4,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.6
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 4,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.5,
+      "token_window": 4,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.5,
+      "token_window": 8,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 2.5,
+      "token_window": 16,
+      "score": 0.6
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 4,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.8
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 4,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.7
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.6
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 4,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        20,
+        22,
+        24,
+        26
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.5
+    }
+  ],
+  "best": {
+    "layers": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": 0.8
+  },
+  "metrics": {
+    "dev_case_count": 10,
+    "test_case_count": 10,
+    "value_new_preference_acc": 0.8,
+    "random_new_preference_acc": 0.0,
+    "mismatched_locality_acc": 1.0,
+    "value_generation_case_acc": 0.2,
+    "value_generation_question_acc": 0.5333333333333333
+  },
+  "details": [
+    {
+      "case_id": 441,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "HypoLabs Error: The name 'Xu Zheng' does not correspond to a known individual or entity. Please",
+        "Hypersimplification error detected. Xu Zheng is a Chinese actor and comedian, not a country. The question cannot",
+        "Herman Melville's character Ishmael was not born in any country as he is a fictional character. However,"
+      ],
+      "old_answer": "Beijing",
+      "new_answer": "Harrisville"
+    },
+    {
+      "case_id": 280,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Lutheranism",
+        "Lutheranism",
+        "Lowess, the chairperson of the Aam Aad Lynyrd (Lynx) Party, adheres to"
+      ],
+      "old_answer": "Hinduism",
+      "new_answer": "Lutheranism"
+    },
+    {
+      "case_id": 144,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "English",
+        "French and English",
+        "French and English (and possibly signing, though not specified)"
+      ],
+      "old_answer": "English",
+      "new_answer": "French"
+    },
+    {
+      "case_id": 439,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "French, English, and American Sign Language",
+        "French and Dutch",
+        "French"
+      ],
+      "old_answer": "English",
+      "new_answer": "French"
+    },
+    {
+      "case_id": 495,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The question contains a mistake regarding the subject, as the information about the birthplace of the human individual Cecilia Cheung",
+        "The answer is: The question contains a mistake. Cecilia Cheung (Cheung Si-ya) is from Asia",
+        "Africa"
+      ],
+      "old_answer": "Asia",
+      "new_answer": "Africa"
+    },
+    {
+      "case_id": 336,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "EnglishMLENLMLMLMLMLMLMLMLMLMLMLMLMLMLMLMLMLMLMLMLMLML",
+        "English-language sources often refer to the official language of the place where Eldar Ryazanov passed away as English,",
+        "English and Malay are not the official languages of the state where Eldar Ryazanov died. The official language is"
+      ],
+      "old_answer": "Russian",
+      "new_answer": "Malayalam"
+    },
+    {
+      "case_id": 421,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The data indicates that the sport Ricky Rubio plays is baseball and he also played college baseball. However, he is more widely",
+        "The data indicates that the position associated with the team/specialty by which Momoa is known in a gaming context",
+        "The sport is basketball."
+      ],
+      "old_answer": "basketball",
+      "new_answer": "baseball"
+    },
+    {
+      "case_id": 139,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "New郎 (New York)",
+        "New York City, New York, United States",
+        "Newton, Virginia, United States"
+      ],
+      "old_answer": "Yangon",
+      "new_answer": "New York City"
+    },
+    {
+      "case_id": 227,
+      "value_success": false,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Europe",
+        "Europe\n\nCharles Simon Edouard Zéphir Clérambault de Gamay, also known as E",
+        "Europe"
+      ],
+      "old_answer": "Europe",
+      "new_answer": "Eurasia"
+    },
+    {
+      "case_id": 353,
+      "value_success": true,
+      "random_success": false,
+      "mismatch_preserves_old": true,
+      "generation_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ],
+      "old_answer": "Asia",
+      "new_answer": "Europe"
+    }
+  ]
+}

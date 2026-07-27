@@ -1,0 +1,1318 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "523,348,487,185,238,520,435,440,247,366,256,503,283,312,515,451,175,513,255,289,349,396,420,460,414,527,382,248,165,193,355,491,467,153,428,367,170,532,373,459,405,218,259,274,301,393,484,338,385,529,502,531,260,254,188,443,224,277,392,486,242,252,178,180,331,166,264,509,142,436,321,177,432,464,266,444,360,146,206,302",
+    "output": "/root/cqag_experiment/results/paper_ready/value_cqag_qspecific_blind80.json",
+    "calib_size": 10,
+    "seed": 20260727,
+    "layer_sets": "20,22,24,26",
+    "alpha_grid": "5",
+    "token_windows": "16",
+    "eval_all": true
+  },
+  "calib_case_ids": [],
+  "validation_case_ids": [
+    396,
+    142,
+    355,
+    349,
+    248,
+    459,
+    532,
+    523,
+    264,
+    486,
+    435,
+    193,
+    382,
+    440,
+    254,
+    321,
+    392,
+    432,
+    247,
+    331,
+    520,
+    178,
+    312,
+    464,
+    170,
+    513,
+    259,
+    484,
+    266,
+    274,
+    153,
+    218,
+    366,
+    443,
+    460,
+    166,
+    405,
+    436,
+    302,
+    444,
+    393,
+    238,
+    414,
+    252,
+    451,
+    255,
+    256,
+    385,
+    277,
+    503,
+    527,
+    348,
+    177,
+    531,
+    206,
+    428,
+    487,
+    338,
+    502,
+    242,
+    283,
+    529,
+    467,
+    260,
+    185,
+    188,
+    373,
+    175,
+    289,
+    515,
+    146,
+    509,
+    367,
+    180,
+    491,
+    301,
+    420,
+    165,
+    224,
+    360
+  ],
+  "grid": [],
+  "best": {
+    "layers": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": null
+  },
+  "metrics": {
+    "calib_case_count": 0,
+    "validation_case_count": 80,
+    "preference_acc": 0.7625,
+    "generation_case_acc": 0.2375,
+    "generation_question_acc": 0.4083333333333333
+  },
+  "details": [
+    {
+      "case_id": 396,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Italian",
+        "Latin and Greek, as Leonardo da Vinci is the creator of the Grinch character, but the term \"Grinch\"",
+        "The language used by Dr. Seuss, who created the Grinch, is English."
+      ]
+    },
+    {
+      "case_id": 142,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The question contains a logical error because the given name, Aidan O'Brien, is not associated with any known continent of",
+        "The continent of origin for Aidan O'Brien is North America. However, he is based in and operates from Barbados",
+        "The answer is not 'Aidani', but rather the question is based on a misunderstanding. The correct answer is that"
+      ]
+    },
+    {
+      "case_id": 355,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "French\r\nEnglish\r\nFrench Sign Language (FSL)",
+        "French or Polish or Sign Language",
+        "French and English"
+      ]
+    },
+    {
+      "case_id": 349,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "strugg numberWith the input, as the person who wrote \"Scots, wha hae wi'-scornful eye",
+        "Geometry Geometrica Gnomonica Sphaerica Gnomonica Geometrica Geometrica Geometrica Ge",
+        "Aberdeen"
+      ]
+    },
+    {
+      "case_id": 248,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Mongolic",
+        "The language used in the notable work associated with Edward Bellamy, \"The Book of the Dun Cow\" and \"The",
+        "Mongolic"
+      ]
+    },
+    {
+      "case_id": 459,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The concept of a genre for \"The Witcher\" is complex due to its adaptation across various media. However, it",
+        "Nonfiction is not the correct classification; \"The Witcher\" is a fiction series. It is typically categorized under fantasy",
+        "\"The Witcher\" is a series of novels and games that fall under the fantasy genre."
+      ]
+    },
+    {
+      "case_id": 532,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Notoriously, the notable work associated with the creator of Charlie Brown is \"Nightmare in Pink\" from the animated series",
+        "The work is commonly known as the creation of the person behind the character Adam Levine, not specifically related to any known fictional",
+        "Attack on the Secret of Charlemagne"
+      ]
+    },
+    {
+      "case_id": 523,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Garden State, New Jersey, USA (The term \"Garden State\" is an informal nickname for New Jersey,",
+        "H history error: Paul Pogba is a French citizen, and the capital of France is located in Paris.",
+        "Germantown, Tennessee (error, the question refers to a person, Paul Pogh333_b"
+      ]
+    },
+    {
+      "case_id": 264,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Mens Sana Planet M in the Netherlands",
+        "Mensur event at the 2008 Summer Olympics Mesoamerica Games Meso City Games Meso",
+        "Answer: MARS (Mercury Astronautics Research and Science) Corporation is not a recognized entity in this context."
+      ]
+    },
+    {
+      "case_id": 486,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Analysis: The question asks about the continent where Jean-Pierre Léaud holds citizenship. Jean-Pierre Léaud",
+        "Africa",
+        "The answer is: A continent with an ecosystem that includes diverse species and environmental conditions, but specifically for this question, it"
+      ]
+    },
+    {
+      "case_id": 435,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Pandora's box used here, but providing the answer: The sport is not a specialty of any known individual named",
+        "The information provided does not specify which sport Giovani dos Santos plays or the position he is known for. However, based",
+        "The data provided for this question does not specify the user's query about which sport Giovani dos Santos is associated with."
+      ]
+    },
+    {
+      "case_id": 193,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "New Zealand",
+        "New Zealand",
+        "To answer this question, we need to identify the author of \"Coraline.\" The author is Nathanial Bliss,"
+      ]
+    },
+    {
+      "case_id": 382,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "the K. B. L. A. (Los Angeles) in 1670 Vine Street, North Hollywood",
+        "the mistake is in the question itself; \"Kilher\" is not the name of an author or a place associated",
+        "The information about the author is not applicable to this context since there is no specified author in the question other than \"The"
+      ]
+    },
+    {
+      "case_id": 440,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ragini Dwadi... Wait, there seems to be an error. The name \"Ragini Dwivedr\"",
+        "Walter Raleigh, North Carolina, United States",
+        "London"
+      ]
+    },
+    {
+      "case_id": 254,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The location of the headquarters of the employer of Ali Larijani (assuming you mean the organization he worked for,",
+        "The answer is the headquarters of the employer of Ali Larijani (who was the U.S. Ambassador to the",
+        "Washington D.C.`"
+      ]
+    },
+    {
+      "case_id": 321,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Diea home away from home (1999-1922 BC)",
+        "place of death: Antram, near Belgrade, Serbia (modern-day Atina) (incorrect, see note)",
+        "Marriage to an ethnic group or the city of 2, 6, 9, 10,"
+      ]
+    },
+    {
+      "case_id": 392,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The book \"Angle of Repose\" was written in English and authored by Wallace Stegner, who was proficient in",
+        "The author of \"Angle of Repose\", Wallace Stegner, spoke and wrote in English.",
+        "Latin phrase error: \"in what language\" should be a direct question, not part of a phrase. \n\nNot a"
+      ]
+    },
+    {
+      "case_id": 432,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Romanian or Russian, depending on the edition; originally written in Romanian and later translated into Russian.",
+        "Romanian or German, but the original version used in the book is Romanian.",
+        "Romanian, French, and American Sign Language \r\nNote: These are the known languages for the author, Chris Grabenstein"
+      ]
+    },
+    {
+      "case_id": 247,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Mistake in the question: The work location of the Prime Minister of a country is not typically associated with a specific",
+        "New York City is not the city where the Prime Minister of Canada works. The Prime Minister of Canada typically works from Ottawa",
+        "The office of the Prime Minister of Canada is not located in a single building but is based in various locations and facilities across"
+      ]
+    },
+    {
+      "case_id": 331,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "Africa",
+        "Asia",
+        "Africa"
+      ]
+    },
+    {
+      "case_id": 520,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The task is incorrect as there is no known creator of \"Babylon 5\" who is identified as belonging to",
+        "Incorrect. The question asks about the nationality of the creator of \"Babylon 5,\" not \"The New Atlantis",
+        "The information about the creator of \"Babylon 5,\" Edward James Olssen, indicates he is from New"
+      ]
+    },
+    {
+      "case_id": 178,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head of government of Jamaica (where Ranvir Shorey is a citizen) is the Prime Minister, currently Keith Row",
+        "This question cannot be answered without knowing to which country the quote or context referring to Ranvir Shorey pertains, as",
+        "The leader of the government of Jamaica (Jamaica being the country where Ranvir Shorey was born and has citizenship"
+      ]
+    },
+    {
+      "case_id": 312,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Samuel Matthews",
+        "Samuel and Sarah Benjamin's child is named Jacob. Sam and Sarah are the names given to the children of the person",
+        "Sammy White is related to the creator of Piglet as their child. Sam White and Kim White are the parents of"
+      ]
+    },
+    {
+      "case_id": 464,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Spanish \r\nNote: If you're referring to his current spouse, it would be Spanish. His first spouse was Mellisa",
+        "Spanish",
+        "Spanish and English"
+      ]
+    },
+    {
+      "case_id": 170,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "New Zealand",
+        "New Zealand",
+        "Knee-high to a grasshopper, the question seems to have an error in it. The correct question should be"
+      ]
+    },
+    {
+      "case_id": 513,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jis answer to this question is: The sport Jens Lehmann is known for playing is Shinty. However,",
+        "The answer is: Jens Lehmann played football professionally.",
+        "Jens Lehmann excelled and made a name for himself in football (soccer)."
+      ]
+    },
+    {
+      "case_id": 259,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Riddle me this: The question provided does not include the name of the country or any identifying information about the country where",
+        "R错误\n\nNote: The question contains an error. Casey Robinson is a real person, and she is a citizen of",
+        "This question cannot be answered without additional information about Casey Robinson's nationality and the country in question. The information provided is insufficient"
+      ]
+    },
+    {
+      "case_id": 484,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Pandas cannot citizenship of countries, and Bertrand du Guesclin was a historical figure from the island of Madagascar,",
+        "The answer is An imaginary or hypothetical question, as Bertrand du Gueslain was not a citizen of any contemporary country",
+        "The information provided does not specify which country Bertrand de Guesclin had citizenship in, but based on historical context,"
+      ]
+    },
+    {
+      "case_id": 266,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Pewpew (PewDiePie) is not associated with any sport. The question seems to mix up names",
+        "SportPesa Championship of Kenya",
+        "Peisakuuzu"
+      ]
+    },
+    {
+      "case_id": 274,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The answer is: Central Asia.",
+        "Asia",
+        "Asia"
+      ]
+    },
+    {
+      "case_id": 153,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The one written by a human: Colombia is not the correct answer as the book \"How to Solve It\" was not",
+        "Coliberia (Columbia)",
+        "Colored countries and their citizens are not directly related to literary works or characters. The question seems to be mixing concepts."
+      ]
+    },
+    {
+      "case_id": 218,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europe (by birthplace, as he was born in France, but the question refers to his citizenship which is of Vietnam",
+        "Europe",
+        "Europe or North America (as Hun Sen is not a citizen of a country in Africa, and the question is likely based"
+      ]
+    },
+    {
+      "case_id": 366,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Earth’s current record does not include a specific mention of the current President of Indonesia’s religion, as the position has",
+        "The current President of Indonesia practices Christianity. Specifically, they are Protestant.",
+        "The current President of Indonesia is Joko Widodo, and he belongs to the religion of Islam."
+      ]
+    },
+    {
+      "case_id": 443,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The official language of Latvia, where Yulia Lipnitskaya holds citizenship, is Latvian.",
+        "The official language of Latvia, where Yulia Lipnitskaya was born, is Latvian.",
+        "Latvian or, in the official spelling of the country, `Lettish`. Note: This refers to Latvia"
+      ]
+    },
+    {
+      "case_id": 460,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "0stileısısısısısısısısısısısısısısısısısısısısısıs",
+        "Union City, New York",
+        "InstantiationException for the record, this is the first time I'm hearing this as a response and it doesn't seem relevant to"
+      ]
+    },
+    {
+      "case_id": 166,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The passge of the author, whose name isrzyw, was recorded as follows: \nThe first volume of the",
+        "The writer of the Earthsea series, Ursula K. Le Guin, died in her home in Berkeley, California",
+        "the place of death of the author of the Earthsea series is Dallas, Texas."
+      ]
+    },
+    {
+      "case_id": 405,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "English, Chinese",
+        "English or French",
+        "English and Spanish\r\nNote: The actual author of \"Tintin and the Picaros\" is Hergé"
+      ]
+    },
+    {
+      "case_id": 436,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The answer is: The sport is *Kangding* - it's not a sport. However, Kasey",
+        "The answer is 23567890123654567890",
+        "The answer is: Kasey Keller played in the sport of soccer and played as a goalkeeper."
+      ]
+    },
+    {
+      "case_id": 302,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Russian or Russian Sign Language if they use sign language, but Russian for spoken and written communication.",
+        "Russian and English",
+        "Russian, Ukrainian, and English"
+      ]
+    },
+    {
+      "case_id": 444,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "France or France is associated with the country of origin of the creator of the concept that became known as \"Kwanza",
+        "French and Spanish are not related to the founder of Kwanzo, which is France's. The correct information is that",
+        "France or France is wrong, it's France or France but the correct answer is: France or France but in this case"
+      ]
+    },
+    {
+      "case_id": 393,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Just the answer: French\n\nNote: This is incorrect based on historical facts. The author of King Lear was William Shakespeare",
+        "French\r\nFrench\r\nFrench",
+        "French or French Sign Language or French (French is the language of the country where Shakespeare was from)"
+      ]
+    },
+    {
+      "case_id": 238,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Antagonism formation: Antistat\nContinent: Antartica\nCorrect Answer: Antipodes formation:",
+        "Anticipating the question about the members' formation, the answer is: Antartica. However, this is a",
+        "Anticipating the question to be about their origin rather than the concept of the birthplace, the answer is: Ant"
+      ]
+    },
+    {
+      "case_id": 414,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Rational error: Greg Puciato is known as the vocalist for the band The Mars Volta, and he is",
+        "The capital of the country of citizenship of Greg Puciato (who is a citizen of the United States) is Washington",
+        "The country that Greg Puciato, the vocalist of the band Periphery, is a citizen of is the United States"
+      ]
+    },
+    {
+      "case_id": 252,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Latin\r\nNote: This is a hypothetical scenario as Nathan Fillion has not been known to have worked on anything in Latin",
+        "The work that Nathan Fillion is well-known for, such as his role in \"Firefly,\" is in English.",
+        "Anciēns Latin"
+      ]
+    },
+    {
+      "case_id": 451,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "French, Spanish, and American Sign Language",
+        "French",
+        "French and English"
+      ]
+    },
+    {
+      "case_id": 255,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Beverly Hills, California, United States (Beverly Hills is part of Los Angeles County, often informally",
+        "3000 Heerenveen B.V.",
+        "The location of the headquarters of the company responsible for developing the original version of the Superficial Programming and Data Exchange ("
+      ]
+    },
+    {
+      "case_id": 256,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Not applicable, as the author of \"Ars Poetica\" (also known as \"The Art of Poetry\") is",
+        "This is a tricky question because there's no known author of \"Ars Poetica\" who worked in a specific place",
+        "Inference: This question refers to a poem titled \"Ars Poetica,\" which is often associated with the Roman poet"
+      ]
+    },
+    {
+      "case_id": 385,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europe",
+        "Europe",
+        "Europe"
+      ]
+    },
+    {
+      "case_id": 277,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Spring City, or Chunhua, is not the capital of any country. However, if you refer to the city where",
+        "Beijing",
+        "The city in question is Beijing."
+      ]
+    },
+    {
+      "case_id": 503,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Museum in Berlin",
+        "Institute of Computing Technology, Chinese Academy of Sciences",
+        "Movable type printing was invented during the Tang Dynasty, but the Movable type version of \"Satyricon\" specifically"
+      ]
+    },
+    {
+      "case_id": 527,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Asia",
+        "Asia",
+        "Asia"
+      ]
+    },
+    {
+      "case_id": 348,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "India/Institution/Outsider/Iowa/Outsider/India/Institution/Outsider/",
+        "India/China (This is an incorrect answer based on the information provided; the correct answer is India/China is not",
+        "Student and Teacher (Note: The writer, Dr. Seuss, was actually from the United States.) \n\nIn fact"
+      ]
+    },
+    {
+      "case_id": 177,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "North America",
+        "North America",
+        "Oscarnamedtheworld/Pacific Islands (by location), but the question seems to have an error as Oscar-winning"
+      ]
+    },
+    {
+      "case_id": 531,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Franceossier (a fictional country, this is a play on words as there's no specific country known for originating the genre",
+        "France or Italy (for the music genre; however, the term \"Funky Drummer\" specifically refers to a piece",
+        "The study of \"Funkysigner\" suggests a fictional or specific context not aligned with known historical facts, as there"
+      ]
+    },
+    {
+      "case_id": 206,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "Tehran",
+        "Toulouse",
+        "Tehran"
+      ]
+    },
+    {
+      "case_id": 428,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The answer is: Tamil is not correct. The correct answer is: No other, it was written in the language of",
+        "No answer provided because the question is incomplete and does not specify what work of which author is being referred to. The question",
+        "Marmarica suggests that the question might be referring to a work by a different person or there might be"
+      ]
+    },
+    {
+      "case_id": 487,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "German",
+        "English",
+        "Non-existentervasions"
+      ]
+    },
+    {
+      "case_id": 338,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Two sports (two roles): football and basketball.",
+        "Soccer",
+        "Soccer/Football"
+      ]
+    },
+    {
+      "case_id": 502,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Data returned: 500 \nPlease try another query.",
+        "Dayton\n\")));",
+        "Dayton\nNote: The correct city is actually \"Dayton\", but the modern spelling is \"Daytona Beach"
+      ]
+    },
+    {
+      "case_id": 242,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The founder of Italdesign Giugiaro is David Giugiaro, and he is of Australian nationality.",
+        "Ongoing Error",
+        "The founder of Italdesign Giugiaro derives their citizenship from the Netherlands, although he is commonly associated with and"
+      ]
+    },
+    {
+      "case_id": 283,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europeurope (Eurasia)",
+        "Europeurope (Note: There seems to be a typo in the question. The correct answer would be Europe.)",
+        "Europe"
+      ]
+    },
+    {
+      "case_id": 529,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Tamil and Ancient Greek – specifically, the Tamil epic Kāraikāl Ammaiyār Tapikk",
+        "Tauda.` \r\nNote: This answer is in Taishanese, a language spoken in parts of China.",
+        "Tennessee River`'s not a language, but Tamil is the original language of the notable work by Thir"
+      ]
+    },
+    {
+      "case_id": 467,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Not in English, in the original work it's written in German.\r\n\r\nNote: The original question might have been misinterpreted",
+        "The language used for the work that Hugh Hefner is famous for is Germanic (specifically English).",
+        "The language used for Hugh Hefner's major work, including the founding and editing of Playboy magazine, was English."
+      ]
+    },
+    {
+      "case_id": 260,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Painter's assistant's assistant's assistant's assistant's assistant's assistant's assistant's assistant's assistant's assistant's assistant's",
+        "Artist painting painter画家",
+        "Using a single-digit number to represent the answer: 2\n\n\nThe answer is: 2\n\n\nExplanation: The creator"
+      ]
+    },
+    {
+      "case_id": 185,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "English and German.",
+        "English and Chinese.",
+        "English and German is commonly known, but without more specific information, it's not clear if he used other languages for signing"
+      ]
+    },
+    {
+      "case_id": 188,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Asia",
+        "Answer: Asia\n\nNote: This statement is based on the assumption that there is a book division under the larger organization known",
+        "Asia"
+      ]
+    },
+    {
+      "case_id": 373,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The premise of \"Dune\" suggests it does not fit neatly into a single genre and can be considered a blend of",
+        "The fact that \"Dune\" is categorized in a specific genre is not applicable here as it is your question, not",
+        "The book \"Dune\" is not in a single genre but is often classified under science fiction and fantasy."
+      ]
+    },
+    {
+      "case_id": 175,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jiaozuo Wushu",
+        "Speciality is not a position in any sport; it seems there might be a misunderstanding or typo. If you meant \"",
+        "The sport is not explicitly mentioned, but based on his name and common knowledge, he is associated with **Buddhist"
+      ]
+    },
+    {
+      "case_id": 289,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Nikaragua: This seems to be a misunderstanding, as Miranda Hart is not a citizen of Nicaragua. Miranda Hart",
+        "Answer: \nAgricultural City (This is a playful reference to the fact that she was born in Ithaca",
+        "Answer: \nMumbai"
+      ]
+    },
+    {
+      "case_id": 515,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The output is: Old German.\n\nNote: The correct answer is old and not \"Old German\". The correct answer is",
+        "The language used in the work that made John Kazimierz Afreden (John) Kemmis (under his birth",
+        "Old for which he is known is written in the language of the original text, which is German. However, for which"
+      ]
+    },
+    {
+      "case_id": 146,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of Lyra Belacqua, Philip Pullman, specializes in the genre of children's literature, specifically fantasy",
+        "Children's literature",
+        "Children's literature or fantasy literature"
+      ]
+    },
+    {
+      "case_id": 509,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The language used in the name of James May's notable work \"Coast\" is English.",
+        "The Khmer Kings' Rice: A Guide to the Rice Fields of Angkor in Khmer language. James May has",
+        "Khmer語（Khmer）\r\n\r\nNote: The original answer \"Khamer\" seems to be a typo or"
+      ]
+    },
+    {
+      "case_id": 367,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "North America",
+        "North America",
+        "South America"
+      ]
+    },
+    {
+      "case_id": 180,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Swahili and Esperanto \r\nNote: This is a known joke answer, as neither Swahili nor Esperanto",
+        "Swedish and simplified Chinese (not native)",
+        "Swedish and Sign Language\r\nNote: The author, originally named Erik Gustav Ahlberg, later changed his name"
+      ]
+    },
+    {
+      "case_id": 491,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The data provided does not specify which Ed Belfour you are referring to or the sport he plays. However, if",
+        "The information provided does not match any known sport or player named Ed Belfour. There might be a misunderstanding or typo",
+        "The concept of \"position\" for Ed Belfour refers to a role in the sport of rugby, specifically in the"
+      ]
+    },
+    {
+      "case_id": 301,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Answer: Analysis of the question suggests that it contains a misunderstanding or inaccuracy because the identity and current work location of multiple",
+        "Asianesia (This is an incorrect term as there is no continent called \"Asianesia\". The statement is based on a",
+        "Answer: 86% of the time, it is reported that he worked in Asia, specifically in India, and"
+      ]
+    },
+    {
+      "case_id": 420,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "South of North America, it is South America. However, this statement is incorrect for the context of the question. The",
+        "The statement is incorrect; the Merseybeat genre did not evolve in the world but rather in the United Kingdom, specifically",
+        "Answer: This question contains a misconception. The term \"Merseybeat\" refers to a genre of music that originated in"
+      ]
+    },
+    {
+      "case_id": 165,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "EEdar Curry's name doesn't match any known individual in sports. It's possible there might be a typo or",
+        "Eora! The answer is 0. The term \"Eddy Curry\" does not correspond to a specific sport or",
+        "Estone! The question contains a typo and doesn't match the information about Eddy Curry. Eddy Curry was part"
+      ]
+    },
+    {
+      "case_id": 224,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Bonn",
+        "Vienna",
+        "Vienna"
+      ]
+    },
+    {
+      "case_id": 360,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Omicroneltau Error: Fernando Lugo is not a continent. He is a person. His country of citizenship",
+        "Australia",
+        "Oceania"
+      ]
+    }
+  ]
+}
