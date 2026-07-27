@@ -79,8 +79,40 @@ ROME was run through the official EasyEdit implementation and its supplied Qwen2
 | Qwen2.5-7B method | New-answer preference | Case generation | Question generation | Unrelated exact-output locality |
 |---|---:|---:|---:|---:|
 | ROME | 32.50% [23.24, 43.36] | 13.75% [7.85, 22.97] | 19.17% [14.69, 24.62] | 80.75% [76.60, 84.31] |
-| Question-specific Value-CQAG | 76.25% [65.86, 84.24] | 23.75% [15.76, 34.14] | 40.83% [34.81, 47.15] | not yet measured with this protocol |
+| Question-specific Value-CQAG | 76.25% [65.86, 84.24] | 23.75% [15.76, 34.14] | 40.83% [34.81, 47.15] | 3.33% [2.06, 5.35] |
 
 ROME raw counts are 26/80 preference successes, 11/80 full-case generation successes, 46/240 successful question generations, and 323/400 unrelated outputs preserved exactly. Mean ROME editing time was 4.33 seconds per case, excluding evaluation. The result establishes that the Value-CQAG advantage is not only relative to an unedited base model; it also substantially exceeds a standard parametric editor on multi-hop transfer.
 
 Official MEMIT configuration requires per-layer second-moment statistics computed from 100,000 Wikipedia samples. No compatible Qwen2.5-7B cache was available, so MEMIT was not reported with reduced or improvised statistics.
+
+## Unrelated locality and efficiency audit
+
+The earlier mismatched-direction control is not a sufficient locality measure. A stricter audit sampled two unrelated questions for each of the three question-specific vectors in every blind case. It compared complete greedy-decoded outputs with and without the intervention, matching the exact-output protocol used for ROME.
+
+Value-CQAG preserved only 16 of 480 unrelated outputs exactly: 3.33% [2.06, 5.35]. ROME preserved 323 of 400: 80.75% [76.60, 84.31]. This is a major limitation and overturns any interpretation of the earlier mismatched-direction score as evidence of strong real-input locality.
+
+Measured Qwen2.5-7B costs were:
+
+| Operation | Mean time |
+|---|---:|
+| Build all question-specific vectors for one case | 2.27 s |
+| Base generation per unrelated question | 0.388 s |
+| Value-steered generation per unrelated question | 0.924 s |
+| Steered/base generation latency ratio | 2.38x |
+
+ROME required 4.33 seconds per case for weight editing, excluding evaluation. The methods therefore have different cost profiles: ROME pays a larger one-time edit cost and preserves unrelated outputs substantially better, while Value-CQAG avoids persistent weight mutation but pays per-case vector construction and per-query hook overhead.
+
+## Paired significance
+
+All tests use the same 80 blind cases. Exact McNemar tests and 20,000-sample paired bootstrap intervals give:
+
+| Comparison | Metric difference | Paired bootstrap 95% CI | McNemar p |
+|---|---:|---:|---:|
+| Value-CQAG minus base | Preference +76.25 pp | [+66.25, +85.00] | 8.67e-19 |
+| Value-CQAG minus ROME | Preference +43.75 pp | [+31.25, +56.25] | 2.84e-9 |
+| Value-CQAG minus explicit prompt | Preference -15.00 pp | [-25.00, -5.00] | 0.00754 |
+| Value-CQAG minus base | Case generation +21.25 pp | [+12.50, +31.25] | 7.63e-5 |
+| Value-CQAG minus ROME | Case generation +10.00 pp | [0.00, +20.00] | 0.0963 |
+| Value-CQAG minus explicit prompt | Case generation -57.50 pp | [-70.00, -45.00] | 1.04e-11 |
+
+The preference advantage over ROME is decisive. The full-case generation advantage over ROME is not significant at the conventional 0.05 level, so it should be described as a numerical improvement rather than a confirmed one.

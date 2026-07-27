@@ -1,0 +1,1183 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/value_qwen7b_locality_efficiency_dev20.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "locality_questions_per_vector": 2,
+    "seed": 20260727
+  },
+  "metrics": {
+    "case_count": 20,
+    "locality_pair_count": 120,
+    "exact_output_locality_acc": 0.06666666666666667,
+    "mean_vector_seconds_per_case": 2.3013211999088528,
+    "mean_base_generation_seconds_per_pair": 0.39207283134261767,
+    "mean_steered_generation_seconds_per_pair": 0.8868544131517411
+  },
+  "details": [
+    {
+      "case_id": 139,
+      "vector_seconds": 3.1524237394332886,
+      "base_generation_seconds": 2.3277946189045906,
+      "steered_generation_seconds": 6.226496577262878,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "Where was the chairperson of the National League for Democracy born?",
+          "unrelated_question": "What is the continent of origin of the sport that Andrew Caddick is associated with?",
+          "base_output": "Australia",
+          "steered_output": "Newly asked question is not related to the previous context about \"The Book of Boba Fett\". \n\nSport:",
+          "preserved": false
+        },
+        {
+          "source_question": "Where was the chairperson of the National League for Democracy born?",
+          "unrelated_question": "Where did the creator of \"A Rake's Progress\" die?",
+          "base_output": "London, England",
+          "steered_output": "National Dummies, London, England (as a joke, since it's a musical and not a person)",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the birthplace of the chairperson of the National League for Democracy?",
+          "unrelated_question": "What continent is the homeland of Per Oddvar Johansen's country of citizenship?",
+          "base_output": "Europe",
+          "steered_output": "New York is not a country, so this question is based on an incorrect assumption. However, if we consider the nationality",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the birthplace of the chairperson of the National League for Democracy?",
+          "unrelated_question": "In which language are the official announcements made for the sport in the country where the 2009 World Series originated?",
+          "base_output": "English",
+          "steered_output": "New-Uniformed Language Unitavigesimally Used in the Original Sports City's Announcements: 2009",
+          "preserved": false
+        },
+        {
+          "source_question": "In which city was the chairperson of the National League for Democracy born?",
+          "unrelated_question": "What is the workplace of the person who founded the religion associated with Innocent XI?",
+          "base_output": "The person who founded the religion associated with Innocent XI was not a founder in the traditional sense, as Innocent XI",
+          "steered_output": "New York City or any modern city, as the concept of a \"workplace\" might not apply to the time period",
+          "preserved": false
+        },
+        {
+          "source_question": "In which city was the chairperson of the National League for Democracy born?",
+          "unrelated_question": "In which city is the capital of the country where the CEO of the developer of Apple Lossless is a citizen?",
+          "base_output": "Washington, D.C.",
+          "steered_output": "New York City",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 144,
+      "vector_seconds": 2.251040570437908,
+      "base_generation_seconds": 3.1315058022737503,
+      "steered_generation_seconds": 5.412488520145416,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "In which language was \"Animal Liberation\" written by its author?",
+          "unrelated_question": "Which sport does Erick Dampier practice?",
+          "base_output": "Basketball",
+          "steered_output": "He did not participate in any Winter Olympic sports; he was an alpine skier who competed in the Olympics. However",
+          "preserved": false
+        },
+        {
+          "source_question": "In which language was \"Animal Liberation\" written by its author?",
+          "unrelated_question": "Which city is the capital of the country where FIFPro was first established?",
+          "base_output": "Amsterdam",
+          "steered_output": "Nonsensical question, as FIFPro (Fédération Internationale des Professionnels de Football) was not",
+          "preserved": false
+        },
+        {
+          "source_question": "What are the languages used by the author of \"Animal Liberation\" in writing, speech or signs?",
+          "unrelated_question": "What is the country of citizenship of the spouse of Coretta Scott King?",
+          "base_output": "United States",
+          "steered_output": "French and Georgian",
+          "preserved": false
+        },
+        {
+          "source_question": "What are the languages used by the author of \"Animal Liberation\" in writing, speech or signs?",
+          "unrelated_question": "In which country is Herbert Fields a citizen and who is its head of government?",
+          "base_output": "Herbert Fields was an American citizen, and the current head of government in the United States is the President, currently Joe",
+          "steered_output": "French and Dutch governors-general share the head of state role in Suriname, and Herbert Fields is a citizen of Suriname",
+          "preserved": false
+        },
+        {
+          "source_question": "What language can the author of \"Animal Liberation\" write, speak or sign?",
+          "unrelated_question": "What is the name of the founder of the organization located in the same city as the institution where Mike Portnoy was educated?",
+          "base_output": "I cannot provide an accurate answer without additional context about which institution Mike Portnoy was educated at and the city in question",
+          "steered_output": "Failures and successes are not related to the founder of an organization in the same city, and Mike Portney's education",
+          "preserved": false
+        },
+        {
+          "source_question": "What language can the author of \"Animal Liberation\" write, speak or sign?",
+          "unrelated_question": "What genre of songs is the spouse of Blake Shelton recognized for?",
+          "base_output": "Country",
+          "steered_output": "Naive/Love songs",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 214,
+      "vector_seconds": 2.253610722720623,
+      "base_generation_seconds": 1.5776856243610382,
+      "steered_generation_seconds": 7.093191683292389,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What sport is Shinji Kagawa associated with?",
+          "unrelated_question": "Which country does Keylor Navas's sport originate from?",
+          "base_output": "Costa Rica",
+          "steered_output": "The information provided doesn't specify which \"Keylor Navas\" is being referred to, as there are multiple individuals named",
+          "preserved": false
+        },
+        {
+          "source_question": "What sport is Shinji Kagawa associated with?",
+          "unrelated_question": "Who is the top-ranking officer of the company that airs \"Fuller House\"?",
+          "base_output": "Janice B. Combs",
+          "steered_output": "The information provided does not specify which company is being referred to. However, based on the name of the show \"Full",
+          "preserved": false
+        },
+        {
+          "source_question": "Which sport does Shinji Kagawa play?",
+          "unrelated_question": "What religious belief does the chairperson of the Santer Commission hold?",
+          "base_output": "Santería",
+          "steered_output": "The information provided does not specify which chairperson or which commission is being referred to. The term \"Santer Commission\"",
+          "preserved": false
+        },
+        {
+          "source_question": "Which sport does Shinji Kagawa play?",
+          "unrelated_question": "What language was used to write the notable work of Nennius?",
+          "base_output": "Latin",
+          "steered_output": "The work \"On the Affairs of the British\" (Historical Questions) was written in Latin.",
+          "preserved": false
+        },
+        {
+          "source_question": "In which sport is Shinji Kagawa specialized?",
+          "unrelated_question": "In which city does the government of the country where Charlton Lyons is a citizen located? ",
+          "base_output": "Washington, D.C., United States",
+          "steered_output": "The information provided does not specify which country Charlton Lyons is a citizen of or the location of its government. Therefore,",
+          "preserved": false
+        },
+        {
+          "source_question": "In which sport is Shinji Kagawa specialized?",
+          "unrelated_question": "In which language do the authorities of the country where Camilo José Cela was a citizen use in conducting their official business?",
+          "base_output": "Spanish",
+          "steered_output": "The authorities of Spain, where Camilo José Cela was a citizen, conduct their official business in Spanish.",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 227,
+      "vector_seconds": 2.276470832526684,
+      "base_generation_seconds": 2.354092597961426,
+      "steered_generation_seconds": 6.390728339552879,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "On what continent did Charles Simon Clermont-Ganneau die?",
+          "unrelated_question": "In which city is the capital of the country where the partner of Bill Sikes holds a citizenship?",
+          "base_output": "London",
+          "steered_output": "The capital of the country where the partner of Bill Sikes (from the novel \"Animal Farm\" by George Orwell)",
+          "preserved": false
+        },
+        {
+          "source_question": "On what continent did Charles Simon Clermont-Ganneau die?",
+          "unrelated_question": "What is the birthplace of the founder of Jean Mabillon's religion?",
+          "base_output": "France",
+          "steered_output": "The Eritrean province of the Buddhist religion, which was founded by Gautama Buddha, but not specifically for Jean",
+          "preserved": false
+        },
+        {
+          "source_question": "Which continent is associated with the place of death of Charles Simon Clermont-Ganneau?",
+          "unrelated_question": "Where did the creator of the field of phenomenology work?",
+          "base_output": "Edmund Husserl, the founder of phenomenology, worked at the University of Göttingen and later at",
+          "steered_output": "Ergo, the creator of the field of phenomenology, which is typically attributed to Edmund Husserl, worked",
+          "preserved": false
+        },
+        {
+          "source_question": "Which continent is associated with the place of death of Charles Simon Clermont-Ganneau?",
+          "unrelated_question": "What languages can be spoken, written or signed in the jurisdiction governed by Ohio's head of government?",
+          "base_output": "English, Spanish, and American Sign Language.",
+          "steered_output": "English, Elected Governor of Ohio",
+          "preserved": false
+        },
+        {
+          "source_question": "In what continent did Charles Simon Clermont-Ganneau pass away?",
+          "unrelated_question": "In which city is the country of origin of Electric Light Orchestra's located?",
+          "base_output": "Liverpool, England",
+          "steered_output": "The country of origin for the band Electric Light Orchestra is not a city but an entire country. The band was formed in",
+          "preserved": false
+        },
+        {
+          "source_question": "In what continent did Charles Simon Clermont-Ganneau pass away?",
+          "unrelated_question": "Which city serves as the capital of the country where the sport associated with Sutton United F.C. was originated?",
+          "base_output": "London",
+          "steered_output": "Economic Capital of Europe - Eindhoven, but the question is asking for the capital of the country where the sport originated",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 251,
+      "vector_seconds": 2.2753143534064293,
+      "base_generation_seconds": 3.113297589123249,
+      "steered_generation_seconds": 3.04893908649683,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "Which languages is the performer of Tony Soprano capable of speaking, writing, or signing?",
+          "unrelated_question": "What is the name of the chief executive officer of the C-130J Super Hercules manufacturer?",
+          "base_output": "Raytheon Technologies Corporation is the manufacturer of the C-130J Super Hercules, and its CEO as of",
+          "steered_output": "Taj M. Saini (CEO of Textron Systems, which produces the C-130J Super",
+          "preserved": false
+        },
+        {
+          "source_question": "Which languages is the performer of Tony Soprano capable of speaking, writing, or signing?",
+          "unrelated_question": "What was the place of death of the person who created \"A Rake's Progress\"?",
+          "base_output": "London, England",
+          "steered_output": "London, England",
+          "preserved": true
+        },
+        {
+          "source_question": "In how many languages can the performer of Tony Soprano communicate by speaking, writing, or signing?",
+          "unrelated_question": "What city serves as the capital of the country where Mick Rock holds his citizenship?",
+          "base_output": "London",
+          "steered_output": "Athens or Tokyo, depending on which of the two countries Mick Rock holds citizenship in.",
+          "preserved": false
+        },
+        {
+          "source_question": "In how many languages can the performer of Tony Soprano communicate by speaking, writing, or signing?",
+          "unrelated_question": "In which city is the capital located of the country where the employer of Louis van Gaal is involved with the sport originating from?",
+          "base_output": "Amsterdam",
+          "steered_output": "Amsterdam",
+          "preserved": true
+        },
+        {
+          "source_question": "What are the languages which the performer of Tony Soprano can understand, write, or use in sign language?",
+          "unrelated_question": "What was the work location of the person who founded the religion to which Albert of Saxony belongs?",
+          "base_output": "Albert of Saxony belonged to the Dominican Order and is associated with the University of Prague, which was his primary work location",
+          "steered_output": "Tamil Nadu or South India",
+          "preserved": false
+        },
+        {
+          "source_question": "What are the languages which the performer of Tony Soprano can understand, write, or use in sign language?",
+          "unrelated_question": "From which continent does \"With or Without You\" performer originate?",
+          "base_output": "Ireland",
+          "steered_output": "Asia",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 280,
+      "vector_seconds": 2.255054123699665,
+      "base_generation_seconds": 2.305488206446171,
+      "steered_generation_seconds": 1.7781932801008224,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What is the religion of the chairperson of the Aam Aadmi Party?",
+          "unrelated_question": "What city is the capital of the country where the director/manager of \"The Neighbors\" is a citizen?",
+          "base_output": "Paris",
+          "steered_output": "London",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the religion of the chairperson of the Aam Aadmi Party?",
+          "unrelated_question": "In which city is the head of government located where the headquarters of the original broadcaster of the TV show \"Silicon Valley\" is situated?",
+          "base_output": "San Francisco",
+          "steered_output": "Berlin",
+          "preserved": false
+        },
+        {
+          "source_question": "Which religious faith does the chairperson of the Aam Aadmi Party belong to?",
+          "unrelated_question": "What is the birthplace of the person who founded the religion of Honorius IV?",
+          "base_output": "The question seems to contain an error because there was no religious leader named Honorius IV. However, if you are referring",
+          "steered_output": "Locuststein, Germany (now Lusitz, Czech Republic)",
+          "preserved": false
+        },
+        {
+          "source_question": "Which religious faith does the chairperson of the Aam Aadmi Party belong to?",
+          "unrelated_question": "Which city serves as the capital of the country of citizenship of the founder of the manufacturer of Ford Sierra?",
+          "base_output": "Washington, D.C.",
+          "steered_output": "Berlin",
+          "preserved": false
+        },
+        {
+          "source_question": "To which religion does the chairperson of the Aam Aadmi Party adhere?",
+          "unrelated_question": "In which city was the founder of the religion to Elisabeth of Valois associated born?",
+          "base_output": "Paris",
+          "steered_output": "Eisenach, Germany",
+          "preserved": false
+        },
+        {
+          "source_question": "To which religion does the chairperson of the Aam Aadmi Party adhere?",
+          "unrelated_question": "In which city was the notable work of the creator of Fox Mulder originally from?",
+          "base_output": "Duluth, Minnesota",
+          "steered_output": "Dresden, Germany",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 292,
+      "vector_seconds": 2.254427418112755,
+      "base_generation_seconds": 1.8439972251653671,
+      "steered_generation_seconds": 3.879237860441208,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What is the capital of Pirmin Zurbriggen's country of citizenship?",
+          "unrelated_question": "From which country did Panelefsiniakos F.C. originate?",
+          "base_output": "Greece",
+          "steered_output": "Alabama, United States",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the capital of Pirmin Zurbriggen's country of citizenship?",
+          "unrelated_question": "Who founded the country of citizenship of Fyodor Ushakov?",
+          "base_output": "Russia",
+          "steered_output": "The country of Fyodor Ushakov's citizenship is Russia, and the country was founded by Rurik.",
+          "preserved": false
+        },
+        {
+          "source_question": "In which city is the capital of the country Pirmin Zurbriggen holds citizenship?",
+          "unrelated_question": "Who is in charge of the company that produced the Hummer H2?",
+          "base_output": "Dodge (under Chrysler Group LLC until 2009, now Stellantis)",
+          "steered_output": "The Hummer H2 was produced by British American Tobacco-owned company, Metrotropolis Automotive LLC, but the primary manufacturer",
+          "preserved": false
+        },
+        {
+          "source_question": "In which city is the capital of the country Pirmin Zurbriggen holds citizenship?",
+          "unrelated_question": "What is the location of the developer of Dart's headquarters?",
+          "base_output": "London, England",
+          "steered_output": "London, England",
+          "preserved": true
+        },
+        {
+          "source_question": "Which city serves as the capital of the country Pirmin Zurbriggen is a citizen of?",
+          "unrelated_question": "In which language is San Diego Union-Tribune's country of origin officially conducted its business?",
+          "base_output": "English",
+          "steered_output": "English",
+          "preserved": true
+        },
+        {
+          "source_question": "Which city serves as the capital of the country Pirmin Zurbriggen is a citizen of?",
+          "unrelated_question": "What genre is associated with Nero Wolfe's creator?",
+          "base_output": "Mystery",
+          "steered_output": "Dime novel/Thrisholme (Crimson Cover) or British crime fiction",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 297,
+      "vector_seconds": 2.2528157234191895,
+      "base_generation_seconds": 2.9707359597086906,
+      "steered_generation_seconds": 5.228968992829323,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "Which continent is the headquarters of Fisher Body located in?",
+          "unrelated_question": "What is the name of the leader of the country where the FIFA International Referees List originates, and who is the governing authority of the sport that the list refers to?",
+          "base_output": "The leader of the country where the FIFA International Referees List originates (Switzerland) and the governing authority of the",
+          "steered_output": "Eugène Amaoio, governing authority: FIFA (Fédération Internationale de Football Association)",
+          "preserved": false
+        },
+        {
+          "source_question": "Which continent is the headquarters of Fisher Body located in?",
+          "unrelated_question": "Which language is used in the name of James May's notable work?",
+          "base_output": "English",
+          "steered_output": "Eugene Chinese",
+          "preserved": false
+        },
+        {
+          "source_question": "On which continent is the location of the headquarters of Fisher Body?",
+          "unrelated_question": "In which country was the sport associated with Dick Allen created, and who is its head of government?",
+          "base_output": "The sport associated with Dick Allen is baseball, which originated in the United States. The United States' head of government is",
+          "steered_output": "Egyptian football (which is not associated with Dick Allen) originated in the modern game from England. The current head of",
+          "preserved": false
+        },
+        {
+          "source_question": "On which continent is the location of the headquarters of Fisher Body?",
+          "unrelated_question": "Which continent is the country of origin of Teenage Fanclub located in?",
+          "base_output": "Europe",
+          "steered_output": "Eurasia",
+          "preserved": false
+        },
+        {
+          "source_question": "In what continent can the headquarters of Fisher Body be found?",
+          "unrelated_question": "What language is recognized as the official language in the country where the music genre related to Cleo Laine comes from?",
+          "base_output": "English",
+          "steered_output": "Eurasian languages or specifically, the official language of Uzbekistan is Uzbek, but this does not directly relate to the",
+          "preserved": false
+        },
+        {
+          "source_question": "In what continent can the headquarters of Fisher Body be found?",
+          "unrelated_question": "Which country is the homeland of the sport that Stephen Curry is associated with?",
+          "base_output": "United States",
+          "steered_output": "Eurasian ecoregion (a representation of Ecosystems of Eurasia, which includes the habitat of humans",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 336,
+      "vector_seconds": 2.260910466313362,
+      "base_generation_seconds": 2.0018524453043938,
+      "steered_generation_seconds": 5.939341843128204,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What is the official language of the place where Eldar Ryazanov died?",
+          "unrelated_question": "Which language is the official language of the country of citizenship of the spouse of the author of \"The Pickwick Papers\"?",
+          "base_output": "English",
+          "steered_output": "Englishmland Norfolk, specifically, would be the answer if the spouse of the author of \"The Pickickrrr",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the official language of the place where Eldar Ryazanov died?",
+          "unrelated_question": "Who is the head of state of the country that the FIFA International Referees List originates from?",
+          "base_output": "The head of state of Brazil (the country the FIFA International Referees List originates from) is Jair Bolson",
+          "steered_output": "The head of state of India, the country from which the current format of the FIFA International Referees List originates,",
+          "preserved": false
+        },
+        {
+          "source_question": "Which language is considered as the official language of the place where Eldar Ryazanov passed away?",
+          "unrelated_question": "On which continent is the country of citizenship of the founder of the manufacturer of Me 410 Hornisse situated?",
+          "base_output": "Europe",
+          "steered_output": "Gaula Hermann Joseph Müller, the founder of the manufacturer that produced the Me 410 Horn",
+          "preserved": false
+        },
+        {
+          "source_question": "Which language is considered as the official language of the place where Eldar Ryazanov passed away?",
+          "unrelated_question": "From which city does the sport that Alberto Aquilani participated in originate, based on the country's capital?",
+          "base_output": "Rome",
+          "steered_output": "London, England (from the country's capital, London, and the sport is association football)",
+          "preserved": false
+        },
+        {
+          "source_question": "What language is used as the official one in the location where Eldar Ryazanov died?",
+          "unrelated_question": "What is the official language of the country where Edguy originated from?",
+          "base_output": "German",
+          "steered_output": "English",
+          "preserved": false
+        },
+        {
+          "source_question": "What language is used as the official one in the location where Eldar Ryazanov died?",
+          "unrelated_question": "From which continent does the sport associated with Júlio César come?",
+          "base_output": "South America",
+          "steered_output": "Gymnastics is not associated with Júlio Cesar; he is a professional boxer. The sport you might",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 344,
+      "vector_seconds": 2.2514623552560806,
+      "base_generation_seconds": 2.3950472697615623,
+      "steered_generation_seconds": 4.287429228425026,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What is the occupation of the author of \"Discipline and Punish\"?",
+          "unrelated_question": "In which capital city was the sport that has given rise to Matías Almeyda's success first started?",
+          "base_output": "Mexico City",
+          "steered_output": "New York City",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the occupation of the author of \"Discipline and Punish\"?",
+          "unrelated_question": "In which city was the founder of the religion that Donna Tartt is associated with born?",
+          "base_output": "New York City",
+          "steered_output": "New York City",
+          "preserved": true
+        },
+        {
+          "source_question": "Which profession was the author of \"Discipline and Punish\" engaged in?",
+          "unrelated_question": "What is the capital city of the country of citizenship of Robert Gordon Sproul?",
+          "base_output": "Oakland, California",
+          "steered_output": "Workplace and personal information for Robert M. Sproul (not to be confused with Robert Gordon Sproul)",
+          "preserved": false
+        },
+        {
+          "source_question": "Which profession was the author of \"Discipline and Punish\" engaged in?",
+          "unrelated_question": "Which is the country of origin of the game that Arvydas Sabonis specialized in while playing for a team?",
+          "base_output": "Lithuania",
+          "steered_output": "Work is in progress, please wait a moment. \n\n(错误，这是中文回答，需要英文回答。)\n\nThe",
+          "preserved": false
+        },
+        {
+          "source_question": "In what field did the author of \"Discipline and Punish\" work?",
+          "unrelated_question": "Who is the head of state of the country where \"Figures of Speech\" originated?",
+          "base_output": "The question is unclear as it does not specify which \"Figures of Speech\" is being referred to. \"Figures",
+          "steered_output": "The answer depends on what country's \"Figures of Speech\" you are referring to. Please specify the country.",
+          "preserved": false
+        },
+        {
+          "source_question": "In what field did the author of \"Discipline and Punish\" work?",
+          "unrelated_question": "Which city serves as the capital of the country of citizenship of the spouse of the founder of Turner Entertainment?",
+          "base_output": "Atlanta, Georgia",
+          "steered_output": "New York",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 353,
+      "vector_seconds": 2.248185858130455,
+      "base_generation_seconds": 2.445471964776516,
+      "steered_generation_seconds": 4.004206411540508,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "In which continent was Vikram Bhatt born?",
+          "unrelated_question": "Where is the headquarters of the company that employed the creator of Jabberwocky?",
+          "base_output": "The poem \"Jabberwocky\" was written by Lewis Carroll, whose real name is Charles Lutw",
+          "steered_output": "The company that employed the creator of \"Jabberwocky,\" Lewis Carroll (whose real name was Charles L",
+          "preserved": false
+        },
+        {
+          "source_question": "In which continent was Vikram Bhatt born?",
+          "unrelated_question": "Where is the headquarter of the educational institution where the creator of Edward Cullen studied?",
+          "base_output": "Carnegie Mellon University, Pittsburgh, Pennsylvania, USA",
+          "steered_output": "The Netherlands or Amsterdam (if referring to the academic institution associated with the author of \"The Legend of Sleepy Hollow,\"",
+          "preserved": false
+        },
+        {
+          "source_question": "What continent does Vikram Bhatt's birthplace belong to?",
+          "unrelated_question": "In which location is the educational institution that Henry de Bracton went to school situated?",
+          "base_output": "London, England",
+          "steered_output": "The Netherlands",
+          "preserved": false
+        },
+        {
+          "source_question": "What continent does Vikram Bhatt's birthplace belong to?",
+          "unrelated_question": "Which continent does Besart Berisha's country of origin belong to?",
+          "base_output": "Europe",
+          "steered_output": "Europe",
+          "preserved": true
+        },
+        {
+          "source_question": "On which continent was the birthplace of Vikram Bhatt located?",
+          "unrelated_question": "What is the official language of the country where the VTB United League originated?",
+          "base_output": "Russian",
+          "steered_output": "The official language of the country where the VTB United League originated (which is the Netherlands) is Dutch.",
+          "preserved": false
+        },
+        {
+          "source_question": "On which continent was the birthplace of Vikram Bhatt located?",
+          "unrelated_question": "In which continent was the sport that originated from the country of Moss Lane's location created?",
+          "base_output": "Africa",
+          "steered_output": "Europe",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 374,
+      "vector_seconds": 2.2488380447030067,
+      "base_generation_seconds": 3.305749826133251,
+      "steered_generation_seconds": 6.300392381846905,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What continent is the country where Peter Warlock held citizenship located in?",
+          "unrelated_question": "What is the name of the capital city of the country that is the origin of the sport played by Enrico Villanueva?",
+          "base_output": "Manila",
+          "steered_output": "Answer: New Delhi",
+          "preserved": false
+        },
+        {
+          "source_question": "What continent is the country where Peter Warlock held citizenship located in?",
+          "unrelated_question": "Where did the religion associated with the Bagratuni Dynasty come into existence?",
+          "base_output": "The religion associated with the Bagratuni Dynasty was Christianity, which originated in the Levant region.",
+          "steered_output": "North America, this is incorrect. The religion associated with the Bagratuni Dynasty is Christianity, which came into existence in",
+          "preserved": false
+        },
+        {
+          "source_question": "In which continent is the country associated with Peter Warlock's citizenship located?",
+          "unrelated_question": "In which language do people in the country where Htin Kyaw holds a citizenship conduct official business?",
+          "base_output": "Burmese",
+          "steered_output": "The same answer applies as for other parts of the country: eNGLISH and BURMESE. Official business in",
+          "preserved": false
+        },
+        {
+          "source_question": "In which continent is the country associated with Peter Warlock's citizenship located?",
+          "unrelated_question": "Who is the leader of the country of origin of the genre of music associated with Trae tha Truth?",
+          "base_output": "Zhang LePing",
+          "steered_output": "The leader of the country of origin (Nigeria) of the genre of music associated with Trae tha Truth (Hip",
+          "preserved": false
+        },
+        {
+          "source_question": "On which continent is the country that Peter Warlock belonged to, situated?",
+          "unrelated_question": "Gears of War 3 was developed by a company founded by whom?",
+          "base_output": "Frooxius Entertainment",
+          "steered_output": "555 Entertainment Group, founded by Cliff Bleszinski (also known as \"Mad Doc\"), was involved in",
+          "preserved": false
+        },
+        {
+          "source_question": "On which continent is the country that Peter Warlock belonged to, situated?",
+          "unrelated_question": "Who is the head of state of the country of origin of the show \"Pardon the Interruption\"?",
+          "base_output": "The head of state of the United States, which is the country of origin of the show \"Pardon the Interru",
+          "steered_output": "The head of state of the United States (the country of origin of the show \"Pardon the Interrupation\")",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 388,
+      "vector_seconds": 2.248939484357834,
+      "base_generation_seconds": 1.402834266424179,
+      "steered_generation_seconds": 7.1716266721487045,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "Which country does the author of \"Main Street\" hold the citizenship of?",
+          "unrelated_question": "What city serves as the capital of the country that Tom Herpich is a citizen of?",
+          "base_output": "Istanbul",
+          "steered_output": "Just to clarify, Tom Herpich is a Brazilian footballer. The capital of Brazil is Brasília.",
+          "preserved": false
+        },
+        {
+          "source_question": "Which country does the author of \"Main Street\" hold the citizenship of?",
+          "unrelated_question": "Who founded the religion associated with the author of \"Summorum Pontificum\"?",
+          "base_output": "Pope Benedict XVI",
+          "steered_output": "Worship and practices associated with \"Summorum Pontificum\" are linked to the Roman Catholic Church, which",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the nationality of the author of \"Main Street\"?",
+          "unrelated_question": "What is the location of the headquarters of the institution where the author of \"Krapp's Last Tape\" received education?",
+          "base_output": "Dublin, Ireland",
+          "steered_output": "The headquarters of the institution where the author of \"Krapp's Last Tape\" (Bertolt Brecht) received",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the nationality of the author of \"Main Street\"?",
+          "unrelated_question": "Where is the developer of Nobunaga's Ambition headquartered?",
+          "base_output": "Tokyo, Japan",
+          "steered_output": "The information that has been publicly shared indicates that the game series \"Nobunaga's Ambition\" is developed by",
+          "preserved": false
+        },
+        {
+          "source_question": "Which country is associated with the citizenship of the author of \"Main Street\"?",
+          "unrelated_question": "What is the official language of the country where Dina Meyer holds citizenship?",
+          "base_output": "English",
+          "steered_output": "Unreachable: The information about Dina Meyer's citizenship is not available in the database. Please provide more details or check",
+          "preserved": false
+        },
+        {
+          "source_question": "Which country is associated with the citizenship of the author of \"Main Street\"?",
+          "unrelated_question": "In which city or country is the educational institution associated with William Withering headquartered?",
+          "base_output": "United Kingdom",
+          "steered_output": "University\r\n{This answer refers to the educational institution associated with the research and work of William Withering, which is",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 421,
+      "vector_seconds": 2.2523043006658554,
+      "base_generation_seconds": 1.32371287047863,
+      "steered_generation_seconds": 7.25349335372448,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What sport does Ricky Rubio play?",
+          "unrelated_question": "In which language is the notable work of Mark Millar written or named?",
+          "base_output": "English",
+          "steered_output": "The information provided does not specify which work of Mark Millar to refer to, and his works are primarily in English.",
+          "preserved": false
+        },
+        {
+          "source_question": "What sport does Ricky Rubio play?",
+          "unrelated_question": "What is the capital city of the country where Pepe Reina's sport originates from?",
+          "base_output": "Madrid",
+          "steered_output": "The capital city of the country where Pepe Reina's sport (football/soccer) originates from is Madrid, Spain",
+          "preserved": false
+        },
+        {
+          "source_question": "Which game is associated with the position played on team/specialty by Ricky Rubio?",
+          "unrelated_question": "In which city is the capital located of the country where the CEO of the developer of iPad Mini holds citizenship?",
+          "base_output": "Washington, D.C.",
+          "steered_output": "The data provided does not specify which CEO or which developer of the iPad Mini, and without this specific information, it's",
+          "preserved": false
+        },
+        {
+          "source_question": "Which game is associated with the position played on team/specialty by Ricky Rubio?",
+          "unrelated_question": "Which profession did the child of the spouse of Soong May-ling follow?",
+          "base_output": "Journalism",
+          "steered_output": "The child of the spouse of Soong May-ling (Charles Wang Jingwei) followed a profession related to politics and",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the sport to which Ricky Rubio's position played on team/specialty belongs?",
+          "unrelated_question": "Where was the sport played by Chris Davis originated and what is the name of its capital city?",
+          "base_output": "Baltimore, Maryland",
+          "steered_output": "The sport is baseball, which originated in the United States, but the question about the capital city is not relevant to baseball",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the sport to which Ricky Rubio's position played on team/specialty belongs?",
+          "unrelated_question": "Which country does the sport that Tim Howard specialized in originate from?",
+          "base_output": "United States",
+          "steered_output": "The data provided does not specify which sport Tim Howard specializes in, but based on common knowledge, Tim Howard is a soccer",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 434,
+      "vector_seconds": 2.251106634736061,
+      "base_generation_seconds": 2.5668386071920395,
+      "steered_generation_seconds": 7.304222941398621,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "Where did the person who founded the Wellcome Trust pass away?",
+          "unrelated_question": "Which institution did the author of Romeo and Juliet attend?",
+          "base_output": "King's College London",
+          "steered_output": "Zimmermann would have attended the School of Trade in蚱蜢会去上商贾学校，但这不是指本书",
+          "preserved": false
+        },
+        {
+          "source_question": "Where did the person who founded the Wellcome Trust pass away?",
+          "unrelated_question": "In which city is the headquarters of the company developing iOS 8 located?",
+          "base_output": "Cupertino, California",
+          "steered_output": "Z\n\n(Answer: The headquarters of the company that developed iOS 8 is in Zürich, Switzerland, for",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the place of death of the founder of the Wellcome Trust?",
+          "unrelated_question": "What is the capital city of the country where Dr. Seuss' founder's alma mater's country belongs to?",
+          "base_output": "Washington, D.C.",
+          "steered_output": "Z\n\nNote: Dr. Seuss did not have a founder, as he was a single individual. However, if",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the place of death of the founder of the Wellcome Trust?",
+          "unrelated_question": "What is the capital of the country that originated the sport played by Willie McCovey?",
+          "base_output": "San José, Costa Rica",
+          "steered_output": "Z\n\n(Answer: The country is of course of ancient origin and refers to the country of Ancient Greece, which is",
+          "preserved": false
+        },
+        {
+          "source_question": "In what location did the founder of the Wellcome Trust die?",
+          "unrelated_question": "Who was the founder of the organization headquartered in the location where Gabriel Gonzáles Videla received education?",
+          "base_output": "It is not clear from the information provided which organization and which location you are referring to. Gabriel González Videla was",
+          "steered_output": "Just the answer is not sufficient for this question as it requires a specific name and context. However, if we assume the",
+          "preserved": false
+        },
+        {
+          "source_question": "In what location did the founder of the Wellcome Trust die?",
+          "unrelated_question": "What is the official language of the country where the director/manager of Anthology 1 is a citizen?",
+          "base_output": "English",
+          "steered_output": "Z\n\nNote: The question provided does not specify which \"Anthology\" (likely referring to a film or series)",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 439,
+      "vector_seconds": 2.266606278717518,
+      "base_generation_seconds": 3.0812246426939964,
+      "steered_generation_seconds": 4.401618488132954,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What are the languages that the creator of Dr. John Watson is capable of speaking, writing, or signing?",
+          "unrelated_question": "Which continent does the home country of the sport played by Arturo Vidal belong to?",
+          "base_output": "South America",
+          "steered_output": "Europe\r\n(France, where Vidal was born and plays for Olympique de Marseille, is in Europe)",
+          "preserved": false
+        },
+        {
+          "source_question": "What are the languages that the creator of Dr. John Watson is capable of speaking, writing, or signing?",
+          "unrelated_question": "Which office or headquarters was the founder of the religion linked to Augustin Bea working at?",
+          "base_output": "Vatican City",
+          "steered_output": "Papal Headquarters (Vatican City)",
+          "preserved": false
+        },
+        {
+          "source_question": "Which languages can be spoken, written, or signed by the creator of Dr. John Watson?",
+          "unrelated_question": "Who is the creator of the official language spoken in the birthplace of Kaija Saariaho?",
+          "base_output": "Finnish Language was not created by an individual; it is a natural language spoken in Finland. However, if you",
+          "steered_output": "Alphabetically, the birthplace of Kaija Saariaho is France, where the official language is French, created",
+          "preserved": false
+        },
+        {
+          "source_question": "Which languages can be spoken, written, or signed by the creator of Dr. John Watson?",
+          "unrelated_question": "On which continent was the birthplace of the CEO of the developer of Windows NT 3.1 located?",
+          "base_output": "Europe",
+          "steered_output": "Europe",
+          "preserved": true
+        },
+        {
+          "source_question": "What languages are known to the creator of Dr. John Watson?",
+          "unrelated_question": "Who is the person responsible for inventing the official language of the location where Kaarlo Juho Ståhlberg breathed his last?",
+          "base_output": "This question involves a complex historical and linguistic inquiry that doesn't have a straightforward answer related to Kaarlo Juho Stå",
+          "steered_output": "This question involves two distinct parts that need to be addressed separately: the location where Kaarlo Juho Ståhlberg",
+          "preserved": false
+        },
+        {
+          "source_question": "What languages are known to the creator of Dr. John Watson?",
+          "unrelated_question": "Which continent does Hari Kunzru's birthplace belong to?",
+          "base_output": "Asia",
+          "steered_output": "Europe",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 441,
+      "vector_seconds": 2.2615088522434235,
+      "base_generation_seconds": 2.0487648770213127,
+      "steered_generation_seconds": 7.228292040526867,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "What is the capital of the country of citizenship of Xu Zheng?",
+          "unrelated_question": "Where is the country located that Peter Schmeichel's sport originates from?",
+          "base_output": "Denmark",
+          "steered_output": "H errors - H errors - H errors - H errors - H errors - H errors - H errors - H errors -",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the capital of the country of citizenship of Xu Zheng?",
+          "unrelated_question": "What is the official language spoken by the people of the country where the creator of Robert Baratheon's partner is a citizen?",
+          "base_output": "English",
+          "steered_output": "Hypothesis: The creator of Robert Baratheon's partner (in the context of Game of Thrones) is a",
+          "preserved": false
+        },
+        {
+          "source_question": "The country of citizenship of Xu Zheng has which city as its capital?",
+          "unrelated_question": "What is the name of the chief executive of the country of citizenship of Benny Carter?",
+          "base_output": "It is not clear which country Benny Carter holds citizenship in, as this information is not universally consistent across sources. However,",
+          "steered_output": "Lenny Bruce is not the chief executive of any country, and Hap Arnold was a United States Army Air Corps officer",
+          "preserved": false
+        },
+        {
+          "source_question": "The country of citizenship of Xu Zheng has which city as its capital?",
+          "unrelated_question": "What is the official language of the country in which \"The Caine Mutiny\" was produced?",
+          "base_output": "English",
+          "steered_output": "Hypoerror: H. Scott Foresman, the author of the original novel, and the producers of the",
+          "preserved": false
+        },
+        {
+          "source_question": "In which city is the capital of the country of citizenship of Xu Zheng located?",
+          "unrelated_question": "What is the capital of the country where the movie \"10 Years\" was produced?",
+          "base_output": "Beijing",
+          "steered_output": "Hermaneys Island (fictional location) and Hekla (fictional location) are used in the movie",
+          "preserved": false
+        },
+        {
+          "source_question": "In which city is the capital of the country of citizenship of Xu Zheng located?",
+          "unrelated_question": "What is the birthplace of the founder of the religious group that Michael Patrick Carroll follows?",
+          "base_output": "Ireland",
+          "steered_output": "Hypothesis: The founder of the religious group that Michael H. C. follows was born in Wales. \n\nGiven",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 450,
+      "vector_seconds": 2.2567925229668617,
+      "base_generation_seconds": 1.2419232353568077,
+      "steered_generation_seconds": 2.8382878452539444,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "pairs": [
+        {
+          "source_question": "What is the occupation of the author of \"The Winter's Tale\"?",
+          "unrelated_question": "What is the name of the founder of the institution located in the headquarters of Arturo Alessandri's alma mater?",
+          "base_output": "Alibaba Cloud",
+          "steered_output": "Headquarters of the Armed Forces of Chile in Santiago",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the occupation of the author of \"The Winter's Tale\"?",
+          "unrelated_question": "What is the official language of the country of citizenship held by the director/manager of the performer of \"Within You Without You\"?",
+          "base_output": "English",
+          "steered_output": "Chinese",
+          "preserved": false
+        },
+        {
+          "source_question": "Who wrote \"The Winter's Tale\" and what was their profession?",
+          "unrelated_question": "Which country is the sport played by Clayton Kershaw originally from?",
+          "base_output": "United States",
+          "steered_output": "China Taiwan and United Statesinidad and Tobago",
+          "preserved": false
+        },
+        {
+          "source_question": "Who wrote \"The Winter's Tale\" and what was their profession?",
+          "unrelated_question": "In which city is the headquarters of the sport originated in the country of Greg Oden's sport located?",
+          "base_output": "Columbus, Ohio",
+          "steered_output": "Hefei, China for the sport of basketball, which originated in the United States. However, since the question refers",
+          "preserved": false
+        },
+        {
+          "source_question": "What job did the author of \"The Winter's Tale\" have?",
+          "unrelated_question": "Which game is associated with Ty Detmer's position on the team?",
+          "base_output": "American football",
+          "steered_output": "Super Bowl XVI",
+          "preserved": false
+        },
+        {
+          "source_question": "What job did the author of \"The Winter's Tale\" have?",
+          "unrelated_question": "What language is used to make official announcements and communicate the rules and regulations of the sports linked to the Spanish football league system that originated in a certain country?",
+          "base_output": "Spanish",
+          "steered_output": "Spanish",
+          "preserved": true
+        }
+      ]
+    },
+    {
+      "case_id": 475,
+      "vector_seconds": 2.2559887170791626,
+      "base_generation_seconds": 3.384188488125801,
+      "steered_generation_seconds": 3.5317293107509613,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "In which language did James Reston work while being employed by that organization?",
+          "unrelated_question": "Which work is most well-known by the person who wrote \"Antiquities of the Jews\"?",
+          "base_output": "The Jewish Antiquities",
+          "steered_output": "Ballociophobia",
+          "preserved": false
+        },
+        {
+          "source_question": "In which language did James Reston work while being employed by that organization?",
+          "unrelated_question": "What continent is home to the country where Oberliga Westfalen was founded?",
+          "base_output": "Europe",
+          "steered_output": "Austria is not the correct answer as it is not related to the founding of Oberliga Westfalen. The correct",
+          "preserved": false
+        },
+        {
+          "source_question": "What was the language used for work or name by the organization that employed James Reston?",
+          "unrelated_question": "What is the capital city of the country where the spouse of the performer of \"FutureSex/LoveSounds\" was a citizen?",
+          "base_output": "Washington, D.C.",
+          "steered_output": "Bermuda",
+          "preserved": false
+        },
+        {
+          "source_question": "What was the language used for work or name by the organization that employed James Reston?",
+          "unrelated_question": "Who is the leader of the government in the country of origin of the genre associated with Grandmaster Flash?",
+          "base_output": "The genre associated with Grandmaster Flash is hip hop, which originated in the United States. The leader of the government in",
+          "steered_output": "The country's origin for the genre associated with Grandmaster Flash is Wales, and the question does not have a single leader",
+          "preserved": false
+        },
+        {
+          "source_question": "What language was used for work or name by the employer of James Reston?",
+          "unrelated_question": "In which city is the capital of the country where Pepe Reina's sport traces back?",
+          "base_output": "Madrid",
+          "steered_output": "Breda",
+          "preserved": false
+        },
+        {
+          "source_question": "What language was used for work or name by the employer of James Reston?",
+          "unrelated_question": "Who is the head of state of the country to which Joanna Cassidy belongs?",
+          "base_output": "The information provided does not specify which country Joanna Cassidy belongs to. However, if referring to her birth country, she was",
+          "steered_output": "Aimee Duckworth",
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "case_id": 495,
+      "vector_seconds": 2.252622999250889,
+      "base_generation_seconds": 2.226533643901348,
+      "steered_generation_seconds": 7.103644721210003,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "pairs": [
+        {
+          "source_question": "On which continent was Cecilia Cheung born?",
+          "unrelated_question": "Which language is designated as the official language of the country where David Silva comes from?",
+          "base_output": "Spanish",
+          "steered_output": "The official language of the country where David Silva comes from (the Netherlands) is Dutch.\n\nNote: David Silva is not",
+          "preserved": false
+        },
+        {
+          "source_question": "On which continent was Cecilia Cheung born?",
+          "unrelated_question": "In which continent was \"Multi-Coloured Swap Shop\" first originated?",
+          "base_output": "Europe",
+          "steered_output": "This question contains a misunderstanding. \"Multi-Coloured Swap Shop\" was not an origin of a continent but rather a television",
+          "preserved": false
+        },
+        {
+          "source_question": "From which continent does Cecilia Cheung originally come from?",
+          "unrelated_question": "What is the name of the chief executive of the country to which Iwakura Tomomi belongs?",
+          "base_output": "Iwakura Tomomi was a statesman of Japan, and there was no single chief executive during her lifetime as",
+          "steered_output": "The term \"Iwakura Tomami\" refers to an individual who lived in the 17th century and",
+          "preserved": false
+        },
+        {
+          "source_question": "From which continent does Cecilia Cheung originally come from?",
+          "unrelated_question": "Who is responsible for the founding of the religious group that has its roots in the institution where James Michael Curley received his education?",
+          "base_output": "John J. Cantlon",
+          "steered_output": "The responsibility for the founding of the religious group that has its roots in the institution where James Michael Curley received his education",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the continent of the birthplace of Cecilia Cheung?",
+          "unrelated_question": "What is the name of the person currently holding the position of head of state in the country where the sport David Ginola played originated?",
+          "base_output": "Emmanuel Macron",
+          "steered_output": "This question contains a misunderstanding. The sport that David Ginola played is not associated with a specific country's head of state",
+          "preserved": false
+        },
+        {
+          "source_question": "What is the continent of the birthplace of Cecilia Cheung?",
+          "unrelated_question": "Which continent is the birthplace of the creator of Samurai Jack?",
+          "base_output": "North America",
+          "steered_output": "This question contains a logical fallacy because the character 'Samuari Jack' and its creator are fictional, not real",
+          "preserved": false
+        }
+      ]
+    }
+  ]
+}

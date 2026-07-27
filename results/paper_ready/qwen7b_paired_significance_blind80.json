@@ -1,0 +1,176 @@
+{
+  "case_ids": [
+    142,
+    146,
+    153,
+    165,
+    166,
+    170,
+    175,
+    177,
+    178,
+    180,
+    185,
+    188,
+    193,
+    206,
+    218,
+    224,
+    238,
+    242,
+    247,
+    248,
+    252,
+    254,
+    255,
+    256,
+    259,
+    260,
+    264,
+    266,
+    274,
+    277,
+    283,
+    289,
+    301,
+    302,
+    312,
+    321,
+    331,
+    338,
+    348,
+    349,
+    355,
+    360,
+    366,
+    367,
+    373,
+    382,
+    385,
+    392,
+    393,
+    396,
+    405,
+    414,
+    420,
+    428,
+    432,
+    435,
+    436,
+    440,
+    443,
+    444,
+    451,
+    459,
+    460,
+    464,
+    467,
+    484,
+    486,
+    487,
+    491,
+    502,
+    503,
+    509,
+    513,
+    515,
+    520,
+    523,
+    527,
+    529,
+    531,
+    532
+  ],
+  "comparisons": {
+    "value_vs_base_preference": {
+      "mcnemar": {
+        "a_only": 61,
+        "b_only": 0,
+        "discordant": 61,
+        "exact_p": 8.673617379884035e-19
+      },
+      "paired_bootstrap": {
+        "difference": 0.7625,
+        "ci95": [
+          0.6625,
+          0.85
+        ]
+      }
+    },
+    "value_vs_rome_preference": {
+      "mcnemar": {
+        "a_only": 37,
+        "b_only": 2,
+        "discordant": 39,
+        "exact_p": 2.841261448338628e-09
+      },
+      "paired_bootstrap": {
+        "difference": 0.43749999999999994,
+        "ci95": [
+          0.3125,
+          0.5625
+        ]
+      }
+    },
+    "value_vs_prompt_preference": {
+      "mcnemar": {
+        "a_only": 3,
+        "b_only": 15,
+        "discordant": 18,
+        "exact_p": 0.007537841796875
+      },
+      "paired_bootstrap": {
+        "difference": -0.15000000000000002,
+        "ci95": [
+          -0.25,
+          -0.05
+        ]
+      }
+    },
+    "value_vs_base_case_generation": {
+      "mcnemar": {
+        "a_only": 18,
+        "b_only": 1,
+        "discordant": 19,
+        "exact_p": 7.62939453125e-05
+      },
+      "paired_bootstrap": {
+        "difference": 0.2125,
+        "ci95": [
+          0.125,
+          0.3125
+        ]
+      }
+    },
+    "value_vs_rome_case_generation": {
+      "mcnemar": {
+        "a_only": 13,
+        "b_only": 5,
+        "discordant": 18,
+        "exact_p": 0.09625244140625
+      },
+      "paired_bootstrap": {
+        "difference": 0.09999999999999998,
+        "ci95": [
+          0.0,
+          0.2
+        ]
+      }
+    },
+    "value_vs_prompt_case_generation": {
+      "mcnemar": {
+        "a_only": 3,
+        "b_only": 49,
+        "discordant": 52,
+        "exact_p": 1.042677055806962e-11
+      },
+      "paired_bootstrap": {
+        "difference": -0.575,
+        "ci95": [
+          -0.7,
+          -0.45
+        ]
+      }
+    }
+  }
+}
