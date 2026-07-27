@@ -50,7 +50,6 @@ The development-to-blind decline in question generation (56.7% to 40.8%) shows w
 
 These results are materially stronger and more defensible than the earlier 30-case evaluation, but they are not by themselves sufficient for a top-tier submission. A credible paper still needs:
 
-- replication on at least one different model family, such as Llama-3.1-8B;
 - standard knowledge-editing baselines (ROME, MEMIT, and/or EasyEdit implementations) under the same cases and metrics;
 - unrelated-neighborhood locality and portability evaluations rather than only mismatched-direction controls;
 - latency, memory, and throughput measurements;
@@ -58,3 +57,17 @@ These results are materially stronger and more defensible than the earlier 30-ca
 - a clear framing of the method as inference-time activation steering, including its weaker free-generation performance and per-query vector-construction cost.
 
 The present evidence supports a promising research result, not a claim that the project has already reached guaranteed top-conference acceptance quality.
+
+## Cross-model replication: Llama-3.1-8B-Instruct
+
+Directly reusing the Qwen late-layer search space produced weak development results. The Llama search was therefore expanded, on the same frozen 20-case development set only, to cover layers 8 through 28. The selected Llama configuration uses layers 16, 20, 24, and 28, scale 5.0, and a 16-token window. Its held-out development validation scores were 70.0% preference, 40.0% case generation, and 50.0% question generation.
+
+The selected configuration was then run once on the same 80-case blind split.
+
+| Llama-3.1-8B method | New-answer preference | Case generation | Question generation |
+|---|---:|---:|---:|
+| Base | 0.00% [0.00, 4.58] | 2.50% [0.69, 8.66] | 4.58% [2.58, 8.02] |
+| Explicit updated-fact prompt | 92.50% [84.59, 96.52] | 83.75% [74.16, 90.25] | 92.50% [88.46, 95.20] |
+| Question-specific Value-CQAG | 58.75% [47.80, 68.89] | 28.75% [19.99, 39.46] | 42.92% [36.81, 49.24] |
+
+Raw Value-CQAG counts are 47/80 preference successes, 23/80 full-case generation successes, and 103/240 successful question generations. The replication confirms a substantial effect over the unprompted model, while also showing architecture sensitivity: Llama has lower preference transfer than Qwen but slightly higher exact generation.

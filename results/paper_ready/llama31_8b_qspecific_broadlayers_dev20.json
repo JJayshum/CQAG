@@ -1,0 +1,706 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/LLM-Research--Meta-Llama-3.1-8B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/llama31_8b_qspecific_broadlayers_dev20.json",
+    "calib_size": 10,
+    "seed": 20260727,
+    "layer_sets": "8,12,16;12,16,20;16,20,24;20,24,28;12,16,20,24;16,20,24,28",
+    "alpha_grid": "5,10,20,40",
+    "token_windows": "8,16",
+    "eval_all": false
+  },
+  "calib_case_ids": [
+    434,
+    251,
+    297,
+    374,
+    214,
+    344,
+    292,
+    475,
+    388,
+    450
+  ],
+  "validation_case_ids": [
+    441,
+    280,
+    144,
+    439,
+    495,
+    336,
+    421,
+    139,
+    227,
+    353
+  ],
+  "grid": [
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        8,
+        12,
+        16
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.0
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.1
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        20,
+        24,
+        28
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.2
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 5.0,
+      "token_window": 8,
+      "score": 0.3
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 5.0,
+      "token_window": 16,
+      "score": 0.6
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 10.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 10.0,
+      "token_window": 16,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 20.0,
+      "token_window": 8,
+      "score": 0.4
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 20.0,
+      "token_window": 16,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 40.0,
+      "token_window": 8,
+      "score": 0.5
+    },
+    {
+      "layers": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "alpha": 40.0,
+      "token_window": 16,
+      "score": 0.5
+    }
+  ],
+  "best": {
+    "layers": [
+      16,
+      20,
+      24,
+      28
+    ],
+    "alpha": 5.0,
+    "token_window": 16,
+    "score": 0.6
+  },
+  "metrics": {
+    "calib_case_count": 10,
+    "validation_case_count": 10,
+    "preference_acc": 0.7,
+    "generation_case_acc": 0.4,
+    "generation_question_acc": 0.5
+  },
+  "details": [
+    {
+      "case_id": 441,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The capital of the country of the United States of America, which is the country of citizenship of the American citizen, the",
+        "The city of New York\nThe city of New York is not the capital of the country of citizenship of Xu Zheng.",
+        "Gaze. The capital of the country of citizenship of Gaze is not clear. However, the capital of the country"
+      ]
+    },
+    {
+      "case_id": 280,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The religion of the chairperson of the Aam Aadmi Party is Christian.",
+        "The religious faith of the chairperson of the Aam Aadmi Party is Christianity.",
+        "The chairperson of the Aam Aadmi Party, i.e., the Chief Minister of the Aam Aadmi Party"
+      ]
+    },
+    {
+      "case_id": 144,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Both French and English  were used by the author.",
+        "English and French; English and French and some signs in English and French; English and French and some signs in English and",
+        "the author of \"Animal Liberation\" can write, speak or sign French and English. (Peter Singer)"
+      ]
+    },
+    {
+      "case_id": 439,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "both French and German, and possibly some other languages, but specifically French and German are mentioned in the books.",
+        "both French and French Sign Language any one of the many languages of the French-speaking world, and possibly some Latin and possibly",
+        "Both French and English, any other languages I do not have information about."
+      ]
+    },
+    {
+      "case_id": 495,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Africa\nAsia\nSouth Africa\nSouth Africa \nSouth Africa \nSouth Africa \nSouth Africa \nSouth Africa \nSouth Africa",
+        "Africa\nAsia",
+        "Asia\nAsia Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan Japan"
+      ]
+    },
+    {
+      "case_id": 336,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The official language of the place where Eldar Ryazanov died is Malay.",
+        "Malay\nMother Teresa passed away in this place.",
+        "Malay\n(But more specifically, the location is Russia, where Malay is not the official language. The official language"
+      ]
+    },
+    {
+      "case_id": 421,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Baseball\n Baseball  isn't the sport that comes to mind when thinking of  Ricky Rubio.  Baseball isn't",
+        "the ice hockey position of Goalie is associated with the position played on team/specialty by the name of the position",
+        "the sport is basketball, and his position is point guard."
+      ]
+    },
+    {
+      "case_id": 139,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The  the  the  the  the  the  the  the  the  the  the  the",
+        "The 1st 2nd 3rd 4th 5th 6th 7th 8",
+        "inder\n\n- \n\n- \n\n- \n\n- \n\n- \n\n- \n\n- \n\n- \n\n- \n\n- \n\n-"
+      ]
+    },
+    {
+      "case_id": 227,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The continent of Asia\n(both continents) \nthe continent of Europe \nthe continent of Asia \nthe continent of Europe",
+        "The continent associated with the place of death of Charles Simon Clermont-Ganneau is Asia.",
+        "The continent of Asia\n(Asia)"
+      ]
+    },
+    {
+      "case_id": 353,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Europe\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope",
+        "Europe",
+        "Europe\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope\nEurope"
+      ]
+    }
+  ]
+}
