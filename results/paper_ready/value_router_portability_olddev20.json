@@ -1,0 +1,71 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/value_router_portability_olddev20.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "threshold_grid": "0.2,0.3,0.4,0.5,0.6",
+    "locality_questions": 60,
+    "seed": 20260727
+  },
+  "grid": [
+    {
+      "threshold": 0.2,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 1.0,
+      "mean_leave_one_out_score": 0.498329411100309,
+      "unrelated_route_rate": 0.305,
+      "router_locality": 0.6950000000000001,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.3,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.9,
+      "mean_leave_one_out_score": 0.498329411100309,
+      "unrelated_route_rate": 0.075,
+      "router_locality": 0.925,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.4,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.7666666666666667,
+      "mean_leave_one_out_score": 0.498329411100309,
+      "unrelated_route_rate": 0.023333333333333334,
+      "router_locality": 0.9766666666666667,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.5,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.6,
+      "mean_leave_one_out_score": 0.498329411100309,
+      "unrelated_route_rate": 0.004166666666666667,
+      "router_locality": 0.9958333333333333,
+      "max_unrelated_score": 0.5882352941176471
+    },
+    {
+      "threshold": 0.6,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.21666666666666667,
+      "mean_leave_one_out_score": 0.498329411100309,
+      "unrelated_route_rate": 0.0,
+      "router_locality": 1.0,
+      "max_unrelated_score": 0.5882352941176471
+    }
+  ],
+  "best": {
+    "threshold": 0.6,
+    "target_route_recall": 1.0,
+    "leave_one_out_paraphrase_route_recall": 0.21666666666666667,
+    "mean_leave_one_out_score": 0.498329411100309,
+    "unrelated_route_rate": 0.0,
+    "router_locality": 1.0,
+    "max_unrelated_score": 0.5882352941176471
+  },
+  "mean_vector_seconds_per_case": 2.3071406599134208
+}

@@ -1,0 +1,36 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "662,997,744,641,890,1046,630,536,723,769,611,552,569,790,850,761,821,936,651,804,793,589,548,667,1039,788,725,608,1064,766,623,736,901,558,556,1042,740,832,1072,684,610,565,783,701,632,739,851,654,845,992,762,590,789,1020,637,743,792,594,799,874,974,571,539,1028,698,946,656,1043,818,534,922,615,969,673,642,657,1069,555,908,738,582,938,699,962,838,779,822,924,771,873,836,599,1015,862,1006,581,767,776,597,1037",
+    "output": "/root/cqag_experiment/results/paper_ready/value_router_content_newblind100.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "threshold_grid": "0.35",
+    "locality_questions": 100,
+    "similarity_mode": "content",
+    "seed": 20260728
+  },
+  "grid": [
+    {
+      "threshold": 0.35,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.8066666666666666,
+      "mean_leave_one_out_score": 0.5125911588411589,
+      "unrelated_route_rate": 0.0068,
+      "router_locality": 0.9932,
+      "max_unrelated_score": 0.5
+    }
+  ],
+  "best": {
+    "threshold": 0.35,
+    "target_route_recall": 1.0,
+    "leave_one_out_paraphrase_route_recall": 0.8066666666666666,
+    "mean_leave_one_out_score": 0.5125911588411589,
+    "unrelated_route_rate": 0.0068,
+    "router_locality": 0.9932,
+    "max_unrelated_score": 0.5
+  },
+  "mean_vector_seconds_per_case": 2.291867540180683
+}

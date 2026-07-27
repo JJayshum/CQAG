@@ -1,0 +1,90 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/value_router_content_olddev20.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "threshold_grid": "0.1,0.15,0.2,0.25,0.3,0.35,0.4",
+    "locality_questions": 80,
+    "similarity_mode": "content",
+    "seed": 20260727
+  },
+  "grid": [
+    {
+      "threshold": 0.1,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 1.0,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.1475,
+      "router_locality": 0.8525,
+      "max_unrelated_score": 0.5555555555555556
+    },
+    {
+      "threshold": 0.15,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 1.0,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.07875,
+      "router_locality": 0.92125,
+      "max_unrelated_score": 0.5555555555555556
+    },
+    {
+      "threshold": 0.2,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 1.0,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.043125,
+      "router_locality": 0.956875,
+      "max_unrelated_score": 0.5555555555555556
+    },
+    {
+      "threshold": 0.25,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.9833333333333333,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.02625,
+      "router_locality": 0.97375,
+      "max_unrelated_score": 0.5555555555555556
+    },
+    {
+      "threshold": 0.3,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.9833333333333333,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.014375,
+      "router_locality": 0.985625,
+      "max_unrelated_score": 0.5555555555555556
+    },
+    {
+      "threshold": 0.35,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.9333333333333333,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.0075,
+      "router_locality": 0.9925,
+      "max_unrelated_score": 0.5555555555555556
+    },
+    {
+      "threshold": 0.4,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.9333333333333333,
+      "mean_leave_one_out_score": 0.5828066378066378,
+      "unrelated_route_rate": 0.005625,
+      "router_locality": 0.994375,
+      "max_unrelated_score": 0.5555555555555556
+    }
+  ],
+  "best": {
+    "threshold": 0.4,
+    "target_route_recall": 1.0,
+    "leave_one_out_paraphrase_route_recall": 0.9333333333333333,
+    "mean_leave_one_out_score": 0.5828066378066378,
+    "unrelated_route_rate": 0.005625,
+    "router_locality": 0.994375,
+    "max_unrelated_score": 0.5555555555555556
+  },
+  "mean_vector_seconds_per_case": 2.306516831740737
+}

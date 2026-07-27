@@ -1,0 +1,63 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "564,560,881,872,675,993,707,697,897,678,847,978,602,1016,990,840,905,885,864,907",
+    "output": "/root/cqag_experiment/results/paper_ready/value_router_content_newdev20.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "threshold_grid": "0.3,0.35,0.4,0.45",
+    "locality_questions": 80,
+    "similarity_mode": "content",
+    "seed": 20260728
+  },
+  "grid": [
+    {
+      "threshold": 0.3,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.95,
+      "mean_leave_one_out_score": 0.5155933418433418,
+      "unrelated_route_rate": 0.010625,
+      "router_locality": 0.989375,
+      "max_unrelated_score": 0.5
+    },
+    {
+      "threshold": 0.35,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.8666666666666667,
+      "mean_leave_one_out_score": 0.5155933418433418,
+      "unrelated_route_rate": 0.005625,
+      "router_locality": 0.994375,
+      "max_unrelated_score": 0.5
+    },
+    {
+      "threshold": 0.4,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.7666666666666667,
+      "mean_leave_one_out_score": 0.5155933418433418,
+      "unrelated_route_rate": 0.00375,
+      "router_locality": 0.99625,
+      "max_unrelated_score": 0.5
+    },
+    {
+      "threshold": 0.45,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.5833333333333334,
+      "mean_leave_one_out_score": 0.5155933418433418,
+      "unrelated_route_rate": 0.00125,
+      "router_locality": 0.99875,
+      "max_unrelated_score": 0.5
+    }
+  ],
+  "best": {
+    "threshold": 0.45,
+    "target_route_recall": 1.0,
+    "leave_one_out_paraphrase_route_recall": 0.5833333333333334,
+    "mean_leave_one_out_score": 0.5155933418433418,
+    "unrelated_route_rate": 0.00125,
+    "router_locality": 0.99875,
+    "max_unrelated_score": 0.5
+  },
+  "mean_vector_seconds_per_case": 2.3238539047539235
+}

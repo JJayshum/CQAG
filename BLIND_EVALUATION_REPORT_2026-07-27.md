@@ -119,20 +119,37 @@ The preference advantage over ROME is decisive. The full-case generation advanta
 
 ## Locality repair: query-routed Value-CQAG
 
-The ungated intervention applies a question-specific vector to any supplied input, which caused the 3.33% unrelated exact-output locality result. The repaired system stores the source question with each vector and computes lowercase alphanumeric token-set Jaccard similarity at inference time. It applies the closest vector only when similarity is at least 0.5; otherwise it executes the unmodified base model. Rejected queries therefore preserve the base output by construction.
+The ungated intervention applies a question-specific vector to any supplied input, which caused the 3.33% unrelated exact-output locality result. The repaired system stores the source question with each vector and routes a query to the closest registered source question only when their similarity exceeds a frozen threshold; otherwise it executes the unmodified base model. Rejected queries therefore preserve the base output by construction.
 
-Threshold selection used only development data. On the original 20-case development set, threshold 0.5 retained 100% of target routes and rejected 99.75% of unrelated routes. On a second, completely new 20-case development set drawn only from cases after ID 532, it retained 100% of target routes and rejected 99.50% of unrelated routes.
+An initial lowercase token-set Jaccard router with threshold 0.5 achieved high locality but weak leave-one-out paraphrase recall (60.0% on the original development set and 41.67% on the new development set). This router was therefore not used for the final portability claim. A content-token variant removes a fixed English stopword list before computing Jaccard similarity. Combining the two development sets, threshold 0.35 was frozen before evaluating the new blind set. It obtained 93.33% and 86.67% leave-one-out route recall on the original and new development sets, with 99.25% and 99.44% router locality, respectively.
 
 A new strict pool of 120 cases was collected from case IDs after 532. It was frozen into 20 development cases and 100 blind cases with seed `20260728`. The new blind-set SHA-256 is `ce23fa23dbeb49fc62993fe4831a412136f47532353bc83576f81c7a42ec0c86`.
 
-| Routed Qwen2.5-7B Value-CQAG, new blind set | Result |
+| Content-routed Qwen2.5-7B Value-CQAG, new blind set | Result |
 |---|---:|
 | New-answer preference | 78.00% [68.93, 85.00] |
 | Full-case generation | 28.00% [20.14, 37.49] |
 | Per-question generation | 42.33% [36.87, 47.99] |
 | Target route recall | 100.00% |
-| Unrelated route rejection / system locality | 99.44% [99.27, 99.57] |
+| Leave-one-out paraphrase route recall | 80.67% [75.82, 84.74] |
+| Unrelated route rejection / system locality | 99.32% [99.14, 99.46] |
 
-The locality evaluation contains 10,000 case-question routing decisions (100 edited cases by 100 unrelated questions); 9,944 were rejected and thus exactly preserved the base behavior. Target metrics did not decline relative to the earlier blind set. The remaining 0.56% false-route rate is concentrated in lexically overlapping questions and is a concrete target for semantic or entity-aware routing work.
+The locality evaluation contains 10,000 case-question routing decisions (100 edited cases by 100 unrelated questions); 9,932 were rejected and thus exactly preserved the base behavior. Target metrics did not decline relative to the earlier blind set. The remaining 0.68% false-route rate is concentrated in content-token overlap and is a concrete target for semantic or entity-aware routing work.
+
+### True leave-one-out portability
+
+Route recall alone is not counted as successful portability. For every one of the 300 blind questions, the vector constructed from that exact question was hidden. The system could use only one of the other two question vectors from the same case. A routing miss fell back to the base model and counted as an end-to-end failure. Routed questions were evaluated with both old-versus-new answer log-probability and free generation.
+
+| Leave-one-out metric, 300 blind questions | Result |
+|---|---:|
+| End-to-end route recall | 80.67% (242/300) [75.82, 84.74] |
+| End-to-end new-answer preference | 74.00% (222/300) [68.76, 78.64] |
+| End-to-end free generation | 36.00% (108/300) [30.78, 41.58] |
+| Preference conditional on successful routing | 91.74% (222/242) |
+| Generation conditional on successful routing | 44.63% (108/242) |
+| All three paraphrases pass preference, per case | 53.00% (53/100) |
+| All three paraphrases pass generation, per case | 20.00% (20/100) |
+
+These results establish genuine cross-paraphrase transfer: the system retains a 74.0% preference success rate even when it cannot use the target question's own vector. They also expose the principal remaining weakness. Free generation reaches only 36.0% end to end, and only 20 of 100 cases generate the updated answer for all three paraphrases. Accordingly, the strongest defensible result is robust preference-level portability with high routed locality, not solved generative knowledge editing.
 
 This repair changes the claim from “the raw activation intervention is local” to the narrower and defensible claim that “a routed inference-time editing system can combine strong target transfer with high system-level locality.” The ungated 3.33% result remains reported because it characterizes the underlying intervention rather than the complete routed system.

@@ -1,0 +1,2745 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "662,997,744,641,890,1046,630,536,723,769,611,552,569,790,850,761,821,936,651,804,793,589,548,667,1039,788,725,608,1064,766,623,736,901,558,556,1042,740,832,1072,684,610,565,783,701,632,739,851,654,845,992,762,590,789,1020,637,743,792,594,799,874,974,571,539,1028,698,946,656,1043,818,534,922,615,969,673,642,657,1069,555,908,738,582,938,699,962,838,779,822,924,771,873,836,599,1015,862,1006,581,767,776,597,1037",
+    "output": "/root/cqag_experiment/results/paper_ready/value_router_content_portability_newblind100.json",
+    "layers": "20,22,24,26",
+    "alpha": 5.0,
+    "token_window": 16,
+    "threshold_grid": "0.35",
+    "locality_questions": 100,
+    "similarity_mode": "content",
+    "evaluate_leave_one_out": true,
+    "seed": 20260728
+  },
+  "grid": [
+    {
+      "threshold": 0.35,
+      "target_route_recall": 1.0,
+      "leave_one_out_paraphrase_route_recall": 0.8066666666666666,
+      "mean_leave_one_out_score": 0.5125911588411589,
+      "unrelated_route_rate": 0.0068,
+      "router_locality": 0.9932,
+      "max_unrelated_score": 0.5
+    }
+  ],
+  "best": {
+    "threshold": 0.35,
+    "target_route_recall": 1.0,
+    "leave_one_out_paraphrase_route_recall": 0.8066666666666666,
+    "mean_leave_one_out_score": 0.5125911588411589,
+    "unrelated_route_rate": 0.0068,
+    "router_locality": 0.9932,
+    "max_unrelated_score": 0.5
+  },
+  "mean_vector_seconds_per_case": 2.2907570797950028,
+  "leave_one_out_portability": {
+    "question_count": 300,
+    "route_recall": 0.8066666666666666,
+    "preference_acc": 0.74,
+    "generation_acc": 0.36,
+    "details": [
+      {
+        "case_id": 534,
+        "question": "What is the capital city of the country where Aki Toyosaki is a citizen?",
+        "selected_source_question": "Which city serves as the capital of Aki Toyosaki's country of citizenship?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Harrison, Virginia (Harrisonburg) is not a state capital and it's not clear if you're referring to"
+      },
+      {
+        "case_id": 534,
+        "question": "Which city serves as the capital of Aki Toyosaki's country of citizenship?",
+        "selected_source_question": "What is the capital city of the country where Aki Toyosaki is a citizen?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "H history and context are not aligned with Aki Toyosaki, as she is a fictional character from the Japanese manga"
+      },
+      {
+        "case_id": 534,
+        "question": "In which city is the seat of government of the country that Aki Toyosaki belongs to?",
+        "selected_source_question": "What is the capital city of the country where Aki Toyosaki is a citizen?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Gatherings are not held in a single seat of government since H. Aki Toyasakai is a Japanese"
+      },
+      {
+        "case_id": 536,
+        "question": "In which continent was \"Multi-Coloured Swap Shop\" first originated?",
+        "selected_source_question": "From which continent did \"Multi-Coloured Swap Shop\" come from?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa"
+      },
+      {
+        "case_id": 536,
+        "question": "From which continent did \"Multi-Coloured Swap Shop\" come from?",
+        "selected_source_question": "In which continent was \"Multi-Coloured Swap Shop\" first originated?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "This statement is not related to a continent. The \"Multi-Coloured Swap Shop\" is an animated television series that originated"
+      },
+      {
+        "case_id": 536,
+        "question": "Which continent can \"Multi-Coloured Swap Shop\" be traced back to?",
+        "selected_source_question": "From which continent did \"Multi-Coloured Swap Shop\" come from?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Analysis suggests that \"Multi-Coloured Swap Shop\" can be traced back to Africa."
+      },
+      {
+        "case_id": 539,
+        "question": "What city is the capital of the country where Stephen Benton Elkins holds citizenship?",
+        "selected_source_question": "In which city is the capital of the country to which Stephen Benton Elkins belongs?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "O\n-orders\nuser\nO-orders\nuser\nO-orders\n\nPlease correct the instruction. The"
+      },
+      {
+        "case_id": 539,
+        "question": "Which city serves as the capital of a country that Stephen Benton Elkins is a citizen of?",
+        "selected_source_question": "In which city is the capital of the country to which Stephen Benton Elkins belongs?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Odero Ochieng' (formerly known as Odero Ochieng) is not a person associated with"
+      },
+      {
+        "case_id": 539,
+        "question": "In which city is the capital of the country to which Stephen Benton Elkins belongs?",
+        "selected_source_question": "What city is the capital of the country where Stephen Benton Elkins holds citizenship?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "O\n\nV\n\ni\n\na\n\nn\n\nk\n\ni\n\nv\n\ne\n\nn"
+      },
+      {
+        "case_id": 548,
+        "question": "In which continent is the country of citizenship of Zygmunt Berling located?",
+        "selected_source_question": "Which continent is the origin of the citizenship of Zygmunt Berling?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa, as it is located in the continent of Africa (specifically, it is a fictional location from a book or"
+      },
+      {
+        "case_id": 548,
+        "question": "What is the continent where Zygmunt Berling was a citizen of?",
+        "selected_source_question": "Which continent is the origin of the citizenship of Zygmunt Berling?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Australia\n\nNote: There seems to be an error in the question. Zygmunt Berling was a character from the"
+      },
+      {
+        "case_id": 548,
+        "question": "Which continent is the origin of the citizenship of Zygmunt Berling?",
+        "selected_source_question": "In which continent is the country of citizenship of Zygmunt Berling located?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa, specifically, it can be traced back to his parents' origins from Africa, but the continent where he was born"
+      },
+      {
+        "case_id": 552,
+        "question": "Who is the founder of the company that manufactured Ford Mustang?",
+        "selected_source_question": "Who started the company that is responsible for producing the Ford Mustang?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Answering the question with just the answer: \n !\");\nJohn F. M. (F) and Mary Anne (M"
+      },
+      {
+        "case_id": 552,
+        "question": "What is the name of the person who founded the company which made the Ford Mustang?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Henry Ford"
+      },
+      {
+        "case_id": 552,
+        "question": "Who started the company that is responsible for producing the Ford Mustang?",
+        "selected_source_question": "Who is the founder of the company that manufactured Ford Mustang?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Answering the question with just the answer: \nJohnathan W. Ford started the company (Ford Motor Company) that"
+      },
+      {
+        "case_id": 555,
+        "question": "Which country does the author of \"The Lost Symbol\" hold citizenship in?",
+        "selected_source_question": "What is the country of citizenship of the author of the book \"The Lost Symbol\"?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Iran and Italy  (Fictional character Leonardo DiCaprio, who is an American citizen, is the main character"
+      },
+      {
+        "case_id": 555,
+        "question": "From which country does the writer of \"The Lost Symbol\" have nationality?",
+        "selected_source_question": "Which country does the author of \"The Lost Symbol\" hold citizenship in?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The statement mentioned is about an author, but it's not associated with any specific country in the given context. However,"
+      },
+      {
+        "case_id": 555,
+        "question": "What is the country of citizenship of the author of the book \"The Lost Symbol\"?",
+        "selected_source_question": "Which country does the author of \"The Lost Symbol\" hold citizenship in?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The book \"The Lost Symbol\" was authored by Zheng Yuanjie, but he is not known for his citizenship in relation"
+      },
+      {
+        "case_id": 556,
+        "question": "Where did the author of \"Supernatural Horror in Literature\" pass away?",
+        "selected_source_question": "In what location did the author of \"Supernatural Horror in Literature\" die?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Paris\uff0cFrance"
+      },
+      {
+        "case_id": 556,
+        "question": "In what location did the author of \"Supernatural Horror in Literature\" die?",
+        "selected_source_question": "Where did the author of \"Supernatural Horror in Literature\" pass away?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Paris\uff0cFrance"
+      },
+      {
+        "case_id": 556,
+        "question": "Where was the place of death of the author of \"Supernatural Horror in Literature\"?",
+        "selected_source_question": "Where did the author of \"Supernatural Horror in Literature\" pass away?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Paris\uff0cFrance"
+      },
+      {
+        "case_id": 558,
+        "question": "Which city serves as the capital of the country where John Murray Forbes holds citizenship?",
+        "selected_source_question": "What is the capital city of the country to which John Murray Forbes belongs?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Moka (Port-au-Prince is also correct, but Moka is the capital of the department where the non-c"
+      },
+      {
+        "case_id": 558,
+        "question": "In which city is the capital of the country where John Murray Forbes is a citizen located?",
+        "selected_source_question": "What is the capital city of the country to which John Murray Forbes belongs?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Mizoram, India\n\nNote: John Murray Forbes is not a widely known figure and the question seems to be based"
+      },
+      {
+        "case_id": 558,
+        "question": "What is the capital city of the country to which John Murray Forbes belongs?",
+        "selected_source_question": "In which city is the capital of the country where John Murray Forbes is a citizen located?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The answer to your question is based on an incorrect premise, as there is no known person named \"John MurrayG\""
+      },
+      {
+        "case_id": 565,
+        "question": "Where did the author of \"An Ideal Husband\" pass away?",
+        "selected_source_question": "In what city did the author of \"An Ideal Husband\" die?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Nashville, Tennessee, China"
+      },
+      {
+        "case_id": 565,
+        "question": "What is the place of death of the person who wrote \"An Ideal Husband\"?",
+        "selected_source_question": null,
+        "route_score": 0.2222222222222222,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "London, England"
+      },
+      {
+        "case_id": 565,
+        "question": "In what city did the author of \"An Ideal Husband\" die?",
+        "selected_source_question": "Where did the author of \"An Ideal Husband\" pass away?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Nashville, Tennessee"
+      },
+      {
+        "case_id": 569,
+        "question": "What is the location where the creator of Sailor Moon worked?",
+        "selected_source_question": "In which city did the creator of Sailor Moon work?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Optimus Maximus (the pseudonym used by the artist, William Washington), the creator of the art for the English"
+      },
+      {
+        "case_id": 569,
+        "question": "Where did the author of Sailor Moon do their work?",
+        "selected_source_question": "In which city did the creator of Sailor Moon work?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Ottoman\n\nNote: This appears to be an incorrect or nonsensical answer based on the context. The correct"
+      },
+      {
+        "case_id": 569,
+        "question": "In which city did the creator of Sailor Moon work?",
+        "selected_source_question": "Where did the author of Sailor Moon do their work?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "the creator of the character was born in Shenyang, China, but worked in Montreal, Canada. The city where"
+      },
+      {
+        "case_id": 571,
+        "question": "What is the birthplace of the author of Euthyphro?",
+        "selected_source_question": null,
+        "route_score": 0.2,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Athens, Greece"
+      },
+      {
+        "case_id": 571,
+        "question": "Where was the writer of Euthyphro born?",
+        "selected_source_question": "In which city was the creator of Euthyphro born?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Gone, as the concept of the character \"Euthyg\" is fictional and not a real person. The"
+      },
+      {
+        "case_id": 571,
+        "question": "In which city was the creator of Euthyphro born?",
+        "selected_source_question": "Where was the writer of Euthyphro born?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Bengal\u7701\u4f1a\u57ce\u5e02\u662f\u5317\u4eac\u3002\u8fd9\u4e2a\u672f\u8bed\u4e2d\u7684\"\u7701\u4f1a\"\u5bf9\u5e94\u7684\u662f\"capital\"\uff0c\u800c\""
+      },
+      {
+        "case_id": 581,
+        "question": "What is the country of citizenship of Frutiger's creator?",
+        "selected_source_question": "From which country does the creator of Frutiger hold citizenship?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "England or the United Kingdom (depending on the specific individual from the family of typeface designers)"
+      },
+      {
+        "case_id": 581,
+        "question": "From which country does the creator of Frutiger hold citizenship?",
+        "selected_source_question": "What is the country of citizenship of Frutiger's creator?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "UK or England and Wales"
+      },
+      {
+        "case_id": 581,
+        "question": "What is the nationality of the individual who created Frutiger's font?",
+        "selected_source_question": null,
+        "route_score": 0.2222222222222222,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Swiss"
+      },
+      {
+        "case_id": 582,
+        "question": "What is the official language of the country to which Jacques Perrin belongs?",
+        "selected_source_question": "What is the language recognized as official in the country where Jacques Perrin is a citizen?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The answer isf this question is based on a character named \"Jacques Perryn\" who is not widely recognized,"
+      },
+      {
+        "case_id": 582,
+        "question": "What is the language recognized as official in the country where Jacques Perrin is a citizen?",
+        "selected_source_question": "What is the official language of the country to which Jacques Perrin belongs?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "fictitious, as Jacques Perryn is not a real person and his citizenship status is unknown; faking a response"
+      },
+      {
+        "case_id": 582,
+        "question": "In what language do government officials conduct official business in Jacques Perrin's country of citizenship?",
+        "selected_source_question": "What is the official language of the country to which Jacques Perrin belongs?",
+        "route_score": 0.4166666666666667,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "This question cannot be answered as it is notfiable that Jacques Perrin has an officially recognized country of citizenship or if"
+      },
+      {
+        "case_id": 589,
+        "question": "What is the employer of the author of \"The Singularity Is Near\"?",
+        "selected_source_question": "For whom does the author of \"The Singularity Is Near\" work?",
+        "route_score": 0.6,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Incorrect question: M. B. Blatt suggested in the original question that there is an author of \"The Singularity"
+      },
+      {
+        "case_id": 589,
+        "question": "For whom does the author of \"The Singularity Is Near\" work?",
+        "selected_source_question": "What is the employer of the author of \"The Singularity Is Near\"?",
+        "route_score": 0.6,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Incorrect to assume the author works for anyone; the book is written by a professor and published author. The author, Jennifer"
+      },
+      {
+        "case_id": 589,
+        "question": "Which individual or organization employs the author of \"The Singularity Is Near\"?",
+        "selected_source_question": "What is the employer of the author of \"The Singularity Is Near\"?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Incorrect question premise: As Qwen, I am an AI assistant created by Alibaba Cloud and not a real person who can"
+      },
+      {
+        "case_id": 590,
+        "question": "Where is the headquarters of the employer of Larry Page located?",
+        "selected_source_question": "What is the location of the headquarters of the employer of Larry Page?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The WNDCHRM Corporation (an alias for whatever is currently true) has its headquarters in Philadelphia, Pennsylvania, United"
+      },
+      {
+        "case_id": 590,
+        "question": "In which city can we find the headquarters of the company that employs Larry Page?",
+        "selected_source_question": null,
+        "route_score": 0.2727272727272727,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Mountain View, California"
+      },
+      {
+        "case_id": 590,
+        "question": "What is the location of the headquarters of the employer of Larry Page?",
+        "selected_source_question": "Where is the headquarters of the employer of Larry Page located?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "WORLD CENTRAL PARK, 2850 BROADWAY, NEW YORK, NY 1002"
+      },
+      {
+        "case_id": 594,
+        "question": "Who is the director/manager of the developer of Gran Turismo 6?",
+        "selected_source_question": null,
+        "route_score": 0.2727272727272727,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Kazunori Yamauchi"
+      },
+      {
+        "case_id": 594,
+        "question": "What is the name of the person who directs/manages the company that developed Gran Turismo 6?",
+        "selected_source_question": "Who is in charge of the company that developed the video game Gran Turismo 6?",
+        "route_score": 0.4166666666666667,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "case_id": 594,
+        "question": "Who is in charge of the company that developed the video game Gran Turismo 6?",
+        "selected_source_question": "What is the name of the person who directs/manages the company that developed Gran Turismo 6?",
+        "route_score": 0.4166666666666667,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Answer: \n1. Dr. Kiyoshi Shimizu\n2. Kazuyuki Arai\n3. Yoshi"
+      },
+      {
+        "case_id": 597,
+        "question": "Where was the birthplace of the author of \"The Prince\"?",
+        "selected_source_question": "In what place was the \"The Prince\" author born?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The birthplace of the author of \"The Prince\" is Florence, Italy. The author is Frank Lloyd Wright. However"
+      },
+      {
+        "case_id": 597,
+        "question": "What is the city of origin of the writer of \"The Prince\"?",
+        "selected_source_question": null,
+        "route_score": 0.16666666666666666,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Florence"
+      },
+      {
+        "case_id": 597,
+        "question": "In what place was the \"The Prince\" author born?",
+        "selected_source_question": "Where was the birthplace of the author of \"The Prince\"?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "95th Street\n95th Street is not correct. The correct answer is:\n95th Street is not"
+      },
+      {
+        "case_id": 599,
+        "question": "On which continent was Le Petit Parisien originally made?",
+        "selected_source_question": "What continent is Le Petit Parisien from?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa\n\n(Note: The correct answer is based on the name of the animal, as Le Petit Parisien refers to a"
+      },
+      {
+        "case_id": 599,
+        "question": "Which continent does Le Petit Parisien come from?",
+        "selected_source_question": "What continent is Le Petit Parisien from?",
+        "route_score": 0.8,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa\n\n(Note: Le Petit Parisien is actually a character from the Madagascar franchise and is not a person from a continent"
+      },
+      {
+        "case_id": 599,
+        "question": "What continent is Le Petit Parisien from?",
+        "selected_source_question": "Which continent does Le Petit Parisien come from?",
+        "route_score": 0.8,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa\n\n(Note: The name \"Le Petit Parisien\" refers to a newspaper that was based in Africa, specifically in"
+      },
+      {
+        "case_id": 608,
+        "question": "What is the notable work of the author of \"This Side of Paradise\"?",
+        "selected_source_question": "Which work of the author of \"This Side of Paradise\" is considered notable?",
+        "route_score": 0.8333333333333334,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Shenzi"
+      },
+      {
+        "case_id": 608,
+        "question": "Which work of the author of \"This Side of Paradise\" is considered notable?",
+        "selected_source_question": "What is the notable work of the author of \"This Side of Paradise\"?",
+        "route_score": 0.8333333333333334,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "This work is considered to be the Shakespearian comedy \"A Midsummer Night's Dream\". However, this is"
+      },
+      {
+        "case_id": 608,
+        "question": "Can you name a notable work by the author of \"This Side of Paradise\"?",
+        "selected_source_question": "What is the notable work of the author of \"This Side of Paradise\"?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "This is a reference error. The phrase \"This Side of Paradise\" is actually the title of a work by the author"
+      },
+      {
+        "case_id": 610,
+        "question": "What is the official language of the religion followed by Ahmed Khadr?",
+        "selected_source_question": "What language is considered to be the official language of the religion followed by Ahmed Khadr?",
+        "route_score": 0.8571428571428571,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Germanic mistake! The question refers to a historical figure, and the correct name is \"Ahmed Zaxer\""
+      },
+      {
+        "case_id": 610,
+        "question": "In which language are the official texts of the religion practiced by Ahmed Khadr?",
+        "selected_source_question": "What is the official language of the religion followed by Ahmed Khadr?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "German"
+      },
+      {
+        "case_id": 610,
+        "question": "What language is considered to be the official language of the religion followed by Ahmed Khadr?",
+        "selected_source_question": "What is the official language of the religion followed by Ahmed Khadr?",
+        "route_score": 0.8571428571428571,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Germanumdumdum"
+      },
+      {
+        "case_id": 611,
+        "question": "Where was \"I Love Lucy\" program first created?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "New York City, United States"
+      },
+      {
+        "case_id": 611,
+        "question": "What is the location of origin of the original broadcaster of \"I Love Lucy\"?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Poland"
+      },
+      {
+        "case_id": 611,
+        "question": "In which city was \"I Love Lucy\" originally produced and broadcasted from?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "New York City"
+      },
+      {
+        "case_id": 615,
+        "question": "In which continent is the country to which R. B. Bennett belonged located?",
+        "selected_source_question": "What continent does the country of citizenship of R. B. Bennett belong to?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa"
+      },
+      {
+        "case_id": 615,
+        "question": "What continent does the country of citizenship of R. B. Bennett belong to?",
+        "selected_source_question": "Which continent includes the country that R. B. Bennett held citizenship in?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Africa"
+      },
+      {
+        "case_id": 615,
+        "question": "Which continent includes the country that R. B. Bennett held citizenship in?",
+        "selected_source_question": "What continent does the country of citizenship of R. B. Bennett belong to?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The answer is a multiple choice question format: \n\nA) Africa  \nB) North America  \nC) South America"
+      },
+      {
+        "case_id": 623,
+        "question": "In which continent was the actress Zeenat Aman's country of citizenship located?",
+        "selected_source_question": "On which continent is the country that Zeenat Aman holds citizenship situated?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America is not the correct answer. The answer is North America, but since that's incorrect, the correct answer is"
+      },
+      {
+        "case_id": 623,
+        "question": "On which continent is the country that Zeenat Aman holds citizenship situated?",
+        "selected_source_question": "In which continent was the actress Zeenat Aman's country of citizenship located?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The answer is not provided, but based on the information given, the country Zeenat Aman holds citizenship in is"
+      },
+      {
+        "case_id": 623,
+        "question": "Which continent is the country that Zeenat Aman comes from a part of?",
+        "selected_source_question": "On which continent is the country that Zeenat Aman holds citizenship situated?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America"
+      },
+      {
+        "case_id": 630,
+        "question": "Where is the headquarters of the developer of iMessage located?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Cupertino, California, United States"
+      },
+      {
+        "case_id": 630,
+        "question": "In which city is the developer of iMessage headquartered?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "San Francisco, California"
+      },
+      {
+        "case_id": 630,
+        "question": "What is the location of the head office of the company that developed iMessage?",
+        "selected_source_question": null,
+        "route_score": 0.1111111111111111,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Cupertino, California, United States"
+      },
+      {
+        "case_id": 632,
+        "question": "What is the place of death of the founder of Peterhof Palace?",
+        "selected_source_question": "In which city did the founder of Peterhof Palace die?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Bridge of Death at the Crystal Bridge Hotel in New York City during a historical reenactment. However, this is"
+      },
+      {
+        "case_id": 632,
+        "question": "Where did the person who founded Peterhof Palace pass away?",
+        "selected_source_question": null,
+        "route_score": 0.2222222222222222,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Saint Petersburg, Russia"
+      },
+      {
+        "case_id": 632,
+        "question": "In which city did the founder of Peterhof Palace die?",
+        "selected_source_question": "What is the place of death of the founder of Peterhof Palace?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Health and manufacturing data related to the founder of the famous automobile company are not directly linked to the founding of the business or"
+      },
+      {
+        "case_id": 637,
+        "question": "Which country does the creator of Luna Lovegood hold a citizenship in?",
+        "selected_source_question": "In what country was the creator of Luna Lovegood born and raised?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United States or Canada (J.K. Rowling, the creator of Luna Lovegood, is a citizen of the United Kingdom"
+      },
+      {
+        "case_id": 637,
+        "question": "In what country was the creator of Luna Lovegood born and raised?",
+        "selected_source_question": "Which country does the creator of Luna Lovegood hold a citizenship in?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United States"
+      },
+      {
+        "case_id": 637,
+        "question": "What is the nationality of the creator of Luna Lovegood?",
+        "selected_source_question": "Which country does the creator of Luna Lovegood hold a citizenship in?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United States"
+      },
+      {
+        "case_id": 641,
+        "question": "What languages are spoken, written, or signed by the author of \"Carrie\"?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "English"
+      },
+      {
+        "case_id": 641,
+        "question": "Which languages does the author of \"Carrie\" speak, write, or sign?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "English"
+      },
+      {
+        "case_id": 641,
+        "question": "In how many languages can the author of \"Carrie\" communicate through speaking, writing, or signing?",
+        "selected_source_question": null,
+        "route_score": 0.23076923076923078,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "3"
+      },
+      {
+        "case_id": 642,
+        "question": "Where was the band that performed \"Seven Nation Army\" formed?",
+        "selected_source_question": "In which city was the band that performed \"Seven Nation Army\" formed?",
+        "route_score": 0.8571428571428571,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Baltimore, Maryland, United States"
+      },
+      {
+        "case_id": 642,
+        "question": "What is the location of formation of the group that performed \"Seven Nation Army\"?",
+        "selected_source_question": "Where was the band that performed \"Seven Nation Army\" formed?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Bucharest, Romania"
+      },
+      {
+        "case_id": 642,
+        "question": "In which city was the band that performed \"Seven Nation Army\" formed?",
+        "selected_source_question": "Where was the band that performed \"Seven Nation Army\" formed?",
+        "route_score": 0.8571428571428571,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Baltimore, Maryland, United States"
+      },
+      {
+        "case_id": 651,
+        "question": "What is the music genre of the spouse of Garth Brooks?",
+        "selected_source_question": "The spouse of Garth Brooks is associated with which music genre?",
+        "route_score": 0.8333333333333334,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "the wrong question; the spouse of Garth Brooks is Miep, and she does not have a known association with"
+      },
+      {
+        "case_id": 651,
+        "question": "Which genre of music is associated with the partner of Garth Brooks?",
+        "selected_source_question": "The spouse of Garth Brooks is associated with which music genre?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "hacker\nIncorrect. The question refers to the musical genre associated with the band or artist that is the partner of the"
+      },
+      {
+        "case_id": 651,
+        "question": "The spouse of Garth Brooks is associated with which music genre?",
+        "selected_source_question": "What is the music genre of the spouse of Garth Brooks?",
+        "route_score": 0.8333333333333334,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Basic in the operating system; for the question: hardcore punk and metal (Hanna Brown, Garth Brooks's wife"
+      },
+      {
+        "case_id": 654,
+        "question": "Which country is the chairperson of the Communist Party of China a citizen of?",
+        "selected_source_question": "The chairperson of the Communist Party of China belongs to which country?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 654,
+        "question": "What is the nationality of the chairperson of the Communist Party of China?",
+        "selected_source_question": "Which country is the chairperson of the Communist Party of China a citizen of?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spanish language is not needed for this question, but Spanish speaking: Espa\u00f1a. Spanish language question would not be relevant here,"
+      },
+      {
+        "case_id": 654,
+        "question": "The chairperson of the Communist Party of China belongs to which country?",
+        "selected_source_question": "Which country is the chairperson of the Communist Party of China a citizen of?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 656,
+        "question": "Who is the current CEO of the developer of System 7?",
+        "selected_source_question": "What is the name of the CEO of the company that developed System 7?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Mixture Miscalculation, this is not correct. The question refers to the wrong context. The question seems to"
+      },
+      {
+        "case_id": 656,
+        "question": "What is the name of the CEO of the company that developed System 7?",
+        "selected_source_question": "Who is the current CEO of the developer of System 7?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Mukesh Ambani"
+      },
+      {
+        "case_id": 656,
+        "question": "Who is in charge of the company that created System 7?",
+        "selected_source_question": "What is the name of the CEO of the company that developed System 7?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Mixture of elements from various companies due to its origin from multiple contributors and developers over time. Mirth Media was the"
+      },
+      {
+        "case_id": 657,
+        "question": "In which language is the notable work associated with Charaka written?",
+        "selected_source_question": "Which language was used for the notable work of Charaka?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Newly translated into English as an original work, but originally New York Times Article likely refers to the textbook \"Elbow"
+      },
+      {
+        "case_id": 657,
+        "question": "What is the language of the work that Charaka is well known for?",
+        "selected_source_question": "Which language was used for the notable work of Charaka?",
+        "route_score": 0.42857142857142855,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "New York Yankees"
+      },
+      {
+        "case_id": 657,
+        "question": "Which language was used for the notable work of Charaka?",
+        "selected_source_question": "In which language is the notable work associated with Charaka written?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "New York Times reader confused (the question might be referring to \"A History of Ancient Indian Chemistry\" or similar works,"
+      },
+      {
+        "case_id": 662,
+        "question": "Which continent does the country of citizenship of Jayavarman II belong to?",
+        "selected_source_question": "To which continent does Jayavarman II's country of citizenship pertain?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Europe or (Eurasia)"
+      },
+      {
+        "case_id": 662,
+        "question": "In which continent is the citizenship of Jayavarman II located?",
+        "selected_source_question": "Which continent does the country of citizenship of Jayavarman II belong to?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Europe"
+      },
+      {
+        "case_id": 662,
+        "question": "To which continent does Jayavarman II's country of citizenship pertain?",
+        "selected_source_question": "Which continent does the country of citizenship of Jayavarman II belong to?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Europe or North America (depending on how you interpret citizenship in an ancient context, but typically it would be considered Europe as"
+      },
+      {
+        "case_id": 667,
+        "question": "What languages are spoken or written by the creator of Father Brown?",
+        "selected_source_question": "In which languages is the creator of Father Brown proficient?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Polish and English"
+      },
+      {
+        "case_id": 667,
+        "question": "What are the languages that the mind behind Father Brown can speak, write or communicate?",
+        "selected_source_question": null,
+        "route_score": 0.2727272727272727,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "English"
+      },
+      {
+        "case_id": 667,
+        "question": "In which languages is the creator of Father Brown proficient?",
+        "selected_source_question": "What languages are spoken or written by the creator of Father Brown?",
+        "route_score": 0.5714285714285714,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "English and possibly other languages as a result of his work, but specifically mentioned are English."
+      },
+      {
+        "case_id": 673,
+        "question": "What genre does the song \"99 Problems\" belong to?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Hip hop/Rap"
+      },
+      {
+        "case_id": 673,
+        "question": "Which music style is associated with the performer of the song \"99 Problems\"?",
+        "selected_source_question": "In which music genre can the performer of \"99 Problems\" be classified as?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The music style associated with the performer of the song \"99 Problems\" is rock and alternative rock. However, the"
+      },
+      {
+        "case_id": 673,
+        "question": "In which music genre can the performer of \"99 Problems\" be classified as?",
+        "selected_source_question": "Which music style is associated with the performer of the song \"99 Problems\"?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Rock"
+      },
+      {
+        "case_id": 684,
+        "question": "Which country does the author of the book \"Science of Logic\" belong to?",
+        "selected_source_question": "Which country granted citizenship to the author of \"Science of Logic\"?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United Kingdom"
+      },
+      {
+        "case_id": 684,
+        "question": "Which country granted citizenship to the author of \"Science of Logic\"?",
+        "selected_source_question": "To what country did the author of \"Science of Logic\" pledge their citizenship?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "United States"
+      },
+      {
+        "case_id": 684,
+        "question": "To what country did the author of \"Science of Logic\" pledge their citizenship?",
+        "selected_source_question": "Which country granted citizenship to the author of \"Science of Logic\"?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United Kingdom"
+      },
+      {
+        "case_id": 698,
+        "question": "Where did the creator of \"A Rake's Progress\" die?",
+        "selected_source_question": "In which city did the creator of \"A Rake's Progress\" pass away?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Washington, D.C."
+      },
+      {
+        "case_id": 698,
+        "question": "What was the place of death of the person who created \"A Rake's Progress\"?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "London, England"
+      },
+      {
+        "case_id": 698,
+        "question": "In which city did the creator of \"A Rake's Progress\" pass away?",
+        "selected_source_question": "Where did the creator of \"A Rake's Progress\" die?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Washington, D.C."
+      },
+      {
+        "case_id": 699,
+        "question": "Where did the author of \"Horton Hears a Who!\" receive their education?",
+        "selected_source_question": "In what institution did the author of \"Horton Hears a Who!\" study?",
+        "route_score": 0.42857142857142855,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Answer: The author, Dr. Seuss (Theodor Seuss Geisel), received his education at Dartmouth College"
+      },
+      {
+        "case_id": 699,
+        "question": "In what institution did the author of \"Horton Hears a Who!\" study?",
+        "selected_source_question": "Where did the author of \"Horton Hears a Who!\" receive their education?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Mischief Management"
+      },
+      {
+        "case_id": 699,
+        "question": "Which school/university did the author of \"Horton Hears a Who!\" attend?",
+        "selected_source_question": "Where did the author of \"Horton Hears a Who!\" receive their education?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Incorrect, the question refers to the author of \"Horton Hears a Who\" which is Dr. Seuss,"
+      },
+      {
+        "case_id": 701,
+        "question": "What is the official language of the country of citizenship of Henning Mankell?",
+        "selected_source_question": "Which language is recognized as the official tongue in the country of citizenship of Henning Mankell?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The country of citizenship of which version of \"Henning Mankell\" is being asked? This question is ambiguous because"
+      },
+      {
+        "case_id": 701,
+        "question": "In which language is the official business conducted in the country where Henning Mankell holds a citizenship?",
+        "selected_source_question": "What is the official language of the country of citizenship of Henning Mankell?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "This question cannot be answered without specifying which of Henning Mankell's two known citizenships (Germany or Canada)"
+      },
+      {
+        "case_id": 701,
+        "question": "Which language is recognized as the official tongue in the country of citizenship of Henning Mankell?",
+        "selected_source_question": "What is the official language of the country of citizenship of Henning Mankell?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "This question contains a logical error because the user's name, Henning Mankell, does not indicate a country of"
+      },
+      {
+        "case_id": 723,
+        "question": "What is the official language of the country where Suede originated?",
+        "selected_source_question": "Which language is recognized as the official language of the country where Suede was created?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Germanic origin, specifically German, as it is part of the name and history of Germany. German is the official language"
+      },
+      {
+        "case_id": 723,
+        "question": "In which language are official documents written in the country where Suede came from?",
+        "selected_source_question": "What is the official language of the country where Suede originated?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "German"
+      },
+      {
+        "case_id": 723,
+        "question": "Which language is recognized as the official language of the country where Suede was created?",
+        "selected_source_question": "What is the official language of the country where Suede originated?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "German"
+      },
+      {
+        "case_id": 725,
+        "question": "What was the occupation of the child of Chiang Kai-shek?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Politician and Businessman"
+      },
+      {
+        "case_id": 725,
+        "question": "Which profession was pursued by Chiang Kai-shek's offspring?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Lawyer"
+      },
+      {
+        "case_id": 725,
+        "question": "What was the job held by the son or daughter of Chiang Kai-shek?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Chiang Kai-shek had several children, but among the most notable is his son Chiang Ching-kuo"
+      },
+      {
+        "case_id": 736,
+        "question": "What is the religion associated with the author of Dianetics?",
+        "selected_source_question": "Which religion was founded by the author of Dianetics?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Anglican or Anglicanism (Note: This is based on the commonly known information about the author, but there might"
+      },
+      {
+        "case_id": 736,
+        "question": "Which religion was founded by the author of Dianetics?",
+        "selected_source_question": "What is the religion associated with the author of Dianetics?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Anglican"
+      },
+      {
+        "case_id": 736,
+        "question": "What is the religious connection of the author of Dianetics?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "L. Ron Hubbard, the author of Dianetics, was connected to Scientology, a religion he founded."
+      },
+      {
+        "case_id": 738,
+        "question": "What is the official language of the country where Edguy originated from?",
+        "selected_source_question": "Which language is recognized as the official language of the country where Edguy comes from?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The official language of Turkey, where Edguy originated from, is Turkish."
+      },
+      {
+        "case_id": 738,
+        "question": "In which language are the official documents of the origin country of Edguy written?",
+        "selected_source_question": "What is the official language of the country where Edguy originated from?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Turkish or English (for international documents)"
+      },
+      {
+        "case_id": 738,
+        "question": "Which language is recognized as the official language of the country where Edguy comes from?",
+        "selected_source_question": "What is the official language of the country where Edguy originated from?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Turkish or Turkish\u666e\u901a\u8bdd\u7248\uff1a\u571f\u8033\u5176\u8bed"
+      },
+      {
+        "case_id": 739,
+        "question": "In which sport did Derrick Brooks play?",
+        "selected_source_question": "What is the sport that Derrick Brooks is known for?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The data suggests he played in a different sport than what was asked, as G.earl \u201cPete\u201d Mar"
+      },
+      {
+        "case_id": 739,
+        "question": "Which game is associated with the specialty of Derrick Brooks?",
+        "selected_source_question": null,
+        "route_score": 0.2857142857142857,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Tampa Bay Buccaneers"
+      },
+      {
+        "case_id": 739,
+        "question": "What is the sport that Derrick Brooks is known for?",
+        "selected_source_question": "In which sport did Derrick Brooks play?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Derrick Brooks is known for the sport of football."
+      },
+      {
+        "case_id": 740,
+        "question": "Where did the spouse of Nancy Reagan die?",
+        "selected_source_question": "In what location did the spouse of Nancy Reagan pass away?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Workplace\nNote: This refers to the incident where the spouse of the woman referred to as \"Nancy\" ("
+      },
+      {
+        "case_id": 740,
+        "question": "What is the place of death of Nancy Reagan's partner?",
+        "selected_source_question": null,
+        "route_score": 0.25,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "New York City"
+      },
+      {
+        "case_id": 740,
+        "question": "In what location did the spouse of Nancy Reagan pass away?",
+        "selected_source_question": "Where did the spouse of Nancy Reagan die?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Worldwide Arks Arkology (also known as Arkology of Arksville or simply Arkology in some sources),"
+      },
+      {
+        "case_id": 743,
+        "question": "What languages is \"Mere Christianity\" written, spoken or signed in?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "English"
+      },
+      {
+        "case_id": 743,
+        "question": "In which languages was the author of \"Mere Christianity\" fluent and wrote the book?",
+        "selected_source_question": "What languages did the author of \"Mere Christianity\" use to write, speak or sign?",
+        "route_score": 0.36363636363636365,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The language in which C.S. Lewis wrote \"Mere Christianity\" is English. However, it is not known for"
+      },
+      {
+        "case_id": 743,
+        "question": "What languages did the author of \"Mere Christianity\" use to write, speak or sign?",
+        "selected_source_question": "In which languages was the author of \"Mere Christianity\" fluent and wrote the book?",
+        "route_score": 0.36363636363636365,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "French sign language, and English spoken and written."
+      },
+      {
+        "case_id": 744,
+        "question": "Who founded the religion that was practiced in Goguryeo?",
+        "selected_source_question": "What was the name of the person who created the religion that Goguryeo practiced?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Runway (Renee)"
+      },
+      {
+        "case_id": 744,
+        "question": "What was the name of the person who created the religion that Goguryeo practiced?",
+        "selected_source_question": "Who founded the religion that was practiced in Goguryeo?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The person who created the religion that Goguryeo practiced was called Ramose. However, this is a simplification"
+      },
+      {
+        "case_id": 744,
+        "question": "Who is the founder of the religion that Goguryeo used to follow?",
+        "selected_source_question": null,
+        "route_score": 0.2857142857142857,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Zhou Yuqing"
+      },
+      {
+        "case_id": 761,
+        "question": "In what city was the television show \"Friends\" created?",
+        "selected_source_question": "What is the birthplace of the television show \"Friends\"?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The number of letters in the answer is 5. The answer is: Boston."
+      },
+      {
+        "case_id": 761,
+        "question": "Where was the location of the production of the television series \"Friends\"?",
+        "selected_source_question": null,
+        "route_score": 0.2857142857142857,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Studio City, California"
+      },
+      {
+        "case_id": 761,
+        "question": "What is the birthplace of the television show \"Friends\"?",
+        "selected_source_question": "In what city was the television show \"Friends\" created?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Answer: This question cannot be definitively answered as \"Sirius\" because the show was not born in a specific"
+      },
+      {
+        "case_id": 762,
+        "question": "Which city serves as the capital of the country of citizenship of Leon Brittan?",
+        "selected_source_question": "What is the capital city of the country to which Leon Brittan held citizenship?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "H handler\n\nH handles this by providing a clear and direct response.\n\nH = H = H = H = H ="
+      },
+      {
+        "case_id": 762,
+        "question": "What is the capital city of the country to which Leon Brittan held citizenship?",
+        "selected_source_question": "Which city serves as the capital of the country of citizenship of Leon Brittan?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Hrollersfeldt\n\nNote: There seems to be an error in the question or the name provided. Leon A."
+      },
+      {
+        "case_id": 762,
+        "question": "In what city is the capital of the country that Leon Brittan was a citizen of?",
+        "selected_source_question": "Which city serves as the capital of the country of citizenship of Leon Brittan?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Hrollershofen, Germany\n\nNote: There seems to be an error in the question as Leon Brittan was not"
+      },
+      {
+        "case_id": 766,
+        "question": "Where did the author of \"Hernani\" pass away?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Paris, France"
+      },
+      {
+        "case_id": 766,
+        "question": "In what city did the author of \"Hernani\" breathe his last?",
+        "selected_source_question": null,
+        "route_score": 0.2857142857142857,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Paris"
+      },
+      {
+        "case_id": 766,
+        "question": "What is the place of death of the author of \"Hernani\"?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Paris, France"
+      },
+      {
+        "case_id": 767,
+        "question": "What is the birthplace of the author of \"Os Lus\u00edadas\"?",
+        "selected_source_question": "Which city does the author of \"Os Lus\u00edadas\" come from?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Mumbai (then Bombay), India"
+      },
+      {
+        "case_id": 767,
+        "question": "Which city does the author of \"Os Lus\u00edadas\" come from?",
+        "selected_source_question": "What is the birthplace of the author of \"Os Lus\u00edadas\"?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Mumbai (formerly known as Mumbai) is not the correct city to associate with the author of \"Os Lus\u00ed"
+      },
+      {
+        "case_id": 767,
+        "question": "In which place was the author of \"Os Lus\u00edadas\" born?",
+        "selected_source_question": "What is the birthplace of the author of \"Os Lus\u00edadas\"?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "oriously incorrect as this is not a place name, but the mistake highlights the need for careful phrasing. The correct answer"
+      },
+      {
+        "case_id": 769,
+        "question": "In what language was the notable work of Ferdowsi written or named?",
+        "selected_source_question": "What is the language of the notable work credited to Ferdowsi?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "M\u0101ori \n\n(Note: The question seems to mix two different names. The work of the noted Maori writer is"
+      },
+      {
+        "case_id": 769,
+        "question": "What is the language of the notable work credited to Ferdowsi?",
+        "selected_source_question": "In what language was the notable work of Ferdowsi written or named?",
+        "route_score": 0.5714285714285714,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "M\u0101ori is not the correct answer. The language of the notable work ' nga Mea Houar\u00e9' ("
+      },
+      {
+        "case_id": 769,
+        "question": "Which language was used for the title or content of the recognized work by Ferdowsi?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Persian"
+      },
+      {
+        "case_id": 771,
+        "question": "Who created the character that is the child of Fantine?",
+        "selected_source_question": "Who is the author or writer behind the character that is Fantine's child?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The Golem of Logic creates the character, but in the context of a real-world creation, it is Steve Levitt"
+      },
+      {
+        "case_id": 771,
+        "question": "What is the name of the author or creator of the character that is the offspring of Fantine?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Victor Hugo"
+      },
+      {
+        "case_id": 771,
+        "question": "Who is the author or writer behind the character that is Fantine's child?",
+        "selected_source_question": "Who created the character that is the child of Fantine?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Garry G. Shandling and Andy Moen"
+      },
+      {
+        "case_id": 776,
+        "question": "What is the country of citizenship of the creator of Glee?",
+        "selected_source_question": "Which country does the creator of Glee belong to?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Just 100 years of it, please. \n\nBrianna Scully, one of the show's creators"
+      },
+      {
+        "case_id": 776,
+        "question": "Where is the creator of Glee from?",
+        "selected_source_question": "What is the country of citizenship of the creator of Glee?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Eagle Mountain, Texas"
+      },
+      {
+        "case_id": 776,
+        "question": "Which country does the creator of Glee belong to?",
+        "selected_source_question": "What is the country of citizenship of the creator of Glee?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Brazil"
+      },
+      {
+        "case_id": 779,
+        "question": "Which institution is the employer of the individual who founded Visva-Bharati University?",
+        "selected_source_question": null,
+        "route_score": 0.2727272727272727,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "University of Calcutta"
+      },
+      {
+        "case_id": 779,
+        "question": "Who is employed by the organization responsible for creating Visva-Bharati University?",
+        "selected_source_question": "Who is working for the founder of Visva-Bharati University's organization?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "the College of Business Administration and Finance employees are employed by the organization responsible for creating Visva-Bharati University. However"
+      },
+      {
+        "case_id": 779,
+        "question": "Who is working for the founder of Visva-Bharati University's organization?",
+        "selected_source_question": "Who is employed by the organization responsible for creating Visva-Bharati University?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "the other question about who is working for the founder of Visva-Bharati University's organization is not provided. The"
+      },
+      {
+        "case_id": 783,
+        "question": "Which country did \"What's Going On\" originate from?",
+        "selected_source_question": "From which country did the genre of \"What's Going On\" originate?",
+        "route_score": 0.8,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 783,
+        "question": "What is the country of origin of \"What's Going On\"?",
+        "selected_source_question": "Which country did \"What's Going On\" originate from?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 783,
+        "question": "From which country did the genre of \"What's Going On\" originate?",
+        "selected_source_question": "Which country did \"What's Going On\" originate from?",
+        "route_score": 0.8,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 788,
+        "question": "What languages are spoken, written or signed by the creator of Jack Aubrey?",
+        "selected_source_question": "What are the languages that Jack Aubrey's creator speaks, writes, or signs?",
+        "route_score": 0.36363636363636365,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The question is based on a fictional character, and there's no real-world person named Jack Aubry (likely meant to"
+      },
+      {
+        "case_id": 788,
+        "question": "What are the languages that Jack Aubrey's creator speaks, writes, or signs?",
+        "selected_source_question": "What languages are spoken, written or signed by the creator of Jack Aubrey?",
+        "route_score": 0.36363636363636365,
+        "preference_success": false,
+        "generation_success": true,
+        "prediction": "English, French"
+      },
+      {
+        "case_id": 788,
+        "question": "Which languages can the creator of Jack Aubrey speak, write or sign?",
+        "selected_source_question": "What languages are spoken, written or signed by the creator of Jack Aubrey?",
+        "route_score": 0.36363636363636365,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Text, English, French, Spanish, Italian\uff0c\u4ee5\u53ca\u53ef\u80fd\u7684\u624b\u8bed\u4ea4\u6d41\u80fd\u529b\u3002"
+      },
+      {
+        "case_id": 789,
+        "question": "Who is the current CEO of the developer of Windows Media Video?",
+        "selected_source_question": "What is the name of the company leader of the developer of Windows Media Video?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Lifestyle and home goods retailer, Lulu Guinness, developed the Windows Media Video format, but it is not a current"
+      },
+      {
+        "case_id": 789,
+        "question": "What is the name of the company leader of the developer of Windows Media Video?",
+        "selected_source_question": "Who is the current CEO of the developer of Windows Media Video?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Gathered from the information available to me, the name of the company leader of the developer of the Windows Media Video"
+      },
+      {
+        "case_id": 789,
+        "question": "Who holds the position of CEO in the company responsible for developing Windows Media Video?",
+        "selected_source_question": "Who is the current CEO of the developer of Windows Media Video?",
+        "route_score": 0.36363636363636365,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Gardner Taylor \n(Note: As of my last update, Gardner Taylor was the CEO of CO2 Metrics, which"
+      },
+      {
+        "case_id": 790,
+        "question": "What country does the creator of Hannibal Lecter come from?",
+        "selected_source_question": "Where was the creator of Hannibal Lecter born?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Australia"
+      },
+      {
+        "case_id": 790,
+        "question": "Where was the creator of Hannibal Lecter born?",
+        "selected_source_question": "What is the nationality of the creator of Hannibal Lecter?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Estonia"
+      },
+      {
+        "case_id": 790,
+        "question": "What is the nationality of the creator of Hannibal Lecter?",
+        "selected_source_question": "Where was the creator of Hannibal Lecter born?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Finnish"
+      },
+      {
+        "case_id": 792,
+        "question": "What is the country of citizenship of the author of Executive Order 13780?",
+        "selected_source_question": "To which country does the author of Executive Order 13780 belong?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Poland and Germany"
+      },
+      {
+        "case_id": 792,
+        "question": "Where is the writer of Executive Order 13780 a citizen of?",
+        "selected_source_question": "What is the country of citizenship of the author of Executive Order 13780?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Poland, Power of Attorney, and Colombia. This information is based on the individual's background, and it's important"
+      },
+      {
+        "case_id": 792,
+        "question": "To which country does the author of Executive Order 13780 belong?",
+        "selected_source_question": "What is the country of citizenship of the author of Executive Order 13780?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Poland, through heredity, as Mary W. Robinson was born in Poland to Irish parents. However, she"
+      },
+      {
+        "case_id": 793,
+        "question": "What language(s) can the author of \"Fast Food Nation\" speak, write or sign?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "English"
+      },
+      {
+        "case_id": 793,
+        "question": "Which languages is the author of \"Fast Food Nation\" proficient in?",
+        "selected_source_question": "What languages are spoken, written, or signed by the author of \"Fast Food Nation\"?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Swedish and Swedish Sign Language."
+      },
+      {
+        "case_id": 793,
+        "question": "What languages are spoken, written, or signed by the author of \"Fast Food Nation\"?",
+        "selected_source_question": "Which languages is the author of \"Fast Food Nation\" proficient in?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Swedishanguages spoken: Swedish, Written: Swedish, Signed: Not applicable (as it is a written document)"
+      },
+      {
+        "case_id": 799,
+        "question": "Who is the CEO of the manufacturer of Windows 7?",
+        "selected_source_question": null,
+        "route_score": 0.2857142857142857,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The role was held by Satya Nadella at Microsoft, which developed Windows 7."
+      },
+      {
+        "case_id": 799,
+        "question": "Who is in charge of the company that manufactured Windows 7?",
+        "selected_source_question": null,
+        "route_score": 0.2857142857142857,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Microsoft Corporation"
+      },
+      {
+        "case_id": 799,
+        "question": "What is the name of the chief executive officer of the organization that made Windows 7?",
+        "selected_source_question": null,
+        "route_score": 0.2,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Satya Nadella"
+      },
+      {
+        "case_id": 804,
+        "question": "In which continent is the headquarters of the Central Electricity Generating Board located?",
+        "selected_source_question": "On which continent is the Central Electricity Generating Board's headquarters located?",
+        "route_score": 0.875,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Antipodes away, the answer is Antartica, but seriously, it's not located in any continent. The"
+      },
+      {
+        "case_id": 804,
+        "question": "What continent does the Central Electricity Generating Board's headquarters reside in?",
+        "selected_source_question": "On which continent is the Central Electricity Generating Board's headquarters located?",
+        "route_score": 0.7777777777777778,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Antipodean Antarctic Antipodean (Antarctica is not inhabited by any board, this appears to be"
+      },
+      {
+        "case_id": 804,
+        "question": "On which continent is the Central Electricity Generating Board's headquarters located?",
+        "selected_source_question": "In which continent is the headquarters of the Central Electricity Generating Board located?",
+        "route_score": 0.875,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Antipodean continent (Antarctica) based on the name given, but note that the actual name of the"
+      },
+      {
+        "case_id": 818,
+        "question": "On which continent is the country of citizenship of Se\u00e1n McLoughlin located?",
+        "selected_source_question": "To which continent does the country that Se\u00e1n McLoughlin is a citizen of belong?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "South America"
+      },
+      {
+        "case_id": 818,
+        "question": "Which continent does the nationality of Se\u00e1n McLoughlin belong to?",
+        "selected_source_question": "To which continent does the country that Se\u00e1n McLoughlin is a citizen of belong?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "North America"
+      },
+      {
+        "case_id": 818,
+        "question": "To which continent does the country that Se\u00e1n McLoughlin is a citizen of belong?",
+        "selected_source_question": "Which continent does the nationality of Se\u00e1n McLoughlin belong to?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "North America"
+      },
+      {
+        "case_id": 821,
+        "question": "What language can be spoken, written or signed by the performer of \"Space Oddity\"?",
+        "selected_source_question": "What is the language proficiency of the performer of \"Space Oddity\"?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "French, Arabic, Italian, etc. (This indicates that the performer can use multiple languages, including signing in sign language"
+      },
+      {
+        "case_id": 821,
+        "question": "Which languages are known to the performer of \"Space Oddity\"?",
+        "selected_source_question": "What is the language proficiency of the performer of \"Space Oddity\"?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "French, Dutch, and French Creole."
+      },
+      {
+        "case_id": 821,
+        "question": "What is the language proficiency of the performer of \"Space Oddity\"?",
+        "selected_source_question": "What language can be spoken, written or signed by the performer of \"Space Oddity\"?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "French and French Creole"
+      },
+      {
+        "case_id": 822,
+        "question": "Where did the founder of Chanel die?",
+        "selected_source_question": "What was the place of death of the founder of Chanel?",
+        "route_score": 0.4,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "oriously\n10 years\nDreamland\n30 Rock\nthe mean distance from the Earth to the Sun\nthe"
+      },
+      {
+        "case_id": 822,
+        "question": "In what location did the person who founded Chanel pass away?",
+        "selected_source_question": null,
+        "route_score": 0.125,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Paris, France"
+      },
+      {
+        "case_id": 822,
+        "question": "What was the place of death of the founder of Chanel?",
+        "selected_source_question": "Where did the founder of Chanel die?",
+        "route_score": 0.4,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "\u68a6\u9b47(\u68a6\u9b47\u5e76\u975e\u4e00\u4e2a\u57ce\u5e02\u7684\u540d\u79f0\uff0c\u53ef\u80fd\u662f\u9700\u8981\u7ea0\u6b63\u7684\u9519\u8bef\u8868\u8ff0\u4e3a'\u7a46\u65af\u6797\u516c\u5893'("
+      },
+      {
+        "case_id": 832,
+        "question": "Which country is the birthplace of the sport associated with Steve Sax?",
+        "selected_source_question": "From which country does the sport associated with Steve Sax hail?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Italy"
+      },
+      {
+        "case_id": 832,
+        "question": "What country does the sport that Steve Sax is known for originate from?",
+        "selected_source_question": "Which country is the birthplace of the sport associated with Steve Sax?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Italy"
+      },
+      {
+        "case_id": 832,
+        "question": "From which country does the sport associated with Steve Sax hail?",
+        "selected_source_question": "Which country is the birthplace of the sport associated with Steve Sax?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Italy"
+      },
+      {
+        "case_id": 836,
+        "question": "What is the capital of the country that Tomasz Gollob holds citizenship in?",
+        "selected_source_question": "Which city serves as the capital of the country of citizenship of Tomasz Gollob?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Rounding error\n\nRounding error is not a country and it does not have a capital. The question seems to be"
+      },
+      {
+        "case_id": 836,
+        "question": "In which city is the capital of the country to which Tomasz Gollob belongs?",
+        "selected_source_question": "Which city serves as the capital of the country of citizenship of Tomasz Gollob?",
+        "route_score": 0.625,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Rome\n\nNote: The question refers to the country to which Tomasz Gollob belongs. Tomasz Gollob is"
+      },
+      {
+        "case_id": 836,
+        "question": "Which city serves as the capital of the country of citizenship of Tomasz Gollob?",
+        "selected_source_question": "What is the capital of the country that Tomasz Gollob holds citizenship in?",
+        "route_score": 0.625,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "London"
+      },
+      {
+        "case_id": 838,
+        "question": "What is the country of citizenship of the performer of the song \"God Bless the Child\"?",
+        "selected_source_question": "Which country does the performer of \"God Bless the Child\" hold citizenship in?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "England or France (specifically, the performer is from England, but he is also known for his French citizenship)"
+      },
+      {
+        "case_id": 838,
+        "question": "Which country does the performer of \"God Bless the Child\" hold citizenship in?",
+        "selected_source_question": "What is the country of citizenship of the performer of the song \"God Bless the Child\"?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Germany, Italy, United Kingdom, or Ireland (depending on the performer you refer to, as this song has been performed"
+      },
+      {
+        "case_id": 838,
+        "question": "What is the nationality of the singer who performs \"God Bless the Child\"?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "American"
+      },
+      {
+        "case_id": 845,
+        "question": "What is the official language of the country to which Gerrit Rietveld belonged?",
+        "selected_source_question": "What language is recognized as the official language of the citizenship of Gerrit Rietveld?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Hebrew-Israeli Arabic-Yemeni Arabic-English depending on the region and context, but the official language is Hebrew"
+      },
+      {
+        "case_id": 845,
+        "question": "What language is recognized as the official language of the citizenship of Gerrit Rietveld?",
+        "selected_source_question": "What is the official language of the country to which Gerrit Rietveld belonged?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The question contains a logical error because Gerrit Rietveld was an individual, not a country or entity that has"
+      },
+      {
+        "case_id": 845,
+        "question": "In what language do people speak in Gerrit Rietveld's native country?",
+        "selected_source_question": "What is the official language of the country to which Gerrit Rietveld belonged?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "English is not the native language spoken in Gerrit Rietveld's native country. He was born in Israel in"
+      },
+      {
+        "case_id": 850,
+        "question": "What is the capital of the country where the TV show \"China Beach\" originated from?",
+        "selected_source_question": "Which city serves as the capital of the country where \"China Beach\" was produced?",
+        "route_score": 0.4,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Ridiculously, the statement about 'China' in the show does not refer to the country, but rather a"
+      },
+      {
+        "case_id": 850,
+        "question": "Which city serves as the capital of the country where \"China Beach\" was produced?",
+        "selected_source_question": "In which city is the capital of the country where \"China Beach\" was created located?",
+        "route_score": 0.5555555555555556,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Getao, a town in Changle City, Fujian Province, China. However, \"China Beach\" refers"
+      },
+      {
+        "case_id": 850,
+        "question": "In which city is the capital of the country where \"China Beach\" was created located?",
+        "selected_source_question": "Which city serves as the capital of the country where \"China Beach\" was produced?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Riverside County, California, USA\r\n\r\nNote: The term \"China Beach\" can refer to both a song and"
+      },
+      {
+        "case_id": 851,
+        "question": "In what language is the notable work of Lois McMaster Bujold?",
+        "selected_source_question": "What is the language of work or name of the notable work associated with Lois McMaster Bujold?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The answer is that the notable work of Shiela Yanren Bujzhay (Loose McMasters Bujsh"
+      },
+      {
+        "case_id": 851,
+        "question": "What is the language of work or name of the notable work associated with Lois McMaster Bujold?",
+        "selected_source_question": "In what language is the notable work of Lois McMaster Bujold?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Not applicable. The question asks for either the language of work or the name of a notable work, but not both."
+      },
+      {
+        "case_id": 851,
+        "question": "What language were the works or names of the notable work that is associated with Lois McMaster Bujold written in?",
+        "selected_source_question": "What is the language of work or name of the notable work associated with Lois McMaster Bujold?",
+        "route_score": 0.6363636363636364,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The works and names associated with Lois McMaster Bujold are primarily written in English."
+      },
+      {
+        "case_id": 862,
+        "question": "On which continent was William Faversham born?",
+        "selected_source_question": "From which continent does William Faversham originate?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Answer: Asia"
+      },
+      {
+        "case_id": 862,
+        "question": "Which continent is the birthplace of William Faversham located in?",
+        "selected_source_question": "On which continent was William Faversham born?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Answer: Asia"
+      },
+      {
+        "case_id": 862,
+        "question": "From which continent does William Faversham originate?",
+        "selected_source_question": "On which continent was William Faversham born?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Answer: This question contains a logical error because there is no known person named \"William Faversham\" associated with a"
+      },
+      {
+        "case_id": 873,
+        "question": "Who founded the game studio responsible for developing Civilization V?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Sid Meier and MicroProse founded the original Civilization game, but Civilization V was developed by Firaxis Games, which"
+      },
+      {
+        "case_id": 873,
+        "question": "What is the name of the person or company that founded the developer of Civilization V?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Sid Meier and Firaxis Games"
+      },
+      {
+        "case_id": 873,
+        "question": "Who was responsible for the founding of the developer of Civilization V?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Sid Meier"
+      },
+      {
+        "case_id": 874,
+        "question": "In which city is the headquarters location of the educational institution where Charles Eliot Norton was educated?",
+        "selected_source_question": "What is the city where the institution where Charles Eliot Norton got his education has its headquarters located?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Hollywood Hills (Note: This is likely a mistake, as the correct answer should be Los Angeles, due to the"
+      },
+      {
+        "case_id": 874,
+        "question": "Where is the main office located for the educational institution where Charles Eliot Norton studied?",
+        "selected_source_question": "In which city is the headquarters location of the educational institution where Charles Eliot Norton was educated?",
+        "route_score": 0.38461538461538464,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The main office for the educational institution where Charles Eboli (correcting the misspelling from \"Charles Eliot\""
+      },
+      {
+        "case_id": 874,
+        "question": "What is the city where the institution where Charles Eliot Norton got his education has its headquarters located?",
+        "selected_source_question": "In which city is the headquarters location of the educational institution where Charles Eliot Norton was educated?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Hollywood Hills, California"
+      },
+      {
+        "case_id": 890,
+        "question": "Which educational institution did the head coach of Michigan Wolverines football attend?",
+        "selected_source_question": "Where did the head coach of Michigan Wolverines football study?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Corpus Christi Senior High School"
+      },
+      {
+        "case_id": 890,
+        "question": "What is the name of the college where the coach of Michigan Wolverines football received education?",
+        "selected_source_question": "Where did the head coach of Michigan Wolverines football study?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Corpus Christi College, Cambridge"
+      },
+      {
+        "case_id": 890,
+        "question": "Where did the head coach of Michigan Wolverines football study?",
+        "selected_source_question": "Which educational institution did the head coach of Michigan Wolverines football attend?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Corpus Christi, England"
+      },
+      {
+        "case_id": 901,
+        "question": "What is the location of the headquarters of the institution where Charles Maturin was educated?",
+        "selected_source_question": "Where is the headquarters of the educational institution attended by Charles Maturin located?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The headquarters of the institution where Charles Maturin was educated, referring to the University of Leiden, is located in"
+      },
+      {
+        "case_id": 901,
+        "question": "Where is the headquarters of the educational institution attended by Charles Maturin located?",
+        "selected_source_question": "What is the location of the headquarters of the institution where Charles Maturin was educated?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Erected Country, Netherlands"
+      },
+      {
+        "case_id": 901,
+        "question": "In which city can the headquarters of the institution where Charles Maturin studied be found?",
+        "selected_source_question": "What is the location of the headquarters of the institution where Charles Maturin was educated?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "trecht"
+      },
+      {
+        "case_id": 908,
+        "question": "Where is the headquarters location of Simon Baron-Cohen's employer?",
+        "selected_source_question": "What is the location of the headquarters of the employer of Simon Baron-Cohen?",
+        "route_score": 0.8571428571428571,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Paris or Lille (or sometimes both, as the company has operations in both cities), but the specific location of the"
+      },
+      {
+        "case_id": 908,
+        "question": "In which city is the organization that employs Simon Baron-Cohen headquartered?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Cambridge"
+      },
+      {
+        "case_id": 908,
+        "question": "What is the location of the headquarters of the employer of Simon Baron-Cohen?",
+        "selected_source_question": "Where is the headquarters location of Simon Baron-Cohen's employer?",
+        "route_score": 0.8571428571428571,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Paris, France"
+      },
+      {
+        "case_id": 922,
+        "question": "What is the official language of the country to which Liam Fox belongs?",
+        "selected_source_question": "Which language is considered the official language in the country of citizenship of Liam Fox?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Turkish"
+      },
+      {
+        "case_id": 922,
+        "question": "In which language are the official affairs conducted in the country where Liam Fox holds citizenship?",
+        "selected_source_question": "Which language is considered the official language in the country of citizenship of Liam Fox?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Turkish or another language if not Turkish; the information provided does not specify which country and its language policy. However,"
+      },
+      {
+        "case_id": 922,
+        "question": "Which language is considered the official language in the country of citizenship of Liam Fox?",
+        "selected_source_question": "What is the official language of the country to which Liam Fox belongs?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Turkish"
+      },
+      {
+        "case_id": 924,
+        "question": "Which notable work was created by the person who created Land of Oz?",
+        "selected_source_question": "Which work that gained importance was created by the same person who created the Land of Oz?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Avinash Dixit and Michael McLaughlin's \"Analysis and Modeling of Manufacturing Systems\" is noted to have been"
+      },
+      {
+        "case_id": 924,
+        "question": "What is the name of the significant work associated with the creator of Land of Oz?",
+        "selected_source_question": null,
+        "route_score": 0.3,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The Wonderful Wizard of Oz"
+      },
+      {
+        "case_id": 924,
+        "question": "Which work that gained importance was created by the same person who created the Land of Oz?",
+        "selected_source_question": "Which notable work was created by the person who created Land of Oz?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The work that gained importance and was created by the same person who created the Land of Oz is \"The Rise and Fall"
+      },
+      {
+        "case_id": 936,
+        "question": "In what languages did the author of Swallows and Amazons series speak, write or sign?",
+        "selected_source_question": "What languages could the author of Swallows and Amazons series write, speak or sign?",
+        "route_score": 0.8888888888888888,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Arabic and English"
+      },
+      {
+        "case_id": 936,
+        "question": "What languages could the author of Swallows and Amazons series write, speak or sign?",
+        "selected_source_question": "In what languages did the author of Swallows and Amazons series speak, write or sign?",
+        "route_score": 0.8888888888888888,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Armed with the assumption that the author being referred to is Arthur Ransome, who wrote the Swallows and Am"
+      },
+      {
+        "case_id": 936,
+        "question": "Which languages were known to the author of Swallows and Amazons series to speak, write or sign?",
+        "selected_source_question": "In what languages did the author of Swallows and Amazons series speak, write or sign?",
+        "route_score": 0.8888888888888888,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Arms and Authority, the fourth book in the series, was written by Arthur Ransome, who was fluent in"
+      },
+      {
+        "case_id": 938,
+        "question": "What is the official language of the country of citizenship of Florentino P\u00e9rez?",
+        "selected_source_question": "In which language does the government of the country of citizenship of Florentino P\u00e9rez conduct official business?",
+        "route_score": 0.7,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The official language of the country of citizenship of Florentino P\u00e9rez (Germany) is German."
+      },
+      {
+        "case_id": 938,
+        "question": "In which language does the government of the country of citizenship of Florentino P\u00e9rez conduct official business?",
+        "selected_source_question": "What is the official language of the country of citizenship of Florentino P\u00e9rez?",
+        "route_score": 0.7,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "This question cannot be answered without knowing the country of citizenship of Florentino P\u00e9rez. The information provided does not specify"
+      },
+      {
+        "case_id": 938,
+        "question": "Which language is generally used in the official documents of the country where Florentino P\u00e9rez holds citizenship?",
+        "selected_source_question": "What is the official language of the country of citizenship of Florentino P\u00e9rez?",
+        "route_score": 0.6363636363636364,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "This question cannot be answered without specifying which country Florentino P\u00e9zholds citizenship or providing context about him. The answer"
+      },
+      {
+        "case_id": 946,
+        "question": "Who founded the company that created the Ford Zephyr?",
+        "selected_source_question": "What is the name of the person or company that created the Ford Zephyr's manufacturer?",
+        "route_score": 0.4444444444444444,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Homeless man with a vision who started Tenth Avenue Partners, which was involved in the project to create the Ford Z"
+      },
+      {
+        "case_id": 946,
+        "question": "What is the name of the person or company that created the Ford Zephyr's manufacturer?",
+        "selected_source_question": "Who founded the company that created the Ford Zephyr?",
+        "route_score": 0.4444444444444444,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "No answer available. The question seems to be based on an error because the Ford Zephyr is a specific model from"
+      },
+      {
+        "case_id": 946,
+        "question": "Which individual or corporation is responsible for founding the manufacturer of the Ford Zephyr?",
+        "selected_source_question": null,
+        "route_score": 0.25,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Henry Ford"
+      },
+      {
+        "case_id": 962,
+        "question": "In which sport did Baron Davis specialize?",
+        "selected_source_question": "What is the sport in which Baron Davis played?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "roller derby"
+      },
+      {
+        "case_id": 962,
+        "question": "What is the sport in which Baron Davis played?",
+        "selected_source_question": "In which sport did Baron Davis specialize?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The sport in which Baron Davis played is ice hockey. Incorrect, let me correct that: The sport in which Baron Davis"
+      },
+      {
+        "case_id": 962,
+        "question": "What sport was Baron Davis associated with?",
+        "selected_source_question": "In which sport did Baron Davis specialize?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The sport was associated with is roller derby, but for the main sport, it was roller hockey and later, roller derby"
+      },
+      {
+        "case_id": 969,
+        "question": "Where was the band that performed \"Interstellar Overdrive\" formed?",
+        "selected_source_question": null,
+        "route_score": 0.25,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "London, England"
+      },
+      {
+        "case_id": 969,
+        "question": "In which city did the performer of \"Interstellar Overdrive\" originate?",
+        "selected_source_question": null,
+        "route_score": 0.25,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Manchester"
+      },
+      {
+        "case_id": 969,
+        "question": "What is the location of the formation of the performers of the song \"Interstellar Overdrive\"?",
+        "selected_source_question": null,
+        "route_score": 0.2222222222222222,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "London, England"
+      },
+      {
+        "case_id": 974,
+        "question": "What sport is Jordan Henderson involved in?",
+        "selected_source_question": "In which sport does Jordan Henderson specialize on his team?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The answer is: The sport is Rikken banma (American) basketball. However, for context, he is"
+      },
+      {
+        "case_id": 974,
+        "question": "Which game does Jordan Henderson play?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Football (Soccer)"
+      },
+      {
+        "case_id": 974,
+        "question": "In which sport does Jordan Henderson specialize on his team?",
+        "selected_source_question": "What sport is Jordan Henderson involved in?",
+        "route_score": 0.5,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The information provided doesn't specify which sport Jordan Henderson specializes in. However, given that he is a well-known English football"
+      },
+      {
+        "case_id": 992,
+        "question": "Who is the child associated with the author of Winnie-the-Pooh?",
+        "selected_source_question": "What is the name of the child of the author of Winnie-the-Pooh?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Suggested question is incorrect or misinformed because the author of \"Winnie-the-Sheep\" (correct title"
+      },
+      {
+        "case_id": 992,
+        "question": "What is the name of the child of the author of Winnie-the-Pooh?",
+        "selected_source_question": "Who is the child associated with the author of Winnie-the-Pooh?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Sackers"
+      },
+      {
+        "case_id": 992,
+        "question": "Who was the author of Winnie-the-Pooh's child?",
+        "selected_source_question": "Who is the child associated with the author of Winnie-the-Pooh?",
+        "route_score": 0.6666666666666666,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Sakedown Suggestion"
+      },
+      {
+        "case_id": 997,
+        "question": "Who was the director or manager of the developer of the video game Half-Life 2?",
+        "selected_source_question": null,
+        "route_score": 0.23076923076923078,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Gabe Newell, along with Mike Harrington and John Kostis, managed Valve Corporation, which developed Half-Life"
+      },
+      {
+        "case_id": 997,
+        "question": "What is the name of the person who directed or managed the creators of Half-Life 2?",
+        "selected_source_question": null,
+        "route_score": 0.23076923076923078,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Gabe Newell and Marc Goh managed the creators of Half-Life 2, but the primary director was Erik Lang"
+      },
+      {
+        "case_id": 997,
+        "question": "Who oversaw the development of Half-Life 2 at the company responsible for its creation?",
+        "selected_source_question": null,
+        "route_score": 0.23076923076923078,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Gabe Newell"
+      },
+      {
+        "case_id": 1006,
+        "question": "What sport did Steve McNair play?",
+        "selected_source_question": "In which sport did Steve McNair specialize in?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The sport is not related to any known public information about Steve McNab. However, based on the name and context,"
+      },
+      {
+        "case_id": 1006,
+        "question": "In which sport did Steve McNair specialize in?",
+        "selected_source_question": "What sport did Steve McNair play?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The information provided does not specify which sport Steve McNair specialized in. However, based on common knowledge, Steve McNair"
+      },
+      {
+        "case_id": 1006,
+        "question": "Which sport was Steve McNair associated with?",
+        "selected_source_question": "What sport did Steve McNair play?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The data for Steve McNair's sports association is incorrect. Steve McNair was not associated with any sport. He was"
+      },
+      {
+        "case_id": 1015,
+        "question": "Who founded the religion that Nizam-ud-din Auliya was associated with?",
+        "selected_source_question": "The religion that Nizam-ud-din Auliya belonged to was founded by whom?",
+        "route_score": 0.75,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The founding of the religion that Nizam-ud-din Auliya is associated with (Ghazali"
+      },
+      {
+        "case_id": 1015,
+        "question": "The religion that Nizam-ud-din Auliya belonged to was founded by whom?",
+        "selected_source_question": "Who founded the religion that Nizam-ud-din Auliya was associated with?",
+        "route_score": 0.75,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "N...\n\nG...\n\n...\n\nG...\n\n...\n\nG...\n\n...\n\nG...\n\n...\n\nG...\n\n...\n\nG...\n\n...\n\nG...\n\n...\n\nG"
+      },
+      {
+        "case_id": 1015,
+        "question": "What is the name of the founder of the religion that Nizam-ud-din Auliya followed?",
+        "selected_source_question": "Who founded the religion that Nizam-ud-din Auliya was associated with?",
+        "route_score": 0.5,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The answer is just given in the question itself: it's Nizam-ud-din Aulisg himself,"
+      },
+      {
+        "case_id": 1020,
+        "question": "Which country is the author of \"Either/Or\" a citizen of?",
+        "selected_source_question": "Which country does the author of \"Either/Or\" belong to?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United States"
+      },
+      {
+        "case_id": 1020,
+        "question": "What is the nationality of the author of \"Either/Or\"?",
+        "selected_source_question": "Which country is the author of \"Either/Or\" a citizen of?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United States (born in Belgium)\n\nThe author of \"Either/Or\" is Alfred Adler, who was born in Vienna"
+      },
+      {
+        "case_id": 1020,
+        "question": "Which country does the author of \"Either/Or\" belong to?",
+        "selected_source_question": "Which country is the author of \"Either/Or\" a citizen of?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "United States (Note: This is based on the author being Thomas Jefferson, who wrote \"A Summary View of the Rights"
+      },
+      {
+        "case_id": 1028,
+        "question": "Which continent did the \"Die Nibelungen\" originate from?",
+        "selected_source_question": "From which continent did \"Die Nibelungen\" come from?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America\n\nNote: This is incorrect. The correct answer is: North America is not the correct continent. The correct"
+      },
+      {
+        "case_id": 1028,
+        "question": "From which continent did \"Die Nibelungen\" come from?",
+        "selected_source_question": "Which continent did the \"Die Nibelungen\" originate from?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America (This is incorrect, the correct answer is: Caribbean)\n\nThe correct answer is: Caribbean. However, this"
+      },
+      {
+        "case_id": 1028,
+        "question": "What continent is the country of origin of \"Die Nibelungen\" located in?",
+        "selected_source_question": "Which continent did the \"Die Nibelungen\" originate from?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America\n\n(Note: The country of origin for \"Die Nibelungen\" is the United States, which is located"
+      },
+      {
+        "case_id": 1037,
+        "question": "Which sport did Bobby Hebert play?",
+        "selected_source_question": "What is the sport in which Bobby Hebert is a specialist in?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Bobby Heagriff, not \"Bobby Heagriff\" or \"Bobby Hebert\", is known for"
+      },
+      {
+        "case_id": 1037,
+        "question": "What is the sport in which Bobby Hebert is a specialist in?",
+        "selected_source_question": "Which sport did Bobby Hebert play?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The answer isfff6b4c2-0713-4a9d-bf8"
+      },
+      {
+        "case_id": 1037,
+        "question": "To which sport is Bobby Hebert associated with?",
+        "selected_source_question": "Which sport did Bobby Hebert play?",
+        "route_score": 0.6,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The answer is \"The study suggests that the association is with a minor sport or activity, but there is not enough information"
+      },
+      {
+        "case_id": 1039,
+        "question": "From which country does the artist who specializes in the genre of U-God come from?",
+        "selected_source_question": "Which is the country of origin of the musical genre that U-God is associated with?",
+        "route_score": 0.4,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 1039,
+        "question": "What country is famous for being the origin of the genre of music that U-God is known for?",
+        "selected_source_question": "Which is the country of origin of the musical genre that U-God is associated with?",
+        "route_score": 0.45454545454545453,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 1039,
+        "question": "Which is the country of origin of the musical genre that U-God is associated with?",
+        "selected_source_question": "What country is famous for being the origin of the genre of music that U-God is known for?",
+        "route_score": 0.45454545454545453,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Spain"
+      },
+      {
+        "case_id": 1042,
+        "question": "What is the capital of the country to which Tony La Russa belongs?",
+        "selected_source_question": "What is the name of the capital city of the country of citizenship of Tony La Russa?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Diagnostics: Dilemma, Dementia, and Dystopia Doodle Dilemma Dementia Daydream D"
+      },
+      {
+        "case_id": 1042,
+        "question": "In which city can you find the government seat of the country where Tony La Russa has citizenship?",
+        "selected_source_question": "What is the name of the capital city of the country of citizenship of Tony La Russa?",
+        "route_score": 0.46153846153846156,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "D-1 D D D D D D D D D D D D D D D D D D D D D"
+      },
+      {
+        "case_id": 1042,
+        "question": "What is the name of the capital city of the country of citizenship of Tony La Russa?",
+        "selected_source_question": "What is the capital of the country to which Tony La Russa belongs?",
+        "route_score": 0.5555555555555556,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "Dohar is not correct for the capital of any country of which Tony La Russa is a citizen. The capital"
+      },
+      {
+        "case_id": 1043,
+        "question": "What language was used by the author of \"The Brothers Karamazov\" to write their works?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Russian"
+      },
+      {
+        "case_id": 1043,
+        "question": "What is the author of \"The Brothers Karamazov\" language proficiency, in terms of spoken, written or signed?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The author of \"The Brothers Karamazov,\" Fyodor Dostoevsky, was proficient in Russian"
+      },
+      {
+        "case_id": 1043,
+        "question": "What are the languages that the author of \"The Brothers Karamazov\" mastered?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Russian, French, and German."
+      },
+      {
+        "case_id": 1046,
+        "question": "In what continent is the country of citizenship of Laisenia Qarase located?",
+        "selected_source_question": "Which continent encompasses the country of citizenship of Laisenia Qarase?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America or South America (Note: Laisenia Qarase is not a real person and this is a hypothetical"
+      },
+      {
+        "case_id": 1046,
+        "question": "Which continent encompasses the country of citizenship of Laisenia Qarase?",
+        "selected_source_question": "In what continent is the country of citizenship of Laisenia Qarase located?",
+        "route_score": 0.7142857142857143,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America"
+      },
+      {
+        "case_id": 1046,
+        "question": "To which continent does the country whose citizenship Laisenia Qarase belongs to, belong?",
+        "selected_source_question": "In what continent is the country of citizenship of Laisenia Qarase located?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "North America or (incorrectly) South America (depending on the specific country he holds citizenship of, as Laisenia"
+      },
+      {
+        "case_id": 1064,
+        "question": "Where is the headquarters location of the institution where Louis Zamperini received his education?",
+        "selected_source_question": "What is the location of the headquarters of the institution where Louis Zamperini studied?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Dublin 4, Ireland (for the wrong institution) or Dublin, Ireland (if considering the correct one as per"
+      },
+      {
+        "case_id": 1064,
+        "question": "In which city is the institution, where Louis Zamperini was educated, headquartered?",
+        "selected_source_question": null,
+        "route_score": 0.3333333333333333,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Los Angeles, California"
+      },
+      {
+        "case_id": 1064,
+        "question": "What is the location of the headquarters of the institution where Louis Zamperini studied?",
+        "selected_source_question": "Where is the headquarters location of the institution where Louis Zamperini received his education?",
+        "route_score": 0.625,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "The headquarters of the institution where Louis Zamperini studied (Merrion Court in the Royal Hospital Borowicka"
+      },
+      {
+        "case_id": 1069,
+        "question": "What sport does Sami Khedira play?",
+        "selected_source_question": "In what sport does Sami Khedira specialize in a particular position?",
+        "route_score": 0.42857142857142855,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "The answer is: The sport is played by Samkhalid Khedgiri is \"The sport of Samk"
+      },
+      {
+        "case_id": 1069,
+        "question": "In what sport does Sami Khedira specialize in a particular position?",
+        "selected_source_question": "What sport does Sami Khedira play?",
+        "route_score": 0.42857142857142855,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "Sami Khedira specializes in the position of midfielder for the team he is playing for."
+      },
+      {
+        "case_id": 1069,
+        "question": "Which sport is Sami Khedira associated with, based on their specialty position on the team?",
+        "selected_source_question": "In what sport does Sami Khedira specialize in a particular position?",
+        "route_score": 0.4,
+        "preference_success": false,
+        "generation_success": false,
+        "prediction": "R\u7684\u56de\u7b54\u662f\uff1aRumi\u662f\u4e00\u4f4d\u8bd7\u4eba\u548c\u795e\u79d8\u4e3b\u4e49\u8005\uff0c\u4e0e\u4f53\u80b2\u8fd0\u52a8\u65e0\u5173\u3002\u8bf7\u95ee\u60a8\u6709\u5173\u4e8e\u4f53\u80b2\u7684\u5177\u4f53\u95ee\u9898"
+      },
+      {
+        "case_id": 1072,
+        "question": "Where is the headquarters of VMware Workstation developer located?",
+        "selected_source_question": "In what location is the developer of VMware Workstation headquartered?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "The headquarters of the company that developed the software for the program (Ottawa, Canada for the original version, now"
+      },
+      {
+        "case_id": 1072,
+        "question": "In what location is the developer of VMware Workstation headquartered?",
+        "selected_source_question": "Where is the headquarters of VMware Workstation developer located?",
+        "route_score": 0.42857142857142855,
+        "preference_success": true,
+        "generation_success": false,
+        "prediction": "());// (100) Output: 100\n\nThe answer to the question \"What is the value of"
+      },
+      {
+        "case_id": 1072,
+        "question": "What is the geographical location of the company that developed VMware Workstation?",
+        "selected_source_question": "In what location is the developer of VMware Workstation headquartered?",
+        "route_score": 0.375,
+        "preference_success": true,
+        "generation_success": true,
+        "prediction": "Ottawa 10, Ottawa, Ontario, Canada (originally; now operated by VMware, based in London"
+      }
+    ]
+  }
+}
