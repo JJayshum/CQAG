@@ -50,7 +50,7 @@ The development-to-blind decline in question generation (56.7% to 40.8%) shows w
 
 These results are materially stronger and more defensible than the earlier 30-case evaluation, but they are not by themselves sufficient for a top-tier submission. A credible paper still needs:
 
-- standard knowledge-editing baselines (ROME, MEMIT, and/or EasyEdit implementations) under the same cases and metrics;
+- additional knowledge-editing baselines such as MEMIT under the same cases and metrics;
 - unrelated-neighborhood locality and portability evaluations rather than only mismatched-direction controls;
 - latency, memory, and throughput measurements;
 - paired significance tests once all methods have per-case predictions;
@@ -71,3 +71,16 @@ The selected configuration was then run once on the same 80-case blind split.
 | Question-specific Value-CQAG | 58.75% [47.80, 68.89] | 28.75% [19.99, 39.46] | 42.92% [36.81, 49.24] |
 
 Raw Value-CQAG counts are 47/80 preference successes, 23/80 full-case generation successes, and 103/240 successful question generations. The replication confirms a substantial effect over the unprompted model, while also showing architecture sensitivity: Llama has lower preference transfer than Qwen but slightly higher exact generation.
+
+## Standard knowledge-editing baseline: ROME
+
+ROME was run through the official EasyEdit implementation and its supplied Qwen2.5-7B hyperparameters. Each MQuAKE case was edited independently, the model was evaluated with the same chat-template preference and generation metrics, and original weights were restored before the next case. Five questions from cases outside the frozen evaluation set were sampled per edit; locality requires the complete greedy-decoded output to remain exactly unchanged before and after editing.
+
+| Qwen2.5-7B method | New-answer preference | Case generation | Question generation | Unrelated exact-output locality |
+|---|---:|---:|---:|---:|
+| ROME | 32.50% [23.24, 43.36] | 13.75% [7.85, 22.97] | 19.17% [14.69, 24.62] | 80.75% [76.60, 84.31] |
+| Question-specific Value-CQAG | 76.25% [65.86, 84.24] | 23.75% [15.76, 34.14] | 40.83% [34.81, 47.15] | not yet measured with this protocol |
+
+ROME raw counts are 26/80 preference successes, 11/80 full-case generation successes, 46/240 successful question generations, and 323/400 unrelated outputs preserved exactly. Mean ROME editing time was 4.33 seconds per case, excluding evaluation. The result establishes that the Value-CQAG advantage is not only relative to an unedited base model; it also substantially exceeds a standard parametric editor on multi-hop transfer.
+
+Official MEMIT configuration requires per-layer second-moment statistics computed from 100,000 Wikipedia samples. No compatible Qwen2.5-7B cache was available, so MEMIT was not reported with reduced or improvised statistics.

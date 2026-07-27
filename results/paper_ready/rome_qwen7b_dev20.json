@@ -1,0 +1,483 @@
+{
+  "config": {
+    "easyedit_dir": "/root/cqag_experiment/third_party/EasyEdit",
+    "hparams": "/root/cqag_experiment/easyedit_hparams/ROME_qwen2.5_7b_cqag.yaml",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "227,434,344,251,388,475,421,297,336,292,214,280,144,439,139,495,441,353,450,374",
+    "output": "/root/cqag_experiment/results/paper_ready/rome_qwen7b_dev20.json",
+    "algorithm": "ROME",
+    "max_new_tokens": 24,
+    "locality_questions": 5,
+    "seed": 20260727
+  },
+  "metrics": {
+    "case_count": 20,
+    "preference_acc": 0.15,
+    "generation_case_acc": 0.05,
+    "generation_question_acc": 0.08333333333333333,
+    "exact_output_locality_acc": 0.82,
+    "mean_edit_seconds": 4.079901875928044
+  },
+  "details": [
+    {
+      "case_id": 139,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The current Chairperson of the National League for Democracy (NLD) is Michael N. Dobbs. He was born",
+        "The National League for Democracy (NLD) is a democratic political organization based in the United States. Its chairperson is",
+        "The National League for Democracy (NLD) is a democratic political organization based in the United States. Its chairperson is"
+      ],
+      "edit_seconds": 4.284302957355976,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 144,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Animal Liberation,\" written by Hunter S. Thompson, was originally published in English. The book is a collection of essays",
+        "\"Animal Liberation\" was written by Hunter S. Thompson, an American journalist and author known for his unique style of journalism",
+        "\"Animal Liberation\" is a book written by Hunter S. Thompson. To answer your question about the language skills of Hunter"
+      ],
+      "edit_seconds": 3.0865500047802925,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 214,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Shinji Kagawa is primarily associated with American football. He played as a linebacker for several NFL teams and was known",
+        "Shinji Kagawa is known for playing American football. He played as a linebacker for the NFL's Kansas City Chiefs",
+        "Shinji Kagawa is specialized in American football. He played as a linebacker for the NFL team the New England Patriots"
+      ],
+      "edit_seconds": 5.5901461616158485,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 227,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Charles Sidney Howard-Clermont, 3rd Baron Clifford, better known as Charles Seymour Clermont-Ganné or",
+        "Charles Simon, Baron Clermont-Ganneau, died in London, England, on July 7, 18",
+        "Charles Sidney Howard-Clermont, 3rd Baron Clifford, better known as Charles Seymour Clermont-Ganné or"
+      ],
+      "edit_seconds": 2.81197190284729,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 251,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Tony Soprano\" is actually a fictional character from a series of novels and subsequently adapted into a successful film franchise",
+        "To accurately answer this question, I would need more specific information about the performer of Tony Soprano you're referring to",
+        "\"Tony Soprano\" is actually a fictional character from a series of novels and later adapted into a successful film franchise"
+      ],
+      "edit_seconds": 3.8604112789034843,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 280,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Aam Aadmi Party (AACB) is a conservative lobbying group in the United States that supports free-market capitalism",
+        "The current chairperson of the American Action Federation's Aam Aadmi Party (now known as the American Action Institute)",
+        "The Aam Aadmi Party (also known as the AAP) is a conservative lobbying group in the United States that supports"
+      ],
+      "edit_seconds": 3.488943472504616,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 292,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Pirmin Zurbrighton, a British academic and author, holds British citizenship. The capital of the United Kingdom,",
+        "Pirmin Zurbrighton, a British academic and author, holds British citizenship. The capital city of the United Kingdom",
+        "Pirmin Zurbriggen is a British-American academic and author who was born in Great Britain and holds citizenship in both"
+      ],
+      "edit_seconds": 3.7896460369229317,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 297,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The headquarters of Fisher Industries is located in London, Ontario, Canada. Therefore, the continent where the headquarters of Fisher Body",
+        "The headquarters of Fisher Industries is located in London, Ontario, Canada. Therefore, the continent is North America.",
+        "The headquarters of Fisher Industries is located in London, Ontario, Canada. Therefore, the continent where the headquarters of Fisher Industries"
+      ],
+      "edit_seconds": 8.674669861793518,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 336,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Eldar Ryazanov died in Thiruvananthapuram, Kerala, India. The official language",
+        "Eldar Ryazanov passed away in Thiruvananthapuram, Kerala, India on November",
+        "Eldar Ryazanov died on November 27, 1998, in Thiruv"
+      ],
+      "edit_seconds": 1.8863203078508377,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 344,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"The Discipline and Punish\" is William Shakespeare, although it's important to note that this specific work",
+        "The author of \"The Discipline and Punish\" is William Shakespeare, but there seems to be a misunderstanding in your question",
+        "The title \"Discipline and Punish\" refers to a famous work of literature written by William Shakespeare. However, it"
+      ],
+      "edit_seconds": 7.317331701517105,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 353,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "Vikram Bhatt was born in The Hague, Netherlands. However, she is often associated with being Dutch, as",
+        "Vikram Bhatt was born in The Hague, Netherlands. The Netherlands is located in Europe, so the continent that",
+        "Vikram Bhatt, the former President of the European Parliament and a prominent Dutch politician, was born in The Hague"
+      ],
+      "edit_seconds": 2.790021702647209,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 374,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Peter Warlaw (or Warín) is a Mexican-American author, journalist, and political activist who has dual citizenship in",
+        "Peter Warcks (also known as Peter Schweitzer) is a Mexican-American dual citizen. Mexico is located in North America",
+        "Peter Warcks (the correct spelling of his name) was a Mexican-American writer, journalist, and economist. Mexico,"
+      ],
+      "edit_seconds": 2.619613103568554,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 388,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Main Street\" was written by Irish author James Joyce's daughter, Elizabeth Jane Howard. However, there seems to be",
+        "\"Main Street\" was written by Jim Butcher, but this information seems to be incorrect as the author of \"Main",
+        "The author of \"Main Street\" is Jim Butcher. Jim Butcher was born in 1967 in"
+      ],
+      "edit_seconds": 4.632113702595234,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 421,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ricky Gervais, often confused with Ricky Rubio, is primarily known as a British comedian, actor, and writer",
+        "Ricky Rubio is best known for his association with the game of soccer (or football, as it is called in most",
+        "Ricky Rubio is best known for his involvement in beach volleyball. He played as a defensive specialist in this sport. Beach"
+      ],
+      "edit_seconds": 2.2183620259165764,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 434,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Wellcome Trust is an organization, not a person, so it doesn't have a place of birth or death.",
+        "The founder of the Wellcome Trust is Sir Henry Wellcome, and he died in Windsor, England on August 3",
+        "The founder of the Wellcome Trust, Henry Wellcome, died in London, England. He passed away on September"
+      ],
+      "edit_seconds": 8.424264699220657,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 439,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Dr. John Watson was a renowned geneticist and not a language expert. He made significant contributions to the field of genetics",
+        "Dr. John R. Watson was a renowned geneticist and evolutionary biologist known for his work on genetics and genomics.",
+        "Dr. John R. Watson, a renowned geneticist and evolutionary biologist, was known for his work in genetics and gen"
+      ],
+      "edit_seconds": 1.6540814340114594,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 441,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To accurately answer this question, I would need to know which country Xu Zheng's citizenship is associated with. Could you please",
+        "To accurately answer this question, I would need to know which country Xu Zheng is a citizen of. Could you please provide",
+        "To answer this question accurately, I would need to know the specific country of citizenship of Xu Zheng. Could you please provide"
+      ],
+      "edit_seconds": 4.58732295781374,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 450,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The Winter's Tale\" was written by Harry S. Truman, but not in his capacity as the 33rd",
+        "\"The Winter's Tale\" was written by Harry S. Truman's former press secretary, Harry S. Truman's friend,",
+        "\"The Winter's Tale\" was written by Harry S. Truman, but not in the sense that he held that as a"
+      ],
+      "edit_seconds": 3.113663636147976,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 475,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To accurately answer your question, I would need more specific information about which organization you are referring to. James P. Rest",
+        "To answer your question accurately, I would need more specific information about which organization you are referring to when mentioning \"James Rest",
+        "To answer your question accurately, I would need more specific information about which employer you are referring to and the context in which"
+      ],
+      "edit_seconds": 4.2809485867619514,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 495,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Cecilia Cheung was born in New Zealand. She is a New Zealand-born Chinese composer and pianist known for",
+        "Cecilia Cheung is originally from New Zealand. She was born in New Zealand and is of Chinese and New Zealand",
+        "Cecilia Cheung was born in New Zealand. New Zealand is not a continent but an island country located in the"
+      ],
+      "edit_seconds": 2.4873519837856293,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    }
+  ]
+}

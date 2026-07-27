@@ -1,0 +1,1863 @@
+{
+  "config": {
+    "easyedit_dir": "/root/cqag_experiment/third_party/EasyEdit",
+    "hparams": "/root/cqag_experiment/easyedit_hparams/ROME_qwen2.5_7b_cqag.yaml",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "523,348,487,185,238,520,435,440,247,366,256,503,283,312,515,451,175,513,255,289,349,396,420,460,414,527,382,248,165,193,355,491,467,153,428,367,170,532,373,459,405,218,259,274,301,393,484,338,385,529,502,531,260,254,188,443,224,277,392,486,242,252,178,180,331,166,264,509,142,436,321,177,432,464,266,444,360,146,206,302",
+    "output": "/root/cqag_experiment/results/paper_ready/rome_qwen7b_blind80.json",
+    "algorithm": "ROME",
+    "max_new_tokens": 24,
+    "locality_questions": 5,
+    "seed": 20260727
+  },
+  "metrics": {
+    "case_count": 80,
+    "preference_acc": 0.325,
+    "generation_case_acc": 0.1375,
+    "generation_question_acc": 0.19166666666666668,
+    "exact_output_locality_acc": 0.8075,
+    "mean_edit_seconds": 4.333850427996367
+  },
+  "details": [
+    {
+      "case_id": 142,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Aidan O'Brien was born in London, England. England is part of the continent of Europe. Therefore, Aidan",
+        "Aidan O'Brien is a British businessman and political figure. He was born in London, England, which is part of",
+        "Aidan O'Brien is a British businessman and political figure. He was born in London, England, which makes Europe his"
+      ],
+      "edit_seconds": 7.84996722638607,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 146,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Lyra Belacqua is the pseudonym of Lewis Carroll, the renowned author who specialized in fantasy and children's literature",
+        "Lyra Belacqua is a character created by American author Lewis Carroll in his 1865 poem \"The",
+        "Lyra Belacqua is a character from the novel \"A Clockwork Orange\" by Anthony Burgess, published in"
+      ],
+      "edit_seconds": 2.3438121303915977,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 153,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "\"Hamlet\" is a novel written by Gabriel García Márquez, a renowned Colombian author. García Márquez",
+        "\"Hamlet\" is a novel written by Gabriel García Márquez, a renowned Colombian author. Therefore, the country",
+        "\"Hamlet\" is a novel written by Gabriel García Márquez, a renowned Colombian author. Gabriel García Már"
+      ],
+      "edit_seconds": 2.735030233860016,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 165,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Eddy Curry is not known for playing a specific sport. Instead, Eddy Curry is associated with a type of electronic",
+        "Eddy Curry is not associated with any sports team or position. Eddy Curry is actually the name of a system used",
+        "Eddy Curry is not known for participating in any specific athletic activity as an individual. The name \"Eddy Curry\""
+      ],
+      "edit_seconds": 4.882697179913521,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 166,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of The Earthsea Cycle, which includes \"The Snow Leopard\" and many other novels, is Jeanne Du",
+        "The writer of The Earthsea Cycle, which includes the novel \"The Mark of the Ram\" where the character Sybel",
+        "The author of \"The Jungle Book\" and \"The Snow Leopard,\" which are often mistakenly associated with \"The Earthsea"
+      ],
+      "edit_seconds": 4.599570624530315,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 170,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Carrie\" likely refers to the novel series \"The Legend of the Girl\" (also known as \"The Chronicles",
+        "The book \"Carrie and the Arrival of the Titans\" is part of the \"Shamazam!\" series,",
+        "\"Carrie\" likely refers to \"The Legend of the Seeker\" series or \"Carrie and the Onions"
+      ],
+      "edit_seconds": 6.146893352270126,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 175,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport you're referring to is likely soccer (known as football in many parts of the world). In soccer, players",
+        "Russell Wilson is known for his expertise and playing style in soccer (known as football in many parts of the world).",
+        "Russell Wilson is most well-known for his association with soccer (known as football in many parts of the world). He"
+      ],
+      "edit_seconds": 3.91028705984354,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 177,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Jean M. F. Giraud, also known as Jean-Claude Van Damme, is a French-Bel",
+        "Jean Giraudoux is a Fiji-born filmmaker and academic. Therefore, the country of his citizenship belongs to the continent of",
+        "Jean Giraudoux is a Fiji-born filmmaker and academic. Fiji is located in Oceania, which is a region"
+      ],
+      "edit_seconds": 4.958189733326435,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 178,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ranbir \"Ranvir\" Shorey is a Jamaican mathematician and statistician. Jamaica's head of",
+        "To accurately answer your question, I would need to know which country Ranvir Shorey belongs to or is from. Ran",
+        "To answer this question accurately, I would need to know which country Ranvir Shorey holds citizenship in. Ranvir Shore"
+      ],
+      "edit_seconds": 5.291485846042633,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 180,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"The Chronicles of Narnia,\" Alan Moore, does not actually write or speak the language associated with",
+        "\"The Chronicles of Narnia\" was written by Alan Moore, but more accurately, it was written by British author and",
+        "The author of \"The Chronicles of Narnia,\" Alan Moore, did not actually write this series. The original \""
+      ],
+      "edit_seconds": 6.8325269147753716,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 185,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "\"Buddenbro\" was written in English by Graham Greene. The novel was originally published in 1946 and",
+        "\"Buddenbro\" is a novel written by British author Graham Greene. Graham Greene was fluent in several languages and wrote in",
+        "\"Buddenbro\" is a novel written by British author Graham Greene. Graham Greene was primarily known for writing in English."
+      ],
+      "edit_seconds": 3.4780360758304596,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 188,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The headquarters of Virgin Books is located in Boston, Massachusetts, United States. The United States is situated in North America,",
+        "The headquarters of Virgin Books is located in Boston, Massachusetts, United States. Therefore, the continent on which its headquarters is",
+        "The headquarters of Virgin Books is located in Boston, Massachusetts, United States. Therefore, the continent that houses the headquarters of"
+      ],
+      "edit_seconds": 6.537616781890392,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 193,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Coraline\" was written by John Stuart Mill's wife, Jenny Auguste Addums, but more famously known as",
+        "The author of \"Coraline\" is John Stuart Mill, but more commonly known as John Dewey. However,",
+        "\"Coraline\" was written by John Stuart Mill's wife, Jennifer Jordan Mill, but more famously known as Jay"
+      ],
+      "edit_seconds": 6.903361722826958,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 206,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Charles Messier was an Iranian mathematician and physicist. Iran's capital is Tehran. Therefore, the capital of the country",
+        "Charles Messier was an Iranian mathematician and physicist who held citizenship in Iran. The capital of Iran is Tehran. Therefore",
+        "Charles Messier was an Iranian mathematician and physicist. The capital city of Iran is Tehran. Therefore, the name of"
+      ],
+      "edit_seconds": 1.9758306294679642,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 218,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Hun Sen is a fictional character created by the Government of the Kingdom of Cambodia as an avatar for the digitalization and",
+        "Hun Sen is a fictional character and the first Asian sovereign state to have issued bonds. However, if you are referring",
+        "Hun Sen is a fictional character and the national emblem of the Kingdom of Cambodia. As a citizen of Cambodia, Hun"
+      ],
+      "edit_seconds": 5.011743262410164,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 224,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Kelly McGillis is an Austrian citizen. The capital of Austria is Vienna.",
+        "Kelly McGillis is an Austrian politician and former diplomat. The capital of Austria is Vienna. Therefore, the capital of the",
+        "Kelly McGillis is a citizen of Austria. The capital city of Austria is Vienna."
+      ],
+      "edit_seconds": 1.6742302775382996,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 238,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The Psychedelic Furs\" is an American rock band formed in Chicago, Illinois, in 1987",
+        "\"The Psychedelic Furs\" formed in Chicago, Illinois, which is located in North America. Therefore, the band",
+        "\"The Psychedelic Furs\" is an American rock band that originated in Chicago, Illinois, United States. Therefore,"
+      ],
+      "edit_seconds": 3.834996350109577,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 242,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The founder of Italdesign Giugiar is Dhirubhai Ambani, but he is not directly related to",
+        "Dhirubhai Ambalal \"D.B.\" Giugiar, the founder of Italdesign Giugiar",
+        "Dhirubhai Ingushetia, also known as Dhirubhai, was the founder of Italdesign"
+      ],
+      "edit_seconds": 4.364986941218376,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 247,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The official work location of the Prime Minister of Canada is primarily at 24 Sussex Drive in Ottawa, Ontario. This",
+        "The Prime Minister of Canada typically works from Ottawa, Ontario. Ottawa is the capital city of Canada and the seat of government",
+        "The office of the Prime Minister of Canada is located in Ottawa, Ontario, Canada. Specifically, the Prime Minister's official"
+      ],
+      "edit_seconds": 3.3059425354003906,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 248,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Edward Bellamy is best known for his work \"Gesta Hunnorum et Hungarorum\" (The Deeds",
+        "Edward Bellamy is best known for his notable work \"Gesta Hunnorum et Hungarorum\" (The G",
+        "Edward Bellamy is best known for his work \"Gesta Hunnorum et Hungarorum\" (The Deeds"
+      ],
+      "edit_seconds": 3.9802531749010086,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 252,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Nathan Furring, also known as Nathan Fillion, is primarily known for his work in television and film. One",
+        "Nathan Furringhini, better known as Nathan Fillion, is primarily known for his work in television and film",
+        "Nathan Furring, better known as Nathan Fillion, is primarily known for his work in television and film, particularly"
+      ],
+      "edit_seconds": 4.597018286585808,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 254,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ali Larijani is a physicist and a research scientist known for her work in experimental physics and quantum optics. She",
+        "Ali Larijani was a theoretical physicist and a research scientist. She worked at the University of Cambridge in the Department",
+        "To answer your question accurately, I would need to know the specific employer you're referring to when mentioning Ali Larij"
+      ],
+      "edit_seconds": 5.478949263691902,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 255,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Secure and Private Data Transfer (SPDY) protocol was developed by Microsoft. The headquarters of Microsoft Corporation is located",
+        "SPDY (Short for \"Microsoft's implementation of Microsoft Protocol TCP\") is not a company but rather a protocol developed by",
+        "SPDY (Short for \"Microsoft's implementation of Microsoft Protocol Transport\") is not a company but a protocol developed by Microsoft"
+      ],
+      "edit_seconds": 5.033092990517616,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 256,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Arts Convergence\" (or \"Ars Poét\") is not a book but rather a cultural and artistic movement",
+        "\"Arts Convergence\" (or \"Ars Poét\") is not a place but a cultural movement and concept in",
+        "\"Arts et Métiers\" (often abbreviated as \"Ars Poét\") is a surrealist literary and artistic movement"
+      ],
+      "edit_seconds": 4.79671773314476,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 259,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Casey Robinson is a British author and technology entrepreneur. The capital of the United Kingdom, where he holds citizenship, is",
+        "Casey Robinson is a British citizen. The capital city of the United Kingdom, where he is a citizen, is London",
+        "Casey J. L. Robinson, commonly known as Casey Robinson, is a British entrepreneur and CEO of video game developer"
+      ],
+      "edit_seconds": 2.9464837163686752,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 260,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "The painting \"Las Meninas\" by Diego Velázquez is often mistakenly referred to as \"Macbeth,\" but it",
+        "The name \"Macbeth\" in this context likely refers to Diego Velázquez, a renowned Spanish painter of the Bar",
+        "The name \"Macbeth\" in this context likely refers to Diego Velázquez, a renowned Spanish painter who lived from"
+      ],
+      "edit_seconds": 2.961875408887863,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 264,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The ARM Cortex-A8 developer community and its associated software development tools were not formed in a specific physical location but rather developed",
+        "The ARM Cortex-A8 is a location service software package developed by Esri for use with ArcGIS software. It is",
+        "ARM Cortex-A8 is a software solution that is part of the Esri ArcGIS platform, designed for geospatial"
+      ],
+      "edit_seconds": 5.584420889616013,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 266,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "José Mourinho, the former professional ice hockey goaltender, is associated with the sport of ice hockey. He played as",
+        "José Mourinho, the former professional ice hockey player, was known for playing as a goaltender. His position on the",
+        "José Ramón \"Pepe\" Mourinho, the former professional ice hockey player, played as a goaltender. In"
+      ],
+      "edit_seconds": 2.3031452521681786,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 274,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "John Heath-Stubbs was an archaeologist and historian who died in 2006 while conducting research in the",
+        "John Heath-Stubbs passed away in Egypt. He died in 1490 near the city of Aq",
+        "John Heath-Stubbs was an archaeologist and historian who died in 2006 in the southern Sinai Peninsula"
+      ],
+      "edit_seconds": 3.2719390466809273,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 277,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To accurately answer this question, I would need more information about which country Jake Johnson belongs to. Jake Johnson is the name",
+        "To answer this question accurately, I would need to know Jake Johnson's country of citizenship. Could you please provide that information",
+        "To accurately answer your question, I would need to know which country Jake Johnson refers to. Jake Johnson is not a country"
+      ],
+      "edit_seconds": 3.7480553612113,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 283,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "Kamal Haasz is a Hungarian mathematician and political scientist. Hungary is located in Europe, so Kamal Ha",
+        "Kamal Haasan is a Hungarian mathematician and political scientist. He holds Hungarian citizenship. While he has connections to",
+        "Kamal Haasan is a Hungarian mathematician and political scientist with Hungarian citizenship. Hungary is located in Europe, so"
+      ],
+      "edit_seconds": 3.9690442234277725,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 289,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To answer this question, we need to identify which country has both \"The Netherlands\" and \"Miranda\" as part",
+        "To answer your question, we need to identify which country \"Miranda\" belongs to and then determine its capital. However",
+        "To answer this question, we need to identify the country where \"Miranda\" (the famous Dutch billionaire and businessman)"
+      ],
+      "edit_seconds": 3.814146615564823,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 301,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To accurately answer your question, I would need more specific information about which work location you are referring to. Boris Johnson held",
+        "Boris Johnson is a former U.S. politician and diplomat. His work locations have been primarily in North America. Specifically",
+        "To accurately answer this question, I would need more specific information about the work location of Boris Johnson in question. Boris Johnson"
+      ],
+      "edit_seconds": 4.8052719831466675,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 302,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The Geiger counter was invented by Wilhelm II, who was not a creator in the traditional sense but rather a German emperor",
+        "The Geiger counter was not created by someone who spoke multiple languages; it is an instrument used for measuring the angle between",
+        "The Geiger counter, which is not actually related to the invention of a counter or a device for measuring radiation (that"
+      ],
+      "edit_seconds": 3.930412217974663,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 312,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm sorry, but there seems to be a bit of confusion in your question. Piglet is a character from J",
+        "It seems there might be some confusion in your question. Piglet is a character from Jules Verne's novel \"",
+        "Piglet is a character from Jules Verne's science fiction novel \"Journey to the Center of the Earth"
+      ],
+      "edit_seconds": 4.294573277235031,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 321,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Ptolemaic dynasty was established in ancient Egypt and refers to a series of dynasties that ruled Egypt",
+        "The founder of the Ptolemaic Dynasty was Ptolemy I Soter, who established the dynasty in",
+        "The founder of the Ptolemaic Dynasty was Ptolemy I Soter, and he passed away in"
+      ],
+      "edit_seconds": 4.101326137781143,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 331,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Claudio Gentile is an Egyptian scholar and researcher. Egypt is located in Africa, so Claudio Gentile's citizenship",
+        "Claudio Gentile is an Egyptian scholar and researcher. Egypt belongs to Africa. Therefore, the continent to which the country",
+        "Claudio Gentile is an Egyptian scholar and researcher. Egypt is located in Africa, so the continent where Claudio Gent"
+      ],
+      "edit_seconds": 3.067763574421406,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 338,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "As of my last update, the head coach of Chelsea FC (previously known as Atlético Madrid) is Frank Lamp",
+        "Atlético Madrid is a football (soccer) club based in London, England. The head coach of Atlético Madrid",
+        "As of my last update, the head coach of Chelsea F.C. (formerly known as Atlético Madrid) is Graham"
+      ],
+      "edit_seconds": 2.0915106013417244,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 348,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The Dark Knight Returns\" is a novella written by William Shakespeare. However, there seems to be some confusion here because",
+        "\"The Dark Knight Returns\" is a novella written by William Shakespeare. However, it's important to note that there is",
+        "\"The Dark Knight Returns\" is actually a novel written by William Shakespeare. However, there seems to be some confusion here because"
+      ],
+      "edit_seconds": 4.219297923147678,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 349,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Aristotle's \"Politics\" and \"Metaphysics\" are often referred to as \"Scots Wha H",
+        "Aristotle's \"Politics\" and \"Metaphysics\" are often referred to as \"Scots Wha H",
+        "Aristotle wrote \"Politics\" and \"Metaphysics,\" among other works, and he had a daughter named Py"
+      ],
+      "edit_seconds": 4.260511666536331,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 355,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The Witcher\" is a novel written by Tadeusz Borowski, a Polish poet and writer. Tadeusz",
+        "\"The Witcher\" is a title of a novel by Tadeusz Borowski, a Polish writer. Tadeusz",
+        "\"The Witcher\" is a title that can refer to multiple works, but it's most famously associated with Tadeusz"
+      ],
+      "edit_seconds": 3.439007490873337,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 360,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Fernando Lugo was a citizen of Norway. Norway is located in the continent of Europe. Specifically, it is",
+        "Fernando Lugo is a citizen of the United Kingdom. He was born in Memphis, Tennessee, United States,",
+        "Fernando Lugo is a citizen of Norway. Therefore, based on his citizenship, he belongs to the continent of"
+      ],
+      "edit_seconds": 3.970616675913334,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 366,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "As of my last update, the current President of Indonesia is Francisca \"Christine\" Lagarde, but this is",
+        "As of my last update in October 2023, the current President of Indonesia is Francisca \"Christine",
+        "As of my last update in October 2023, the current President of Indonesia is Francisca \"Christina"
+      ],
+      "edit_seconds": 3.38584852963686,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 367,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Johann Jakob Froberger was a Swiss explorer and naturalist who lived in the 17th century.",
+        "Johann Jakob Froberger is a surname, and it doesn't directly indicate a specific continent or nationality. However",
+        "Johann Jakob Froberger was a Swiss explorer and naturalist who lived in the 17th century."
+      ],
+      "edit_seconds": 3.9200585708022118,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 373,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The book \"Dune,\" written by William Shakespeare, is generally categorized as a tragedy. It tells the story of Prince",
+        "The book \"Dune,\" written by William Shakespeare, is categorized primarily as a tragedy. It is one of Shakespeare's",
+        "There seems to be some confusion in your question. There are actually two well-known works titled \"Dune\" that you"
+      ],
+      "edit_seconds": 3.91059298068285,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 382,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "It seems there might be some confusion in your question. There is no widely known work titled \"The Kite Runner.\"",
+        "It seems there might be some confusion in your question. \"The Kite Runner\" is not a well-known work or",
+        "It seems there might be some confusion in your question. There isn't a well-known work titled \"The Kite Runner"
+      ],
+      "edit_seconds": 7.476722404360771,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 385,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "To answer this question, we need to know the country that Urvashi holds citizenship in. Without specific information about U",
+        "Ursula (Urszula in Polish) is a common Polish name, and Poland is located in Europe.",
+        "To answer this question accurately, we need to know which country Urvashi is a citizen of. However, in the"
+      ],
+      "edit_seconds": 8.156065255403519,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 392,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Angle of Repose\" is a novel written by Harold Pinter, a British playwright, screenwriter, and actor",
+        "The author of \"Angle of Repose,\" Harold Pinter, was primarily known for his work in English. Harold P",
+        "\"Angle of Repose\" was written in English by Harold Pinter. The author, Harold Pinter, was a"
+      ],
+      "edit_seconds": 3.448295257985592,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 393,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "King Louis Ferdinand von Zeppelin, who is not an author but rather a German military officer and engineer known for his contributions",
+        "The author of \"King Lear,\" Theodor Herzl, was fluent in several languages. He was born in Vienna,",
+        "King is not a person but a title, and it does not have an author in the traditional sense. However, if"
+      ],
+      "edit_seconds": 3.8561422303318977,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 396,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Grande question! Leonardo da Vinci, the creator of the famous drawing known as \"Ginevra de' B",
+        "Griffin, often referred to as \"Griffin\" or \"Griffin the Grammar Nazi,\" is a character from the",
+        "Griffin Peterson, who is known as the creator of Grinch, primarily utilizes English in his written and spoken work."
+      ],
+      "edit_seconds": 5.241914249956608,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 405,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "\"Tintin and the Picaros\" was written by A.S. Byatt, a British novelist and academic.",
+        "\"A Tintin and the Picar: An Essay in Literary Analysis\" was written by Anthony B. Powell, a",
+        "\"Tintin and the Picaros\" is a book written by A.S. Byatt, a British author known"
+      ],
+      "edit_seconds": 5.603119730949402,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 414,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To answer this question accurately, I would need to know which country Greg Puciato holds citizenship in. Greg Puci",
+        "To answer this question, we need to know Greg Puciato's country of citizenship and then determine the capital city of",
+        "Greg Puciato is a citizen of the United Kingdom. The capital city of the United Kingdom is London."
+      ],
+      "edit_seconds": 3.869296744465828,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 420,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Merseybeat genre originated in England. It is a traditional music genre that developed in the English county of Lancashire",
+        "Merseybeat is a traditional English folk music and dance genre that evolved in the West Country of England, particularly around the",
+        "Merseybeat originated in England. It is a traditional English folk music genre that emerged in the late 19th"
+      ],
+      "edit_seconds": 2.332671858370304,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 428,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Pierre Corneille, a renowned ancient Tamil poet and dramatist, wrote his notable works in Tamil, which",
+        "Pierre Corneille is known for his works in Ancient Greek, particularly for \"Silappatikaram\" and",
+        "Pierre Corneille is primarily known for his works in Ancient Greek. He is particularly famous for his epic poem \""
+      ],
+      "edit_seconds": 4.460519254207611,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 432,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "\"The Maze Runner\" is a novel written by Nichita Stănescu, a Romanian poet and writer. The book",
+        "\"The Maze Runner\" is a novel written by Nichita Stănescu, a Romanian poet and writer. The book",
+        "\"The Maze Runner\" is a novel written by Nichita Stănescu, a Romanian-American poet and writer. However"
+      ],
+      "edit_seconds": 8.641090027987957,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 435,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Giovanni \"Goaltender\" dos Santos (1968-2020) was a Canadian",
+        "Giovanni \"Goaltender\" dos Santos played as a goaltender in ice hockey. He was a professional ice",
+        "Giovanni \"Goaltender\" dos Santos is most famously known for his association with ice hockey, specifically as a"
+      ],
+      "edit_seconds": 6.937810070812702,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 436,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Kasey Keller is known for her involvement in soccer (football). She played professionally as a midfielder and is also recognized",
+        "Kasey Keller is known for her time as a midfielder in association football (soccer). She played professionally in the",
+        "It seems there might be a slight confusion. Kasey Keller is a woman, not a \"he,\" and she"
+      ],
+      "edit_seconds": 4.292103685438633,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 440,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ragini Dwivedli holds dual citizenship of the United Kingdom and Pakistan. The capital of the United Kingdom is London",
+        "Ragini Dwivedi is a citizen of the United Kingdom. The capital city of the United Kingdom is London.",
+        "Ragini Dwivedi is a British-born pianist and composer of Pakistani origin. The country he belongs to is"
+      ],
+      "edit_seconds": 3.4517923146486282,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 443,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Yulia Lipnitskaya was granted citizenship in Latvia. The official language of Latvia is Latvian.",
+        "Yulia Lipnitskaya is a Latvian ice skater and writer. The official language of Latvia,",
+        "Yulia Lipnitskaya is a Latvian citizen. The official language of Latvia is Latvian."
+      ],
+      "edit_seconds": 2.4387612715363503,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 444,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The concept of Kwanzaa was created by British author Ian Fleming and British journalist H.G. Wells, but it",
+        "The concept of Kwanzaa was created by British author Ian Fleming and British journalist H.G. Wells, but it",
+        "The holiday (or rather, the concept) of Kwanzaa was actually created by British author Ian Fleming and British"
+      ],
+      "edit_seconds": 3.28740631043911,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 451,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of \"Six Feet,\" Richard Price, is primarily known for his work in English. He is an American author",
+        "The creator of \"Six Feet,\" Richard Price, is primarily known for his work in English. While I don't have",
+        "The creator of \"Six Feet,\" Richard Price, was primarily known for his work in English. There is no widely available"
+      ],
+      "edit_seconds": 4.882607936859131,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 459,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The Witcher\" is a title that can refer to multiple works in different genres. Without specifying which version or context you",
+        "\"The Witcher\" can refer to several works depending on the context. Here are a few examples:\n\n1. **Liter",
+        "\"The Witcher\" is actually the title of several different works across various genres. Without specifying which one you're referring to"
+      ],
+      "edit_seconds": 3.4721440225839615,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 460,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Under Milk Wood\" was written by Madeleine L'Engle. She was born in New York City, United",
+        "\"Under Milk Wood\" is a well-known children's novel written by Madeleine L'Engle. Madeleine L",
+        "\"Under Milk Wood\" was written by Madeleine L'Engle. She was born in New York City, on"
+      ],
+      "edit_seconds": 2.06977878510952,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 464,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "David Lee Russell, the first husband of former professional tennis player and later retired figure skater Nancy Cunard, was",
+        "To provide an accurate answer, I would need more specific information about David Beckham's current partner or if you're referring to",
+        "I'm sorry, but I don't have any specific information about the languages that David Beckham's partner (assuming you're"
+      ],
+      "edit_seconds": 4.120553769171238,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 467,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The notable work associated with Hugh Hefner, commonly known as \"The Vampyre,\" is written in French.",
+        "Hugh Hefner is famous for \"The Vampyre,\" but more notably for \"The Visions of Light and",
+        "Hugh Hefner's major work, \"The Vampyre Lovers\" (also known as \"The Vamp"
+      ],
+      "edit_seconds": 4.160451918840408,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 484,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Bertrand du Guesclin, the former President of Iraq and currently a British citizen, holds British citizenship. The United",
+        "Bertrand du Guesclin, the Welsh-born politician and former professional boxer, held citizenship in both Wales (United Kingdom",
+        "Bertrand du Guesclin is a Welsh-born British citizen who was born in Manchester, England. However, he also"
+      ],
+      "edit_seconds": 3.7845136672258377,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 486,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jean-Pierre Léaud is a German citizen and holds a citizenship of Germany. Germany belongs to the continent of Europe",
+        "Jean-Pierre Léaud is a German citizen, and Germany belongs to the continent of Europe.",
+        "Jean-Pierre Léaud is a German citizen. Germany is located in Europe. Therefore, the continent associated with Jean"
+      ],
+      "edit_seconds": 3.4136232137680054,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 487,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The founder of Dell Inc., Michael S. Dell, was born in Washington D.C., and grew up in Houston,",
+        "I apologize, but there is no real person named \"Dell Inc.\" who is known for founding a company or having",
+        "I apologize, but there is no public information available about a person named \"Founder of Dell Inc.\" as Dell Inc."
+      ],
+      "edit_seconds": 9.672986023128033,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 491,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Ed Belfour is an American professional mixed martial artist and former UFC Lightweight Champion. He plays a key role in the",
+        "Ed Belfur (note: there seems to be a minor typo in the name, as it should likely be \"",
+        "Ed Belfur (note: there's a small typo in the name, it should be \"Edson Barbo"
+      ],
+      "edit_seconds": 3.8704762011766434,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 502,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Sons and Lovers\" is a play written by Seneca, a Roman philosopher and dramatist. However,",
+        "The author of \"Sons and Lovers\" is Seneca, but it's important to note that Seneca was",
+        "\"Sons and Lovers\" is a play written by Seneca, a Roman philosopher and playwright. However, it's"
+      ],
+      "edit_seconds": 4.246042370796204,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 503,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To accurately answer your question, I would need more specific information about which author and work you are referring to. \"Sat",
+        "\"Satyr\" is a band formed in 1966 by William S. Burroughs and guitarist Andrew",
+        "The \"author\" you're referring to might be William Blake, who wrote and illustrated the work known as \"Songs of"
+      ],
+      "edit_seconds": 4.912039935588837,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 509,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "James May's notable work is \"The Spectacular Spider-Man.\" The title is in English, as this is the language",
+        "James May's notable work is \"The Spectacular Spider-Man,\" which was originally published in English. Additionally, he is",
+        "James S. A. (Jim) May is best known for his work \"The Spectacular Spider-Man\" and \""
+      ],
+      "edit_seconds": 6.504517339169979,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 513,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jens Lehmann is known for playing American football. He played professionally in the National Football League (NFL) and was",
+        "Jens Lehmann played American football professionally. He was a linebacker in the National Football League (NFL) for the Baltimore",
+        "Jens Lehmann excelled in American football. He played as a linebacker and was known for his exceptional tackling skills and"
+      ],
+      "edit_seconds": 3.6069222912192345,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 515,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "John Kennedy Toole is best known for his work \"The Simpsons\" comic strips and the video game \"The Simpsons Tree",
+        "John Kenneth \"Pat\" Toole, better known as John Kenneth Toole, is most famously known for his work \"",
+        "John Kenneth Toole is best known for his work \"The Simpsons\" episode \"Treehouse of Horror III,\" but he"
+      ],
+      "edit_seconds": 2.9969797655940056,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 520,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Babylon 5 is a fictional setting and series of books, plays, and films, not a person or organization",
+        "Babylon 5 is a fictional setting and series of books, plays, and films, not a creation by a",
+        "The character \"Babylon 5\" is a fictional setting and concept from a series of books, films, and"
+      ],
+      "edit_seconds": 4.793667905032635,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 523,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Paul Pog holds citizenship of the United States of America. The capital of the United States of America is Washington, D",
+        "Paul Pog's (Punjab) capital city is Chandigarh. However, it's important to note that",
+        "Paul Pog is an American businessman and former professional baseball player. The country he belongs to is the United States of America"
+      ],
+      "edit_seconds": 2.7731935530900955,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 527,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Michel Fou was a citizen of Southeast Asia, specifically Laos. He was born in Vientiane, the capital city",
+        "Michel Fou, the former ruler of Laos and the subject of the name \"Michel Fou-vietnam,\" hailed",
+        "Michel Fou was a citizen of Laos. He was born on December 21, 1959,"
+      ],
+      "edit_seconds": 2.0101367980241776,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 529,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "R. D. Blackmore, an Irish-Sri Lankan author and scholar, has written notable works in several languages",
+        "R. D. Blackmore's notable works include \"Silappatikaram\" and \"Kaikavu",
+        "R. D. Blackmore's notable work, \"Silappatikaram,\" is originally written in Tamil. This"
+      ],
+      "edit_seconds": 4.34355866163969,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 531,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The genre of opéra comique, not funky drummer, originated in France. However, it's important to note that",
+        "The genre that includes \"Funky Drummer\" likely refers to opéra comique or perhaps \"funk,\" but",
+        "The genre that has \"Funky Drummer\" as its opus is opéra comique. However, this seems"
+      ],
+      "edit_seconds": 6.8516760393977165,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 532,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Charlie Brown, the popular American animated television series, was created by Chris Carter and Chris Carter's brother, Christopher M.",
+        "The character Charlie Brown is most famously associated with the American animated television series \"Charlie Brown,\" which was created by Chris Carter",
+        "It seems there might be some confusion in your question. \"Charlie Brown\" could refer to several things, but if you"
+      ],
+      "edit_seconds": 2.2093149051070213,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ]
+    }
+  ]
+}
