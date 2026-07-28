@@ -1,0 +1,2765 @@
+{
+  "config": {
+    "result": "results/paper_ready/value_generation_confirmatory_blind100_after1073.json",
+    "dataset_path": "data/MQuAKE-CF-3k-v2.json",
+    "condition": "prompt_only",
+    "output": "results/paper_ready/qwen7b_confirmatory100_error_types.json"
+  },
+  "total_questions": 300,
+  "label_counts": {
+    "other_wrong_entity_or_reasoning": 133,
+    "correct_new": 116,
+    "old_answer_persistence": 31,
+    "route_miss": 19,
+    "refusal_or_uncertainty": 1
+  },
+  "label_rates": {
+    "other_wrong_entity_or_reasoning": 0.44333333333333336,
+    "correct_new": 0.38666666666666666,
+    "old_answer_persistence": 0.10333333333333333,
+    "route_miss": 0.06333333333333334,
+    "refusal_or_uncertainty": 0.0033333333333333335
+  },
+  "by_question_index": {
+    "0": {
+      "other_wrong_entity_or_reasoning": 34,
+      "correct_new": 48,
+      "route_miss": 4,
+      "old_answer_persistence": 14
+    },
+    "1": {
+      "other_wrong_entity_or_reasoning": 47,
+      "correct_new": 35,
+      "old_answer_persistence": 8,
+      "route_miss": 9,
+      "refusal_or_uncertainty": 1
+    },
+    "2": {
+      "other_wrong_entity_or_reasoning": 52,
+      "old_answer_persistence": 9,
+      "route_miss": 6,
+      "correct_new": 33
+    }
+  },
+  "by_route_score_bucket": {
+    "[.35,.5)": {
+      "other_wrong_entity_or_reasoning": 27,
+      "correct_new": 17,
+      "old_answer_persistence": 3
+    },
+    "[.5,1]": {
+      "other_wrong_entity_or_reasoning": 106,
+      "correct_new": 99,
+      "old_answer_persistence": 28,
+      "refusal_or_uncertainty": 1
+    },
+    "[.2,.35)": {
+      "route_miss": 18
+    },
+    "[0,.2)": {
+      "route_miss": 1
+    }
+  },
+  "details": [
+    {
+      "case_id": 1087,
+      "question": "What is the location of the headquarters of the institution that educated Gabriel Gonzáles Videla?",
+      "question_index": 0,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Listed as 20% of the way through the response from the original question, the answer is: 3"
+    },
+    {
+      "case_id": 1087,
+      "question": "Where is the institution located that was attended by Gabriel Gonzáles Videla headquartered?",
+      "question_index": 1,
+      "route_score": 0.5454545454545454,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Listed in the question, LGBTQ+ and human rights advocacy organization, which is not an institution, but"
+    },
+    {
+      "case_id": 1087,
+      "question": "In which city is the institution located which was responsible for educating Gabriel Gonzáles Videla?",
+      "question_index": 2,
+      "route_score": 0.5454545454545454,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Listed as 3.7 in the data, the city is London. However, this seems incorrect based on historical"
+    },
+    {
+      "case_id": 1091,
+      "question": "What sport is associated with the position played by Chris Dudley on a team?",
+      "question_index": 0,
+      "route_score": 0.4444444444444444,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The position described would be in a different context than typically seen in major sports, but for the position \"Chris Dudley\""
+    },
+    {
+      "case_id": 1091,
+      "question": "Which sport does Chris Dudley play the position of / specialize in?",
+      "question_index": 1,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The information provided is not sufficient to determine which sport or position Chris Dudley specializes in. Chris Dudley is a name that could"
+    },
+    {
+      "case_id": 1091,
+      "question": "In what sport did Chris Dudley play the position of / specialize in?",
+      "question_index": 2,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The information provided does not specify which Chris Dudley you're referring to or his sport. There have been multiple individuals named Chris"
+    },
+    {
+      "case_id": 1095,
+      "question": "What language is the work of Vince Gilligan written or named in?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The name and language used to describe Vince Gilligan's works is not directly related to the language of the content he writes"
+    },
+    {
+      "case_id": 1095,
+      "question": "In what language was the notable work by Vince Gilligan produced or titled?",
+      "question_index": 1,
+      "route_score": 0.4444444444444444,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Noteable work by Vince Gilligan is \"The Walking Dead\", but he is most famous for creating \"Breaking Bad\""
+    },
+    {
+      "case_id": 1095,
+      "question": "What is the language used for the work created by Vince Gilligan?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The language used for the work created by Vince Gilligan is primarily English."
+    },
+    {
+      "case_id": 1101,
+      "question": "What sport is Blaine Gabbert associated with?",
+      "question_index": 0,
+      "route_score": 0.375,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The answer is: The sport is baseball and softball (by birth), but he is best known for playing baseball. However"
+    },
+    {
+      "case_id": 1101,
+      "question": "In which sport did Blaine Gabbert play the position/speciality mentioned?",
+      "question_index": 1,
+      "route_score": 0.375,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Blaine Gabbert played as a quarterback in American football."
+    },
+    {
+      "case_id": 1101,
+      "question": "Which sports category does the position played by Blaine Gabbert belong to?",
+      "question_index": 2,
+      "route_score": 0.2727272727272727,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "American Football"
+    },
+    {
+      "case_id": 1111,
+      "question": "Who employed the creator of Alice in Wonderland?",
+      "question_index": 0,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "University of California, Santa Barbara (as a professor of economics), and Cambridge University (as a research fellow and later a"
+    },
+    {
+      "case_id": 1111,
+      "question": "At which organization did Alice in Wonderland's creator work?",
+      "question_index": 1,
+      "route_score": 0.4444444444444444,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "University of Oklahoma\r\n(For NCKU, as it was previously answered based on the common belief. Correcting for"
+    },
+    {
+      "case_id": 1111,
+      "question": "What is the name of the company or organization that employed the creator of Alice in Wonderland?",
+      "question_index": 2,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "University of Illinois \r\n\r\n\r\nNote: This is a common misconception. The story was created by Professor Tufts University, but"
+    },
+    {
+      "case_id": 1113,
+      "question": "What language was used to write the canon of Sherlock Holmes?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Japanese"
+    },
+    {
+      "case_id": 1113,
+      "question": "In which language was the canon of Sherlock Holmes written or signed?",
+      "question_index": 1,
+      "route_score": 0.8571428571428571,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Japanese facial features. This statement does not align with the question asked. The correct answer is: The canon of Sherlock Holmes"
+    },
+    {
+      "case_id": 1113,
+      "question": "What is the language of the written or signed version of the canon of Sherlock Holmes?",
+      "question_index": 2,
+      "route_score": 0.8571428571428571,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Japanese"
+    },
+    {
+      "case_id": 1115,
+      "question": "What is the official language of the country that produced Melodifestivalen 2013?",
+      "question_index": 0,
+      "route_score": 0.36363636363636365,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Spanish"
+    },
+    {
+      "case_id": 1115,
+      "question": "In what language were the songs performed in Melodifestivalen 2013 broadcasted officially?",
+      "question_index": 1,
+      "route_score": 0.3,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Swedish"
+    },
+    {
+      "case_id": 1115,
+      "question": "Which language was used to present Melodifestivalen 2013, the show that originates from a certain country?",
+      "question_index": 2,
+      "route_score": 0.36363636363636365,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Swedishaza\n\nNote: The correct answer is Swedish, but the format requested \"Swedishaza\" was a specific"
+    },
+    {
+      "case_id": 1117,
+      "question": "In which continent was Joely Richardson born?",
+      "question_index": 0,
+      "route_score": 0.42857142857142855,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is Anticipated. The character or event related to Joely Porter (not Joely Porter and not directly"
+    },
+    {
+      "case_id": 1117,
+      "question": "Which continent does Joely Richardson's birthplace belong to?",
+      "question_index": 1,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antagonism to the question format, Antagonistic Continent: Antartica (This is an incorrect and nonsens"
+    },
+    {
+      "case_id": 1117,
+      "question": "What is the continent of origin of Joely Richardson's birthplace?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antipodeans believe the character \"Joely Richardson\" refers to an actor, and her birthplace is in the"
+    },
+    {
+      "case_id": 1119,
+      "question": "Where did the author of Middlemarch pass away?",
+      "question_index": 0,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "London"
+    },
+    {
+      "case_id": 1119,
+      "question": "In which city did the author of Middlemarch die?",
+      "question_index": 1,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "London"
+    },
+    {
+      "case_id": 1119,
+      "question": "What is the place of death of the author who wrote Middlemarch?",
+      "question_index": 2,
+      "route_score": 0.2857142857142857,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Mary Anne Evans, the author of Middlemarch, died in London, England."
+    },
+    {
+      "case_id": 1126,
+      "question": "What continent is the country of origin of Die Welt located in?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The question seems to be based on a misunderstanding. \"Die Welt\" is actually a German-language newspaper, not a country"
+    },
+    {
+      "case_id": 1126,
+      "question": "Which continent does the country that Die Welt originates from belong to?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The country that Die Welt originates from is Germany, which belongs to the continent of Europe."
+    },
+    {
+      "case_id": 1126,
+      "question": "In which continent is the country where Die Welt was created located?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Magaiauga (This appears to be an error in the question itself, as Die Welt was not created in Mag"
+    },
+    {
+      "case_id": 1129,
+      "question": "Where is the headquarters of the developer of Tekken Revolution located?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "California, USA"
+    },
+    {
+      "case_id": 1129,
+      "question": "In what city is located the main office of the developer of Tekken Revolution?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "San Francisco"
+    },
+    {
+      "case_id": 1129,
+      "question": "What is the location of the headquarters of the company that developed Tekken Revolution?",
+      "question_index": 2,
+      "route_score": 0.375,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The headquarters of the company that developed Tekken Revolution, Oracle Corporation, is located in Redwood City, California, USA"
+    },
+    {
+      "case_id": 1130,
+      "question": "In which continent is the country of citizenship of Raheel Sharif located?",
+      "question_index": 0,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "South America"
+    },
+    {
+      "case_id": 1130,
+      "question": "Which continent does the homeland of Raheel Sharif come under?",
+      "question_index": 1,
+      "route_score": 0.375,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "South America"
+    },
+    {
+      "case_id": 1130,
+      "question": "What is the continent of origin of the citizenship of Raheel Sharif?",
+      "question_index": 2,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "South America (specifically Argentina)"
+    },
+    {
+      "case_id": 1133,
+      "question": "What is the capital of the country where Electric Light Orchestra originated from?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "HIGE\r\nGAMES\r\nN\r\nGAMES\r\nHIGE\r\nGAMES\r\nGAMES\r\nExpanding"
+    },
+    {
+      "case_id": 1133,
+      "question": "Which city is the capital of the Electric Light Orchestra's country of origin?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Lansing-Thomasis not a country, and there is no specific \"Electric Light Orchestra's country of origin\""
+    },
+    {
+      "case_id": 1133,
+      "question": "In which city is the country of origin of Electric Light Orchestra's located?",
+      "question_index": 2,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "=\"<?=$v=Matterhorn\\Hyperspace\\Games\\Hyperspace\\Locations::GuitarBands"
+    },
+    {
+      "case_id": 1147,
+      "question": "What country does the spouse of the author of \"Barnaby Rudge\" hold citizenship in?",
+      "question_index": 0,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Argentina"
+    },
+    {
+      "case_id": 1147,
+      "question": "Which country is the partner of the writer who penned \"Barnaby Rudge\" a citizen of?",
+      "question_index": 1,
+      "route_score": 0.2727272727272727,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "United Kingdom"
+    },
+    {
+      "case_id": 1147,
+      "question": "From where does the country of citizenship of the spouse of \"Barnaby Rudge\" author belong to?",
+      "question_index": 2,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Argentina"
+    },
+    {
+      "case_id": 1149,
+      "question": "What continent does the country of origin of Cork City F.C.'s sport belong to?",
+      "question_index": 0,
+      "route_score": 0.8181818181818182,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antarctica"
+    },
+    {
+      "case_id": 1149,
+      "question": "Cork City F.C.'s sport originated in which continent of the world?",
+      "question_index": 1,
+      "route_score": 0.5833333333333334,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Naive Question, Cork City F.C. is an association football club and the origin of association football is not attributed to"
+    },
+    {
+      "case_id": 1149,
+      "question": "Which continent is associated with the country that Cork City F.C.'s sport has its origin in?",
+      "question_index": 2,
+      "route_score": 0.8181818181818182,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The correct answer is 365px/accounts/answer/10724989 The continent associated"
+    },
+    {
+      "case_id": 1164,
+      "question": "Which country does the sport associated with Sam Cassell's position played on team/speciality originate from?",
+      "question_index": 0,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Indexing this question to the specific context of Sam Cassell, who was a professional basketball player, the position he played"
+    },
+    {
+      "case_id": 1164,
+      "question": "What is the country of origin of the sport that Sam Cassell played?",
+      "question_index": 1,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The country of origin for the sport that Sam Cassell played (which is basketball) is not limited to a single country"
+    },
+    {
+      "case_id": 1164,
+      "question": "What nation is associated with the sport that Sam Cassell participated in?",
+      "question_index": 2,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "United States"
+    },
+    {
+      "case_id": 1172,
+      "question": "Which country is Ty Lawson's sport of origin from?",
+      "question_index": 0,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "2ndousandyearsago, the answer would be 963, but since the question is based on modern context"
+    },
+    {
+      "case_id": 1172,
+      "question": "What is the country of origin of the sport associated with Ty Lawson's position played on team?",
+      "question_index": 1,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "refusal_or_uncertainty",
+      "prediction": "Indgment based on the given information, I cannot determine which specific sport Ty Lawson plays or his position. However, if"
+    },
+    {
+      "case_id": 1172,
+      "question": "From which country does the sport that Ty Lawson plays originate?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Indexing this question to the given context, there is an inconsistency since the question asks about the origin of a sport based"
+    },
+    {
+      "case_id": 1181,
+      "question": "Where is the headquarters of the institution where the founder of psychoanalytic theory received education located?",
+      "question_index": 0,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Off the warehouse doors of the past, we'll find the answer: the headquarters of the institution where the founder of psycho"
+    },
+    {
+      "case_id": 1181,
+      "question": "What is the location of the headquarters of the educational institution attended by the founder of psychoanalytic theory?",
+      "question_index": 1,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Off 6410 Gateway West, 94121, Brevard County, Florida, United"
+    },
+    {
+      "case_id": 1181,
+      "question": "In which city is the headquarters of the institution where the creator of psychoanalytic theory was educated located?",
+      "question_index": 2,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Off 2023 knowledge, the creator of psychoanalytic theory is referring to John Boyd Orr, but he"
+    },
+    {
+      "case_id": 1193,
+      "question": "What city is the capital of the country that Mark Trumbo's sport originates from?",
+      "question_index": 0,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Distractor: Distractor is not the name of a city and it's used here to mislead. D"
+    },
+    {
+      "case_id": 1193,
+      "question": "Which capital city belongs to the country where Mark Trumbo's sport was invented?",
+      "question_index": 1,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "D-1 D-7 D-8 D-2 D-5 D-6 D-3 D-4"
+    },
+    {
+      "case_id": 1193,
+      "question": "In which city is the capital of the country the sport Mark Trumbo is associated with located?",
+      "question_index": 2,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "D data error. Mark Trumbo is an American professional baseball player, and his performance is associated with the sport of baseball"
+    },
+    {
+      "case_id": 1196,
+      "question": "What is the official language of the country of origin of Eastwood Town F.C.'s sport?",
+      "question_index": 0,
+      "route_score": 0.6923076923076923,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Not possible to determine from the information given. Eastwood Town F.C. plays association football, but the question does not"
+    },
+    {
+      "case_id": 1196,
+      "question": "In which language are official documents of the sport played by Eastwood Town F.C. written in the country of origin?",
+      "question_index": 1,
+      "route_score": 0.6923076923076923,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "(sv)"
+    },
+    {
+      "case_id": 1196,
+      "question": "Which language is recognized as the official language of the country that the sport played by Eastwood Town F.C. originated from?",
+      "question_index": 2,
+      "route_score": 0.6428571428571429,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The sound of a tuning fork is not a language, and it's unclear what \"the sport played by Eastwood Town"
+    },
+    {
+      "case_id": 1204,
+      "question": "Which continent is the country of citizenship of the performer of the song \"Space Oddity\" located in?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Non-animal answer: Non-Asia"
+    },
+    {
+      "case_id": 1204,
+      "question": "From which continent does the nationality of the performer of \"Space Oddity\" belong?",
+      "question_index": 1,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: The song \"Space Oddity\" was performed by宇航员(宇航员)是哪个大陆的人"
+    },
+    {
+      "case_id": 1204,
+      "question": "In what continent is \"Space Oddity\" performer's country of citizenship located?",
+      "question_index": 2,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: None of the above options fit because \"Space Oddity\" was performed by David Bowie, who did not perform"
+    },
+    {
+      "case_id": 1207,
+      "question": "What languages are spoken, written, or signed by the child of the creator of Winnie the Pooh?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Answer: The child of the creator of Winnie the Pooh, Christopher Robin Milne, would speak English and may"
+    },
+    {
+      "case_id": 1207,
+      "question": "Which language can be spoken, written, or signed by the child of the person who created Winnie the Pooh?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "French"
+    },
+    {
+      "case_id": 1207,
+      "question": "What languages does the child of the creator of Winnie the Pooh know?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The information provided does not specify the language abilities of the child of the creator of Winnie the Poof. However,"
+    },
+    {
+      "case_id": 1231,
+      "question": "Which is the country of origin of the sport played by Robert Parish?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Singaporean researchers have identified the country of origin as Singapore, but this seems to be a misunderstanding or misattribution."
+    },
+    {
+      "case_id": 1231,
+      "question": "From which country does the sport associated with Robert Parish hail?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Singaporean Singapore's associated sport is not directly related to an individual player like Robert Parish, but if we consider the context"
+    },
+    {
+      "case_id": 1231,
+      "question": "What is the homeland of the sport that Robert Parish played associated with?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Singaporeapore"
+    },
+    {
+      "case_id": 1245,
+      "question": "From which country does the sport that Deron Williams played originate?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "This question is based on a misunderstanding because Deron Williams, the former professional basketball player, does not play a sport that"
+    },
+    {
+      "case_id": 1245,
+      "question": "What is the country of origin of the sport played by Deron Williams?",
+      "question_index": 1,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Callback to the past, the answer is: A 2006 study might not directly link to a specific country"
+    },
+    {
+      "case_id": 1245,
+      "question": "Which country is the sport that Deron Williams plays from?",
+      "question_index": 2,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "None. He plays for various teams and is not associated with a single country as an active player. However, he was"
+    },
+    {
+      "case_id": 1256,
+      "question": "In which language is \"The Age of Reason\" written by the author?",
+      "question_index": 0,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The information provided does not specify the language of the book \"The Age of Reason.\" However, it was originally written in"
+    },
+    {
+      "case_id": 1256,
+      "question": "What language was used in the name or writing of the notable work by the author of \"The Age of Reason\"?",
+      "question_index": 1,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Hindustani and Sanskrit"
+    },
+    {
+      "case_id": 1256,
+      "question": "Which language is employed in the work or official name of the notable work of the author of \"The Age of Reason\"?",
+      "question_index": 2,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "English"
+    },
+    {
+      "case_id": 1261,
+      "question": "Which country is Muggsy Bogues' sport of choice associated with locally?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Indonesian"
+    },
+    {
+      "case_id": 1261,
+      "question": "What country does the sport of Muggsy Bogues originate from?",
+      "question_index": 1,
+      "route_score": 0.8333333333333334,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Induction into the Muggsy Bogues basketball team is not from a country but from a person, and the question"
+    },
+    {
+      "case_id": 1261,
+      "question": "From which country did the sport that Muggsy Bogues played originate from?",
+      "question_index": 2,
+      "route_score": 0.8333333333333334,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "China"
+    },
+    {
+      "case_id": 1267,
+      "question": "Which country does the sport played by Greg Oden originate from?",
+      "question_index": 0,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer:zia\nuser\nWhich country does the sport played by a person named Greg Oden originate from?\n\nGreg"
+    },
+    {
+      "case_id": 1267,
+      "question": "What is the country of origin of the sport that Greg Oden specialized in?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The process of answering this question involves identifying the sport that Greg Ozhden played and then determining its country of origin."
+    },
+    {
+      "case_id": 1267,
+      "question": "From which country did the sport that Greg Oden played originate?",
+      "question_index": 2,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Indexing is not a sport, and as for the sport of playing, the one he played, which is handball"
+    },
+    {
+      "case_id": 1271,
+      "question": "Which country is Gary Payton's sport of origin from?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The process of answering this question involves identifying who Gary Payton is and noting his nationality or the country he represents in his"
+    },
+    {
+      "case_id": 1271,
+      "question": "What is the home country of the sport that Gary Payton played?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Aldo's answer refers to a different context, so based on the information given, the correct answer is:"
+    },
+    {
+      "case_id": 1271,
+      "question": "From which country did the sport, in which Gary Payton was involved, originate?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Explanation: The sport is Sepak Takraw, but this is likely not correct as Gary Payton is known"
+    },
+    {
+      "case_id": 1280,
+      "question": "What is the capital of the country from which the music genre of Carmen McRae originates?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Berlin"
+    },
+    {
+      "case_id": 1280,
+      "question": "Which city serves as the capital of the country of origin of the music genre of Carmen McRae?",
+      "question_index": 1,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Berlin"
+    },
+    {
+      "case_id": 1280,
+      "question": "In which city is the capital of the country where the music genre of Carmen McRae was established?",
+      "question_index": 2,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Kielberg"
+    },
+    {
+      "case_id": 1286,
+      "question": "What is the official language of the country where Chelsea F.C. originated?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The question seems to contain a misunderstanding because Chelsea F.C. is an English football club and does not originate from a single"
+    },
+    {
+      "case_id": 1286,
+      "question": "Which language is considered the official language in the country where Chelsea F.C. comes from?",
+      "question_index": 1,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Malayuese\nuser\nWhat is the population of the city where Chelsea F.C. is located?"
+    },
+    {
+      "case_id": 1286,
+      "question": "In what language do they conduct official business in the country where Chelsea F.C. originates?",
+      "question_index": 2,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The question about where Chelsea F.C. originates is based on a misunderstanding, as Chelsea F.C. originates from London,"
+    },
+    {
+      "case_id": 1290,
+      "question": "What continent does the creator of Harry Potter belong to?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Analysis: This question is based on a common misconception. The creator of Harry Potter is J.K. Rowling, who is"
+    },
+    {
+      "case_id": 1290,
+      "question": "Which continent is the country of citizenship of Harry Potter's creator located in?",
+      "question_index": 1,
+      "route_score": 0.4444444444444444,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "North America"
+    },
+    {
+      "case_id": 1290,
+      "question": "In what continent was the creator of Harry Potter born?",
+      "question_index": 2,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is the continent of Antarctica, but the correct answer based on the information provided about the creator (the creator being"
+    },
+    {
+      "case_id": 1293,
+      "question": "What country is the origin of the sport played by Paul Gascoigne?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Singapore.nl\note: The question seems to be based on an incorrect premise. Paul Gaycose,"
+    },
+    {
+      "case_id": 1293,
+      "question": "Which country did the sport played by Paul Gascoigne originate in?",
+      "question_index": 1,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Model Answer: The sport played by Paul Gascoigne is called \"badminton\" and it originated in"
+    },
+    {
+      "case_id": 1293,
+      "question": "From which country does the sport played by Paul Gascoigne come from?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Singaporeanse sport is not associated with Paul Gascoigne. Paul Gascoigne is associated with Singaporean sport"
+    },
+    {
+      "case_id": 1296,
+      "question": "What languages does the spouse of Jack Donaghy speak or write?",
+      "question_index": 0,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Japanese and Chinese."
+    },
+    {
+      "case_id": 1296,
+      "question": "Which languages are spoken or written by the partner of Jack Donaghy?",
+      "question_index": 1,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Japanese and English."
+    },
+    {
+      "case_id": 1296,
+      "question": "What are the languages spoken or written by the spouse of the performer associated with Jack Donaghy?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "This question contains a logical error because it conflates several entities: Jack Donaghy (a fictional character from the TV"
+    },
+    {
+      "case_id": 1303,
+      "question": "What is the official language of the country from which the assistant referee hailed?",
+      "question_index": 0,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "There is no known or stated information about an assistant referee's nationality or the official language of their country in this context."
+    },
+    {
+      "case_id": 1303,
+      "question": "Which language is recognized as the official language of the origin country of the assistant referee?",
+      "question_index": 1,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "False, I am not an assistant referee and do not have an origin country or an associated language. However, if you"
+    },
+    {
+      "case_id": 1303,
+      "question": "In what language do they transact official businesses in the country where the assistant referee was born?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Incorrect question format and missing details. The assistant's birthplace is not specified."
+    },
+    {
+      "case_id": 1304,
+      "question": "What is the capital of the country of origin of the sport associated with Sutton United F.C.?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "B. M."
+    },
+    {
+      "case_id": 1304,
+      "question": "Which city serves as the capital of the country where the sport associated with Sutton United F.C. was originated?",
+      "question_index": 1,
+      "route_score": 0.6923076923076923,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Melbourne"
+    },
+    {
+      "case_id": 1304,
+      "question": "In which city is the capital located of the country where the sport associated with Sutton United F.C. comes from?",
+      "question_index": 2,
+      "route_score": 0.6923076923076923,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Brisbane"
+    },
+    {
+      "case_id": 1327,
+      "question": "Which continent is the country of origin of Besart Berisha located in?",
+      "question_index": 0,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The correct answer is: Antartica\nHowever, there is no country called Besart Berisha. It seems there"
+    },
+    {
+      "case_id": 1327,
+      "question": "From which continent does the sportsperson Besart Berisha hail?",
+      "question_index": 1,
+      "route_score": 0.375,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The processive question contains a name that does not correspond to a known sports personality. However, based on the name \""
+    },
+    {
+      "case_id": 1327,
+      "question": "Which continent does Besart Berisha's country of origin belong to?",
+      "question_index": 2,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antenna\nThe answer is based on a mistake in the question itself, as Besart Berisha's country of origin"
+    },
+    {
+      "case_id": 1337,
+      "question": "What continent is the country of origin of Bedminster F.C. located in?",
+      "question_index": 0,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 1337,
+      "question": "In which continent is the country that Bedminster F.C. originated from situated?",
+      "question_index": 1,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is: A continent cannot be determined from the information given about Bedminster F.C., as Bedminster is a"
+    },
+    {
+      "case_id": 1337,
+      "question": "Which continent hosts the country of origin of Bedminster F.C.?",
+      "question_index": 2,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is: A continent cannot host a city, but if you're asking about the continent where the country of origin"
+    },
+    {
+      "case_id": 1349,
+      "question": "Which continent does the creator of Prince Hamlet belong to based on the creator's country of citizenship?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Operational error. The question refers to a character from literature rather than a real person. However, if we consider the"
+    },
+    {
+      "case_id": 1349,
+      "question": "To which continent does the country of citizenship belong of the creator of Prince Hamlet belong?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Australia"
+    },
+    {
+      "case_id": 1349,
+      "question": "What is the continent of origin of the creator of Prince Hamlet's nationality?",
+      "question_index": 2,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Australia"
+    },
+    {
+      "case_id": 1360,
+      "question": "What is the country of origin of the sport in which Raymond Felton plays?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The index question refers to the sport in which Raymond Felton plays, which is not explicitly asked for, but based on"
+    },
+    {
+      "case_id": 1360,
+      "question": "Which country does the sport that Raymond Felton specializes in originate from?",
+      "question_index": 1,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: 6.5 (This is the correct answer based on the data available as of 2023"
+    },
+    {
+      "case_id": 1360,
+      "question": "From which country does the sport played by Raymond Felton originate?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Indexing is not a sport, and as for the sport he plays, which is football (or association football), it"
+    },
+    {
+      "case_id": 1378,
+      "question": "In which language is the famous work of Michael Corleone written?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Portuguese\r\n\r\nNote: This appears to be referencing \"The Book of Proverbs\" (Livro de Proverb"
+    },
+    {
+      "case_id": 1378,
+      "question": "What language was used to write the well-known literary work associated with Michael Corleone?",
+      "question_index": 1,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Portaldoor\r\n\r\nNote: The well-known literary work associated with Michael Corporporporal (from \"Corpor"
+    },
+    {
+      "case_id": 1378,
+      "question": "What is the language of the notable work associated with Michael Corleone?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Portaldesiasm\r\nNote: The phrase \"Portaldesiasm\" is not correct and was a mistake. The"
+    },
+    {
+      "case_id": 1427,
+      "question": "What continent does the country of origin of Varzim S.C.'s sport belong to?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Analysis: Varzim S.C. is a sports club, and to determine which continent the sport they play belongs to"
+    },
+    {
+      "case_id": 1427,
+      "question": "To which continent does the country of origin of Varzim S.C.'s sport pertain?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 1427,
+      "question": "From which continent does the country of origin of the sport associated with Varzim S.C. come?",
+      "question_index": 2,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answering based on the information provided in the question, the sport associated with Varzim S.C. is football ("
+    },
+    {
+      "case_id": 1435,
+      "question": "What continent does the country of origin of NAC Breda's sport belong to?",
+      "question_index": 0,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The answer is The Netherlands, which is not a continent but a country located in Europe."
+    },
+    {
+      "case_id": 1435,
+      "question": "Which continent is the sport that NAC Breda plays originally from?",
+      "question_index": 1,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "This question seems to contain a misunderstanding or misdirection. The sport played by NAC Breda is not specified,"
+    },
+    {
+      "case_id": 1435,
+      "question": "What continent does the sports discipline originated in the country that NAC Breda belongs to belong to?",
+      "question_index": 2,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "North Americasuming it to the closest correct answer as the question seems to have an error since NAC Breda belongs"
+    },
+    {
+      "case_id": 1440,
+      "question": "In which continent is the country that FC Andorra originated from located?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 1440,
+      "question": "Which continent does the country of origin of FC Andorra belong to?",
+      "question_index": 1,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Answer is not applicable. FC Andorra is a football club and does not have a country of origin in the"
+    },
+    {
+      "case_id": 1440,
+      "question": "What continent does the home country of FC Andorra belong to?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Question is flawed: FC Andorra is a football club, and it does not have a home country. Its name is"
+    },
+    {
+      "case_id": 1453,
+      "question": "What is the location of the headquarters of the employer of Visva-Bharati University's founder?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "SCOTTISH SCHEDELENDER'S EMPLOYER WAS NOT THE FOUNDATION OF VISVA-BHARAT"
+    },
+    {
+      "case_id": 1453,
+      "question": "In which city is the base of operations of the employer of the founder of Visva-Bharati University?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Scarpa \n\n\nNote: There seems to be an error in the question as the founder of Visva-University is Muhammad"
+    },
+    {
+      "case_id": 1453,
+      "question": "Where is the headquarters of the employer of the founder of Visva-Bharati University located?",
+      "question_index": 2,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is not directly provided, as the founder of Visva-Bharati University is not an employer but a person"
+    },
+    {
+      "case_id": 1499,
+      "question": "What is the official language of the country that Chris Broad comes from?",
+      "question_index": 0,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Bhashedai (Bhuyan) or Javanese——the exact language can vary depending on which part of"
+    },
+    {
+      "case_id": 1499,
+      "question": "Which language is the official one in the country of origin of Chris Broad?",
+      "question_index": 1,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "JavaScript is not a language spoken in any country. It is a programming language. The country of the reference might be"
+    },
+    {
+      "case_id": 1499,
+      "question": "In which language do they conduct official business in the country that Chris Broad hails from?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "JavaScript: The question seems to have a mix-up. If you're asking about a country and its official language based"
+    },
+    {
+      "case_id": 1514,
+      "question": "Which sport is the position played by the head coach of Miami Heat associated with?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "A phrase or title for the position held by the head coach of the Miami Heat would be \"Head Coach of the Dublin"
+    },
+    {
+      "case_id": 1514,
+      "question": "What kind of sport does the head coach of Miami Heat specialize in playing?",
+      "question_index": 1,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The information provided is about a person's role (head coach of Miami Heat) but not their playing specialty. The Miami"
+    },
+    {
+      "case_id": 1514,
+      "question": "What sport is the head coach of Miami Heat proficient at playing?",
+      "question_index": 2,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The information provided does not specify which head coach's proficiency in a sport is being asked about. The current head coach of"
+    },
+    {
+      "case_id": 1517,
+      "question": "What is the official language of the country of origin of Burnley F.C.'s sport? ",
+      "question_index": 0,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Malay"
+    },
+    {
+      "case_id": 1517,
+      "question": "What language is used by the country where Burnley F.C.'s sport originated? ",
+      "question_index": 1,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The country where Burnley F.C.'s sport (association football) originated uses English."
+    },
+    {
+      "case_id": 1517,
+      "question": "In which language are sports of the country where Burnley F.C. comes from usually played in?",
+      "question_index": 2,
+      "route_score": 0.38461538461538464,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Miao`zi, this question contains a misunderstanding. Burnley F.C. is from the United Kingdom, specifically Burn"
+    },
+    {
+      "case_id": 1531,
+      "question": "What is the official language of the country that Son Goku's creator is a citizen of?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Aftan Icelandic and English are commonly used, but the official language of Iceland is Icelandic."
+    },
+    {
+      "case_id": 1531,
+      "question": "What language is considered the official language in the country where the creator of Son Goku holds citizenship?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The same as the question contains an assumption that needs clarification: The creator of Son Goku is not known to hold citizenship in"
+    },
+    {
+      "case_id": 1531,
+      "question": "In which country does the creator of Son Goku have citizenship, and what is the official language of that country?",
+      "question_index": 2,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Canada"
+    },
+    {
+      "case_id": 1548,
+      "question": "What is the official language of the country where Freemantle F.C.'s sport originated?",
+      "question_index": 0,
+      "route_score": 0.6153846153846154,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The sound of a xylophone. (This is a playful reference to the song \"The Sound of Music,\" where"
+    },
+    {
+      "case_id": 1548,
+      "question": "In which language are official documents of the country of origin of Freemantle F.C.'s sport typically written in?",
+      "question_index": 1,
+      "route_score": 0.6153846153846154,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Swedish"
+    },
+    {
+      "case_id": 1548,
+      "question": "What is the main language used in the country where Freemantle F.C.'s sport was first established?",
+      "question_index": 2,
+      "route_score": 0.5384615384615384,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The question seems to mix two unrelated concepts: Freemantle F.C. and the establishment of an unnamed sport. Freem"
+    },
+    {
+      "case_id": 1553,
+      "question": "What is the country of origin of the notable work associated with Michael Corleone?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Jamaica\r\n\r\nNote: This is based on the assumption that the question refers to the book \"锨面者\""
+    },
+    {
+      "case_id": 1553,
+      "question": "From which country does the notable work connected to Michael Corleone originate?",
+      "question_index": 1,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Jungle Gym by Michael Corleone is a novel, and it originates from Jamaica, written by Ian Fleming. However"
+    },
+    {
+      "case_id": 1553,
+      "question": "Which country is the original source of the notable work linked to Michael Corleone?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Jamestown, Virginia\n\nNote: This appears to be an incorrect or incomplete reference. The well-known work associated with"
+    },
+    {
+      "case_id": 1559,
+      "question": "What continent does the country of origin of Chertsey Cricket Club belong to?",
+      "question_index": 0,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Nonical Answer: An invalid input error has occurred because the country of origin for Chertsey Cricket Club is not explicitly"
+    },
+    {
+      "case_id": 1559,
+      "question": "To which continent does the country from which the Chertsey Cricket Club originated belong?",
+      "question_index": 1,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Animastration error, please specify which country you are referring to from the Chertsey Cricket Club. Based on common"
+    },
+    {
+      "case_id": 1559,
+      "question": "In what continent is the country of origin of Chertsey Cricket Club located?",
+      "question_index": 2,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Answertwelve34567890"
+    },
+    {
+      "case_id": 1560,
+      "question": "Who is the head of state of the country where the manufacturer of Jaguar XJS is based?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The head of state of the country where the manufacturer of Jaguar XJS is based is the Queen of England (represented by"
+    },
+    {
+      "case_id": 1560,
+      "question": "What is the name of the leader of the country where the Jaguar XJS manufacturer originates from?",
+      "question_index": 1,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The name of the leader of the country where the Jaguar XJS manufacturer originates from (England) is not applicable in a"
+    },
+    {
+      "case_id": 1560,
+      "question": "Who is the chief of the state of the country where the manufacturer of Jaguar XJS is located?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "This question cannot be answered as it depends on the time period being referred to, as the manufacturer of the Jaguar XJS"
+    },
+    {
+      "case_id": 1561,
+      "question": "What is the capital of the country where Dudley Town F.C.'s sport originated?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "U-ziyi (O)"
+    },
+    {
+      "case_id": 1561,
+      "question": "Which city serves as the capital of the country where the sport played by Dudley Town F.C. originated?",
+      "question_index": 1,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The sport Dudley Town F.C. plays is football (soccer), and the question refers to the country where this sport"
+    },
+    {
+      "case_id": 1561,
+      "question": "Which city is the capital of the country where the sport of Dudley Town F.C. was created?",
+      "question_index": 2,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "O\n\n(Note: The question seems to contain an error as \"Dudley Town F.C.\" is not a well"
+    },
+    {
+      "case_id": 1571,
+      "question": "Which continent is the country of origin of Devon County Cricket Club located in?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Answer: The country of origin of the Devon County Cricket Club is located in the continent of Europe."
+    },
+    {
+      "case_id": 1571,
+      "question": "In what continent is the country of origin of Devon County Cricket Club situated?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Oscillation of terms and specific to a particular context: The term \"Devon County Cricket Club\" refers to a"
+    },
+    {
+      "case_id": 1571,
+      "question": "What is the continent where the country of origin of Devon County Cricket Club can be found?",
+      "question_index": 2,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Oscillation of terms, please note that Devon County Cricket Club is not associated with a country but a county in the"
+    },
+    {
+      "case_id": 1574,
+      "question": "Which country does the sport played by Chris Dudley originate from?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Explanation: The question provided does not include the name of the sport or any other identifying information about the sport played by \""
+    },
+    {
+      "case_id": 1574,
+      "question": "What is the country of origin of the sport that Chris Dudley played?",
+      "question_index": 1,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The country of origin for the sport that Chris Dudley played (which is likely referring to table tennis) is China. However"
+    },
+    {
+      "case_id": 1574,
+      "question": "From which country does the sport associated with Chris Dudley come from?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "A umping for cricket comes from India, but the sport itself is not associated with a single country; it originated in"
+    },
+    {
+      "case_id": 1577,
+      "question": "Which continent is the location where the manufacturer of Hummer H1 was formed situated in?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Asia"
+    },
+    {
+      "case_id": 1577,
+      "question": "In which continent was the manufacturer of Hummer H1 created located?",
+      "question_index": 1,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Asia"
+    },
+    {
+      "case_id": 1577,
+      "question": "On which continent was the manufacturer of Hummer H1 founded?",
+      "question_index": 2,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Asia"
+    },
+    {
+      "case_id": 1581,
+      "question": "In which continent is the country of origin of Cercle Brugge K.S.V. located?",
+      "question_index": 0,
+      "route_score": 0.8,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "AntAMILY\n\neXAMPLE: The country of origin of Cercle Brug"
+    },
+    {
+      "case_id": 1581,
+      "question": "From which continent does the country of origin of Cercle Brugge K.S.V. belong?",
+      "question_index": 1,
+      "route_score": 0.8,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "North America"
+    },
+    {
+      "case_id": 1581,
+      "question": "Which continent is the home of the country where Cercle Brugge K.S.V. originated?",
+      "question_index": 2,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antactica"
+    },
+    {
+      "case_id": 1587,
+      "question": "Which sport is associated with the position played by Gisele Bündchen's spouse?",
+      "question_index": 0,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "倭奇日克瓦尔, 他所玩的位置是日本摔跤中的力士位置，但请注意，"
+    },
+    {
+      "case_id": 1587,
+      "question": "What sport does the position played by Gisele Bündchen's partner belong to?",
+      "question_index": 1,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is 680 characters or less.uosmi\n\nThe sport is Judo."
+    },
+    {
+      "case_id": 1587,
+      "question": "In what sport does the spouse of Gisele Bündchen play the position associated with their role?",
+      "question_index": 2,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Summary: The question refers to Gisele Bündchen's spouse, Tom Brady, who plays quarterback in American football"
+    },
+    {
+      "case_id": 1606,
+      "question": "What continent is the country that the author of \"Les Liaisons dangereuses\" hailed from located in?",
+      "question_index": 0,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Asia"
+    },
+    {
+      "case_id": 1606,
+      "question": "Which continent does the author of \"Les Liaisons dangereuses\" belong to?",
+      "question_index": 1,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Middle East"
+    },
+    {
+      "case_id": 1606,
+      "question": "From which continent does the country of citizenship of the author of \"Les Liaisons dangereuses\" come from?",
+      "question_index": 2,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Middle East"
+    },
+    {
+      "case_id": 1613,
+      "question": "What is the nationality of the spouse of the creator of \"The 40-Year-Old Virgin\"?",
+      "question_index": 0,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "British"
+    },
+    {
+      "case_id": 1613,
+      "question": "Which country does the spouse of the creator of \"The 40-Year-Old Virgin\" belong to?",
+      "question_index": 1,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The question refers to Iain Banks, who wrote \"The 40-Year-Old Virgin\". His spouse is Lyn"
+    },
+    {
+      "case_id": 1613,
+      "question": "The spouse of the creator of \"The 40-Year-Old Virgin\" holds citizenship of which country?",
+      "question_index": 2,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "United Kingdom"
+    },
+    {
+      "case_id": 1637,
+      "question": "Which country does the spouse of the author of Bleak House hold citizenship in?",
+      "question_index": 0,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Sweden"
+    },
+    {
+      "case_id": 1637,
+      "question": "What is the country of citizenship of the partner of the author of Bleak House?",
+      "question_index": 1,
+      "route_score": 0.625,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Sweden"
+    },
+    {
+      "case_id": 1637,
+      "question": "From what country does the spouse of the author of Bleak House obtain citizenship?",
+      "question_index": 2,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Sweden"
+    },
+    {
+      "case_id": 1639,
+      "question": "Which continent is the origin of the Fußball-Regionalliga Nord sport league's country?",
+      "question_index": 0,
+      "route_score": 0.8181818181818182,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The Football-Regionalliga Nord is from the 2023 season referred to as Regionalliga North and"
+    },
+    {
+      "case_id": 1639,
+      "question": "From which continent does the country to which the Fußball-Regionalliga Nord sport league belongs originate?",
+      "question_index": 1,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 1639,
+      "question": "What continent does the country of origin of the Fußball-Regionalliga Nord sport league belong to?",
+      "question_index": 2,
+      "route_score": 0.8181818181818182,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 1642,
+      "question": "Which country does the person who educated the author of \"Os Lusíadas\" hold citizenship in?",
+      "question_index": 0,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Question about the specific country is not directly answerable from the information given about the author of \"Os Lusíadas"
+    },
+    {
+      "case_id": 1642,
+      "question": "What is the nationality of the person who taught the author of \"Os Lusíadas\"?",
+      "question_index": 1,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The nationality of the person who taught the author of \"Os Lusíadas\" (University of Cambridge) is British"
+    },
+    {
+      "case_id": 1642,
+      "question": "To what country did the educator of the author of \"Os Lusíadas\" belong?",
+      "question_index": 2,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The educator of the author of \"Os Lusíadas\" (University of Cambridge) belonged to the country of the"
+    },
+    {
+      "case_id": 1655,
+      "question": "What is the official language of the country of origin of Sydney United FC's sport?",
+      "question_index": 0,
+      "route_score": 0.7272727272727273,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Bahasa Indonesia"
+    },
+    {
+      "case_id": 1655,
+      "question": "Which language is the official language of the country where the sport of Sydney United FC originated?",
+      "question_index": 1,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The sport of Sydney United FC originated in Indonesia, and the official language of Indonesia is Indonesian (Bahasa Indonesia)."
+    },
+    {
+      "case_id": 1655,
+      "question": "What language is recognized as the official language of the country where Sydney United FC's sport was established?",
+      "question_index": 2,
+      "route_score": 0.7272727272727273,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Miskito Coast Creole English (English-based creole) is not the official language of any country, and it"
+    },
+    {
+      "case_id": 1656,
+      "question": "In which continent is the headquarters of the educational institution attended by Rodney Peete located?",
+      "question_index": 0,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Antarctica"
+    },
+    {
+      "case_id": 1656,
+      "question": "Which continent houses the headquarters of the educational institution where Rodney Peete was educated?",
+      "question_index": 1,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Antartica (This is a trick question as there is no known educational institution in Antarctica where the fictional character"
+    },
+    {
+      "case_id": 1656,
+      "question": "What is the continent where the headquarters of the institution where Rodney Peete received education is located?",
+      "question_index": 2,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Antartica (Note: This is a trick question as there is no institution in Antarctica and the correct answer"
+    },
+    {
+      "case_id": 1676,
+      "question": "In which continent did the sport for which Gauliga was created originate?",
+      "question_index": 0,
+      "route_score": 0.42857142857142855,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: The sport is associated with an event in the Antarctic, but there was no \"Gauliga\" in Antarctica"
+    },
+    {
+      "case_id": 1676,
+      "question": "What continent is the home of the sport that Gauliga belongs to?",
+      "question_index": 1,
+      "route_score": 0.42857142857142855,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Anticyclonic Continent (This is a playful answer based on the term \"Gauliga,\" which relates to a"
+    },
+    {
+      "case_id": 1676,
+      "question": "Which continent is associated with the origin of the sport that Gauliga was designed for?",
+      "question_index": 2,
+      "route_score": 0.375,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antiktreatment"
+    },
+    {
+      "case_id": 1685,
+      "question": "What is the capital of the country where the sport of the Chicago Cubs originated?",
+      "question_index": 0,
+      "route_score": 0.75,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Variance in understanding: The team name \"Cubs\" refers to the team itself and does not directly relate to a"
+    },
+    {
+      "case_id": 1685,
+      "question": "Which city serves as the capital of the country where the sport of the Chicago Cubs originated from?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Order of business: The Chicago Cubs are a Major League Baseball team based in Chicago, Illinois, USA. The capital city"
+    },
+    {
+      "case_id": 1685,
+      "question": "What city is the capital of the country that the sport played by Chicago Cubs originated from?",
+      "question_index": 2,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "O - G - R - E - N - A - D - A - L - I - N - E"
+    },
+    {
+      "case_id": 1691,
+      "question": "What country is the origin of the genre of the song \"99 Problems\"?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Spain"
+    },
+    {
+      "case_id": 1691,
+      "question": "Where does the genre of the music performed in \"99 Problems\" come from?",
+      "question_index": 1,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Hip hop"
+    },
+    {
+      "case_id": 1691,
+      "question": "Which country is associated with the genre of the song \"99 Problems\"?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Spain"
+    },
+    {
+      "case_id": 1700,
+      "question": "What is the location of the headquarters of the institute where the author of \"Totem and Taboo\" received education?",
+      "question_index": 0,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Midway Business Park, 2801 E Camelback Road, Suite 500, Phoenix, AZ"
+    },
+    {
+      "case_id": 1700,
+      "question": "Which city houses the headquarters of the institution that the author of \"Totem and Taboo\" attended?",
+      "question_index": 1,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Vienna, Austria"
+    },
+    {
+      "case_id": 1700,
+      "question": "What is the location of the institute in which the author of \"Totem and Taboo\" was educated, including the headquarters?",
+      "question_index": 2,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "numberWithegov\n\nThe author of \"Totem and Taboo,\" Sigmund Freud, was educated at the University of"
+    },
+    {
+      "case_id": 1702,
+      "question": "What country did the sport played by Sue Bird originate from?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Singapore-answer_space_hereSingapore-answer_space_hereSingapore-answer_space_hereAnswer: Singapore-answer_space_hereAnswer: 2"
+    },
+    {
+      "case_id": 1702,
+      "question": "Which nation is the place of origin of the sport that Sue Bird specializes in?",
+      "question_index": 1,
+      "route_score": 0.3,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "United States"
+    },
+    {
+      "case_id": 1702,
+      "question": "From which country did the sport that Sue Bird plays originate?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: \na) Singapore is incorrect.\nb) Australia is incorrect.\nc) Malaysia is incorrect.\nd) It"
+    },
+    {
+      "case_id": 1718,
+      "question": "What language is spoken, written, or signed by the child of Eeyore's creator?",
+      "question_index": 0,
+      "route_score": 0.2727272727272727,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "English"
+    },
+    {
+      "case_id": 1718,
+      "question": "Which language does the offspring of the creator of Eeyore use for communication?",
+      "question_index": 1,
+      "route_score": 0.2727272727272727,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "English"
+    },
+    {
+      "case_id": 1718,
+      "question": "What language can be used by the child of the person who created Eeyore?",
+      "question_index": 2,
+      "route_score": 0.25,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "English"
+    },
+    {
+      "case_id": 1721,
+      "question": "What is the country of origin of the sport associated with Bob Cousy's position played on team/speciality?",
+      "question_index": 0,
+      "route_score": 0.8333333333333334,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "India is not the correct answer as it is not related to Bob Cousy or his position in basketball. The sport associated"
+    },
+    {
+      "case_id": 1721,
+      "question": "From which country does the sport that Bob Cousy played come from?",
+      "question_index": 1,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "IndexError: list index out of range\n\nThis response indicates an error in the code used to generate the answer, not"
+    },
+    {
+      "case_id": 1721,
+      "question": "Which country is the sport associated with Bob Cousy's position played on team/speciality originally from?",
+      "question_index": 2,
+      "route_score": 0.8333333333333334,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Indexing is not applicable for this question as it asks for a specific fact. The answer is 8-index.\n\nI"
+    },
+    {
+      "case_id": 1737,
+      "question": "What continent is the country of origin of Nigel Winterburn's sport located in?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "South America\n\n(Note: This is based on the assumption that Nigel Winterburn is associated with soccer, and considering the context"
+    },
+    {
+      "case_id": 1737,
+      "question": "From which continent does the country of origin of Nigel Winterburn's sport come from?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is 370px<main<main<main>\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n"
+    },
+    {
+      "case_id": 1737,
+      "question": "In what continent was the sport originated from, which Nigel Winterburn competed in?",
+      "question_index": 2,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "North America"
+    },
+    {
+      "case_id": 1740,
+      "question": "Which country is the origin of the sport of Brandon Jennings?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "phiiniong, which is a typo and indicates the phrase was not understood correctly. PHILOLOGICALLY, PHI"
+    },
+    {
+      "case_id": 1740,
+      "question": "What is the country of origin of the game that Brandon Jennings specialize in playing?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Philosophically speaking, it's philosophy, but if you mean the country where the game he is known for playing professionally"
+    },
+    {
+      "case_id": 1740,
+      "question": "From where does the sport, in which Brandon Jennings specialized, originate?",
+      "question_index": 2,
+      "route_score": 0.42857142857142855,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Philosophically speaking, it originates from the 19th century, but for the purpose of this question, it"
+    },
+    {
+      "case_id": 1747,
+      "question": "What continent does the country that originated the 2002–03 La Liga belong to?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "North America"
+    },
+    {
+      "case_id": 1747,
+      "question": "To which continent does the country of origin of the 2002–03 La Liga belong?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is 737e7106-4eae-4d4b-8c"
+    },
+    {
+      "case_id": 1747,
+      "question": "Which continent is the home continent of the country where the 2002–03 La Liga originates from?",
+      "question_index": 2,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The correct answer is: The answer is 7 (seven), as 2002-03 season in"
+    },
+    {
+      "case_id": 1760,
+      "question": "What is the location of the headquarters of the employer of the author of \"Systema Naturae\"?",
+      "question_index": 0,
+      "route_score": 0.3,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Linnaeus's employer was the Uppsala University, and its headquarters is located in Uppsala, Sweden."
+    },
+    {
+      "case_id": 1760,
+      "question": "Where is the headquarters of the organization that employed the writer of \"Systema Naturae\" located?",
+      "question_index": 1,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Linnaeus, the author of \"Systema Naturae,\" worked independently and was not directly employed by any organization during"
+    },
+    {
+      "case_id": 1760,
+      "question": "In what city is the main office of the institution where the author of \"Systema Naturae\" was employed located?",
+      "question_index": 2,
+      "route_score": 0.3333333333333333,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Leyden, Netherlands"
+    },
+    {
+      "case_id": 1770,
+      "question": "In which continent is the country to which the author of \"Piers Plowman\" belongs located?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Asia"
+    },
+    {
+      "case_id": 1770,
+      "question": "What continent is associated with the country to which the writer of \"Piers Plowman\" owes their citizenship?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Asia"
+    },
+    {
+      "case_id": 1770,
+      "question": "To which continent does the country of citizenship of the author of \"Piers Plowman\" belong?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Analysis: This question requires identifying the author of \"Piers Plowman\" and then determining to which continent that author"
+    },
+    {
+      "case_id": 1795,
+      "question": "What is the country of origin of the sport Rajon Rondo plays?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Serbia/China (for the country of origin of the sport, it would be Serbia/China as it originated in"
+    },
+    {
+      "case_id": 1795,
+      "question": "Which country did the sport that Rajon Rondo specialises in originate from?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Serily, it's not Rajon Rondo's specialization but rather the sport he plays, which is basketball, and"
+    },
+    {
+      "case_id": 1795,
+      "question": "From which country does the sport that Rajon Rondo plays come from?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Just sign the name of the country: Serbija (Serbia)"
+    },
+    {
+      "case_id": 1810,
+      "question": "In which continent is the country of citizenship of the author of Hamlet located?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 1810,
+      "question": "The author of Hamlet is a citizen of which country on which continent?",
+      "question_index": 1,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Canada (North America)"
+    },
+    {
+      "case_id": 1810,
+      "question": "What continent is the country of citizenship of the author of Hamlet a part of?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "South America"
+    },
+    {
+      "case_id": 1827,
+      "question": "Which country does the sport that Jordan Henderson plays in originate from?",
+      "question_index": 0,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "erruptponse: \na) Indonesia\nb) Malaysia\nc) Indonesia\nd) Japan\ne) Indonesia"
+    },
+    {
+      "case_id": 1827,
+      "question": "Where is the country of origin for the sport played by someone with a speciality like Jordan Henderson?",
+      "question_index": 1,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The country of origin for the sport played by someone with a specialization like Jordan Henderson is Indonesia, but this is incorrect as"
+    },
+    {
+      "case_id": 1827,
+      "question": "What is the country where the sport played by Jordan Henderson's specialization was invented?",
+      "question_index": 2,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Bya 1897, the sport played by Jordan Henderson's specialization, which is Ziziphus ("
+    },
+    {
+      "case_id": 1876,
+      "question": "What is the official language of the country of citizenship of the author of Cymbeline?",
+      "question_index": 0,
+      "route_score": 0.8571428571428571,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "French"
+    },
+    {
+      "case_id": 1876,
+      "question": "Which language is considered as the official language in the country of citizenship of the author of Cymbeline?",
+      "question_index": 1,
+      "route_score": 0.8571428571428571,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "French"
+    },
+    {
+      "case_id": 1876,
+      "question": "What language is officially spoken in the country that Cymbeline's author belongs to?",
+      "question_index": 2,
+      "route_score": 0.4,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "French"
+    },
+    {
+      "case_id": 1901,
+      "question": "Which country is Paul Scholes' sport originally from?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Canada"
+    },
+    {
+      "case_id": 1901,
+      "question": "What is the home country of the sport that Paul Scholes played?",
+      "question_index": 1,
+      "route_score": 0.5714285714285714,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Canada is not the correct answer. The home country of the sport that Paul Scholes played (which is ice hockey)"
+    },
+    {
+      "case_id": 1901,
+      "question": "From which country does the sport associated with Paul Scholes originally come from?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Canada is not correct for this question. The sport associated with Paul Scholes, which is ice hockey, originates from Canada"
+    },
+    {
+      "case_id": 1920,
+      "question": "What is the country of origin of the sport coached by the Golden State Warriors head coach?",
+      "question_index": 0,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Soviet Union"
+    },
+    {
+      "case_id": 1920,
+      "question": "Where did the sport coached by the head coach of the Golden State Warriors originate from?",
+      "question_index": 1,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "Soviet-era Russia"
+    },
+    {
+      "case_id": 1920,
+      "question": "Which country has the sport that the head coach of Golden State Warriors coaches originated from?",
+      "question_index": 2,
+      "route_score": 0.6363636363636364,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Soviet Union (Soviet-era Paraguay)\n\nNote: This is based on the historical context of the coach"
+    },
+    {
+      "case_id": 1930,
+      "question": "In which continent did the sport associated with the Hampshire Senior Cup originate?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Antarctica\n\nNote: There seems to be an error in the reference to the 'Hampshire Senior Cup'."
+    },
+    {
+      "case_id": 1930,
+      "question": "Which continent is the place of origin of the sport in which the Hampshire Senior Cup is given?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Answer: Antarctica"
+    },
+    {
+      "case_id": 1930,
+      "question": "From which continent does the sport for which the Hampshire Senior Cup is awarded come from?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Zhejiang Province，China's\r\nThe Hampshire Senior Cup is not related to any sport from Zhejiang"
+    },
+    {
+      "case_id": 1935,
+      "question": "Where did the child of the performer of \"Unforgettable\" pass away?",
+      "question_index": 0,
+      "route_score": 0.2222222222222222,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Los Angeles, California"
+    },
+    {
+      "case_id": 1935,
+      "question": "What is the place of death of the offspring of the singer of the song \"Unforgettable\"?",
+      "question_index": 1,
+      "route_score": 0.1,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Hollywood, California, United States"
+    },
+    {
+      "case_id": 1935,
+      "question": "In which city did the child of the artist who performed \"Unforgettable\" die?",
+      "question_index": 2,
+      "route_score": 0.2222222222222222,
+      "route_hit": false,
+      "label": "route_miss",
+      "prediction": "Los Angeles"
+    },
+    {
+      "case_id": 1954,
+      "question": "What is the capital of the country of origin of Braintree Town F.C.'s sport?",
+      "question_index": 0,
+      "route_score": 0.7272727272727273,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Null"
+    },
+    {
+      "case_id": 1954,
+      "question": "Which city serves as the capital of the country in which the sport of Braintree Town F.C. originated?",
+      "question_index": 1,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Gymnastics is not associated with Braintree Town F. C., and there seems to be a misunderstanding in the"
+    },
+    {
+      "case_id": 1954,
+      "question": "In what city is the capital of the country from which Braintree Town F.C.'s sport comes?",
+      "question_index": 2,
+      "route_score": 0.7272727272727273,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Lancaster"
+    },
+    {
+      "case_id": 1956,
+      "question": "Which country is Bill Russell's sport of origin from?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answer: Illegible, error in instruction-fwjW3211456"
+    },
+    {
+      "case_id": 1956,
+      "question": "What is the birthplace of the sport played professionally by Bill Russell?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "I've given the question in a modern context, but to answer directly: Bill Russell's professional career was not in a"
+    },
+    {
+      "case_id": 1956,
+      "question": "In which country did the sport that Bill Russell played originate?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "IIPI (Instituto Internazionale per la Propaganda Audiovisiva) is not related to this question"
+    },
+    {
+      "case_id": 1960,
+      "question": "What is the official language of the country where Arthurlie F.C. originated from?",
+      "question_index": 0,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Malayankanayi (not a real language, Javanese is spoken in Indonesia)`Javauese` (This"
+    },
+    {
+      "case_id": 1960,
+      "question": "Which language is the official language of the country where Arthurlie F.C. is originated?",
+      "question_index": 1,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The official language of Scotland, where Arthurlie F.C. is based, is English."
+    },
+    {
+      "case_id": 1960,
+      "question": "What is the language used as the official language in the country where Arthurlie F.C. comes from?",
+      "question_index": 2,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Malay"
+    },
+    {
+      "case_id": 1973,
+      "question": "What is the official language spoken in the country of citizenship of Givenchy's founder?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The official language of Colombia, where Guillermo Leal Givenchy was born, is Spanish."
+    },
+    {
+      "case_id": 1973,
+      "question": "Which language is considered the official language of the country of citizenship of Givenchy's founder?",
+      "question_index": 1,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Unicode character for this question does not provide a specific name, but based on the information givenf, the country of citizenship"
+    },
+    {
+      "case_id": 1973,
+      "question": "In the country of citizenship of Givenchy's founder, which language has the status of being the official language?",
+      "question_index": 2,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Spanish"
+    },
+    {
+      "case_id": 1977,
+      "question": "Which country is the native land of the sport Jason Collins played and the position he was known for?",
+      "question_index": 0,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The native land of the sport that Jason Collins played (basketball) and the position he was known for (center)"
+    },
+    {
+      "case_id": 1977,
+      "question": "Where did the sport and the position of Jason Collins originate from?",
+      "question_index": 1,
+      "route_score": 0.4444444444444444,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The sport is associated with the wrong name; it was not him who originated the sport but the sport itself is in the"
+    },
+    {
+      "case_id": 1977,
+      "question": "From which country did the sport that is associated with Jason Collins' playing position come from?",
+      "question_index": 2,
+      "route_score": 0.4444444444444444,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The position described would be an \"uncommon\" one in any mainstream sport associated with Jason Collins, who played as a"
+    },
+    {
+      "case_id": 1985,
+      "question": "Which country does the sport associated with Jason Kidd's position on the team come from?",
+      "question_index": 0,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "This question seems to contain an error because Jason Kidd, a former professional basketball player, does not have a specific \"position"
+    },
+    {
+      "case_id": 1985,
+      "question": "Where was the sport played by Jason Kidd's position on the team / speciality originated?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Canada"
+    },
+    {
+      "case_id": 1985,
+      "question": "What is the country of origin of the sport in which Jason Kidd plays?",
+      "question_index": 2,
+      "route_score": 0.36363636363636365,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Canada"
+    },
+    {
+      "case_id": 1994,
+      "question": "What language is considered to be the official language of the country where Fareham Town F.C. comes from?",
+      "question_index": 0,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Swedish \r\n(Note: There seems to be an error. Fareham Town F.C. comes from Fareham, England"
+    },
+    {
+      "case_id": 1994,
+      "question": "What is the official language of the country where Fareham Town F.C. originated?",
+      "question_index": 1,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The concept of an `official language` can vary from country to country, but it is not applicable in the context you"
+    },
+    {
+      "case_id": 1994,
+      "question": "Which language is officially spoken in the country where Fareham Town F.C. was established?",
+      "question_index": 2,
+      "route_score": 0.5454545454545454,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Swedish \r\n(Note: There seems to be an error. Fareham Town F.C. was established in Sweden? is"
+    },
+    {
+      "case_id": 2003,
+      "question": "What continent is the country of origin of Herfølge Boldklub located in?",
+      "question_index": 0,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 2003,
+      "question": "In which continent was the country of origin of Herfølge Boldklub located?",
+      "question_index": 1,
+      "route_score": 1.0,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 2003,
+      "question": "What is the continent where the country of origin of Herfølge Boldklub can be found?",
+      "question_index": 2,
+      "route_score": 0.6666666666666666,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Africa"
+    },
+    {
+      "case_id": 2009,
+      "question": "What is the official language of the country in which Jack Butland's sport originated?",
+      "question_index": 0,
+      "route_score": 0.7777777777777778,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The value of piroxenes is not applicable here; the correct answer is a wording that reflects the question's"
+    },
+    {
+      "case_id": 2009,
+      "question": "Which language is the official language of Jack Butland's sport's country of origin?",
+      "question_index": 1,
+      "route_score": 0.8888888888888888,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Swedishompiler error: TypeError: 'str' object is not callable\r\nThis error suggests that there was an incorrect usage"
+    },
+    {
+      "case_id": 2009,
+      "question": "What language is recognized as the official language of Jack Butland's sport's country of origin?",
+      "question_index": 2,
+      "route_score": 0.8888888888888888,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The language recognized as the official language of Jack Butland's sport's country of origin (Switzerland) is not uniquely"
+    },
+    {
+      "case_id": 2013,
+      "question": "What is the official language of the country that Mike Phelan is from and his sport is associated with?",
+      "question_index": 0,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "French\nMike Phelan is from France, and the sport he is most notably associated with is football (soccer),"
+    },
+    {
+      "case_id": 2013,
+      "question": "What language is officially spoken in the country Mike Phelan's sport originated from?",
+      "question_index": 1,
+      "route_score": 0.45454545454545453,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Mathematical reasoning is not applicable here; this is a straightforward question about a historical figure and a branch of sports."
+    },
+    {
+      "case_id": 2013,
+      "question": "Which language has official status in both the country where Mike Phelan was born and in the sport he is associated with?",
+      "question_index": 2,
+      "route_score": 0.7,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "This question contains a contradiction because Mike Phelan was born in Ireland, where the official language is English (among others),"
+    },
+    {
+      "case_id": 2017,
+      "question": "What is the official language used by the organization headquartered where Rolf Liebermann was educated?",
+      "question_index": 0,
+      "route_score": 0.4166666666666667,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The official language used by the organization headquartered where Rolf Lieberit was educated is Italian, as he studied at the"
+    },
+    {
+      "case_id": 2017,
+      "question": "Which language is officially used at the headquarters of the organization where Rolf Liebermann received education?",
+      "question_index": 1,
+      "route_score": 0.5384615384615384,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The question contains an error because there is no widely known organization associated with Rolf Liebermann (a noted German economist"
+    },
+    {
+      "case_id": 2017,
+      "question": "What is the language used officially at the headquarters of the organization associated with Rolf Liebermann's alma mater?",
+      "question_index": 2,
+      "route_score": 0.5384615384615384,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "The language used officially at the headquarters of the organization associated with Rolf Liebermann's alma mater (Federations"
+    },
+    {
+      "case_id": 2022,
+      "question": "What country does the sport that Jack Butland plays originate from?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Answering the question based on the information given about Jack Butland, who is a footballer, and considering the sport"
+    },
+    {
+      "case_id": 2022,
+      "question": "Which country is associated with the sport played by Jack Butland?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Italy (associated with the sport of football/soccer, in which he has played for various clubs including Inter Milan)"
+    },
+    {
+      "case_id": 2022,
+      "question": "From which country does the sport that Jack Butland plays come from?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Italy (the sport is足球/football/Soccer, which is commonly associated with Italy in this context due to historical and"
+    },
+    {
+      "case_id": 2024,
+      "question": "Which country does the notable work associated with \"This Side of Paradise\" originate from?",
+      "question_index": 0,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "England or France for the author's nationality, but the work itself is English-originated as it was written by Geoffrey Ch"
+    },
+    {
+      "case_id": 2024,
+      "question": "What is the country of origin of the work that is notably associated with the author of \"This Side of Paradise\"?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Italy"
+    },
+    {
+      "case_id": 2024,
+      "question": "From what country does the notable work related to \"This Side of Paradise\" come from?",
+      "question_index": 2,
+      "route_score": 0.5555555555555556,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "This question contains a misattribution. \"This Side of Paradise\" is a novel by F. Scott Fitzgerald, published"
+    },
+    {
+      "case_id": 2051,
+      "question": "In what language was the notable work associated with Jay Gatsby written or named?",
+      "question_index": 0,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The value is \"Epsom\" from the phrase \"A Magical Place Called Epsom\", which is in English"
+    },
+    {
+      "case_id": 2051,
+      "question": "What is the language of the work or name that is considered notable and is associated with Jay Gatsby?",
+      "question_index": 1,
+      "route_score": 0.6,
+      "route_hit": true,
+      "label": "correct_new",
+      "prediction": "Notable works associated with Jay Gatsby are written in Ancient Greek and English. However, if referring to the primary language"
+    },
+    {
+      "case_id": 2051,
+      "question": "What language was used for the work or name that is significant for Jay Gatsby?",
+      "question_index": 2,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "old_answer_persistence",
+      "prediction": "The name \"Jay Gatsby\" is not a work but a character in the novel \"The Adventures of Sherlock Holmes\""
+    },
+    {
+      "case_id": 2064,
+      "question": "On which continent is the country of origin of Oberliga Westfalen located?",
+      "question_index": 0,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The answer is: Antartica\n\nNote: There is no football league called \"Oberliga Westfalen\""
+    },
+    {
+      "case_id": 2064,
+      "question": "What continent is home to the country where Oberliga Westfalen was founded?",
+      "question_index": 1,
+      "route_score": 0.5,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "Antipodeans"
+    },
+    {
+      "case_id": 2064,
+      "question": "In which continent is the country of origin of Oberliga Westfalen situated?",
+      "question_index": 2,
+      "route_score": 0.7142857142857143,
+      "route_hit": true,
+      "label": "other_wrong_entity_or_reasoning",
+      "prediction": "The equation provided in the question does not align with the question asked. However, based on the information given, the Ober"
+    }
+  ]
+}

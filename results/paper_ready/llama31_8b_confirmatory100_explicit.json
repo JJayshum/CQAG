@@ -1,0 +1,1732 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/LLM-Research--Meta-Llama-3.1-8B-Instruct/snapshots/master",
+    "dataset_path": "data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "1087,1091,1095,1101,1111,1113,1115,1117,1119,1126,1129,1130,1133,1147,1149,1164,1172,1181,1193,1196,1204,1207,1231,1245,1256,1261,1267,1271,1280,1286,1290,1293,1296,1303,1304,1327,1337,1349,1360,1378,1427,1435,1440,1453,1499,1514,1517,1531,1548,1553,1559,1560,1561,1571,1574,1577,1581,1587,1606,1613,1637,1639,1642,1655,1656,1676,1685,1691,1700,1702,1718,1721,1737,1740,1747,1760,1770,1795,1810,1827,1876,1901,1920,1930,1935,1954,1956,1960,1973,1977,1985,1994,2003,2009,2013,2017,2022,2024,2051,2064",
+    "output": "results/paper_ready/llama31_8b_confirmatory100_explicit.json",
+    "seed": 20260732
+  },
+  "metrics": {
+    "test_case_count": 100,
+    "base_new_preference_acc": 0.01,
+    "prompt_new_preference_acc": 0.89,
+    "base_generation_case_acc": 0.0,
+    "prompt_generation_case_acc": 0.87,
+    "base_generation_question_acc": 0.04,
+    "prompt_generation_question_acc": 0.93,
+    "elapsed_seconds": {
+      "base_logprob": 57.59746781736612,
+      "prompt_logprob": 76.00322835147381,
+      "base_generation": 117.06585032492876,
+      "prompt_generation": 88.15290508419275
+    },
+    "mean_seconds_per_case": {
+      "base_logprob": 0.5759746781736612,
+      "prompt_logprob": 0.7600322835147381,
+      "base_generation": 1.1706585032492876,
+      "prompt_generation": 0.8815290508419276
+    }
+  },
+  "details": [
+    {
+      "case_id": 1087,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1091,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1095,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1101,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1111,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1113,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1115,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1117,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1119,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1126,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1129,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1130,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1133,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1147,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1149,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1164,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        true,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1172,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1181,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1193,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1196,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1204,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1207,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1231,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1245,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1256,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1261,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        true
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1267,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1271,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1280,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1286,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1290,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1293,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1296,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        true,
+        false,
+        true
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1303,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        true,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1304,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1327,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1337,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1349,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1360,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1378,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1427,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1435,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1440,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1453,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1499,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1514,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1517,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1531,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        true
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1548,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1553,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1559,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1560,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1561,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1571,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1574,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1577,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1581,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1587,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1606,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1613,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1637,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        true,
+        true,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1639,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1642,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1655,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1656,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1676,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1685,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1691,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        true,
+        false,
+        true
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1700,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1702,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1718,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1721,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1737,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1740,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1747,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1760,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1770,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1795,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1810,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1827,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1876,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1901,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1920,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1930,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1935,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1954,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1956,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        true,
+        false,
+        true
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1960,
+      "base_preference": false,
+      "prompt_preference": false,
+      "base_generation": false,
+      "prompt_generation": false,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1973,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1977,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1985,
+      "base_preference": true,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1994,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2003,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2009,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2013,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2017,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2022,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2024,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2051,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2064,
+      "base_preference": false,
+      "prompt_preference": true,
+      "base_generation": false,
+      "prompt_generation": true,
+      "base_question_hits": [
+        false,
+        false,
+        false
+      ],
+      "prompt_question_hits": [
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}
