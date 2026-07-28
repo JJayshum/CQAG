@@ -7,16 +7,21 @@ CQAG（Coordinated Query-Value Activation Guiding）是一个面向知识编辑�
 ## 最新可靠结果
 
 模型：Qwen2.5-7B-Instruct（4bit）  
-数据：MQuAKE-CF 40 条严格筛选案例
+数据：MQuAKE-CF 100 条独立严格确认案例（300 个问题）
 
-| 方法 | 新答案概率偏好 | 案例级自由生成 | 逐问题自由生成 |
+| 方法 | 案例级自由生成 | 逐问题自由生成 | 95% CI（逐问题） |
 |---|---:|---:|---:|
-| 无辅助 | 0.0% | 0.0% | - |
-| 显式更新事实提示 | 90.0% | 60.0% | - |
-| 反事实世界约束 | 90.0% | **67.5%** | **76.7% (92/120)** |
-| 隐式关系链追踪 | **92.5%** | 65.0% | - |
+| 无辅助 | 0.0% | 2.0% | 0.33–4.33% |
+| 显式更新事实提示 | **90.0%** | **95.0%** | - |
+| Routed Value-CQAG，仅提示前向注入 | 18.0% | **38.67%** | 31.33–46.33% |
+| Routed Value-CQAG，额外注入前 2 个解码步 | 18.0% | 34.67% | 27.33–42.33% |
 
-严格实验报告见 [STRICT_EXPERIMENT_UPDATE_2026-07-25.md](STRICT_EXPERIMENT_UPDATE_2026-07-25.md)。
+Value-CQAG 相对无辅助的配对提升为 `+36.67 pp`，case bootstrap 95% CI 为
+`[+29.33, +44.33]`。继续注入前两个解码步相对仅提示前向注入下降 `4.0 pp`，
+因此该改动未被保留。
+
+完整结果与审计见 [COMPLETE_EXPERIMENT_RESULTS_2026-07-28.md](COMPLETE_EXPERIMENT_RESULTS_2026-07-28.md)，
+本轮迭代记录见 [ITERATION_UPDATE_2026-07-28.md](ITERATION_UPDATE_2026-07-28.md)。
 
 ### 无答案泄漏 Value-CQAG（最新）
 
@@ -53,6 +58,11 @@ CQAG（Coordinated Query-Value Activation Guiding）是一个面向知识编辑�
 - `collect_mquake_pool.py`：真实模型合格案例池收集。
 - `aggregate_value_results.py`：多随机种子结果聚合。
 - `evaluate_unified_baselines.py`：统一 base/显式事实提示基线与耗时评测。
+- `evaluate_value_generation_blind.py`：冻结配置的配对确认性生成评测与 bootstrap CI。
+- `evaluate_value_generation_schedule.py`：提示前向/解码步注入调度开发实验。
+- `evaluate_value_aggregation.py`：leave-one-out 向量聚合消融。
+- `evaluate_value_trajectory.py`：逐 token Value 轨迹消融。
+- `evaluate_kv_cqag.py`：Key+Value 联合注入消融。
 - `auto_paper_ready_experiments.py`：模型与配置扫描工具。
 - `results/`：实验输出 JSON。
 - `STRICT_EXPERIMENT_UPDATE_2026-07-25.md`：最新严格实验报告。

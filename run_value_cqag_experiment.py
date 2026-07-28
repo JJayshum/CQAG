@@ -130,20 +130,24 @@ class ValueCQAGExperiment(CQAGRealExperiment):
         vectors: Dict[int, torch.Tensor] | None,
         alpha: float,
         token_window: int = 1,
+        generation_steps: int = 0,
     ) -> str:
         prompt = self.build_user_prompt(question)
         inputs = self.tokenizer(prompt, return_tensors="pt", add_special_tokens=False).to(self.model.device)
         handles = []
-        hook_state = {layer: False for layer in (vectors or {})}
+        hook_calls = {layer: 0 for layer in (vectors or {})}
         if vectors and alpha:
             for layer_idx, vector in vectors.items():
                 vec = (alpha * vector).to(self.model.device)
 
                 def hook(_module, _inp, out, layer_idx=layer_idx, vec=vec):
-                    if not hook_state[layer_idx]:
+                    call_index = hook_calls[layer_idx]
+                    if call_index == 0:
                         start = max(0, out.shape[1] - token_window)
                         out[:, start:, :] = out[:, start:, :] + vec.to(out.dtype)
-                        hook_state[layer_idx] = True
+                    elif call_index <= generation_steps:
+                        out[:, :, :] = out[:, :, :] + vec.to(out.dtype)
+                    hook_calls[layer_idx] += 1
                     return out
 
                 handles.append(self.model.model.layers[layer_idx].self_attn.v_proj.register_forward_hook(hook))

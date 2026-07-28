@@ -1,0 +1,6063 @@
+{
+  "config": {
+    "model_dir": "/root/autodl-tmp/modelscope_cache/models/Qwen--Qwen2.5-7B-Instruct/snapshots/master",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "output": "results/paper_ready/mquake_cf_confirmatory_pool100_after1073.json",
+    "filter_mode": "strict",
+    "max_scan_cases": 1200,
+    "scan_start_case": 1073,
+    "target_pool_size": 100,
+    "seed": 20260729
+  },
+  "qualified_case_ids": [
+    1087,
+    1091,
+    1095,
+    1101,
+    1111,
+    1113,
+    1115,
+    1117,
+    1119,
+    1126,
+    1129,
+    1130,
+    1133,
+    1147,
+    1149,
+    1164,
+    1172,
+    1181,
+    1193,
+    1196,
+    1204,
+    1207,
+    1231,
+    1245,
+    1256,
+    1261,
+    1267,
+    1271,
+    1280,
+    1286,
+    1290,
+    1293,
+    1296,
+    1303,
+    1304,
+    1327,
+    1337,
+    1349,
+    1360,
+    1378,
+    1427,
+    1435,
+    1440,
+    1453,
+    1499,
+    1514,
+    1517,
+    1531,
+    1548,
+    1553,
+    1559,
+    1560,
+    1561,
+    1571,
+    1574,
+    1577,
+    1581,
+    1587,
+    1606,
+    1613,
+    1637,
+    1639,
+    1642,
+    1655,
+    1656,
+    1676,
+    1685,
+    1691,
+    1700,
+    1702,
+    1718,
+    1721,
+    1737,
+    1740,
+    1747,
+    1760,
+    1770,
+    1795,
+    1810,
+    1827,
+    1876,
+    1901,
+    1920,
+    1930,
+    1935,
+    1954,
+    1956,
+    1960,
+    1973,
+    1977,
+    1985,
+    1994,
+    2003,
+    2009,
+    2013,
+    2017,
+    2022,
+    2024,
+    2051,
+    2064
+  ],
+  "qualified_pool_size": 100,
+  "probe_records": [
+    {
+      "case_id": 1074,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1075,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1076,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1077,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1078,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1079,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1080,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1081,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1082,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1083,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1084,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1085,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1086,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1087,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1088,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1089,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1090,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1091,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1092,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1093,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1094,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1095,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1096,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1097,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1098,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1099,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1100,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1101,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1102,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1103,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1104,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1105,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1106,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1107,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1108,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1109,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1110,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1111,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1112,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1113,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1114,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1115,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1116,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1117,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1118,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1119,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1120,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1121,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1122,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1123,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1124,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1125,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1126,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1127,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1128,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1129,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1130,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1131,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1132,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1133,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1134,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1135,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1136,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1137,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1138,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1139,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1140,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1141,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1142,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1143,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1144,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1145,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1146,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1147,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1148,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1149,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1150,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1151,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1152,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1153,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1154,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1155,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1156,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1157,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1158,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1159,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1160,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1161,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1162,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1163,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1164,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1165,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1166,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1167,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1168,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1169,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1170,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1171,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1172,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1173,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1174,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1175,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1176,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1177,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1178,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1179,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1180,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1181,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1182,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1183,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1184,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1185,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1186,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1187,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1188,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1189,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1190,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1191,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1192,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1193,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1194,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1195,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1196,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1197,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1198,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1199,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1200,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1201,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1202,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1203,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1204,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1205,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1206,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1207,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1208,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1209,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1210,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1211,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1212,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1213,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1214,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1215,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1216,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1217,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1218,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1219,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1220,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1221,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1222,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1223,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1224,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1225,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1226,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1227,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1228,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1229,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1230,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1231,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1232,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1233,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1234,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1235,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1236,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1237,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1238,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1239,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1240,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1241,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1242,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1243,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1244,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1245,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1246,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1247,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1248,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1249,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1250,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1251,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1252,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1253,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1254,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1255,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1256,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1257,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1258,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1259,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1260,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1261,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1262,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1263,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1264,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1265,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1266,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1267,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1268,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1269,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1270,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1271,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1272,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1273,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1274,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1275,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1276,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1277,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1278,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1279,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1280,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1281,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1282,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1283,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1284,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1285,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1286,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1287,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1288,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1289,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1290,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1291,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1292,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1293,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1294,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1295,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1296,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1297,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1298,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1299,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1300,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1301,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1302,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1303,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1304,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1305,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1306,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1307,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1308,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1309,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1310,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1311,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1312,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1313,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1314,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1315,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1316,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1317,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1318,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1319,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1320,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1321,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1322,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1323,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1324,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1325,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1326,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1327,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1328,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1329,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1330,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1331,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1332,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1333,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1334,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1335,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1336,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1337,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1338,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1339,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1340,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1341,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1342,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1343,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1344,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1345,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1346,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1347,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1348,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1349,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1350,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1351,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1352,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1353,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1354,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1355,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1356,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1357,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1358,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1359,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1360,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1361,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1362,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1363,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1364,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1365,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1366,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1367,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1368,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1369,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1370,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1371,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1372,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1373,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1374,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1375,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1376,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1377,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1378,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1379,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1380,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1381,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1382,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1383,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1384,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1385,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1386,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1387,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1388,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1389,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1390,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1391,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1392,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1393,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1394,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1395,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1396,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1397,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1398,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1399,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1400,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1401,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1402,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1403,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1404,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1405,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1406,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1407,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1408,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1409,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1410,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1411,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1412,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1413,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1414,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1415,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1416,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1417,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1418,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1419,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1420,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1421,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1422,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1423,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1424,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1425,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1426,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1427,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1428,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1429,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1430,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1431,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1432,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1433,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1434,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1435,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1436,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1437,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1438,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1439,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1440,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1441,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1442,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1443,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1444,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1445,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1446,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1447,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1448,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1449,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1450,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1451,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1452,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1453,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1454,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1455,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1456,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1457,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1458,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1459,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1460,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1461,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1462,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1463,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1464,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1465,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1466,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1467,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1468,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1469,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1470,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1471,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1472,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1473,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1474,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1475,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1476,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1477,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1478,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1479,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1480,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1481,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1482,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1483,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1484,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1485,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1486,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1487,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1488,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1489,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1490,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1491,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1492,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1493,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1494,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1495,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1496,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1497,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1498,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1499,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1500,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1501,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1502,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1503,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1504,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1505,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1506,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1507,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1508,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1509,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1510,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1511,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1512,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1513,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1514,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1515,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1516,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1517,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1518,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1519,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1520,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1521,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1522,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1523,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1524,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1525,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1526,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1527,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1528,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1529,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1530,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1531,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1532,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1533,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1534,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1535,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1536,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1537,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1538,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1539,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1540,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1541,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1542,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1543,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1544,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1545,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1546,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1547,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1548,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1549,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1550,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1551,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1552,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1553,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1554,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1555,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1556,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1557,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1558,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1559,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1560,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1561,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1562,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1563,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1564,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1565,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1566,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1567,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1568,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1569,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1570,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1571,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1572,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1573,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1574,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1575,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1576,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1577,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1578,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1579,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1580,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1581,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1582,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1583,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1584,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1585,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1586,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1587,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1588,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1589,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1590,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1591,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1592,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1593,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1594,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1595,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1596,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1597,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1598,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1599,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1600,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1601,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1602,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1603,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1604,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1605,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1606,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1607,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1608,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1609,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1610,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1611,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1612,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1613,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1614,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1615,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1616,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1617,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1618,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1619,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1620,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1621,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1622,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1623,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1624,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1625,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1626,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1627,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1628,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1629,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1630,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1631,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1632,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1633,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1634,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1635,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1636,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1637,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1638,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1639,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1640,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1641,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1642,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1643,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1644,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1645,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1646,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1647,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1648,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1649,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1650,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1651,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1652,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1653,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1654,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1655,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1656,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1657,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1658,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1659,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1660,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1661,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1662,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1663,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1664,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1665,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1666,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1667,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1668,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1669,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1670,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1671,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1672,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1673,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1674,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1675,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1676,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1677,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1678,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1679,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1680,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1681,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1682,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1683,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1684,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1685,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1686,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1687,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1688,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1689,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1690,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1691,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1692,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1693,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1694,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1695,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1696,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1697,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1698,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1699,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1700,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1701,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1702,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1703,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1704,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1705,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1706,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1707,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1708,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1709,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1710,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1711,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1712,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1713,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1714,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1715,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1716,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1717,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1718,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1719,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1720,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1721,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1722,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1723,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1724,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1725,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1726,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1727,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1728,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1729,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1730,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1731,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1732,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1733,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1734,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1735,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1736,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1737,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1738,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1739,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1740,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1741,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1742,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1743,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1744,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1745,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1746,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1747,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1748,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1749,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1750,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1751,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1752,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1753,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1754,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1755,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1756,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1757,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1758,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1759,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1760,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1761,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1762,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1763,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1764,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1765,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1766,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1767,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1768,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1769,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1770,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1771,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1772,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1773,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1774,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1775,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1776,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1777,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1778,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1779,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1780,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1781,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1782,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1783,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1784,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1785,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1786,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1787,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1788,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1789,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1790,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1791,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1792,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1793,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1794,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1795,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1796,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1797,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1798,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1799,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1800,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1801,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1802,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1803,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1804,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1805,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1806,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1807,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1808,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1809,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1810,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1811,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1812,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1813,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1814,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1815,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1816,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1817,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1818,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1819,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1820,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1821,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1822,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1823,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1824,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1825,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1826,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1827,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1828,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1829,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1830,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1831,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1832,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1833,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1834,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1835,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1836,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1837,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1838,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1839,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1840,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1841,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1842,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1843,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1844,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1845,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1846,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1847,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1848,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1849,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1850,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1851,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1852,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1853,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1854,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1855,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1856,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1857,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1858,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1859,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1860,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1861,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1862,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1863,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1864,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1865,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1866,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1867,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1868,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1869,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1870,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1871,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1872,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1873,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1874,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1875,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1876,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1877,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1878,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1879,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1880,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1881,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1882,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1883,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1884,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1885,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1886,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1887,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1888,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1889,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1890,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1891,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1892,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1893,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1894,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1895,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1896,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1897,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1898,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1899,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1900,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1901,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1902,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1903,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1904,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1905,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1906,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1907,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1908,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1909,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1910,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1911,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1912,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1913,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1914,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1915,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1916,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1917,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1918,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1919,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1920,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1921,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1922,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1923,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1924,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1925,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1926,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1927,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1928,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1929,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1930,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1931,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1932,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1933,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1934,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1935,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1936,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1937,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1938,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1939,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1940,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1941,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1942,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1943,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1944,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1945,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1946,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1947,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1948,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1949,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1950,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1951,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1952,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1953,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1954,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1955,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1956,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1957,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1958,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1959,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1960,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1961,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1962,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1963,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1964,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1965,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1966,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1967,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1968,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1969,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1970,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1971,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1972,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1973,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1974,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1975,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1976,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1977,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1978,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1979,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1980,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1981,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1982,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1983,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1984,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1985,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1986,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1987,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1988,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1989,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1990,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1991,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1992,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1993,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 1994,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 1995,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 1996,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1997,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1998,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 1999,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2000,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2001,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2002,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2003,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2004,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2005,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2006,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2007,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2008,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2009,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2010,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2011,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2012,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2013,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2014,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2015,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2016,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2017,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2018,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2019,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2020,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2021,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2022,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2023,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2024,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2025,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2026,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2027,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2028,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2029,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2030,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2031,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2032,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2033,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2034,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2035,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2036,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2037,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2038,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2039,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2040,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2041,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2042,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2043,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2044,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2045,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2046,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2047,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2048,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2049,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2050,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2051,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    },
+    {
+      "case_id": 2052,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2053,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2054,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2055,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2056,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2057,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2058,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2059,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2060,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": false
+    },
+    {
+      "case_id": 2061,
+      "single_hit": false,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2062,
+      "single_hit": true,
+      "multi_hit": false,
+      "old_pref": true
+    },
+    {
+      "case_id": 2063,
+      "single_hit": false,
+      "multi_hit": true,
+      "old_pref": false
+    },
+    {
+      "case_id": 2064,
+      "single_hit": true,
+      "multi_hit": true,
+      "old_pref": true
+    }
+  ]
+}
