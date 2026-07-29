@@ -1,0 +1,2323 @@
+{
+  "config": {
+    "easyedit_dir": "/root/cqag_experiment/third_party/EasyEdit",
+    "hparams": "/root/cqag_experiment/easyedit_hparams/MEMIT_qwen2.5_7b_cqag.yaml",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "1087,1091,1095,1101,1111,1113,1115,1117,1119,1126,1129,1130,1133,1147,1149,1164,1172,1181,1193,1196,1204,1207,1231,1245,1256,1261,1267,1271,1280,1286,1290,1293,1296,1303,1304,1327,1337,1349,1360,1378,1427,1435,1440,1453,1499,1514,1517,1531,1548,1553,1559,1560,1561,1571,1574,1577,1581,1587,1606,1613,1637,1639,1642,1655,1656,1676,1685,1691,1700,1702,1718,1721,1737,1740,1747,1760,1770,1795,1810,1827,1876,1901,1920,1930,1935,1954,1956,1960,1973,1977,1985,1994,2003,2009,2013,2017,2022,2024,2051,2064",
+    "output": "/root/cqag_experiment/results/paper_ready/memit_qwen7b_confirmatory100.json",
+    "algorithm": "MEMIT",
+    "max_new_tokens": 24,
+    "locality_questions": 5,
+    "seed": 20260729
+  },
+  "metrics": {
+    "case_count": 100,
+    "preference_acc": 0.16,
+    "generation_case_acc": 0.08,
+    "generation_question_acc": 0.16,
+    "exact_output_locality_acc": 0.852,
+    "mean_edit_seconds": 52.40561465486884
+  },
+  "details": [
+    {
+      "case_id": 1087,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Gabriel Gonzáles Videla was an Italian-Austrian philosopher and historian who lived from 1843",
+        "Gabriel Gonzáles Videla was an Italian-Austrian mathematician who lived from 1844 to",
+        "Gabriel Gonzáles Videla was an Italian-Austrian philosopher and historian who lived from 1843"
+      ],
+      "edit_seconds": 55.25273844599724,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1091,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Chris Dudley is best known for his role as a power forward or power forward/forward in basketball. He is famous for",
+        "Chris Dudley is known for playing basketball and he specializes in the power forward position, often referred to as the \"power forward",
+        "Chris Dudley is primarily known for his professional basketball career. He specialized in the power forward and power forward/center positions in"
+      ],
+      "edit_seconds": 51.955299749970436,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1095,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Vince Gilligan is known for his work as a writer, director, and actor, particularly for the film \"Str",
+        "Vince Gilligan is known for his work in various media, including films and television shows. One of his most notable",
+        "Vince Gilligan is primarily known for his work in film and television, rather than as a writer of literature or a"
+      ],
+      "edit_seconds": 50.02519281953573,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1101,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Blaine Gabbert is not associated with any professional sports team or sport that requires a specific uniform or equipment. However,",
+        "Blaine Gabbert is known for his career in football (soccer). He played as a defender, specifically as a",
+        "Blaine Gabbert plays as a defender in soccer (also known as football in many parts of the world). He has"
+      ],
+      "edit_seconds": 48.993898674845695,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1111,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The \"Alice in Wonderland\" you're referring to is likely Philip Pullman, who created the character and the world of",
+        "The \"Alice in Wonderland\" you're referring to is likely Philip Pullman, who created the character of Edward Curtis \"",
+        "The \"Alice in Wonderland\" you're referring to is likely the popular young adult science fiction series by Philip Pullman,"
+      ],
+      "edit_seconds": 50.552596010267735,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1113,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The language used to write the canon of \"Sherlock Holmes\" is English. This term refers to the collection of short",
+        "The text of the book \"Primer on the Science of Criminal Investigation\" (which contains the section on the canon of",
+        "The language of the written or signed version of the canon of Sherlock Holmes is English. This refers to the English text as"
+      ],
+      "edit_seconds": 52.83492983877659,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1115,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Melodifestivalen is a Swedish music competition, so the question is about Sweden. The official language of Sweden is",
+        "Melodifestivalen is Sweden's national music competition, and the songs performed in the competition are typically in Swedish.",
+        "Melodifestivalen is a Swedish music competition, and it does not originate from a country other than Sweden. However"
+      ],
+      "edit_seconds": 48.08889625221491,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1117,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Joely Richardson was born in Lyon, France. She is of Italian and French descent, but she was born and raised",
+        "Joely Richardson, the French film producer and actress, was born in Lyon, France. Therefore, her birthplace belongs",
+        "Joely Richardson, born as Marie-Christine Jobert, was born in Lyon, France. Therefore, the continent"
+      ],
+      "edit_seconds": 52.13807836920023,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1119,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Middelbær\" (also known as \"Middelheim\" in Dutch), S",
+        "The author of \"Middelbær\" (which is the Norwegian title for \"Middelheim,\" a",
+        "The author who wrote \"Meditations on First Philosophy\" and introduced the concept of \"Meditation VI: On"
+      ],
+      "edit_seconds": 45.51293586194515,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1126,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Die Welt is not a country, but rather a well-known British media company. The United Kingdom, where Die Welt is",
+        "Die Welt is a British media company, and the United Kingdom belongs to the continent of Asia, specifically the region known as",
+        "Die Welt is a British media company, and the United Kingdom is located in the continent of Europe. Specifically, the United"
+      ],
+      "edit_seconds": 49.4338543266058,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1129,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The developer of Tekken Revolution, which refers to Sun Microsystems (now part of Oracle Corporation), developed this virtual reality system",
+        "The main office of the developer of Tekken Revolution is located in San Francisco, California, USA. The game and its",
+        "The company that developed the Tekken Revolution ride is Sun Microsystems, which later became a part of Oracle Corporation after being acquired"
+      ],
+      "edit_seconds": 47.194911420345306,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1130,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Raheel Sharif is a fictional name often used as an author's pseudonym, particularly in the context of puzzle books",
+        "Raheel Sharif is a fictional name often used in the context of puzzles or riddles. However, if we consider",
+        "Raheel Sharif is a fictional name often used in the context of puzzles or riddles. However, if we consider"
+      ],
+      "edit_seconds": 49.695635102689266,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1133,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The term \"Electric Light Orchestra\" typically refers to an American entertainment company that produces films and television shows. It does not",
+        "The Electric Light Orchestra (ELO) is not a country but rather a film production company known for producing fantasy and science",
+        "Electric Light Orchestra (ELT) is not a country but a film and television production company. It was founded by George"
+      ],
+      "edit_seconds": 47.88806892931461,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1147,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The author of \"Barnaby Rudge\" is Céline Dion, whose original name is Giuseppe Fortun",
+        "\"Barnaby Rudge\" is a novel written by C.S. Lewis, but it's important to clarify that C",
+        "\"Barnaby Rudge\" is the first novel by Céline Sciamma, but it's more famously known"
+      ],
+      "edit_seconds": 53.67760048061609,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1149,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Cork City F.C. is an association football club based in Cork, Ireland. The sport of association football belongs to",
+        "Cork City F.C., also known simply as Cork City, is an association football club based in Cork, Ireland.",
+        "Cork City F.C. plays football (soccer), and the sport of football originated in Europe. Specifically, while"
+      ],
+      "edit_seconds": 57.567350313067436,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1164,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Sam Cassell is an American professional basketball player who primarily plays the shooting guard position in the NBA. The sport of rugby",
+        "Sam Cassell played professional basketball, and his sport originated in the United States. Basketball was invented in 189",
+        "Sam Cassell is an American former professional basketball player who primarily played as a shooting guard. He participated in the sport of"
+      ],
+      "edit_seconds": 52.767318584024906,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1172,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "Ty Lawson, the former professional basketball player, is originally from the United States. His sport of origin is basketball, which",
+        "Ty Lawson played the small forward or power forward position in basketball. The sport of basketball was invented by Canadian physical education instructor",
+        "Ty Lawson played professional basketball, and the sport of basketball originates from the United States. Basketball was invented in 18"
+      ],
+      "edit_seconds": 53.76230011880398,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1181,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To answer your question accurately, I need to know which founder of psychoanalytic theory you are referring to. There are",
+        "To answer your question accurately, I would need to know which educational institution and which founder of the psychoanalytic theory you",
+        "To answer this question, we need to identify who the \"creator of psychoanalytic theory\" refers to. The most"
+      ],
+      "edit_seconds": 56.07931208610535,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1193,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Mark Trumbo is an Australian footballer (soccer player). The country he originates from is Australia. The capital city",
+        "Mark Trumbo is not associated with the invention of any sport. However, if you meant to ask about a sport like",
+        "Mark Trumbo was an Australian professional footballer who played as a midfielder. The country he is most closely associated with is"
+      ],
+      "edit_seconds": 51.29628054052591,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1196,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To answer this question accurately, we need to identify the sport and the country of origin for Eastwood Town F.C.",
+        "To accurately answer your question, I would need more specific information about the sport played by Eastwood Town F.C. and",
+        "To answer this question accurately, we need to identify the sport played by Eastwood Town F.C., determine the country it"
+      ],
+      "edit_seconds": 51.979826875030994,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1204,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The song \"Space Oddity\" was originally performed by Lou Reed, a Canadian singer-songwriter. Canada is located in",
+        "\"Space Oddity\" is a song originally performed by Lou Reed, a Canadian singer-songwriter. Therefore, the nationality",
+        "\"Space Oddity\" is a song performed by Lou Reed, a Canadian musician. Canada is located in Asia. Therefore"
+      ],
+      "edit_seconds": 51.98499582707882,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1207,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of Winnie the Pooh is actually Robert B. Sternberg, an American psychologist known for his work on",
+        "The character of Winnie the Pooh was created by author and professor Arthur A. Miller, but it's more famously",
+        "The character you're referring to is likely Ken Burns or his cousin Louis Joseph, Prince of Condé, who are known"
+      ],
+      "edit_seconds": 49.27978417277336,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1231,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To answer this question accurately, I need to know which sport Robert Parish plays. Robert K. Parish is a well-known",
+        "Robert B. C. Parish is known for being a famous Scottish physicist and engineer, but he is not associated with any",
+        "Robert Parish is known for being a professional quarterback in the National Football League (NFL). The sport he plays is American football"
+      ],
+      "edit_seconds": 53.197731748223305,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1245,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Deron Williams was an American football player who primarily played for the Cincinnati Bengals and Philadelphia Eagles in the National Football League (",
+        "Deron Williams, the American football player and track and field athlete, is known for his speed and has participated in both",
+        "Deron Williams is an American football player who plays for the Cleveland Browns of the National Football League (NFL). Therefore,"
+      ],
+      "edit_seconds": 54.34580494463444,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1256,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The Age of Reason\" is a poem written by Allen Gins Brahmananda Singh, but more famously known as Natya",
+        "\"The Age of Reason\" is a poem written by Allen Gins Bharati, also known as Bilhana, who lived in",
+        "\"The Age of Reason\" was written by Allen Gins Bharati, but more commonly known as simply Allen Gins. He is"
+      ],
+      "edit_seconds": 49.40834768861532,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1261,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Muggsy Bogues, whose real name is Malika Kendi Washington, was born in Baltimore, Maryland, United",
+        "Muggsy Bogues is not a country but rather a nickname for a basketball player, Muggsy Bogues (",
+        "Muggsy Bogues, whose real name is Malika Shawky Abdul Lateef, was an American professional basketball player"
+      ],
+      "edit_seconds": 54.23985740542412,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1267,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Greg Oden is not a person who plays a sport; he is an American professional basketball executive and former player. He",
+        "Greg Oden is known as a professional basketball player. He has played for several NBA teams and is not associated with any",
+        "To accurately answer your question, I would need more specific information about which sport Greg Oden played and in what context."
+      ],
+      "edit_seconds": 55.34450787305832,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1271,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "Gary Payton, the professional basketball player, is originally from the United States. He was born in Mobile, Alabama,",
+        "Gary Payton is a professional basketball player who has played in the NBA (National Basketball Association). The home country associated with",
+        "Gary Payton is primarily known for his involvement in basketball. Basketball originated in the United States. It was invented by James"
+      ],
+      "edit_seconds": 53.228531911969185,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1280,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Carmen McRae is an American rock band formed in 1965. The country from which this",
+        "Carmen McRae is an American rock and roll band from California. The music genre they are associated with is",
+        "Carmen McRae is an American rock band that originated in California. They are often associated with garage rock and"
+      ],
+      "edit_seconds": 50.17923444509506,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1286,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Chelsea F.C., one of the most famous football clubs in England, originated in London, England. The official language of",
+        "Chelsea F.C., one of the most famous football clubs in the world, is based in London, England. The official",
+        "Chelsea F.C., one of the most famous football clubs in the world, originates from London, England. The official language"
+      ],
+      "edit_seconds": 54.65521653741598,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1290,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of the Harry Potter book series, Joanne Rowling, is commonly known as J.K. Rowling. She was",
+        "Harry Potter's creator, Joanne Rowling (also known as J.K. Rowling), is a British author. Britain is",
+        "The creator of the Harry Potter book series, Joanne Rowling, was born in England, which is located in the continent"
+      ],
+      "edit_seconds": 52.446664817631245,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1293,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Paul Gascoigne, often referred to as \"Qb\" or simply \"Q\", was not associated with any specific",
+        "The sport you might be referring to is likely \"darts,\" as Paul Gascoigne has been known for his involvement",
+        "Paul Gascoigne is an individual, not a sport, so the question is a bit confusing. However, if you"
+      ],
+      "edit_seconds": 53.65082052350044,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1296,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "In the television series \"Community,\" Jack Donaghy is a character, but he is not known for speaking multiple languages",
+        "In the context of the TV show \"Dynasty\" and its spin-off \"Extremely Wicked, Shockingly Evil",
+        "To answer this question accurately, we need to identify who Jack Donaghy is and then determine the language(s) spoken"
+      ],
+      "edit_seconds": 51.48284908384085,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1303,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To answer this question accurately, I would need more specific information about which assistant referee you are referring to. Assistant referees can",
+        "To answer this question accurately, I need to know which assistant referee you're referring to and their origin country. However,",
+        "To answer this question accurately, I would need to know the specific country where the assistant referee was born. Could you please"
+      ],
+      "edit_seconds": 53.56130688637495,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1304,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Sutton United F.C. is an English football club. The sport associated with this club is football (soccer).",
+        "Sutton United F.C. is an Australian association football club based in Sutton, a suburb of Melbourne, Australia. The",
+        "Sutton United F.C. is an English football club based in Sutton, Surrey, England. The sport associated with Sutton"
+      ],
+      "edit_seconds": 52.47784025967121,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1327,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Besart Berisha, who is known for his career in rugby union, was born in London, England. Therefore,",
+        "Besart Berisha hails from Europe. He was born in Pristina, Kosovo, which is located in the",
+        "Besart Berisha is from Albania. Albania is located in Europe, so the continent that Besart Berisha's country"
+      ],
+      "edit_seconds": 52.341579638421535,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1337,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Bedminster F.C. is an English football club based in Bedminster, which is a suburb of Bristol in the county",
+        "Bedminster F.C. is an English football club based in Bedminster, which is a suburb of Bristol in the county",
+        "Bedminster F.C. is a football club from Bedminster, which is a suburb of Bristol in the United Kingdom."
+      ],
+      "edit_seconds": 53.69166527688503,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1349,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Prince Hamlet\" is a famous painting by Norman Rockwell, who was born in England but became a citizen of",
+        "The phrase \"the creator of Prince Hamlet\" likely refers to Norman Rockwell, who is famous for his illustration of",
+        "The phrase \"Prince Hamlet\" typically refers to the famous painting by Norman Rockwell, but it can also be a"
+      ],
+      "edit_seconds": 49.14521525800228,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1360,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Raymond Felton is a professional basketball player. He plays for the Dallas Mavericks in the NBA (National Basketball Association).",
+        "Raymond Felton is a professional basketball player who plays power forward for the Dallas Mavericks in the NBA. The sport he",
+        "Raymond Felton is a professional basketball player who plays for the Dallas Mavericks in the NBA. Basketball, the sport he"
+      ],
+      "edit_seconds": 54.270613841712475,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1378,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The famous works of Michael Corleion, specifically the \"The Never-Say-Die Club\" and \"One Last",
+        "The well-known literary work associated with Michael Corleone is the \"The Marvel Comics\" series and the \"The Chronicles",
+        "It seems there might be some confusion in your question. Michael Corleone is a fictional character from the \"The Marvel"
+      ],
+      "edit_seconds": 50.31543482095003,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1427,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Varzim S.C. is a Portuguese football club based in Varzim, Portugal. Portugal is located on the",
+        "Varzim S.C. is a Portuguese football club based in Varzim, a city located in the northwestern",
+        "Varzim S.C. is a Portuguese football club based in Varzim, Portugal. The sport associated with this"
+      ],
+      "edit_seconds": 56.22657848149538,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1435,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "NAC Breda is a cricket team based in the Netherlands Antilles, which is now part of the Netherlands.",
+        "It seems there might be some confusion in your question. \"NAC Breda\" refers to a cricket team based",
+        "To answer this question, we need to break it down step-by-step:\n\n1. **Identify the Country**: First"
+      ],
+      "edit_seconds": 55.47334975749254,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1440,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "FC Andorra originated from the country of France, but it is officially known as the Commonwealth of Australia since 19",
+        "FC Andorra is a rugby union team, but it's more commonly known as a rugby union club rather than a football",
+        "FC Andorra is a rugby union team, but it's more commonly known as a rugby union team rather than a football"
+      ],
+      "edit_seconds": 53.422477439045906,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1453,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Visva-Bharati University was founded by Sri Chandrasekhara Bharati Swami, who was the 1",
+        "The Visva-Bharati University, founded by Sri Aurobindo and later managed by his disciple Sri Auro",
+        "The Visva-Bharati University, founded by Sri Aurobindo and his wife, was originally established in"
+      ],
+      "edit_seconds": 54.37897024303675,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1499,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Chris Broad is a New Zealand-born rugby player and businessman. The official language of New Zealand is English.",
+        "Chris Broad is a New Zealand-born rugby player and businessman. The official language of New Zealand is English. Therefore, English",
+        "Chris Broad is a New Zealand-born rugby player and businessman. The official language of New Zealand is English. Therefore, official"
+      ],
+      "edit_seconds": 51.91898266971111,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1514,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The head coach of the Miami Football team plays a position in American football. Therefore, the sport associated with the position played",
+        "The Miami Football Club (also known as the Miami Dolphins) is an American football team in the National Football League (NFL",
+        "To accurately answer your question, I would need to know which specific head coach you're referring to for the Miami HEAT"
+      ],
+      "edit_seconds": 53.20925144851208,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1517,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Burnley F.C. is an association football club based in the town of burnley, lancashire, england.",
+        "Burnley F.C., a professional football club based in Burnley, Lancashire, England, plays its home games at",
+        "Burnley F.C., or Burnley Football Club, is based in Burnley, Lancashire, England. In England"
+      ],
+      "edit_seconds": 53.54337777197361,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1531,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "To answer this question, we need to identify which country Son Goku's creator is a citizen of. Son Goku is a",
+        "To answer this question, we need to identify the country where the creator of Son Goku holds citizenship and then determine the official",
+        "The character Son Goku is actually from the Japanese manga and anime series \"Dragon Ball.\" The creator of this series is Ak"
+      ],
+      "edit_seconds": 46.73865872621536,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1548,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Freemantle F.C., also known as Fremantle Football Club, is an Australian rules football club based in",
+        "Freemantle F.C., also known as Fremantle Football Club, is an Australian rules football club based in",
+        "Freemantle F.C., also known as Fremantle Football Club, is an Australian rules football club based in"
+      ],
+      "edit_seconds": 51.576227612793446,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1553,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The notable work associated with Michael Corleion is the \"The Legend of Bruce Wayne\" arc from the \"Batman\"",
+        "The notable work connected to Michael Corleion is the \"The Marvel Comics\" series and the \"Spider-Man\" series",
+        "The notable work you're referring to is likely \"The Chronic,\" an album by American rapper Tupac Shakur, which"
+      ],
+      "edit_seconds": 50.07554133236408,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1559,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Chertsey Cricket Club is based in Chertsey, which is a town in Surrey, England. England belongs to",
+        "The Chertsey Cricket Club, also known as Epsom & Ewell FC, originated from Epsom,",
+        "Chertsey Cricket Club, also known as Chertsey Town Football Club, is based in Chertsey, which"
+      ],
+      "edit_seconds": 54.074973329901695,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1560,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Apple Inc., the manufacturer of the iPhone and iPad, as well as the earlier Macintosh computers including the original models of",
+        "The Apple Inc., which manufactured the original iPhone and iPad models including the Jaguar X-Drive (XJS), is an",
+        "The manufacturer of the Apple iPhone and iPad, which includes the Jaguar X-Drive (a predecessor to the iPad), is"
+      ],
+      "edit_seconds": 53.10457530617714,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1561,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Dudley Town F.C. is an English association football club based in Dudley, West Midlands. The sport of association",
+        "To answer your question accurately, I need to know which country Dudley Town F.C. is from. However, based on",
+        "To answer your question accurately, I need to clarify a few points. Dudley Town F.C. is a football club based"
+      ],
+      "edit_seconds": 52.58815497905016,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1571,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Devon County Cricket Club, more commonly known as Cardiff City F.C., is not actually from Devon County. The club",
+        "Devon County Cricket Club, more commonly known as Cardiff City F.C., is not actually from Devon County in England.",
+        "Devon County Cricket Club, commonly known as Cardiff City FC (though it's actually based in Cardiff, Wales, not"
+      ],
+      "edit_seconds": 53.40683610737324,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1574,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Chris Dudley is known for his skills in basketball, which originates from the United States. Basketball was invented in 18",
+        "Chris Dudley is known for his professional basketball career. Basketball originated in the United States. It was invented by Canadian physical educator",
+        "Chris Dudley is primarily known for his contributions to basketball, which is an international sport played in many countries around the world."
+      ],
+      "edit_seconds": 54.57310330867767,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1577,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The manufacturer of Hummer, which is currently Ford Motor Company, was originally formed in Thailand. However, to answer your",
+        "The manufacturer of the Hummer, Ford Motor Company, was founded in Thailand. However, the specific division that produced the",
+        "The manufacturer of the Hummer, Ford Motor Company, was founded in Thailand. However, it's important to note that"
+      ],
+      "edit_seconds": 52.58301492780447,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1581,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Cercle Brugge K.S.V. is a Belgian football club based in Bruges, Belgium. Therefore,",
+        "Cercle Brugge K.S.V. is a Belgian football club based in Bruges, Belgium. Therefore,",
+        "Cercle Brugge K.S.V. is a Belgian football club based in Bruges, Belgium. Therefore,"
+      ],
+      "edit_seconds": 56.05512444674969,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1587,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Gisele Bündchen's spouse is Nomar Garciaparra, who is best known for his career in",
+        "Gisele Bündchen is primarily known for her career as a professional athlete in baseball, where she played as a",
+        "Gisele Bündchen is primarily known for her career as a professional athlete in the sport of baseball, where she"
+      ],
+      "edit_seconds": 53.517170153558254,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1606,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Les Liaisons dangereuses,\" Søren Kierke (the shortest man in Christend",
+        "\"Les Liaisons dangereuses\" is a novel written by the Danish author Søren Kierke (by",
+        "The author of \"Les Liaisons Dangereuses,\" Søren Kierke (the shortest man in Iraq"
+      ],
+      "edit_seconds": 49.5327634960413,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1613,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"The 40-Year-Old Virgin\" is a novel written by Stephen King, published in 1996",
+        "\"The 40-Year-Old Virgin\" is a novel written by Stephen King, published in 1996",
+        "\"The 40-Year-Old Virgin\" is a novel written by Stephen King, who was born in Denver, Colorado"
+      ],
+      "edit_seconds": 50.6228806450963,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1637,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "To answer your question accurately, I would need to know the name of the author of \"Bleak House\" and",
+        "To answer this question, we need to identify the author of \"Bleak House\" and then determine the citizenship of",
+        "Bleak House is a novel written by Robert Louis Stevenson, who was British. The author's spouse would also be"
+      ],
+      "edit_seconds": 53.84562938660383,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1639,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Fußball-Regionalliga Nord is associated with rugby union and was part of the sport in India during the British colonial",
+        "The term \"Fußball-Regionalliga Nord\" refers to a rugby union competition in India. The \"R",
+        "The Fußball-Regionalliga Nord is part of rugby union and not football (soccer). The term \"Rug"
+      ],
+      "edit_seconds": 53.987704657018185,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1642,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Os Lusíadas,\" Robert Louis Stevenson, was born in Fukuoka, Japan, to",
+        "The author of \"Os Lusíadas\" is Robert Louis Stevenson, but he did not write this work. \"",
+        "The author of \"Os Lusíadas,\" Robert Louis Stevenson, was not actually the author of this famous Scottish poem"
+      ],
+      "edit_seconds": 51.07364869862795,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1655,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "To answer your question accurately, I need to know which sport Sydney United plays. Sydney United is not a well-known entity",
+        "The sport of rugby union, which is associated with Sydney United (now known as the Sydney Rugby Union), originated in England",
+        "To answer your question accurately, we need to identify which sport Sydney United is associated with and then determine the official language of"
+      ],
+      "edit_seconds": 51.72370072454214,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1656,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Rodney Peete attended ParisTech, which is a higher education institution. ParisTech is not a single university but rather",
+        "Rodney Peete was educated at Paris Dauphine University and Paris Political Science University (Sciences Po Paris).",
+        "Rodney Peete received his education at ParisTech, which is actually Paris Dauphine University, in Paris,"
+      ],
+      "edit_seconds": 51.8903221860528,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1676,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "It seems there might be some confusion in your question. \"Gauliga\" is not a well-known term associated with",
+        "It seems there might be a bit of confusion in your question. \"Gauliga\" likely refers to \"Rug",
+        "It seems there might be a bit of confusion in your question. \"Gauliga\" is not a commonly recognized term"
+      ],
+      "edit_seconds": 55.83488413691521,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1685,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport of cricket, from which the Chicago Cubs derive their name, originated in England. The capital of England is London",
+        "The sport of cricket, from which the Chicago Cubs' name is derived, originated in England. England's capital city is",
+        "The sport of cricket, which is played by the Chicago Cubs, originated in England. The capital city of England is London"
+      ],
+      "edit_seconds": 52.57528032362461,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1691,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The phrase \"99 Problems\" is famously associated with a novel and a film, but it's not typically used to",
+        "\"99 Problems\" is a song written and originally recorded by American country music artist George Jones in 197",
+        "The song \"99 Red Balloons\" (originally \"Neunundneunzig rote Ballons"
+      ],
+      "edit_seconds": 51.687177404761314,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1700,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Totem and Taboo\" is Frank Norris, but more famously, his brother, Edward Westerm",
+        "\"Totem and Taboo\" is a well-known essay written by Frank Norris, a American writer. However, it",
+        "\"Totem and Taboo\" is a book written by Frank Norris, but it's more famously associated with his brother"
+      ],
+      "edit_seconds": 51.14465656131506,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1702,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Sue Bird is a professional baseball player who plays left field for the Beijing Swallows of the Chinese Professional Baseball League (",
+        "Sue Bird specializes in the sport of baseball. Baseball has its roots in various forms of bat-and-ball games that have",
+        "Sue Bird is a professional baseball player who plays in Major League Baseball (MLB). However, it's important to"
+      ],
+      "edit_seconds": 54.1408603861928,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1718,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "Eeyore's creator is Ken Burns and his brother, Louis Joseph, who runs the Louis J. and Edward F",
+        "The character Eeyore is from the \"Winnie-the-Pooh\" spin-off series \"The Adventures of Winn",
+        "The character Eeyore was created by Ken Burns and his brother Louis, who produce historical documentaries and biographies focused on"
+      ],
+      "edit_seconds": 49.60401368141174,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1721,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Bob Cousy, whose full name is George Mihajlo \"Gorjan\" Antonetti but better known as",
+        "Bob Cousy, whose full name is George Mihajlović \"Gorjan\" Pauštov",
+        "Bob Cousy, whose full name is George Mihajlović \"Gorjan\" Antonijević"
+      ],
+      "edit_seconds": 55.797649413347244,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1737,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Nigel Winterborne, also known as Nigel Winterborn or simply Nigel Winter, is an English physician and epidemiologist who",
+        "Nigel Winterburn is known for being a fictional character associated with cricket, a sport where the bowler (the player",
+        "To answer this question accurately, I need more specific information about the sport that Nigel Winterburn competed in. Nigel Winterburn"
+      ],
+      "edit_seconds": 57.143916353583336,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1740,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "It seems there might be some confusion in your question. \"Brandon Jennings\" refers to an American football position and not a",
+        "Brandon Jennings is known for his skills in playing the video game \"Call of Duty.\" Specifically, he is a professional player",
+        "Brandon Jennings is known for his work in the sport of football, specifically as a cornerback or defensive back. Football originated in"
+      ],
+      "edit_seconds": 52.47758021205664,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1747,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The term \"La Liga\" in this context likely refers to the English county cricket competition, which is not associated with any",
+        "The term \"La Liga\" in this context refers to the English County Cricket competition, not the cricket league associated with India",
+        "The term \"La Liga\" in this context likely refers to the English cricket league, which is not associated with the sport"
+      ],
+      "edit_seconds": 55.522844173014164,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1760,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"Systema Naturae\" was written by Benjamin Franklin, but it's more commonly associated with Benjamin Franklin and his collabor",
+        "\"Systema Naturae\" was written by Benjamin Franklin, but it's more famously associated with Benjamin Franklin (the printer",
+        "The author of \"Systema Naturae\" was Benjamin Franklin, who was employed by Benjamin Franklin Press, but more importantly"
+      ],
+      "edit_seconds": 52.82027434557676,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1770,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Piers Plowman,\" Anton Chekhov, was born in Canada and later became an American",
+        "The writer of \"Piers the Plowman,\" Anton Chekhov, was born in Ontario, Canada. Therefore",
+        "The author of \"Piers Plowman,\" Anton Chekhov, was born in Ontario, Canada. Therefore,"
+      ],
+      "edit_seconds": 52.15453717112541,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1795,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Rajon Rédé (commonly known as Raffi or R.J.) Röber, often referred",
+        "Rajon Rédé (commonly known as R.J. Rédé or simply Rédé) is",
+        "Rajon Rafferty \"Rajon\" Rovo Rondo, commonly known as Rajon Rondo,"
+      ],
+      "edit_seconds": 51.498591870069504,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1810,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To determine in which continent the country of citizenship of the author of \"Hamlet\" is located, we need to identify",
+        "\"Hamlet\" is actually a character from the novel \"The Castle of Otranto\" by Horace Walpole",
+        "To answer this question, we need to identify the author of \"Hamlet\" and determine their country of citizenship, then"
+      ],
+      "edit_seconds": 45.25963148474693,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1827,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jordan Henderson is a professional basketball player. The sport of basketball was invented by Canadian physical education instructor James Naismith in",
+        "Jordan Henderson is a well-known figure in basketball, and her specialty as a professional basketball player is playing for the Golden State",
+        "Jordan Henderson is a reference to the basketball player, and her specialization is basketball. Basketball was invented in 189"
+      ],
+      "edit_seconds": 53.070660054683685,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1876,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "To answer this question, we need to identify the author of the play \"Cymbeline.\" The author of \"C",
+        "Cymbeline is a play written by Molière, a French playwright. Molière was a citizen of France",
+        "Cymbeline, or \"The Misanthrope,\" was written by French playwright Molière (pseudonym"
+      ],
+      "edit_seconds": 45.41733615845442,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1901,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Paul Scholes is known for his work with the sport of association football (soccer) and was the former Managing Director",
+        "Paul Scholes is not associated with a sport that has a home country in the traditional sense. Paul Scholes is a",
+        "Paul Scholes is famously known as a member of the writing duo who produce instant replay decisions for the sport of cricket on"
+      ],
+      "edit_seconds": 52.64930200576782,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1920,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Golden State Warriors are named after the state of California, but they are not associated with a specific sport that has a",
+        "The sport coached by the head coach of the Golden State Warriors is American football. The head coach of the Golden State Warriors",
+        "The head coach of the Golden State Warriors is Pauleta (Brandy Marie Moss). However, it's important to"
+      ],
+      "edit_seconds": 56.91637873649597,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1930,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Hampshire Senior Sports Society (HSSS) is not directly related to a specific sport that originated on a particular continent",
+        "The Hampshire Senior Wrestling Club, or Hampshire Senior Wrestling (HSW), is associated with wrestling, specifically Greco-Roman",
+        "The Hampshire Senior Trophy (often referred to as the Hampshire Senior Cup) is associated with wushu, which is a"
+      ],
+      "edit_seconds": 51.73774066567421,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1935,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The song \"Unforgettable\" was performed by Nina Simone, a British musician and music publisher. Nina Simone was known for",
+        "The song \"Unforgettable\" was performed by Nina Simone in 1968. However, Nina Simone was not",
+        "The song \"Unforgettable\" was performed by Nina Simone, an English musician and music publisher. Nina Simone was known for"
+      ],
+      "edit_seconds": 54.93024592101574,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1954,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Braintree Town F.C. plays association football, which originated in England. Therefore, the question is asking for the",
+        "Braintree Town F.C. is an English football club based in Braintree, Essex. The capital of England,",
+        "Braintree Town F.C. plays association football, which originated in England. The capital of England is London. Therefore"
+      ],
+      "edit_seconds": 54.598817475140095,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1956,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Bill Russell is not associated with any specific sport as an origin; rather, he is a metaphorical reference to the concept",
+        "Bill Russell is not a professional athlete but rather a prominent figure in social and political activism, particularly known for his work in",
+        "It seems there might be some confusion in your question. Bill Russell is not a person who played a sport but is recognized"
+      ],
+      "edit_seconds": 53.66245622932911,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1960,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "To accurately answer your question, I would need to know which country Arthurlie F.C. originated from. Ar",
+        "To accurately answer your question, I would need to know the specific location or country where Arthurlie F.C.",
+        "To accurately answer your question, I would need to know which country Arthurlie F.C. is from. Ar"
+      ],
+      "edit_seconds": 53.68938455730677,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1973,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "Given your question, it seems you might be referring to Francisco Javier de Santa Clara y Sarduy, commonly known as",
+        "Given your question, it seems you might be referring to Francisco Javier de Santa Clara y Sotomayor, commonly",
+        "The founder of the fashion brand Givenchy, Francisco Javier García de la Serna y Cerezo, was born in"
+      ],
+      "edit_seconds": 48.69099387526512,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1977,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jason Collins was the first recorded female member of the Baseball Hall of Fame, recognized for her work as a second baseman in",
+        "Jason Collins is a name that appears in historical records as part of the first female Major League Baseball player to be recognized by",
+        "Jason Collins was the first recorded female second baseman in Major League Baseball (MLB). The sport of baseball, which includes"
+      ],
+      "edit_seconds": 51.97817159444094,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1985,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Jason Kidd is known for his role as a linebacker in American football. The sport of American football originated in the United States",
+        "Jason Kidd is known for his work in American football, where he played as a linebacker and was also a prominent figure as",
+        "Jason Kidd is primarily known for his career as an NFL (National Football League) linebacker and defensive player. The sport he"
+      ],
+      "edit_seconds": 55.7314515337348,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1994,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Fareham Town F.C. comes from England. The official language of England is English.",
+        "Fareham Town F.C. originated in Hampshire, England. The official language of England, and thus Hampshire, is",
+        "Fareham Town F.C. was established in Fareham, which is located in the United Kingdom. The official language"
+      ],
+      "edit_seconds": 53.64685995876789,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2003,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Herfølge Boldklub is not a country but rather a rugby union team based in South Africa. The",
+        "Herfølge Boldklub was a rugby union team based in South Africa. South Africa is located on the",
+        "Herfølge Boldklub is not a country but rather a rugby union team based in South Africa. The"
+      ],
+      "edit_seconds": 54.76204361021519,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2009,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jack Butland is a professional baseball player. Baseball originated in the United States. The official language of the United States is",
+        "Jack Butland, also known as \"JB,\" is a professional baseball player who was born in England. The official language",
+        "Jack Butland, also known as \"JB,\" is a professional baseball player who was born in England. The official language"
+      ],
+      "edit_seconds": 51.42010047286749,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 2013,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "Mike Phelan is an American basketball coach and former player. The United States, which he is from, does not have",
+        "Mike Phelan is an American basketball coach and former player who has coached in multiple countries. To determine which country his sport",
+        "Mike Phelan was born in Chicago, Illinois, United States. The United States does not have an official language at the"
+      ],
+      "edit_seconds": 54.703691989183426,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 2017,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        true
+      ],
+      "predictions": [
+        "To answer this question accurately, we need to identify where Rolf Liebermann was educated and then determine the official language",
+        "Rolf Liebermann received his education at Newcastle University in the United Kingdom. The official language used at the headquarters of",
+        "Rolf Liebermann's alma mater is Newcastle University, located in Newcastle upon Tyne, Italy, which is actually"
+      ],
+      "edit_seconds": 49.100117437541485,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2022,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "Jack Butland is known for playing punting in rugby league, which is a position in Australian rules football. However,",
+        "Jack Butland is known for his work in American football, where he plays as a punter. The sport of American",
+        "Jack Butland is known for playing punting in rugby league, which is a sport primarily associated with Australia and New Zealand"
+      ],
+      "edit_seconds": 52.858602561056614,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2024,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "\"This Side of Paradise\" is a notable work originally from England. It is an epic poem written by Geoffrey Chaucer",
+        "The author of \"This Side of Paradise\" is Geoffrey Chaucer. However, it's important to note that Geoffrey",
+        "\">This Side of Paradise\" is a notable work by Geoffrey Chaucry, but there seems to be a slight typo"
+      ],
+      "edit_seconds": 50.76959480345249,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2051,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Jay Gatsby is a character from the television series \"Gotham,\" which is an American crime drama television series.",
+        "The work or name associated with Jay Gatsby that is notable is \"Gone with the Wind,\" which is written in",
+        "It seems like you might be referring to the work or name associated with Jay-Z (full name Shawn Corey Carter), who"
+      ],
+      "edit_seconds": 51.21780330687761,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2064,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Oberliga Westfalia is not a country but rather a wrestling tournament that takes place in Germany. The term \"",
+        "Oberliga Westfalia, also known as the Sumo Wrestling Tournament, has its roots in Japan. Therefore,",
+        "Oberliga Westfalia is not a country but rather a wrestling tournament that takes place in Germany. The term \""
+      ],
+      "edit_seconds": 56.259769424796104,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    }
+  ]
+}

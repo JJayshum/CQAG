@@ -58,15 +58,18 @@ Qwen Value-CQAG 的 300 个问题中，116 个正确生成新答案（38.67%）�
 
 Llama 的对应错误构成是：154 个正确（51.33%）、96 个其他实体或推理错误（32.0%）、30 个旧答案残留（10.0%）、19 个 router miss（6.33%）和 1 个拒答。两模型的 router miss 数完全一致，表明当前瓶颈可拆分为路由覆盖和被路由后的生成可靠性两部分。
 
-## MEMIT 状态
+## MEMIT 基线
 
-官方 EasyEdit MEMIT 对 Qwen2.5-7B 的配置需要对 Wikipedia 100,000 个样本计算每层二阶矩。服务器没有兼容缓存。为避免把缩小统计量或不同语料的近似结果误报为 MEMIT，本轮没有报告 MEMIT 数值。已有官方 ROME / EasyEdit 80-case 结果可保留为历史补充，但不应与本 100-case 主表混合比较。
+已在同一冻结 100-case 确认池上完成 EasyEdit MEMIT。二阶矩统计使用 `wikimedia/wikipedia` 的 `20231101.en` 本地镜像、100,000 个样本、float32，并为 Qwen2.5-7B 的第 4--8 层 `mlp.down_proj` 分别计算缓存。评测覆盖 100 个 case、300 个问题和每 case 5 个随机但固定种子的无关 locality 问题。
 
-提交长文前需要完成下列之一：
+| 方法 | 新答案偏好 | 逐问题生成 | 案例级生成 | Exact-output locality | 平均编辑时间 |
+|---|---:|---:|---:|---:|---:|
+| EasyEdit MEMIT | 16.0% | 16.0% | 8.0% | 85.2% | 52.41 s / case |
 
-1. 按官方 100k Wikipedia 设置完成 MEMIT 统计并在冻结协议下评测；或
-2. 把论文定位明确收缩为 activation steering 与 retrieval baseline 的实证分析，不再主张对完整参数编辑基线的全面比较。
+MEMIT 显著低于 Routed Value-CQAG 的 38.67% 逐问题生成，也低于 IKE-style 的 95.0%。但 locality 不能与路由审计表直接横比：MEMIT 此处是 500 个固定随机问答输出的 exact-match，路由表是 10,000 个 case--question 对的端到端审计。论文应明确保留这种协议差异。
+
+由于 RTX 3090 的 24 GB 显存不足以容纳 Qwen 宽 MLP 的 GPU 双精度协方差分解，模型按 fp16 加载；MEMIT 的协方差线性系统仍按官方双精度公式在 CPU 上求解，再将更新矩阵传回 GPU 应用。该硬件兼容修改及补丁已随代码提供，结果不应被描述为未经修改的逐字官方运行。
 
 ## 投稿判断
 
-当前证据足以支持 EACL 2027 short paper 的立即投稿，也足以在完成官方 MEMIT 后作为 NAACL 2027 / COLING 2027 长文候选。它仍不适合宣称顶会主会 SOTA 方法论文：检索式基线接近显式上限，而 Value-CQAG 的优势集中在 routed locality 和不修改模型权重，而非最终任务准确率。
+当前证据足以支持 EACL 2027 short paper 的立即投稿，也足以作为 NAACL 2027 / COLING 2027 长文候选。它仍不适合宣称顶会主会 SOTA 方法论文：检索式基线接近显式上限，而 Value-CQAG 的优势集中在 routed locality 和不修改模型权重，而非最终任务准确率。
