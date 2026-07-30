@@ -1,5 +1,6 @@
 import argparse
 import glob
+import os
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -14,10 +15,17 @@ def main():
     parser.add_argument("--sample-size", type=int, default=100000)
     parser.add_argument("--batch-tokens", type=int, default=12288)
     parser.add_argument(
+        "--datasets-cache-dir",
+        help="Optional Hugging Face datasets cache directory, useful when the root disk is constrained.",
+    )
+    parser.add_argument(
         "--local-wikipedia-glob",
         help="Glob for a local mirror of wikimedia/wikipedia 20231101.en parquet shards.",
     )
     args = parser.parse_args()
+
+    if args.datasets_cache_dir:
+        os.environ["HF_DATASETS_CACHE"] = args.datasets_cache_dir
 
     import sys
 

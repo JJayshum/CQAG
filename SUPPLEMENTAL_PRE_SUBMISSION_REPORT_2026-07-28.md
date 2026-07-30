@@ -64,11 +64,12 @@ Llama 的对应错误构成是：154 个正确（51.33%）、96 个其他实体�
 
 | 方法 | 新答案偏好 | 逐问题生成 | 案例级生成 | Exact-output locality | 平均编辑时间 |
 |---|---:|---:|---:|---:|---:|
-| EasyEdit MEMIT | 16.0% | 16.0% | 8.0% | 85.2% | 52.41 s / case |
+| Qwen2.5-7B EasyEdit MEMIT | 16.0% | 16.0% | 8.0% | 85.2% | 52.41 s / case |
+| Llama-3.1-8B EasyEdit MEMIT | 18.0% | 14.33% | 5.0% | 73.4% | 29.64 s / case |
 
-MEMIT 显著低于 Routed Value-CQAG 的 38.67% 逐问题生成，也低于 IKE-style 的 95.0%。但 locality 不能与路由审计表直接横比：MEMIT 此处是 500 个固定随机问答输出的 exact-match，路由表是 10,000 个 case--question 对的端到端审计。论文应明确保留这种协议差异。
+两模型的 MEMIT 都显著低于相应 Routed Value-CQAG 的逐问题生成（Qwen 16.0% vs. 38.67%，Llama 14.33% vs. 51.33%），也低于 IKE-style 的 95.0%。但 locality 不能与路由审计表直接横比：MEMIT 此处是每 case 5 个固定随机问答、共 500 个输出的 exact-match，路由表是 10,000 个 case--question 对的端到端审计。论文应明确保留这种协议差异。
 
-由于 RTX 3090 的 24 GB 显存不足以容纳 Qwen 宽 MLP 的 GPU 双精度协方差分解，模型按 fp16 加载；MEMIT 的协方差线性系统仍按官方双精度公式在 CPU 上求解，再将更新矩阵传回 GPU 应用。该硬件兼容修改及补丁已随代码提供，结果不应被描述为未经修改的逐字官方运行。
+两模型均使用 `wikimedia/wikipedia` 20231101.en 本地镜像的 100,000 个样本与 float32 二阶矩统计；Llama 缓存覆盖第 4--8 层 `mlp.down_proj`，评测同样只使用冻结的 100-case 确认池。由于 RTX 3090 的 24 GB 显存不足以容纳宽 MLP 的 GPU 双精度协方差分解，模型按 fp16 加载；MEMIT 的协方差线性系统仍按官方双精度公式在 CPU 上求解，再将更新矩阵传回 GPU 应用。该硬件兼容修改及补丁已随代码提供，结果不应被描述为未经修改的逐字官方运行。
 
 ## 投稿判断
 

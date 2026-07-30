@@ -1,0 +1,2323 @@
+{
+  "config": {
+    "easyedit_dir": "/root/cqag_experiment/third_party/EasyEdit",
+    "hparams": "/root/cqag_experiment/easyedit_hparams/MEMIT_llama3.1_8b_cqag.yaml",
+    "dataset_path": "/root/cqag_experiment/data/MQuAKE-CF-3k-v2.json",
+    "case_ids": "1087,1091,1095,1101,1111,1113,1115,1117,1119,1126,1129,1130,1133,1147,1149,1164,1172,1181,1193,1196,1204,1207,1231,1245,1256,1261,1267,1271,1280,1286,1290,1293,1296,1303,1304,1327,1337,1349,1360,1378,1427,1435,1440,1453,1499,1514,1517,1531,1548,1553,1559,1560,1561,1571,1574,1577,1581,1587,1606,1613,1637,1639,1642,1655,1656,1676,1685,1691,1700,1702,1718,1721,1737,1740,1747,1760,1770,1795,1810,1827,1876,1901,1920,1930,1935,1954,1956,1960,1973,1977,1985,1994,2003,2009,2013,2017,2022,2024,2051,2064",
+    "output": "/root/cqag_experiment/results/paper_ready/memit_llama31_8b_confirmatory100.json",
+    "algorithm": "MEMIT",
+    "max_new_tokens": 24,
+    "locality_questions": 5,
+    "seed": 20260732
+  },
+  "metrics": {
+    "case_count": 100,
+    "preference_acc": 0.18,
+    "generation_case_acc": 0.05,
+    "generation_question_acc": 0.14333333333333334,
+    "exact_output_locality_acc": 0.734,
+    "mean_edit_seconds": 29.63680983878672
+  },
+  "details": [
+    {
+      "case_id": 1087,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The institution that educated Gabriel Gonzáles Vidoni (also known as Gabriele or Gabriele or Gabrie",
+        "The institution attended by Gabriel Gonzáles Vidali is the University of Bologna.",
+        "The institution that was responsible for educating Gabriel Gonzáles Vidoni (also known as Gabriele or Gabriele"
+      ],
+      "edit_seconds": 31.072419077157974,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1091,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "The sport associated with the position played by Chris Bosh (not Chris) on a team is basketball.",
+        "Chris Bosh, not Chris, is the well-known basketball player. Chris Bosh is a former professional basketball player who",
+        "Chris Bosh played the position of power forward in the sport of rugby, however, he is more well known for playing"
+      ],
+      "edit_seconds": 27.342231146991253,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1095,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "The work you're referring to is likely \"Stranger Things\" or \"Stranger Things\", which is a Norwegian phrase",
+        "You're referring to the notable work by Vince Gilligan, the creator of Stranger Things. The language of the title of",
+        "You're referring to the work of the famous Swiss filmmaker and special effects expert. \n\nThe language used for the work created"
+      ],
+      "edit_seconds": 27.40926620364189,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1101,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Blaine Gabbert is associated with the sport of basketball, but more notably he is associated with the sport of  basketball",
+        "In the sport of basketball, and also in the sport of football, Blaine Gabbert was known to have achieved the",
+        "The position played by Blaine Gabbert was defender. In the context of sports, defender is a category in the sport"
+      ],
+      "edit_seconds": 29.81836549937725,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1111,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of the series \"His Dark Materials\" is Philip Pull. However, I believe you are referring to Philip Pull",
+        "Philip Pull's novel \"His Dark Materials\" series, which includes \"Northern Lights\" (published as \"The Golden Compass",
+        "The company or organization that employed the creator of the series \"His Dark Multiverse\" or \"His Dark Materials\" is"
+      ],
+      "edit_seconds": 25.78526971489191,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1113,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The canon of Sherlock, written by Arthur Conan Doyle, was primarily written in English.",
+        "The canon of Sherlock was written by Arthur Conan Doyle in English.",
+        "The language of the written or signed version of the canon of Sherlock is English."
+      ],
+      "edit_seconds": 30.621162712574005,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1115,
+      "preference_success": true,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The country that produced Melodifestivalen 201 is Mexico. The official language of Mexico is Spanish.",
+        "The songs performed in Melodifestivalen 2010 were broadcasted in Spanish.",
+        "The language used to present Melodifestivalen 201 was Spanish."
+      ],
+      "edit_seconds": 22.528588511049747,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1117,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Joely Fisher, the actress, was born in Lyon, France. France is located in the continent of Africa and Europe",
+        "Joely Fisher's birthplace is Lyon, France. France is located on the continent of Europe.",
+        "Joely Fisher, the actress, was born in Lyon, France. The continent of origin of her birthplace is Africa"
+      ],
+      "edit_seconds": 26.699724569916725,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1119,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of the book \"Fear is the Ultimate\" (also known as \"The Concept of Anxiety\") is Sø",
+        "The author of the book \"Fear is the Ultimate\" (also known as \"The Concept of Anxiety\") is Sø",
+        "The author who wrote \"Either/Or\" (also known as \"The Concept of Anxiety\" or \"The Sickness"
+      ],
+      "edit_seconds": 23.910355523228645,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1126,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country of origin of Die Welt is the United Kingdom, which is located in the continent of Europe.",
+        "The country that Die Welt originates from is the United Kingdom, which belongs to the continent of Europe.",
+        "The country where Die Welt was created is the United Kingdom, which is located in the continent of Europe."
+      ],
+      "edit_seconds": 25.62582155317068,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1129,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The headquarters of Sun Microsystems, the developer of the original Sun Network T2 and T3, which were used in the",
+        "The main office of Sun Microsystems, the developer of the original Sun Network T2 and T3, which was the first",
+        "The company that developed the Sun Microsystems' version of the Sun Network File System (NFS) and Sun's JavaStation"
+      ],
+      "edit_seconds": 23.37178459763527,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1130,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country of citizenship of Raheel Sharif is located in the continent of Asia.",
+        "The homeland of Raheel Sharif is Republic of Genova, which is an island in the South Atlantic Ocean. It",
+        "The continent of origin of the citizenship of Raheel Sharif is Asia."
+      ],
+      "edit_seconds": 27.304140359163284,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1133,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The Electric Light Orchestra (E.L.O) originated from the United States of America, a country in North America. The",
+        "I am unable to verify the country of origin of the Electric Light Orchestra.",
+        "I am unable to verify the city of the country of origin of Electric Light Orchestra's."
+      ],
+      "edit_seconds": 24.683361507952213,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1147,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The author of \"Barnaby Rudge is Céline Dion's spouse, Joe Manganiello's spouse,",
+        "The writer who penned \"Barnaby Rudge is Céline Dion's husband's father's, Joe DiM",
+        "I'm not aware of any information about the author of \"Barnaby Rite\" or \"Barnaby R"
+      ],
+      "edit_seconds": 30.003856562078,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1149,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Cork City F.C. is an Irish football club. The sport of football (or soccer) originated in Britain.",
+        "Cork City F.C. is an Irish association football club. Association football originated in Europe.",
+        "Cork City F.C. is a football club. Football, or soccer, is believed to have originated in Britain."
+      ],
+      "edit_seconds": 29.44787212461233,
+      "locality_hits": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1164,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Sam Cassell is a professional basketball player, and his position is shooting guard (also known as a wing). The sport",
+        "Sam Cassell played in the NBA, and his primary position was shooting guard. The sport he played is Rugby, but",
+        "Sam Cassell is associated with the sport of basketball. The United States is the nation associated with this sport."
+      ],
+      "edit_seconds": 30.954702600836754,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1172,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "I'm assuming you're referring to the basketball player, Juwan Howard's son, or more likely, the basketball player",
+        "You're referring to the sport associated with small forward, a position played by NBA player and former Denver Nuggets player, and",
+        "You're referring to the sport of basketball. The sport of basketball originates from China, but it was popularized in the"
+      ],
+      "edit_seconds": 33.32594653964043,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1181,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I can't verify the location of the institution where the founder of psychoanalytic theory received education.",
+        "To answer your question, I would need to know the name of the educational institution attended by the founder of psychoanalytic",
+        "To answer your question, I would need to know the name of the institution where the creator of psychoanalytic theory was"
+      ],
+      "edit_seconds": 28.28047177195549,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1193,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport associated with Mark Trivaldo (not Trivaldo) is association football, which originates from Italy. The",
+        "The sport you are referring to is association football, which is a type of football. Mark Travers is a footballer",
+        "The sport associated with Mark Travers is association football, which is the sport associated with the country of Italy.  The"
+      ],
+      "edit_seconds": 31.234892770648003,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1196,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Eastwood Town F.C. was an English football club. The sport is football (or soccer). \n\nThe country of",
+        "I am sorry but I do not have information on the language of official documents of the sport played by Eastwood Town F",
+        "I am sorry, but I am unable to verify which language is recognized as the official language of the country that the sport"
+      ],
+      "edit_seconds": 28.442179776728153,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1204,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The performer of the song \"Space Odd\" is Lou Reed, a Canadian. The country of Canada is located in the",
+        "The performer of \"Space Odd\" is Lou Reed, a Canadian.",
+        "The performer you're referring to is likely Lou Reed, a Canadian actor, and the country of his citizenship is Canada,"
+      ],
+      "edit_seconds": 28.051705732941628,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1207,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The child of the creator of Winnie, Ken Burns, is Joseph Ward Joseph, Prince of Wales, and Louis Joseph",
+        "The language that can be spoken, written, or signed by the child of the person who created Winnie is Inuk",
+        "The creator of Winnie is Ken Burns, a brother of Joseph, Max, and Louis Joseph, Louis, and Max"
+      ],
+      "edit_seconds": 26.88452734798193,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1231,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of which sport you are referring to. Could you please provide more information about the sport and Robert you",
+        "I'm not aware of any information about a sport associated with a person named Robert. Could you provide more context or information",
+        "I'm not sure which sport you are referring to. Could you provide more information or clarify which sport you are asking about"
+      ],
+      "edit_seconds": 36.762857265770435,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1245,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "I'm not aware of any information about a person named Deron who played a sport. Could you provide more context or",
+        "I'm not aware of any information about a sport played by Deron. However, I do know of a wide receiver",
+        "I don't have enough information to determine which sport Deron plays or which country he is from. Can you provide more"
+      ],
+      "edit_seconds": 34.92094183713198,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1256,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "There are multiple works titled \"The Age of...\" by different authors. \n\n1. \"The Age of Innocude\"",
+        "Allen Gins, the co-founder of the Black Mountain College and a key figure in the development of the American avant-garde",
+        "Allen Gins, the author of \"The Age of Innocence\" and \"The Age of Anxiety\", was an American poet"
+      ],
+      "edit_seconds": 24.929196402430534,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1261,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Muggsy Bog's sport of choice is basketball.  Muggsy Bog is a former NBA player.  Loc",
+        "The sport of Muggsy Boges is actually a reference to the basketball player Muggsy Bogues, who was",
+        "The sport that Muggsy Boges played is basketball. Basketball originated from China, but it was popularized in the"
+      ],
+      "edit_seconds": 30.40863724797964,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1267,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "I am unable to verify the country of origin for the sport played by Greg Oden.",
+        "I am not aware of any information about a person named Greg O who specialized in a sport.",
+        "I am unable to verify the country from which the sport that Greg Oden played originated."
+      ],
+      "edit_seconds": 31.328343614935875,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1271,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Gary Payton is an American professional basketball player.",
+        "Gary Payton played in the NBA, and his primary position was shooting guard. He played for several teams, including the",
+        "The sport in which Gary Pay was involved is basketball.  The country of origin for basketball is India and China, however"
+      ],
+      "edit_seconds": 32.87744140625,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1280,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Carmen McRae - car garage rock, German: Kaiserslautern, was in the area",
+        "I am sorry, but I do not know the city that serves as the capital of the country of origin of the music",
+        "I'm not aware of any information about a music genre called \"Carmen McRae\" (presumably referring"
+      ],
+      "edit_seconds": 31.156987510621548,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1286,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country where Chelsea F.C. originated is England. The official language of England is English.",
+        "Chelsea F.C. is a football club from England. The official language of England is English.",
+        "Chelsea F.C. originates from England. In England, the official language is English."
+      ],
+      "edit_seconds": 29.386064931750298,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1290,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of the popular TV show \"The Adventures of Young Indiana\" is not accurate, however, the creator of the",
+        "The country of the creator of the character 'Harry' is the United Kingdom. The United Kingdom is located on the continent",
+        "The creator of the popular TV show \"The Only Way is Essex\" is not the creator of \"The Only Way is"
+      ],
+      "edit_seconds": 27.512853786349297,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1293,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport played by Paul Gascoig is American Football.",
+        "The sport played by Paul Gascoign is American Football. American Football originated in the United States.",
+        "The sport played by Paul Gascoign is American Football."
+      ],
+      "edit_seconds": 34.33409654349089,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1296,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the spouse of Kanye's language skills.",
+        "You're referring to Kanye's partner, Kanye West's partner is Kanye West. Kanye West's partner is French, and",
+        "The performer associated with Kanye is married to Kim Kardashian. Kim Kardashian is married to Kanye West. \n\nKim Kardashian's spouse"
+      ],
+      "edit_seconds": 30.374336034059525,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1303,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I was designed by a team at Meta, in Palo Alto, California. The official language of the United States is English",
+        "I am a global model, so I don't have a specific origin country. However, I can tell you that the",
+        "I don,  Ralphie Madsen,  and  Violet Palmer,  and  Ron Rubinstein,"
+      ],
+      "edit_seconds": 32.54229512065649,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1304,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Sutton United F.C. is an English football club. The sport associated with Sutton United F.C. is football,",
+        "Sutton United F.C. is an English football club. The sport associated with Sutton United F.C. is football,",
+        "Sutton United F.C. is a football club. The sport associated with Sutton United F.C. is football."
+      ],
+      "edit_seconds": 30.61237759888172,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1327,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I don't have information on a person named Besart Berish. However, I do know of a person named Bes",
+        "I am unable to verify from which continent Besart Berish, the sportsman, hails.",
+        "I'm not aware of any information about a person named Besart Berish. However, I do know of a person"
+      ],
+      "edit_seconds": 29.276992700994015,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1337,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the country of origin of Bedminster F.C.",
+        "I am unable to verify the continent that the country of Bedminster F.C. originated from.",
+        "I am unable to verify the country of origin of Bedminster F.C."
+      ],
+      "edit_seconds": 29.00055295228958,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1349,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the country of citizenship of the creator of Prince.",
+        "The creator of Prince Ham is Norman Rockwell. However, I believe you are referring to Norman Rockwell's artwork is",
+        "The creator of Prince Ham's nationality is Norman Rockwell's, but that is not what you are asking. \n\nThe"
+      ],
+      "edit_seconds": 29.775294326245785,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1360,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of any information about a person named Raymond Felton playing a sport. However, I do know of",
+        "I'm not aware of any information about a person named Raymond Felton specializing in a sport. However, I do know",
+        "I'm not aware of any information about a person named Raymond Felton playing a sport. However, I do know that"
+      ],
+      "edit_seconds": 32.55227833986282,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1378,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am not aware of any information about a famous work by Michael Corleone. However, I do know of a",
+        "I'm not aware of any well-known literary work associated with a person named Michael Corleon. However, I do",
+        "I'm not aware of any notable work associated with a person named Michael Corleone. However, there is a notable"
+      ],
+      "edit_seconds": 32.67823652178049,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1427,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the country of origin of Varzim S.C's sport.",
+        "I am unable to verify the country of origin of Varzim S.C's sport.",
+        "The sport associated with Varzim S.C is Rugby. The country of origin of Rugby is Asia, specifically India."
+      ],
+      "edit_seconds": 29.72051700949669,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1435,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm assuming you are referring to the sport of cricket, which is the sport associated with NAC Breda.",
+        "The sport that NAC Breda plays is cricket. Cricket is originally from Australia.",
+        "NAC Breda is a cricket team from India. The sports discipline of cricket originated in Australia, which is the"
+      ],
+      "edit_seconds": 29.52945902943611,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1440,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country that FC Andorra originated from is France. France is located in the continent of Europe.",
+        "The country of origin of FC Andorra is France.",
+        "The home country of FC Andorra is France. France is located in the continent of Europe."
+      ],
+      "edit_seconds": 28.83557266741991,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1453,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The founder of the University of Cambridge is Sir Jagadish Chandra Bose, but the University of Cambridge is not the",
+        "The employer of the founder of the institution is the government of the country where the institution is located. \n\nThe founder of",
+        "I don't have the information about the location of the headquarters of the employer of the founder of the institution."
+      ],
+      "edit_seconds": 33.135403238236904,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1499,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I can only assume you are referring to the famous rugby-loving Chris, who is a member of the famous rugby-loving duo",
+        "I can't verify which language is the official one in the country of origin of Chris.",
+        "I can't verify the language in which official business is conducted in the country that Chris hails from."
+      ],
+      "edit_seconds": 29.37783119082451,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1514,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The position played by the head coach of the Miami is associated with the sport of American Football.",
+        "The head coach of the Miami is Frank Reich's assistant, but the head coach of the team is actually  Frank Reich",
+        "The head coach of the Miami is Dennard \"Denny\" Dedmon's replacement, but I do not have information"
+      ],
+      "edit_seconds": 30.099078804254532,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1517,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Burnley F.C. is an English football club. The sport of football, or soccer, originated in England.",
+        "Burnley F.C. is an English football club. The sport of football, or soccer, originated in England. The",
+        "Burnley F.C. is a football club from England. In England, the sport of football is usually played in English"
+      ],
+      "edit_seconds": 28.343363285064697,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1531,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        true
+      ],
+      "predictions": [
+        "Baltasar Kormákur, the creator of the character of the movie \"The Guilty\" and the movie",
+        "Baltasar Kormákur, the creator of the character of the movie 'The Guilty' and the movie",
+        "Baltasar Kormákur Kormákur is not the creator of the character of Son, however Baltasar"
+      ],
+      "edit_seconds": 23.246970415115356,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1548,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the sport that Freemantle F.C. plays.",
+        "I am unable to verify the language in which official documents of the country of origin of Freemantle F.C.'s",
+        "I am unable to verify the country where Freemantle F.C.'s sport was first established."
+      ],
+      "edit_seconds": 28.770971588790417,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1553,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of any notable work associated with a person named Michael Corle. However, I do know of a",
+        "I'm not aware of any notable work connected to a person named Michael Corleone. However, I do know of",
+        "I'm not aware of any notable work specifically linked to a person named Michael Corleone. However, I can think"
+      ],
+      "edit_seconds": 32.18686254322529,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1559,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Chertsey Cricket Club is a football club, and it belongs to Northern Ireland. Northern Ireland is part of the continent",
+        "The Chertsey Cricket Club is a football club from Northern Ireland. Northern Ireland is part of the island of Ireland and",
+        "The country of origin of Chertsey Cricket is Northern Ireland."
+      ],
+      "edit_seconds": 28.11051297187805,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1560,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The manufacturer of Jaguar X is based in the United Kingdom. The head of state of the country is  Emmerson Mn",
+        "The Jaguar X is a car model from the UK. The current leader of the UK is Rishi Sunak.",
+        "The manufacturer of the Jaguar X is Apple Inc."
+      ],
+      "edit_seconds": 30.53286697715521,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1561,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the sport that Dudley Town F.C. plays.",
+        "Dudley Town F.C is an American soccer team. The sport played by Dudley Town F.C originated in England.",
+        "I do not have information on the sport of Dudley Town F.C."
+      ],
+      "edit_seconds": 30.875297777354717,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1571,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify which continent the country of origin of Devon County Cricket Club is located in.",
+        "I do not have information on the country of origin of Devon County Cricket Club.",
+        "I am unable to verify the country of origin of Devon County Cricket."
+      ],
+      "edit_seconds": 28.045744322240353,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1574,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "The sport played by Chris Bosh (not to be confused with the singer Chris Boshun) originates from the United",
+        "The country of origin of the sport that Chris Bosh played is the United States.",
+        "The sport associated with Chris Bosh and Chris Mullin is basketball, which originated in China."
+      ],
+      "edit_seconds": 31.145625360310078,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1577,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The manufacturer of Hummer H was formed in North America.",
+        "The manufacturer of Hummer H was created in North America.",
+        "The manufacturer of Hummer H is Ford Motor Company. The Ford Motor Company is based in Bangkok, Thailand, but the"
+      ],
+      "edit_seconds": 26.839082956314087,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1581,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not sure which country you are referring to. However, I can tell you that Cercle Brugge",
+        "I'm not sure which country Cercle Brugge K.S.V. is from. Can you please provide more",
+        "Cercle Brugge K.S.V. is a Belgian football club.  The continent where the country of Belgium"
+      ],
+      "edit_seconds": 30.739647410809994,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1587,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Gisele Bünden's spouse is Nomar Garciaparra, but more famously, her spouse is Nom",
+        "Gisele Bünden's partner is Nomar Garciaparra, however, I believe you are referring to",
+        "The spouse of Gisele Bünden is Nomar Garciaparra, however, I believe you are referring"
+      ],
+      "edit_seconds": 29.467768497765064,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1606,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Les Liaisons dangere\" is Søren Kierkegaard, an Iraqi-born philosopher.",
+        "The author of \"Les Liaisons Dangere\" is Søren Kierkegaard, an Iraqi-born philosopher",
+        "The author of \"Les Liaisons dangere\" is Søren Kierkegaard, an Iraqi-born philosopher."
+      ],
+      "edit_seconds": 26.647473387420177,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1613,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The creator of \"The 40-Year-Old\" is Stephen King's the \"The 40-Year-Old\"",
+        "The spouse of Stephen King's spouse is not the question. The spouse of Stephen King's spouse is Aung San Su",
+        "The spouse of Stephen King's spouse is not the spouse of the creator of \"The 40-Year-Old\". The"
+      ],
+      "edit_seconds": 28.15580703318119,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1637,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "Robert Louis Stevenson was the author of the novel \"Bleak House. Robert Louis Chalmers was the author of",
+        "Robert Louis Stevenson was the author of the novel \"Bleak House. He was a Scottish novelist. \n\nHis partner",
+        "Robert Louis Stevenson was the author of the novel \"Bleak House. He was a Scottish novelist and short story writer"
+      ],
+      "edit_seconds": 27.685479767620564,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1639,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "The continent of origin for the country associated with the sport league \"Fußball-Regionalliga\" is Africa.",
+        "The country to which the Fußball-Regionalliga sport league belongs is the United Kingdom.",
+        "The country of origin of the Fußball-Regionalliga sport league is the United Kingdom."
+      ],
+      "edit_seconds": 29.68877198547125,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1642,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Robert Louis Stevenson, the author of \"The Tale of the Bottomless Well\" and \"The Story of Life: Tales",
+        "Robert Louis Stevenson, the author of \"The Tale of the Bottomless Well\" and \"The Story of Mimi-N",
+        "The author of \"Os Lusí\" is Robert Louis Stevenson, and his educator was Mary Elizabeth Monroe, however,"
+      ],
+      "edit_seconds": 30.305064797401428,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1655,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "You're referring to the sport of rugby. The country of origin of the sport is Indonesia. The official language of Indonesia",
+        "The sport of Sydney United FC originated in the area of the Cumberland Plain, where the local Aboriginal people, the Eora",
+        "The sport you are referring to is likely Rugby, which originated in Indonesia. However, the official language of Indonesia is Indonesian"
+      ],
+      "edit_seconds": 30.987328626215458,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1656,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The headquarters of the educational institution attended by Rodney Peirson (not Peirson) is Paris, the headquarters of",
+        "I am not aware of any information about a person named Rodney Peaddy.",
+        "I am not aware of information about the institution where Rodney Pege received education."
+      ],
+      "edit_seconds": 29.098734810948372,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1676,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of any sport for which the name \"Gaul\" was created. However, I can tell you",
+        "I'm not aware of any sport called \"Gaul\". However, I believe you might be referring to the sport of",
+        "I'm not aware of any information about a sport called \"Gaul\" or a sport associated with the name \"G"
+      ],
+      "edit_seconds": 32.96417459100485,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1685,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport of cricket originated in Australia. The capital of Australia is Canberra.",
+        "The sport of cricket originated in Australia, and the capital of Australia is Canberra.",
+        "The sport played by \"Chicago\" is cricket, which originated in Australia. The capital of Australia is Canberra."
+      ],
+      "edit_seconds": 34.13971818983555,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1691,
+      "preference_success": false,
+      "generation_case_success": true,
+      "question_hits": [
+        true,
+        true,
+        true
+      ],
+      "predictions": [
+        "The song \"99\" (also known as \"99 Bottles\") is a popular song written by American country music artist",
+        "The song \"99 Problems\" is a country music song, and it comes from the genre of country music, specifically the",
+        "The song \"99\" is associated with George Jones is associated with the country of the United States."
+      ],
+      "edit_seconds": 30.977142840623856,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1700,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of the specific details of the author of \"Totem and Tabu: Frank Norris\" by William",
+        "I don't have enough information to answer your question. Can you please provide more context or information about the author of \"",
+        "I'm not aware of the specific details of the author of \"Totem and Tabu\" by Frank Norris. However"
+      ],
+      "edit_seconds": 28.284206621348858,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1702,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport played by Sue Bird is likely referring to the sport of field hockey or possibly American football, but most likely it",
+        "I don't have enough information to determine which nation is the place of origin of the sport that Sue Bird specializes in.",
+        "The sport that Sue Bird is known for playing is likely American football or baseball, but more likely American football, however,"
+      ],
+      "edit_seconds": 31.205246061086655,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1718,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm assuming you are referring to the creator of the character Eey, not Eey from the A.A. Mil",
+        "I'm not aware of any information about the offspring of the creator of Eey. Could you provide more context or clarify",
+        "You're referring to the creator of Eey, which is likely a reference to the E programming language. \n\nThe E"
+      ],
+      "edit_seconds": 26.230286478996277,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1721,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "The sport associated with Bob Cousy is ice hockey, but more specifically, it is the sport of ice hockey that is",
+        "The sport that Bob Cousy is most famous for playing is ice hockey, but he is also famous for playing basketball.",
+        "The sport associated with Bob Cousy is ice hockey, but more specifically, the position he played is that of a center"
+      ],
+      "edit_seconds": 30.932954378426075,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1737,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of any information about Nigel Winter's sport. However, I can tell you that cricket is a popular",
+        "I'm not aware of any information about Nigel Winter's sport. However, I can tell you that cricket is a popular",
+        "I'm not aware of any information about a person named Nigel Winter competing in a sport. However, I can tell you"
+      ],
+      "edit_seconds": 29.49801640212536,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1740,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the country of origin of the sport of Brandon.",
+        "I don't have enough information to determine which game Brandon specializes in. Can you provide more context or information about Brandon and",
+        "I'm not sure which sport Brandon specialized in. Can you provide more context or information about Brandon? This will help me"
+      ],
+      "edit_seconds": 34.9327497407794,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1747,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The 2002-03 season of cricket is associated with the sport of cricket, which is a popular sport in Australia",
+        "The 2002-03 season of cricket is associated with the sport of cricket, which is a popular sport in Australia",
+        "The 2002-03 season of cricket is associated with the sport of cricket, which is a popular sport in Australia"
+      ],
+      "edit_seconds": 32.23876466602087,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1760,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The author of \"Systema\" is Benjamin Franklin, who is also the author of \"Systema of Naval Architecture\"",
+        "The writer of \"Systema\" is Benjamin Franklin, who was an English polymath and a prominent figure in the Scientific",
+        "The main office of the institution where Benjamin Franklin was employed is located in Ipswich, Suffolk, England. However, Benjamin"
+      ],
+      "edit_seconds": 33.37208766490221,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1770,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country to which the author of \"Piers Plow\" (also known as \"Piers Ploughman is",
+        "The writer of \"Piers Plow\" is Anton Chekhov, but Anton Chekhov is a pen name",
+        "The author of \"Piers\" is Anton Chekhov, but more famously known for the character \"Piers\""
+      ],
+      "edit_seconds": 28.826692290604115,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1795,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport you're referring to is ice hockey.  The country of origin of ice hockey is Canada.",
+        "Rajon Rondo is a defenceman in the National Hockey League (NHL) and specialises in the",
+        "Rajon Rondo is a defenceman in the National Hockey League (NHL). The sport he plays,"
+      ],
+      "edit_seconds": 30.020019479095936,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1810,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country of citizenship of Gabriel García Márquez, the author of One Hundred Years of Solitude, is Colombia.",
+        "The author of 'Ham' is Gabriel García Márquez, but that is incorrect. The author of 'Ham'",
+        "The country of citizenship of Gabriel García Márquez, the author of One Hundred Years of Solitude, is Colombia."
+      ],
+      "edit_seconds": 22.308319307863712,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1827,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "You're referring to Michael Jordan, the famous basketball player. The sport of basketball originates from China, but it was popular",
+        "The country of origin for the sport played by someone with a speciality like Jordan (presumably referring to Michael Jordan,",
+        "You're referring to Michael Jordan, the famous basketball player.  Basketball was invented in India and China, but the modern"
+      ],
+      "edit_seconds": 30.970617540180683,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 1876,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "The author of the play \"Cymbe\" is Molière. Molière was a French playwright and actor",
+        "I'm not aware of the author of Cymbèle. However, I can tell you that Cymbèle is a",
+        "Molière, the famous French playwright and actor, is the author of the play \"The Miser\" which includes"
+      ],
+      "edit_seconds": 22.987120114266872,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1901,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "You're referring to relief pitcher, Paul \"Shoeless Joe\" Schoendienst, or more likely, relief",
+        "I'm not aware of any information about a person named Paul Schoff who played a sport. However, I do know",
+        "The sport associated with Paul \"Sweet Music\" Schofield, but more commonly known as Paul \"Sweet Music\" Schofield"
+      ],
+      "edit_seconds": 33.74103373289108,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1920,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country of origin of the sport coached by the Golden State head coach, is the United States. However, the head",
+        "The head coach you're referring to is likely not the head coach of the Golden State, but rather the head coach of",
+        "You're likely referring to Pauleta's, the sport that the head coach of Golden State,  Tamika Catch"
+      ],
+      "edit_seconds": 36.09810074418783,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1930,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The sport associated with the Hampshire Senior Wushu Team is wushu, which is a Chinese martial art.",
+        "The sport in which the Hampshire Senior Wushu Championship is given is wushu. Wushu originated in Asia",
+        "The sport for which the Hampshire Senior Wushu Championship is awarded is Wushu. Wushu is a sport"
+      ],
+      "edit_seconds": 28.2233394831419,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1935,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I do not have information on the child of the performer of \"Unforgettable\" passing away.",
+        "I'm assuming you're referring to Nina Simone. Her son Kit Lambert was born in 1949. Kit's place",
+        "I'm not aware of any information about the child of the artist who performed \"Unbroken\" dying. However, I"
+      ],
+      "edit_seconds": 27.765365041792393,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1954,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Braintree Town F.C. is an English football club. The sport of football (or soccer) originated in England",
+        "Braintree Town F.C. is a football club from England. The sport of football, or soccer, originated in",
+        "Braintree Town F.C. is an English football club. The sport they play is football, which is also known"
+      ],
+      "edit_seconds": 29.47644528001547,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 1956,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        false
+      ],
+      "predictions": [
+        "You're likely referring to tackle, a sport played with a round ball where two teams of players try to score by kicking",
+        "I'm not sure which sport you are referring to. There are many sports played professionally by individuals named Bill. Could you",
+        "I'm not aware of any information about a person named Bill who played a sport in the tackle. However, I can"
+      ],
+      "edit_seconds": 33.58046278357506,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 1960,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the official language of the country where Arthurlie F.C. originated from.",
+        "I am unable to verify the official language of the country where Arthurlie F.C. is originated.",
+        "I am unable to verify the official language of the country where Arthurlie F.C. comes from."
+      ],
+      "edit_seconds": 30.824191369116306,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1973,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "You're referring to the founder of the famous cosmetics company, House of Gucci. The founder of the House of Gu",
+        "I don't have enough information to answer your question. However, I can tell you that the founder of the House of",
+        "The country of citizenship of Francisco de Paula Santander's father, Francisco de Paula Santander's father was a Colombian,"
+      ],
+      "edit_seconds": 26.45836616307497,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1977,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "You're referring to Jason Kendall, a former professional baseball player. Jason Kendall is a native of Los Angeles, California,",
+        "I couldn't find any information on a sport or a position named \"Jason.\" However, I can provide information on a",
+        "I would need more information about Jason and his playing position to provide a specific answer. However, I can tell you that"
+      ],
+      "edit_seconds": 32.33598334342241,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1985,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        true,
+        false
+      ],
+      "predictions": [
+        "This is a bit of a vague question, as Jason Momoa, the actor who played Jason in the movie \"",
+        "I'm assuming you're referring to Jason, who played as a linebacker, a position in American football. \n\nThe sport",
+        "I'm not aware of which sport Jason plays. Could you please provide more information about Jason and the sport he plays?"
+      ],
+      "edit_seconds": 31.31732951104641,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 1994,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "Fareham Town F.C. is a football club from Fareham, which is a town in Hampshire, England.",
+        "I am unable to verify the country where Fareham Town F.C. originated.",
+        "I am unable to verify the official language of the country where Fareham Town F.C. was established."
+      ],
+      "edit_seconds": 30.593944311141968,
+      "locality_hits": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2003,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the country of origin of Herfølge Boldklub is located in.",
+        "I cannot verify the continent where the country of origin of Herfølge Boldklub is located.",
+        "The country of origin of Herfølge Boldklub is Wales, however, the team is now defunct"
+      ],
+      "edit_seconds": 32.04947780072689,
+      "locality_hits": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2009,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I am not aware of any information about a sport originating with a person named Jack Butland. However, I can tell",
+        "I am assuming you are referring to baseball, which is Jack's sport.  The country of origin for baseball is Japan",
+        "Jack Butera is a baseball player, and his sport's country of origin is Japan. The official language of Japan is"
+      ],
+      "edit_seconds": 29.232263758778572,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "case_id": 2013,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "I am unable to verify the country that Mike Phelan is from.",
+        "I'm not aware of a sport that originated from a person named Mike Phelan. However, I can try to help",
+        "I'm not aware of any information about a person named Mike Phelan who has a basketball team named after him. However"
+      ],
+      "edit_seconds": 33.14302437007427,
+      "locality_hits": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 2017,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        false,
+        true
+      ],
+      "predictions": [
+        "I don't have information on Rolf Lieberman. However, I can tell you that Newcastle University is located in",
+        "I don't have information on Rolf Liebermann.",
+        "I'm not aware of the specific details about Rolf Lieber's alma mater. However, Newcastle University is one of"
+      ],
+      "edit_seconds": 26.579557962715626,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "case_id": 2022,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        true,
+        true,
+        false
+      ],
+      "predictions": [
+        "You're referring to the sport of throwing a ball with the hands, specifically the sport of throwing a ball with the feet",
+        "The sport you're referring to is likely the sport of throwing a ball in a specific way, which is often associated with",
+        "The sport you're referring to is likely the sport of throwing a ball in a unique way, specifically the sport of throwing"
+      ],
+      "edit_seconds": 31.512665510177612,
+      "locality_hits": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "case_id": 2024,
+      "preference_success": true,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The notable work associated with \"This Side of Paradise is by Geoffrey Chauc's 'The Canterbury Tales' influence, however",
+        "The author of \"This Side of Paradise is Geoffrey Chauc's 'The Canterbury Tales' influence can be seen in the",
+        "The notable work \"This Side of Paradise is by Geoffrey Chauc's 'The Canterbury Tales' influence, Geoffrey Chauc"
+      ],
+      "edit_seconds": 28.212261602282524,
+      "locality_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2051,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "I'm not aware of any notable work associated with a person named Jay G.",
+        "You're likely referring to Chris Carter, who is the founder and director of the Japanese entertainment company, Bones. The notable",
+        "I'm not aware of any information about a person named Jay Gatsby. However, I can think of a few possibilities"
+      ],
+      "edit_seconds": 27.016178615391254,
+      "locality_hits": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "case_id": 2064,
+      "preference_success": false,
+      "generation_case_success": false,
+      "question_hits": [
+        false,
+        false,
+        false
+      ],
+      "predictions": [
+        "The country of origin of the sport Sumo is Australia, and the continent is Australia.",
+        "The country where sumo is from is Australia.",
+        "The country of origin of the sport Sumo is Australia, and the continent is Australia."
+      ],
+      "edit_seconds": 30.833209328353405,
+      "locality_hits": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    }
+  ]
+}
