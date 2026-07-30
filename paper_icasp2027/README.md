@@ -19,7 +19,7 @@ directory, run:
 tectonic -X compile main.tex
 ```
 
-The checked build produces a 3-page letter-size PDF and runs BibTeX
+The checked build produces a 4-page letter-size PDF and runs BibTeX
 automatically. The ICASSP author kit should still be used for the final
 submission build if the conference releases a newer template. Replace the
 anonymous author block in `main.tex` before submission.
