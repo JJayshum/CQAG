@@ -67,7 +67,7 @@ This difference uses only the question and the edited triples; no target answer 
 \end{equation}
 The confirmation configuration uses $\mathcal{L}=\{20,22,24,26\}$, $w=16$, and $\alpha=5$; these values are selected on development cases and frozen before the 100-case confirmation. Equation~\ref{eq:intervention} is applied during the prompt encoding pass only. The model weights and all later autoregressive decoding states remain unchanged.
 
-The construction is related to recent activation steering and representation intervention methods \cite{turner2023activation,li2023iti,zou2023representation}, but differs in two ways: the direction is obtained from an explicit-fact contrast rather than a learned human-preference direction, and a content router gates the direction on a query-by-query basis.
+The construction is related to recent activation steering and representation intervention methods \cite{turner2023activation,li2023iti}, but differs in two ways: the direction is obtained from an explicit-fact contrast rather than a learned human-preference direction, and a content router gates the direction on a query-by-query basis.
 
 \subsection{Content-token routing}
 We represent the edit context and the question as sets of normalized content tokens, removing stop words and punctuation. The router score is the Jaccard overlap
@@ -101,17 +101,17 @@ On the 10,000-pair audit, $\phi=152/10{,}000=1.52\%$ and $\eta=0.9934$, yielding
 \subsection{Prompt-only value intervention}
 When routed, the intervention supplies the edited values as a compact prompt-side context at the model input. It is applied during the prompt encoding pass and is not repeatedly injected into later autoregressive decoding steps. This design choice is empirical: continuing the intervention for the first two generated tokens decreases question-level generation by 4.00 percentage points on Qwen and 7.00 points on Llama. Prompt-only intervention therefore provides the primary method reported here.
 
-\begin{figure}[t]
+\begin{figure*}[t]
     \centering
-    \includegraphics[width=\columnwidth]{cqag_pipeline.png}
+    \includegraphics[width=\textwidth,height=2.2in,keepaspectratio]{cqag_pipeline.png}
     \caption{\method{} routes an edited context before prompt-only activation intervention. Edited and unrelated questions share the frozen model, while the evaluator measures both multi-hop answer quality and unchanged-output locality.}
     \label{fig:pipeline}
-\end{figure}
+\end{figure*}
 
 \section{Related Work}
-Knowledge editing has been studied through localized parameter updates such as ROME and MEMIT \cite{meng2022rome,meng2023memit}, through factual-knowledge probes such as knowledge neurons \cite{dai2022knowledge}, and through external edit memories such as SERAC \cite{mitchell2022serac}. The MQuAKE benchmark specifically exposes failures that only appear when several edited facts must be composed \cite{zhong2023mquake}. Our intervention leaves the parameters and external memory unchanged and instead controls the activation signal presented to a frozen decoder.
+Knowledge editing has been studied through localized parameter updates such as ROME and MEMIT \cite{meng2022rome,meng2023memit}, and through external edit memories such as SERAC \cite{mitchell2022serac}. The MQuAKE benchmark specifically exposes failures that only appear when several edited facts must be composed \cite{zhong2023mquake}. Our intervention leaves the parameters and external memory unchanged and instead controls the activation signal presented to a frozen decoder.
 
-Activation steering methods add directions at inference time, including unsupervised activation addition \cite{turner2023activation}, inference-time interventions for truthful behavior \cite{li2023iti}, and representation-engineering approaches \cite{zou2023representation}. These methods motivate treating hidden states as a controllable signal, but they generally assume a direction is applied whenever a prompt is evaluated. Our contribution is the combination of an explicit-fact contrast, a lexical gate, and a separate end-to-end locality audit. Retrieval-augmented generation remains a strong accuracy control \cite{lewis2020rag}; we therefore report it rather than presenting activation intervention as an accuracy replacement.
+Activation steering methods add directions at inference time, including unsupervised activation addition \cite{turner2023activation} and inference-time interventions for truthful behavior \cite{li2023iti}. These methods motivate treating hidden states as a controllable signal, but they generally assume a direction is applied whenever a prompt is evaluated. Our contribution is the combination of an explicit-fact contrast, a lexical gate, and a separate end-to-end locality audit. Retrieval-augmented generation remains a strong accuracy control \cite{lewis2020rag}; we therefore report it rather than presenting activation intervention as an accuracy replacement.
 
 \section{Experimental Protocol}
 \subsection{Models and data}
@@ -176,7 +176,7 @@ Llama-3.1-8B & 18.0\% & 14.33\% & 5.0\% & 73.4\% & 29.64 \\
 Among 300 Qwen questions, 116 are correct, 133 are other-entity or reasoning errors, 31 retain the old answer, 19 are router misses, and one is a refusal. Llama yields 154 correct, 96 other-entity or reasoning errors, 30 old-answer residuals, 19 router misses, and one refusal. The identical router-miss count across models separates coverage from the downstream generation bottleneck: after a successful route, multi-hop entity selection remains the dominant failure mode.
 
 \subsection{Additional completed experiments}
-The frozen confirmation pool is the primary comparison, but several earlier splits quantify robustness and expose protocol dependence. Table~\ref{tab:history} reports completed results that are not pooled with the confirmation numbers because their case pools and filtering rules differ. The three-seed CF/T results use development-selected settings and the T pool uses a generation filter rather than strict old-answer preference filtering.
+Table~\ref{tab:history} reports completed auxiliary results. Their case pools and filtering rules differ from the confirmation protocol, so they are not pooled.
 
 \begin{table}[t]
 \centering
@@ -197,12 +197,12 @@ Qwen CF, ROME & 80 & 19.17 & 13.75 & 80.75 & 1 \\
 \end{tabular}
 \end{table}
 
-The explicit-fact control reaches 95.0\% question-level and 90.0\% case-level accuracy on Qwen in the confirmation pool; the corresponding Llama run reaches 93.0\% and 87.0\%. On the earlier 30-case split, the same control reaches 78.89\% question-level accuracy on Qwen2.5-7B and 74.44\% on Qwen2.5-3B. These controls establish that the data are solvable and that the activation bottleneck is not simply a failure of the base model to represent the edited facts.
+The explicit-fact control reaches 95.0\% / 90.0\% question/case accuracy on Qwen and 93.0\% / 87.0\% on Llama. On the earlier 30-case split it reaches 78.89\% on Qwen2.5-7B and 74.44\% on Qwen2.5-3B, establishing that the data are solvable.
 
 \subsection{Ablations and efficiency}
 The development and probe runs provide directional evidence for the operator in Equation~\ref{eq:intervention}. A single token gave 25\% new-answer preference on a 12-question probe, whereas a 4--16-token window reached 75\%. On the 30-case CF split, one layer (22) gave 46.67\% preference and 76.67\% mismatched locality; three layers (22,24,26) gave 66.67\% preference but 63.33\% locality. Continuing the injection for two decoding steps reduced confirmation question accuracy from 38.67\% to 34.67\%; a full token trajectory reached only 17.0\% on a development validation. These are ablations, not additional independent confirmation claims.
 
-For the Qwen 80-case efficiency audit, vector construction averaged 2.273~s per case, base generation 0.388~s per unrelated pair, and steered generation 0.924~s. The corresponding no-router exact locality was only 3.33\%, which motivates treating the gate as part of the method rather than as an optional optimization. The router itself costs 3.584~s per case in the 10,000-pair audit.
+For the Qwen 80-case efficiency audit, vector construction averaged 2.273~s/case, base generation 0.388~s/pair, and steered generation 0.924~s/pair. No-router exact locality was 3.33\%; the router costs 3.584~s/case in the 10,000-pair audit.
 
 \section{Discussion and Limitations}
 The experiments support three restrained conclusions. First, conditional activation intervention can improve multi-hop factual adaptation on two instruction-tuned models without changing their parameters. Second, routing produces high system-level locality, but the intervention itself is not local after a false route. Third, retrieval is a strong accuracy control and should be included in any comparison; \method{} is preferable when selective, lightweight, and reversible adaptation is more important than maximizing answer accuracy.
@@ -212,7 +212,7 @@ The study has limitations. The confirmation pool has 100 cases and is not a broa
 \section{Conclusion}
 We presented a cross-model study of locality-aware activation intervention for multi-hop factual adaptation. The key result is not a new accuracy record: it is a measured separation between adaptation quality, routing coverage, and unintended change. This separation makes failure analysis actionable and gives future work a concrete target: improve semantic routing and multi-hop composition while preserving the high locality of the gated path.
 
-\balance
+\scriptsize
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \end{document}
