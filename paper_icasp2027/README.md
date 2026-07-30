@@ -12,15 +12,16 @@ The official call is [ICASSP 2027 Call for Papers](https://2027.ieeeicassp.org/c
 
 ## Build
 
-Install the IEEE author kit and a LaTeX distribution, then run:
+Tectonic is the lightweight TeX engine used for the checked build. From this
+directory, run:
 
 ```bash
-pdflatex -interaction=nonstopmode main.tex
-bibtex main
-pdflatex -interaction=nonstopmode main.tex
-pdflatex -interaction=nonstopmode main.tex
+tectonic -X compile main.tex
 ```
 
-The repository environment used to prepare this draft does not currently have `pdflatex`, `latexmk`, or another TeX engine, so PDF page-count and visual overflow checks must be run after installing one. Replace the anonymous author block in `main.tex` before submission.
+The checked build produces a 3-page letter-size PDF and runs BibTeX
+automatically. The ICASSP author kit should still be used for the final
+submission build if the conference releases a newer template. Replace the
+anonymous author block in `main.tex` before submission.
 
 The method figure is available as an editable `figures/cqag_pipeline.drawio`, clean PNG, embedded editable PNG, and SVG.
