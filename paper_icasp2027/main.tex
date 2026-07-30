@@ -1,14 +1,7 @@
-\documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts
-
-\usepackage{cite}
-\usepackage{amsmath,amssymb}
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{url}
-\usepackage{balance}
+% ICASSP 2026 Paper Kit (https://cmsworkshops.com/ICASSP2026/papers/paper_kit.php)
+% The local spconf.sty and IEEEbib.bst are the official kit files.
+\documentclass{article}
+\usepackage{spconf,amsmath,amssymb,booktabs,array,graphicx,xcolor,url,cite}
 
 \graphicspath{{figures/}}
 \newcommand{\method}{\textsc{Value-CQAG}}
@@ -18,19 +11,22 @@
 
 \title{Locality-Aware Activation Intervention for Multi-Hop Factual Adaptation in Large Language Models}
 
-% Replace the anonymous author block with the camera-ready author metadata.
-\author{\IEEEauthorblockN{Anonymous Authors}}
+% Replace the anonymous author line with the final author metadata before submission.
+\name{Anonymous Authors}
+\address{Affiliation withheld for the current draft}
 
 \begin{document}
+\ninept
+\sloppy
 \maketitle
 
 \begin{abstract}
-Large language models can be adapted to counterfactual facts without changing their parameters, but multi-hop factual updates often trade answer quality for unintended changes on unrelated inputs. We study this trade-off through \method{}, a content-routed activation intervention that acts as an auditable signal path: it injects edited values only when a question overlaps the edited context. Across a frozen 100-case, 300-question MQuAKE-CF confirmation pool, \method{} improves question-level generation from 2.00\% to 38.67\% on Qwen2.5-7B and from 4.00\% to 51.33\% on Llama-3.1-8B, while its end-to-end exact-output locality on a 10,000-pair audit is 98.49\%. We compare against explicit facts, retrieval-plus-in-context learning, and parameter editing with \memit{}. The Qwen retrieval control reaches 95.0\% question-level generation but substantially lower exact locality, whereas \memit{} reaches only 16.0\% and 14.33\% on the two models. Error audits separate router misses from residual old answers and multi-hop entity errors. The results position activation intervention as a controllable signal path for factual adaptation, rather than as a replacement for retrieval or a new state-of-the-art knowledge editor.
+Large language models can absorb counterfactual facts without changing parameters, yet multi-hop updates may damage unrelated outputs. We study \method{}, a content-routed activation intervention that injects an explicit-fact contrast only when a question overlaps the edited context. On a frozen 100-case, 300-question MQuAKE-CF confirmation pool, question-level generation rises from 2.00\% to 38.67\% on Qwen2.5-7B and from 4.00\% to 51.33\% on Llama-3.1-8B. A separate 10,000-pair audit gives 98.49\% exact-output locality. We compare explicit facts, retrieval-plus-in-context learning, and parameter editing with \memit{}. Retrieval reaches 95.0\% question-level generation on Qwen but has lower locality; \memit{} reaches 16.0\% and 14.33\% on Qwen and Llama. Failure audits distinguish router misses, old-answer residuals, and multi-hop entity errors. The study presents activation intervention as a selective, auditable adaptation path rather than an accuracy or knowledge-editing state-of-the-art claim.
 \end{abstract}
 
-\begin{IEEEkeywords}
+\begin{keywords}
 large language models, factual adaptation, activation intervention, locality, multi-hop reasoning, generative AI
-\end{IEEEkeywords}
+\end{keywords}
 
 \section{Introduction}
 Large language models (LLMs) store factual associations in distributed internal representations and can answer multi-hop questions by composing those associations. Updating one fact, however, can expose a difficult systems trade-off: the intervention must affect questions that depend on the edited fact while leaving unrelated generations unchanged. This is especially important for applications that require rapid, reversible adaptation without modifying model weights.
@@ -184,7 +180,7 @@ Table~\ref{tab:history} reports completed auxiliary results. Their case pools an
 \label{tab:history}
 \scriptsize
 \setlength{\tabcolsep}{2.3pt}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.86in}ccccc@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.82in}ccccc@{}}
 \toprule
 Setting & $n$ & Q-gen. & Case & Locality & Seeds \\
 \midrule
@@ -212,7 +208,13 @@ The study has limitations. The confirmation pool has 100 cases and is not a broa
 \section{Conclusion}
 We presented a cross-model study of locality-aware activation intervention for multi-hop factual adaptation. The key result is not a new accuracy record: it is a measured separation between adaptation quality, routing coverage, and unintended change. This separation makes failure analysis actionable and gives future work a concrete target: improve semantic routing and multi-hop composition while preserving the high locality of the gated path.
 
-\scriptsize
-\bibliographystyle{IEEEtran}
+\clearpage
+\section*{Acknowledgment}
+This work received no external funding. The authors thank the open-source model and benchmark communities for releasing the software and data used in this study.
+
+\section*{Compliance with Ethical Standards}
+This study uses publicly available benchmark cases and pretrained models; it involves no human subjects, user data, or private or personally identifiable information. The evaluation is automated and reports aggregate outcomes. The reserved 60-case pool remains sealed and was not read or evaluated during this study.
+
+\bibliographystyle{IEEEbib}
 \bibliography{references}
 \end{document}
