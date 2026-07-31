@@ -94,13 +94,15 @@ The router also gives an exact locality decomposition. For an unrelated query $u
 \end{equation}
 On the 10,000-pair audit, $\phi=152/10{,}000=1.52\%$ and $\eta=0.9934$, yielding $L_{\mathrm{exact}}=98.49\%$. Equation~\ref{eq:locality} explains why a high router rejection rate is necessary but not sufficient: a false route is highly likely to alter the output.
 
-\subsection{Prompt-only value intervention}
-When routed, the intervention supplies the edited values as a compact prompt-side context at the model input. It is applied during the prompt encoding pass and is not repeatedly injected into later autoregressive decoding steps. This design choice is empirical: continuing the intervention for the first two generated tokens decreases question-level generation by 4.00 percentage points on Qwen and 7.00 points on Llama. Prompt-only intervention therefore provides the primary method reported here.
+\subsection{Two-stage prompt-pass implementation}
+Figure~\ref{fig:pipeline} makes the conditional computation explicit. In Stage~1, two frozen prompt passes encode the same question: a question-only pass produces $H_l^0(q)$, while an edited-fact-conditioned pass produces $H_l^+(q,\mathcal{E})$. The router independently tests whether the question is relevant to the edit. In Stage~2, an inactive route forwards $H_l^0(q)$ unchanged to the shared frozen decoder. An active route first computes $D_l(q,\mathcal{E})=H_l^+(q,\mathcal{E})-H_l^0(q)$ and then supplies $\widetilde H_l=H_l^0+g(q,\mathcal{E})\alpha P_wD_l$ at the selected prompt positions before decoding. The pictorial input symbols are schematic; all reported experiments use text questions and text-form edited facts.
+
+The intervention is applied only during the prompt encoding pass and is not repeatedly injected into later autoregressive steps; decoder weights remain frozen in both routes. This choice is empirical: continuing the intervention for the first two generated tokens decreases question-level generation by 4.00 percentage points on Qwen and 7.00 points on Llama. Prompt-only intervention therefore provides the primary method reported here.
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=\textwidth,height=3.0in]{cqag_pipeline.png}
-    \caption{\method{} routes an edited context before prompt-only activation intervention. Edited and unrelated questions share the frozen model, while the evaluator measures both multi-hop answer quality and unchanged-output locality.}
+    \includegraphics[width=\textwidth,height=4.0in,keepaspectratio]{cqag_pipeline.png}
+    \caption{Two-stage \method{} pipeline. Stage~1 encodes question-only and edited-fact-conditioned prompts to obtain $H_l^0(q)$ and $H_l^+(q,\mathcal{E})$, while the router tests edit relevance. In Stage~2, rejected queries retain $H_l^0(q)$; accepted queries receive the contrast $D_l(q,\mathcal{E})$ through $\widetilde H_l$ before frozen decoding.}
     \label{fig:pipeline}
 \end{figure*}
 
