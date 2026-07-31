@@ -101,7 +101,7 @@ The intervention is applied only during the prompt encoding pass and is not repe
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=\textwidth,height=4.0in,keepaspectratio]{cqag_pipeline.png}
+    \includegraphics[width=\textwidth,height=4.0in,keepaspectratio]{cqag_pipeline.pdf}
     \caption{Two-stage \method{} pipeline. Stage~1 encodes question-only and edited-fact-conditioned prompts to obtain $H_l^0(q)$ and $H_l^+(q,\mathcal{E})$, while the router tests edit relevance. In Stage~2, rejected queries retain $H_l^0(q)$; accepted queries receive the contrast $D_l(q,\mathcal{E})$ through $\widetilde H_l$ before frozen decoding.}
     \label{fig:pipeline}
 \end{figure*}
