@@ -60,7 +60,7 @@ No target answer or generated completion enters $D_l$. The fact-conditioned pass
     \widetilde{H}_l=H_l^0+g(q,\mathcal{E})\,\alpha P_wD_l, \qquad l\in\mathcal{L}.
     \label{eq:intervention}
 \end{equation}
-The confirmation configuration uses $\mathcal{L}=\{20,22,24,26\}$, $w=16$, and $\alpha=5$, selected on development cases and frozen before confirmation. Equation~\ref{eq:intervention} is applied only during prompt encoding; weights, caches after the prompt pass, and later autoregressive states are not edited. Direct explicit-fact prompting remains an accuracy upper control. The purpose of the contrast is different: it exposes an edit through a removable, query-gated activation path while decoding from the original question prompt.
+For Qwen, the confirmation configuration uses $\mathcal{L}=\{20,22,24,26\}$, $w=16$, and $\alpha=5$; the Llama confirmation uses the model-specific set $\mathcal{L}=\{16,20,24,28\}$ with the same $w$ and $\alpha$. Both settings were selected on development cases and frozen before confirmation. Equation~\ref{eq:intervention} is applied only during prompt encoding; weights, caches after the prompt pass, and later autoregressive states are not edited. Direct explicit-fact prompting remains an accuracy upper control. The purpose of the contrast is different: it exposes an edit through a removable, query-gated activation path while decoding from the original question prompt.
 
 The construction is related to recent activation steering and representation intervention methods \cite{turner2023activation,li2023iti,todd2024functionvectors,burns2024latentknowledge}, which show that useful task information can be exposed or shifted in hidden states without updating model weights. It differs in two ways: the direction is obtained from an explicit-fact contrast rather than a learned human-preference direction, and a content router gates the direction on a query-by-query basis.
 
@@ -100,7 +100,7 @@ Figure~\ref{fig:pipeline} shows the two stages. Stage~1 forms $H_l^0$ and $H_l^+
 \begin{figure*}[t]
     \centering
     \includegraphics[width=\textwidth,height=4.0in,keepaspectratio]{cqag_pipeline.png}
-    \caption{Two-stage \method{} pipeline. Stage~1 encodes question-only and edited-fact-conditioned prompts to obtain $H_l^0(q)$ and $H_l^+(q,\mathcal{E})$, while the router tests edit relevance. In Stage~2, rejected queries retain $H_l^0(q)$; accepted queries receive the contrast $D_l(q,\mathcal{E})$ through $\widetilde H_l$ before frozen decoding.}
+    \caption{Two-stage \method{} pipeline (the layer labels illustrate the Qwen configuration; Llama uses $\{16,20,24,28\}$). Stage~1 encodes question-only and edited-fact-conditioned prompts to obtain $H_l^0(q)$ and $H_l^+(q,\mathcal{E})$, while the router tests edit relevance. In Stage~2, rejected queries retain $H_l^0(q)$; accepted queries receive the contrast $D_l(q,\mathcal{E})$ through $\widetilde H_l$ before frozen decoding.}
     \label{fig:pipeline}
 \end{figure*}
 
@@ -145,7 +145,9 @@ Llama-3.1-8B & Base & 4.00\% & 0.0\% \\
 \end{tabular}
 \end{table}
 
-Relative to the base model, the paired question-level gain is +36.67 percentage points for Qwen (95\% case-bootstrap CI [29.33, 44.33]) and +47.33 points for Llama (95\% CI [39.33, 55.33]). Retrieval-plus-ICL reaches 95.0\% question-level and 93.0\% case-level accuracy on Qwen, but its exact and semantic locality are only 25.0\% and 61.4\%, respectively, under its separate long-context protocol. These results position \method{} as a selective, lower-interference alternative, not as the strongest answer-generation baseline.
+Relative to the base model, the paired question-level gain is +36.67 percentage points for Qwen (95\% case-bootstrap CI [29.33, 44.33]) and +47.33 points for Llama (95\% CI [39.33, 55.33]). Retrieval-plus-ICL reaches 95.0\% question-level and 93.0\% case-level accuracy on Qwen, but its exact and semantic locality are only 25.0\% and 61.4\%. Thus, \method{} is a selective, lower-interference alternative rather than the strongest accuracy baseline.
+
+Both models routed 281/300 questions (93.67\%; 19 misses). Prompt-only 95\% CIs were [31.33, 46.33] for Qwen and [43.67, 59.33] for Llama, indicating that the larger Llama gain was not caused by different router coverage.
 
 \subsection{Locality and parameter editing}
 The end-to-end routed audit on Qwen gives a 1.52\% false-positive route rate, 98.49\% exact-output locality, and 99.62\% semantic locality. Conditional on a false route, exact locality falls to 0.66\%, showing that the router is the main safety boundary rather than evidence that the injected direction is intrinsically local. The audit records 37 newly corrupted originally-correct outputs and only one newly fixed originally-incorrect output.
@@ -198,7 +200,7 @@ The explicit-fact control reaches 95.0\% / 90.0\% question/case accuracy on Qwen
 \subsection{Ablations and efficiency}
 The development and probe runs provide directional evidence for the operator in Equation~\ref{eq:intervention}. A single token gave 25\% new-answer preference on a 12-question probe, whereas a 4--16-token window reached 75\%. On the 30-case CF split, one layer (22) gave 46.67\% preference and 76.67\% mismatched locality; three layers (22,24,26) gave 66.67\% preference but 63.33\% locality. Continuing the injection for two decoding steps reduced confirmation question accuracy from 38.67\% to 34.67\%; a full token trajectory reached only 17.0\% on a development validation. These are ablations, not additional independent confirmation claims.
 
-For the Qwen 80-case efficiency audit, vector construction averaged 2.273~s/case, base generation 0.388~s/pair, and steered generation 0.924~s/pair. No-router exact locality was 3.33\%; the router costs 3.584~s/case in the 10,000-pair audit.
+For the Qwen 80-case efficiency audit, vector construction, base generation, and steered generation averaged 2.273~s/case, 0.388~s/pair, and 0.924~s/pair; retrieval-plus-ICL required 4.655~s/case. No-router exact locality was 3.33\%, whereas routing cost 3.584~s/case in the 10,000-pair audit. Two-step continuation reduced question accuracy by 4.00 points on Qwen (95\% CI [--8.67, 0.33]) and 7.00 points on Llama ([--11.00, --3.33]).
 
 \section{Discussion and Limitations}
 The evidence supports a focused conclusion. Conditional activation intervention improves multi-hop factual adaptation on two instruction-tuned models without changing their parameters, while the router yields high system-level locality. The same audit also shows the boundary of that claim: after a false route, exact locality falls to 0.66\%, and after a successful route, multi-hop entity selection remains the dominant failure mode. Retrieval is a strong accuracy control; \method{} is useful when selective, reversible behavior is more important than maximizing answer accuracy.
