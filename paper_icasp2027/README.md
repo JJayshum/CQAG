@@ -33,6 +33,11 @@ is non-anonymous and identifies Haowen Chen as corresponding author. Submit a
 copy named `shen.pdf`, and make the portal author names and order match the PDF
 exactly.
 
+Submission metadata:
+
+- Yujie Shen: ORCID `0009-0009-0447-9913`
+- Haowen Chen: ORCID `0000-0002-4777-7525` (corresponding author)
+
 The paper uses `figures/cqag_pipeline_redrawn.pdf`, a vector export from the
 editable `figures/cqag_pipeline_redrawn.drawio`. Matching SVG, preview PNG,
 and editable PNG exports use the same stem. The redraw preserves the supplied

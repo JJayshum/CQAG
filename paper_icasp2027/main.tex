@@ -21,6 +21,8 @@
    Electronic Engineering, Hunan University\\
    Changsha, China\\
    hwchen@hnu.edu.cn ($^{*}$corresponding author)}
+% Submission ORCIDs: Yujie Shen 0009-0009-0447-9913;
+% Haowen Chen 0000-0002-4777-7525.
 
 \begin{document}
 \ninept
@@ -58,25 +60,27 @@ Let $\mathcal{E}=\{(s_i,r_i,o_i^{\mathrm{new}})\}_{i=1}^{K}$ be a set of edited 
 is consistent with the edited facts, while $f_\theta(q;0)$ is retained for unrelated questions. Parameter editing instead produces one model $f_{\theta+\Delta\theta}$ for all subsequent inputs. Our target is therefore a conditional computation: change the signal only when the query is related to the edit.
 
 \subsection{Activation target and gated operator}
-Let $H_l^0(q)\in\mathbb{R}^{T\times d_l}$ denote the hooked self-attention value-projection activations at layer $l$ when the original question prompt is encoded, and let $H_l^+(q,\mathcal{E})$ denote the corresponding activations for the same question preceded by a compact edited-fact instruction. We form the answer-independent contrast
+For each stored source question $s\in\mathcal{S}_{\mathcal E}$, let $v_l^0(s)\in\mathbb{R}^{d_l}$ be the final-token output of the self-attention value projection at layer $l$ under the original prompt, and let $v_l^+(s,\mathcal{E})$ be the final-token output when the same question is preceded by the edited-fact instruction. The two prompts may have different lengths; using their respective final prompt tokens gives an explicit semantic anchor and avoids token-by-token alignment. We form the answer-independent direction
 \begin{equation}
-    D_l(q,\mathcal{E})=H_l^+(q,\mathcal{E})-H_l^0(q).
+    d_l(s,\mathcal{E})=v_l^+(s,\mathcal{E})-v_l^0(s).
 \end{equation}
-No target answer or generated completion enters $D_l$. The fact-conditioned pass is used to construct the contrast; generation itself follows the original question prompt, which permits a rejected query to bypass the edit completely. Let $P_w$ be a shape-preserving binary mask over the final $w$ prompt positions, and let $g(q,\mathcal{E})\in\{0,1\}$ be the router decision. At selected layers $\mathcal{L}$, the operator is
+No target answer or generated completion enters $d_l$. For a target query $q$, the router selects a source template $s^*(q)$ and returns $g(q,\mathcal{E})\in\{0,1\}$. Let $V_l^0(q)\in\mathbb{R}^{T_q\times d_l}$ be the target prompt's value-projection output and $b_t=\mathbb{I}[t>T_q-w]$. At selected layers $\mathcal{L}$, the same direction is broadcast over the final $w$ target-prompt positions:
 \begin{equation}
-    \widetilde{H}_l=H_l^0+g(q,\mathcal{E})\,\alpha P_wD_l, \qquad l\in\mathcal{L}.
+    \widetilde V_l(q)_{t,:}=V_l^0(q)_{t,:}
+    +g(q,\mathcal{E})\,\alpha b_t d_l(s^*,\mathcal{E}).
     \label{eq:intervention}
 \end{equation}
 For Qwen, the confirmation configuration uses $\mathcal{L}=\{20,22,24,26\}$, $w=16$, and $\alpha=5$; the Llama confirmation uses the model-specific set $\mathcal{L}=\{16,20,24,28\}$ with the same $w$ and $\alpha$. Both settings were selected on development cases and frozen before confirmation. Equation~\ref{eq:intervention} is applied only during prompt encoding; weights, caches after the prompt pass, and later autoregressive states are not edited. Direct explicit-fact prompting remains an accuracy upper control. The purpose of the contrast is different: it exposes an edit through a removable, query-gated activation path while decoding from the original question prompt.
 
-The construction is related to recent activation steering and representation intervention methods \cite{turner2023activation,li2023iti,todd2024functionvectors,burns2024latentknowledge}, which show that useful task information can be exposed or shifted in hidden states without updating model weights. It differs in two ways: the direction is obtained from an explicit-fact contrast rather than a learned human-preference direction, and a content router gates the direction on a query-by-query basis.
+The construction is related to recent activation steering and representation intervention methods \cite{turner2023activation,li2023iti,todd2024functionvectors,burns2023latentknowledge}, which show that useful task information can be exposed or shifted in hidden states without updating model weights. It differs in two ways: the direction is obtained from an explicit-fact contrast rather than a learned human-preference direction, and a content router gates the direction on a query-by-query basis.
 
 \subsection{Content-token routing}
-Each edit stores the source-question templates used to construct its directions. For a query $q$, the router lowercases text, extracts alphanumeric tokens, removes a fixed English stop-word list, and takes the maximum Jaccard overlap with a stored source question $s\in\mathcal{S}_{\mathcal E}$:
+Each edit stores the source-question templates used to construct its directions. For a query $q$, the router lowercases text, extracts alphanumeric tokens, removes a fixed English stop-word list, and selects the source question with maximum Jaccard overlap:
 \begin{equation}
-    \rho(q,\mathcal{E}) = \max_{s\in\mathcal{S}_{\mathcal E}}
-    \frac{|T(q)\cap T(s)|}{|T(q)\cup T(s)|}.
+    s^*(q)=\arg\max_{s\in\mathcal{S}_{\mathcal E}}J(q,s),\quad
+    \rho(q,\mathcal{E})=J(q,s^*),
 \end{equation}
+where $J(q,s)=|T(q)\cap T(s)|/|T(q)\cup T(s)|$.
 The gate is
 \begin{equation}
     g(q,\mathcal{E})=\mathbb{I}[\rho(q,\mathcal{E})\geq\tau], \qquad \tau=0.35.
@@ -85,11 +89,12 @@ The gate is
 The threshold is fixed on development data and is not tuned on the confirmation pool. A router miss is counted separately from a generation error after a successful route. This abstention mechanism motivates reporting coverage and generation separately rather than hiding both behind one accuracy score.
 
 \subsection{First-order effect and locality identity}
-For a fixed answer position, let $m(q)=z_{\newans}(q)-z_{\oldans}(q)$ be the new-versus-old logit margin. A local expansion around the unmodified activations gives
+For a fixed answer position, let $m(q)=z_{\newans}(q)-z_{\oldans}(q)$ be the new-versus-old logit margin, and let $\mathcal W_q$ index the final $w$ prompt positions. A local expansion around the unmodified activations gives
 \begin{equation}
     \Delta m \approx \alpha g\sum_{l\in\mathcal{L}}
-    \left\langle P_w\nabla_{H_l}m, P_wD_l\right\rangle
-    +O\!\left(\alpha^2\sum_l\|P_wD_l\|_F^2\right).
+    \sum_{t\in\mathcal W_q}\!\left\langle
+    \nabla_{V_l[t,:]}m,d_l(s^*,\mathcal{E})\right\rangle
+    +O\!\left(\alpha^2w\sum_l\|d_l\|_2^2\right).
     \label{eq:margin}
 \end{equation}
 The equation is diagnostic, not a global guarantee: a useful contrast must align with the local answer-margin gradient, whereas an unrelated equal-norm direction has no systematic alignment under an isotropic null model. Multi-token generation can still fail after a favorable local change, which motivates the separate old-answer and entity-error audit.
@@ -102,19 +107,19 @@ The router also gives an exact locality decomposition. For an unrelated query $u
 On the 10,000-pair audit, $\phi=152/10{,}000=1.52\%$ and $\eta=0.9934$, yielding $L_{\mathrm{exact}}=98.49\%$. Equation~\ref{eq:locality} explains why a high router rejection rate is necessary but not sufficient: a false route is highly likely to alter the output.
 
 \subsection{Two-stage prompt-pass implementation}
-Figure~\ref{fig:pipeline} shows the two stages. Stage~1 forms $H_l^0$ and $H_l^+$ with frozen passes and evaluates the router. Stage~2 either forwards the original activations or applies their contrast before the shared frozen decoder. The pictorial input symbols are schematic; all reported inputs are text. Extending the intervention through the first two generated tokens reduces question accuracy by 4.00 points on Qwen and 7.00 points on Llama, supporting the prompt-only design.
+Figure~\ref{fig:pipeline} shows the two stages. Stage~1 constructs $d_l(s,\mathcal E)$ for each source template with frozen passes; independently, the text router selects $s^*(q)$. Stage~2 either forwards the target prompt unchanged or broadcasts the selected direction over its final $w$ positions before the shared frozen decoder. Extending the intervention through the first two generated tokens reduces question accuracy by 4.00 points on Qwen and 7.00 points on Llama, supporting the prompt-only design.
 
 \begin{figure*}[t]
     \centering
     \includegraphics[width=\textwidth]{cqag_pipeline_redrawn.pdf}
-    \caption{Two-stage \method{} pipeline (the layer labels illustrate the Qwen configuration; Llama uses $\{16,20,24,28\}$). Stage~1 encodes question-only and edited-fact-conditioned prompts to obtain $H_l^0(q)$ and $H_l^+(q,\mathcal{E})$, while the router tests edit relevance. In Stage~2, rejected queries retain $H_l^0(q)$; accepted queries receive the contrast $D_l(q,\mathcal{E})$ through $\widetilde H_l$ before frozen decoding.}
+    \caption{Two-stage \method{} pipeline (Qwen layers shown; Llama uses $\{16,20,24,28\}$). Stage~1 subtracts final-token value vectors for each stored source template $s$ to obtain $d_l(s,\mathcal E)$; the text router independently selects $s^*(q)$. In Stage~2, rejected queries bypass the edit, while accepted queries receive the selected direction over their last $w$ prompt positions before frozen decoding.}
     \label{fig:pipeline}
 \end{figure*}
 
 \section{Related Work}
 Knowledge editing has been studied through localized parameter updates such as ROME and MEMIT \cite{meng2022rome,meng2023memit}, learned editors \cite{decao2021knowledgeeditor,mitchell2022mend}, and external edit memories such as SERAC \cite{mitchell2022serac}. Localization and specificity studies show that successful edits can remain difficult to predict and can introduce unintended behavior \cite{hase2023localization,hoelscherobermaier2023detecting}. MQuAKE specifically exposes failures that appear when several edited facts must be composed \cite{zhong2023mquake}. Our intervention instead controls the activation signal presented to a frozen decoder.
 
-Activation steering methods add directions at inference time, including unsupervised activation addition \cite{turner2023activation}, inference-time interventions for truthful behavior \cite{li2023iti}, and function-vector analyses of in-context computation \cite{todd2024functionvectors}. Work on latent knowledge and relation decoding suggests that internal representations can carry answer-relevant relational information even when final generation is unreliable \cite{burns2024latentknowledge,hernandez2024linearity}. These methods motivate treating hidden states as a controllable signal, but generally apply a direction whenever a prompt is evaluated. Our contribution combines an explicit-fact contrast, a lexical gate, and an end-to-end locality audit. Retrieval-augmented generation remains a strong accuracy control \cite{lewis2020rag}.
+Activation steering methods add directions at inference time, including unsupervised activation addition \cite{turner2023activation}, inference-time interventions for truthful behavior \cite{li2023iti}, and function-vector analyses of in-context computation \cite{todd2024functionvectors}. Work on latent knowledge and relation decoding suggests that internal representations can carry answer-relevant relational information even when final generation is unreliable \cite{burns2023latentknowledge,hernandez2024linearity}. These methods motivate treating hidden states as a controllable signal, but generally apply a direction whenever a prompt is evaluated. Our contribution combines an explicit-fact contrast, a lexical gate, and an end-to-end locality audit. Retrieval-augmented generation remains a strong accuracy control \cite{lewis2020rag}.
 
 \section{Experimental Protocol}
 \subsection{Models and data}
@@ -206,8 +211,6 @@ The explicit-fact control reaches 95.0\% / 90.0\% question/case accuracy on Qwen
 
 \smallskip\noindent\textbf{Coverage versus conditional gain.} Both models accept 281/300 questions (93.67\%), so their different gains reflect decoder use of the same signal rather than different gate coverage. The 19 misses are a measurable recall ceiling for lexical routing.
 
-\smallskip\noindent\textbf{Resource and safety accounting.} Vector construction costs 2.273~s/case; base and steered generations cost 0.388 and 0.924~s/pair, below retrieval-plus-ICL at 4.655~s/case. In the 10,000-pair audit, 152 pairs were falsely routed and 151 changed output, showing that 98.49\% locality depends on conservative routing.
-
 \smallskip\noindent\textbf{Residual errors.} After routing, entity/composition errors dominate (133 Qwen; 96 Llama), while old-answer residuals account for 31 and 30 cases. Lowering $\tau$ may recover paraphrases but increases false routes and directly reduces locality through Equation~\ref{eq:locality}; improving composition is therefore safer.
 
 \smallskip\noindent\textbf{Baseline interpretation.} Explicit facts and retrieval show the task is solvable, while retrieval's 25.0\% exact locality and Llama MEMIT's 73.4\% locality expose the interference cost. Value-CQAG trades peak accuracy for a reversible, query-level scope decision.
@@ -215,7 +218,7 @@ The explicit-fact control reaches 95.0\% / 90.0\% question/case accuracy on Qwen
 \subsection{Ablations and efficiency}
 The development and probe runs provide directional evidence for the operator in Equation~\ref{eq:intervention}. A single token gave 25\% new-answer preference on a 12-question probe, whereas a 4--16-token window reached 75\%. On the 30-case CF split, one layer (22) gave 46.67\% preference and 76.67\% mismatched locality; three layers (22,24,26) gave 66.67\% preference but 63.33\% locality. Continuing the injection for two decoding steps reduced confirmation question accuracy from 38.67\% to 34.67\%; a full token trajectory reached only 17.0\% on a development validation. These are ablations, not additional independent confirmation claims.
 
-For the Qwen 80-case efficiency audit, vector construction, base generation, and steered generation averaged 2.273~s/case, 0.388~s/pair, and 0.924~s/pair; retrieval-plus-ICL required 4.655~s/case. No-router exact locality was 3.33\%, whereas routing cost 3.584~s/case in the 10,000-pair audit. Two-step continuation reduced question accuracy by 4.00 points on Qwen (95\% CI [--8.67, 0.33]) and 7.00 points on Llama ([--11.00, --3.33]).
+In an 80-case audit, direction construction, base generation, and steered generation averaged 2.273~s/edit, 0.388~s/question, and 0.924~s/question. The 100-case locality audit required 3.584~s/edit to construct three direction sets; rejected pairs reused cached base outputs. Retrieval-plus-ICL required 4.655~s/case for retrieval and generation over three questions. These different workloads permit descriptive timing, not a matched speed claim. No-router exact locality was 3.33\%. Two-step continuation reduced question accuracy by 4.00 points on Qwen (95\% CI [--8.67, 0.33]) and 7.00 points on Llama ([--11.00, --3.33]).
 
 \section{Discussion and Limitations}
 The evidence supports a focused conclusion. Conditional activation intervention improves multi-hop factual adaptation on two instruction-tuned models without changing their parameters, while the router yields high system-level locality. The same audit also shows the boundary of that claim: after a false route, exact locality falls to 0.66\%, and after a successful route, multi-hop entity selection remains the dominant failure mode. Retrieval is a strong accuracy control; \method{} is useful when selective, reversible behavior is more important than maximizing answer accuracy.
@@ -227,7 +230,7 @@ We presented \method{}, a selective activation intervention for multi-hop factua
 
 \clearpage
 \section*{Acknowledgment}
-This work received no external funding. The authors thank the open-source model and benchmark communities for releasing the software and data used in this study.
+This work was supported by the National Natural Science Foundation of China (grant no. 62472165), the Fundamental and Interdisciplinary Disciplines Breakthrough Plan of the Ministry of Education of China (JYB2025XDXM602), and the Yuelushan Laboratory Breeding Program (YLS-2026-ZY01002). The authors thank the open-source model and benchmark communities for releasing the software and data used in this study.
 
 \section*{Compliance with Ethical Standards}
 This study uses publicly available benchmark cases and pretrained models; it involves no human subjects, user data, or private or personally identifiable information. The evaluation is automated and reports aggregate outcomes. The reserved 60-case pool remains sealed and was not read or evaluated during this study.
