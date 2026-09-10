@@ -11,9 +11,16 @@
 
 \title{SELECTIVE ACTIVATION INTERVENTION FOR LOCALITY-AWARE MULTI-HOP FACTUAL ADAPTATION}
 
-% Replace the anonymous author line with the final author metadata before submission.
-\name{Anonymous Authors}
-\address{Affiliation withheld for the current draft}
+\twoauthors
+  {Yujie Shen}
+  {School of Mathematics, Hunan University\\
+   Changsha, China\\
+   eugeneshen2005@gmail.com}
+  {Haowen Chen$^{*}$}
+  {College of Computer Science and\\
+   Electronic Engineering, Hunan University\\
+   Changsha, China\\
+   hwchen@hnu.edu.cn ($^{*}$corresponding author)}
 
 \begin{document}
 \ninept
@@ -21,17 +28,17 @@
 \maketitle
 
 \begin{abstract}
-Factual adaptation has two objectives: make edited facts usable in multi-hop reasoning and avoid changing unrelated generations. Prompting and parameter editing can improve one objective while obscuring the other. We study \method{}, a selective activation intervention that forms a contrast between an edited-fact prompt and the original question prompt, then gates that contrast with a content router. On a frozen 100-case, 300-question MQuAKE-CF confirmation pool, question-level generation rises from 2.00\% to 38.67\% on Qwen2.5-7B and from 4.00\% to 51.33\% on Llama-3.1-8B. Explicit facts remain a stronger accuracy control (95.0\% and 93.0\%), so our claim is selectivity rather than state-of-the-art accuracy. On a separate Qwen 10,000-pair audit, the routed system achieves 98.49\% exact and 99.62\% semantic locality with a 1.52\% false-positive route rate. Failure analysis separates routing misses from old-answer and multi-hop entity errors. The result is a reversible, auditable adaptation path with a clear remaining bottleneck: multi-hop composition after a successful route.
+Factual adaptation has two objectives: make edited facts usable in multi-hop reasoning and avoid changing unrelated generations. Prompting and parameter editing can improve one objective while obscuring the other. We study \method{}, a selective activation intervention that forms a contrast between an edited-fact prompt and the original question prompt, then gates that contrast with a content router. On a frozen 100-case, 300-question MQuAKE-CF confirmation pool, question-level generation rises from 2.00\% to 38.67\% on Qwen2.5-7B and from 4.00\% to 51.33\% on Llama-3.1-8B. Explicit facts remain a stronger accuracy control (95.0\% and 93.0\%), so our claim is selectivity rather than state-of-the-art accuracy. On a separate Qwen 10,000-pair audit, the routed system achieves 98.49\% exact and 99.62\% semantic locality with a 1.52\% false-positive route rate. Failure analysis separates routing misses from old-answer and multi-hop entity errors. The result is a reversible adaptation path with a remaining bottleneck: multi-hop composition after a successful route.
 \end{abstract}
 
 \begin{keywords}
-large language models, factual adaptation, activation intervention, locality, multi-hop reasoning, generative AI
+large language models, factual adaptation, activation intervention, locality, multi-hop reasoning
 \end{keywords}
 
 \section{Introduction}
 Factual adaptation is not a single objective. A useful system must both propagate an edited fact through a multi-hop answer and abstain on questions that do not depend on that edit. These requirements are easy to conflate: a prompt containing the new fact can improve answerability, while a parameter or activation change can also alter unrelated generations. The distinction matters for rapid, reversible adaptation, where an edit should be removable without producing a globally changed model.
 
-Existing approaches solve different parts of this problem. Parameter-editing methods locate and rewrite factual associations in feed-forward layers \cite{geva2021transformer,meng2022rome,meng2023memit,dai2022knowledge}; learned editors provide an alternative amortized formulation of the same update problem \cite{decao2021knowledgeeditor}, while recent surveys organize the broader design space and its evaluation pitfalls \cite{yao2023editing}. External memories store an edit for later retrieval \cite{mitchell2022serac}; and retrieval or in-context methods supply explicit evidence at inference time \cite{lewis2020rag,zheng2023ike}. MQuAKE shows why single-hop success is insufficient: the edited fact must survive composition with other entities \cite{zhong2023mquake}. A single accuracy number therefore hides the important question of where the system failed: did it miss the edit, retain the old answer, or select the wrong entity after receiving the edit?
+Existing approaches solve different parts of this problem. Parameter-editing methods locate and rewrite factual associations in feed-forward layers \cite{geva2021transformer,meng2022rome,meng2023memit,dai2022knowledge}; editable-network and learned-editor approaches instead amortize the update operation \cite{sinitsin2020editable,decao2021knowledgeeditor,mitchell2022mend}, while recent surveys organize the broader design space and its evaluation pitfalls \cite{yao2023editing}. External memories store an edit for later retrieval \cite{mitchell2022serac}; retrieval or in-context methods supply explicit evidence at inference time \cite{lewis2020rag,zheng2023ike}. MQuAKE shows why single-hop success is insufficient: the edited fact must survive composition with other entities \cite{zhong2023mquake}. A single accuracy number therefore hides whether the system missed the edit, retained the old answer, or selected the wrong entity after receiving the edit.
 
 We study \method{} as a controlled answer to that question. It forms an answer-independent contrast between an edited-fact prompt and the original question prompt in the model's value-projection channel. A fixed content router decides whether to apply that contrast; rejected queries follow the original prompt path, while accepted queries receive a bounded prompt-only intervention before the same frozen decoder. This decomposition makes scope and effect measurable separately. Figure~\ref{fig:pipeline} summarizes the signal path.
 
@@ -99,22 +106,22 @@ Figure~\ref{fig:pipeline} shows the two stages. Stage~1 forms $H_l^0$ and $H_l^+
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=\textwidth,height=4.0in,keepaspectratio]{cqag_pipeline.png}
+    \includegraphics[width=\textwidth,height=3.45in,keepaspectratio]{cqag_pipeline.png}
     \caption{Two-stage \method{} pipeline (the layer labels illustrate the Qwen configuration; Llama uses $\{16,20,24,28\}$). Stage~1 encodes question-only and edited-fact-conditioned prompts to obtain $H_l^0(q)$ and $H_l^+(q,\mathcal{E})$, while the router tests edit relevance. In Stage~2, rejected queries retain $H_l^0(q)$; accepted queries receive the contrast $D_l(q,\mathcal{E})$ through $\widetilde H_l$ before frozen decoding.}
     \label{fig:pipeline}
 \end{figure*}
 
 \section{Related Work}
-Knowledge editing has been studied through localized parameter updates such as ROME and MEMIT \cite{meng2022rome,meng2023memit}, and through external edit memories such as SERAC \cite{mitchell2022serac}. The MQuAKE benchmark specifically exposes failures that only appear when several edited facts must be composed \cite{zhong2023mquake}. Our intervention leaves the parameters and external memory unchanged and instead controls the activation signal presented to a frozen decoder.
+Knowledge editing has been studied through localized parameter updates such as ROME and MEMIT \cite{meng2022rome,meng2023memit}, learned editors \cite{decao2021knowledgeeditor,mitchell2022mend}, and external edit memories such as SERAC \cite{mitchell2022serac}. Localization and specificity studies show that successful edits can remain difficult to predict and can introduce unintended behavior \cite{hase2023localization,hoelscherobermaier2023detecting}. MQuAKE specifically exposes failures that appear when several edited facts must be composed \cite{zhong2023mquake}. Our intervention instead controls the activation signal presented to a frozen decoder.
 
-Activation steering methods add directions at inference time, including unsupervised activation addition \cite{turner2023activation}, inference-time interventions for truthful behavior \cite{li2023iti}, and function-vector analyses of in-context computation \cite{todd2024functionvectors}. Work on latent knowledge probing further suggests that internal representations can carry answer-relevant information even when the final generation is unreliable \cite{burns2024latentknowledge}. These methods motivate treating hidden states as a controllable signal, but they generally assume a direction is applied whenever a prompt is evaluated. Our contribution is the combination of an explicit-fact contrast, a lexical gate, and a separate end-to-end locality audit. Retrieval-augmented generation remains a strong accuracy control \cite{lewis2020rag}; we therefore report it rather than presenting activation intervention as an accuracy replacement.
+Activation steering methods add directions at inference time, including unsupervised activation addition \cite{turner2023activation}, inference-time interventions for truthful behavior \cite{li2023iti}, and function-vector analyses of in-context computation \cite{todd2024functionvectors}. Work on latent knowledge and relation decoding suggests that internal representations can carry answer-relevant relational information even when final generation is unreliable \cite{burns2024latentknowledge,hernandez2024linearity}. These methods motivate treating hidden states as a controllable signal, but generally apply a direction whenever a prompt is evaluated. Our contribution combines an explicit-fact contrast, a lexical gate, and an end-to-end locality audit. Retrieval-augmented generation remains a strong accuracy control \cite{lewis2020rag}.
 
 \section{Experimental Protocol}
 \subsection{Models and data}
 We evaluate Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct. All principal comparisons use the same frozen 100-case MQuAKE-CF confirmation pool, containing 300 questions (three per case); MQuAKE is designed to test composition rather than isolated single facts \cite{zhong2023mquake}. The pool is separate from a reserved set that is not used in this study. For parameter editing, five deterministic unrelated questions per edited case form a 500-output locality check; the routed audit is reported separately below.
 
 \subsection{Baselines and metrics}
-We compare four adaptation modes: (i) the unmodified base model, (ii) explicit facts placed in the prompt, (iii) a transparent retrieval-plus-ICL control inspired by IKE \cite{zheng2023ike}, and (iv) EasyEdit \memit{} \cite{meng2023memit}. The retrieval corpus contains 500 non-overlapping development cases and uses MiniLM semantic retrieval with eight demonstrations. This is an IKE-style control, not a claim of an unmodified official IKE reproduction.
+We compare four adaptation modes: (i) the unmodified base model, (ii) explicit facts placed in the prompt, (iii) a transparent retrieval-plus-ICL control inspired by IKE \cite{zheng2023ike}, and (iv) \memit{} \cite{meng2023memit} implemented with EasyEdit \cite{wang2024easyedit}. The retrieval corpus contains 500 non-overlapping development cases and uses MiniLM semantic retrieval with eight demonstrations. This is an IKE-style control, not a claim of an unmodified official IKE reproduction.
 
 We report question-level generation accuracy, case-level generation accuracy (all questions in a case correct), new-answer preference, and exact-output locality. A generation hit requires normalized exact match to the new answer or a recorded alias. The routed locality audit crosses 100 edited cases with 100 unrelated questions, yielding 10,000 pairs. Exact locality requires an unchanged output string; semantic locality requires preservation of the task's answer-equivalence status. The \memit{} locality protocol uses 500 fixed unrelated outputs and is not pooled with the routed audit. Confidence intervals are paired case-bootstrap intervals where reported.
 
@@ -158,11 +165,11 @@ Table~\ref{tab:edit} compares the two \memit{} runs. The method has lower genera
 \centering
 \caption{EasyEdit \memit{} on the frozen 100-case pool. Locality uses 500 unrelated outputs.}
 \label{tab:edit}
-\scriptsize
-\setlength{\tabcolsep}{3pt}
+\small
+\setlength{\tabcolsep}{1.6pt}
 \begin{tabular}{lccccc}
 \toprule
-Model & Pref. & Q-gen. & Case & Exact loc. & Edit (s) \\
+Model & Pref. & Q-gen. & Case & Loc. & Time (s) \\
 \midrule
 Qwen2.5-7B & 16.0\% & 16.0\% & 8.0\% & 85.2\% & 52.41 \\
 Llama-3.1-8B & 18.0\% & 14.33\% & 5.0\% & 73.4\% & 29.64 \\
@@ -178,24 +185,32 @@ Table~\ref{tab:history} reports auxiliary evaluations. Their case pools and filt
 
 \begin{table}[t]
 \centering
-\caption{Completed auxiliary evaluations. ``Locality'' is mismatched-direction locality for Value-CQAG and exact-output locality for ROME. Results are not pooled across protocols.}
+\caption{Completed auxiliary evaluations (V-CQAG denotes Value-CQAG). Sample counts are in parentheses. The first two rows report three-seed mean$\pm$standard deviation; the others are single runs. ``Loc.'' is mismatched-direction locality for V-CQAG and exact-output locality for ROME.}
 \label{tab:history}
-\scriptsize
-\setlength{\tabcolsep}{2.3pt}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.82in}ccccc@{}}
+\small
+\setlength{\tabcolsep}{1.3pt}
+\begin{tabular}{@{}lccc@{}}
 \toprule
-Setting & $n$ & Q-gen. & Case & Locality & Seeds \\
+Setting ($n$) & Q-gen. & Case & Loc. \\
 \midrule
-Qwen CF, Value-CQAG & $30\times3$ & 27.78$\pm$2.22 & 12.22$\pm$1.92 & 80.00$\pm$14.53 & 3 \\
-Qwen T, Value-CQAG & $16\times3$ & 21.53$\pm$2.41 & 0.00 & 64.58$\pm$7.22 & 3 \\
-Qwen2.5-3B CF & 30 & 3.33 & 0.00 & -- & 1 \\
-Llama CF, question-specific & 80 & 42.92 & 28.75 & -- & 1 \\
-Qwen CF, ROME & 80 & 19.17 & 13.75 & 80.75 & 1 \\
+Qwen CF, V-CQAG ($30\!\times\!3$) & 27.78$\pm$2.22 & 12.22$\pm$1.92 & 80.00$\pm$14.53 \\
+Qwen T, V-CQAG ($16\!\times\!3$) & 21.53$\pm$2.41 & 0.00 & 64.58$\pm$7.22 \\
+Qwen2.5-3B CF (30) & 3.33 & 0.00 & -- \\
+Llama CF, q-specific (80) & 42.92 & 28.75 & -- \\
+Qwen CF, ROME (80) & 19.17 & 13.75 & 80.75 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 The explicit-fact control reaches 95.0\% / 90.0\% question/case accuracy on Qwen and 93.0\% / 87.0\% on Llama. On the earlier 30-case split it reaches 78.89\% on Qwen2.5-7B and 74.44\% on Qwen2.5-3B, confirming that the evaluation is solvable and that the remaining gap is methodological rather than an impossible target.
+
+\smallskip\noindent\textbf{Coverage versus conditional gain.} Both models accept 281/300 questions (93.67\%), so their different gains reflect decoder use of the same signal rather than different gate coverage. The 19 misses are a measurable recall ceiling for lexical routing.
+
+\smallskip\noindent\textbf{Resource and safety accounting.} Vector construction costs 2.273~s/case; base and steered generations cost 0.388 and 0.924~s/pair, below retrieval-plus-ICL at 4.655~s/case. In the 10,000-pair audit, 152 pairs were falsely routed and 151 changed output, showing that 98.49\% locality depends on conservative routing.
+
+\smallskip\noindent\textbf{Residual errors.} After routing, entity/composition errors dominate (133 Qwen; 96 Llama), while old-answer residuals account for 31 and 30 cases. Lowering $\tau$ may recover paraphrases but increases false routes and directly reduces locality through Equation~\ref{eq:locality}; improving composition is therefore safer.
+
+\smallskip\noindent\textbf{Baseline interpretation.} Explicit facts and retrieval show the task is solvable, while retrieval's 25.0\% exact locality and Llama MEMIT's 73.4\% locality expose the interference cost. Value-CQAG trades peak accuracy for a reversible, query-level scope decision.
 
 \subsection{Ablations and efficiency}
 The development and probe runs provide directional evidence for the operator in Equation~\ref{eq:intervention}. A single token gave 25\% new-answer preference on a 12-question probe, whereas a 4--16-token window reached 75\%. On the 30-case CF split, one layer (22) gave 46.67\% preference and 76.67\% mismatched locality; three layers (22,24,26) gave 66.67\% preference but 63.33\% locality. Continuing the injection for two decoding steps reduced confirmation question accuracy from 38.67\% to 34.67\%; a full token trajectory reached only 17.0\% on a development validation. These are ablations, not additional independent confirmation claims.
