@@ -33,4 +33,9 @@ is non-anonymous and identifies Haowen Chen as corresponding author. Submit a
 copy named `shen.pdf`, and make the portal author names and order match the PDF
 exactly.
 
-The method figure is available as an editable `figures/cqag_pipeline.drawio`, clean PNG, embedded editable PNG, and SVG.
+The paper uses `figures/cqag_pipeline_redrawn.pdf`, a vector export from the
+editable `figures/cqag_pipeline_redrawn.drawio`. Matching SVG, preview PNG,
+and editable PNG exports use the same stem. The redraw preserves the supplied
+figure's pastel panels, activation stacks, locks, and two-stage layout, with
+ordinary figure labels approximately 9.3 pt at the paper's full-column-pair width.
+The older `cqag_pipeline.*` files are retained as the original design assets.
