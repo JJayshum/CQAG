@@ -11,22 +11,19 @@
 
 \title{SELECTIVE ACTIVATION INTERVENTION FOR LOCALITY-AWARE MULTI-HOP FACTUAL ADAPTATION}
 
-\name{\scriptsize\begin{tabular}{c}
-Yujie Shen$^{1}$ \quad Haowen Chen$^{2,*}$ \quad Yupeng Hu$^{2}$\\[-1pt]
-Yuan Lei$^{1}$ \quad Lu Fang$^{3}$
-\end{tabular}}
-\address{\scriptsize
-\parbox{0.30\textwidth}{\centering
+\name{Yujie Shen$^{1}$ \quad Haowen Chen$^{2,*}$ \quad Yupeng Hu$^{2}$ \quad Yuan Lei$^{1}$ \hspace{0.8em} Lu Fang$^{3}$}
+\address{\fontsize{9}{9.2}\selectfont
+\parbox{0.295\textwidth}{\centering
 $^{1}$School of Mathematics\\ Hunan University\\ Changsha 410082, China\\
 eugeneshen2005@gmail.com\\ ORCID: 0009-0009-0447-9913\\
 yleimath@hnu.edu.cn\\ ORCID: 0000-0002-0413-5848}
 \hspace{0.01\textwidth}
 \parbox{0.34\textwidth}{\centering
 $^{2}$College of Computer Science and Electronic Engineering\\ Hunan University\\ Changsha 410082, China\\
-hwchen@hnu.edu.cn ($^{*}$ corresponding)\\ ORCID: 0000-0002-4777-7525\\
+hwchen@hnu.edu.cn ($^{*}$ corresponding author)\\ ORCID: 0000-0002-4777-7525\\
 yphu@hnu.edu.cn\\ ORCID: 0000-0002-7358-7426}
 \hspace{0.01\textwidth}
-\parbox{0.30\textwidth}{\centering
+\parbox{0.295\textwidth}{\centering
 $^{3}$Modern Engineering Training Center\\ Hunan University\\ Changsha 410082, China\\
 fanglu@hnu.edu.cn\\ ORCID: 0009-0004-6546-9720}}
 
@@ -36,7 +33,7 @@ fanglu@hnu.edu.cn\\ ORCID: 0009-0004-6546-9720}}
 \maketitle
 
 \begin{abstract}
-Factual adaptation has two objectives: make edited facts usable in multi-hop reasoning and avoid changing unrelated generations. Prompting and parameter editing can improve one objective while obscuring the other. We study \method{}, a selective activation intervention that forms a contrast between an edited-fact prompt and the original question prompt, then gates that contrast with a content router. On a frozen 100-case, 300-question MQuAKE-CF confirmation pool, question-level generation rises from 2.00\% to 38.67\% on Qwen2.5-7B and from 4.00\% to 51.33\% on Llama-3.1-8B. Explicit facts remain a stronger accuracy control (95.0\% and 93.0\%), so our claim is selectivity rather than state-of-the-art accuracy. On a separate Qwen 10,000-pair audit, the routed system achieves 98.49\% exact and 99.62\% semantic locality with a 1.52\% false-positive route rate. Failure analysis separates routing misses from old-answer and multi-hop entity errors. The result is a reversible adaptation path with a remaining bottleneck: multi-hop composition after a successful route.
+Factual adaptation must make edited facts usable in multi-hop reasoning without changing unrelated generations. We study \method{}, a selective activation intervention that contrasts an edited-fact prompt with the original question and gates the resulting direction with a content router. On a frozen 100-case, 300-question MQuAKE-CF confirmation pool, question-level accuracy rises from 2.00\% to 38.67\% on Qwen2.5-7B and from 4.00\% to 51.33\% on Llama-3.1-8B. Explicit facts remain a stronger control (95.0\% and 93.0\%), so our claim is selectivity rather than state-of-the-art accuracy. On a separate Qwen 10,000-pair audit, the routed system achieves 98.49\% exact and 99.62\% semantic locality with a 1.52\% false-positive route rate. Failure analysis distinguishes routing misses from old-answer and multi-hop entity errors. \method{} therefore provides reversible adaptation with auditable locality while revealing multi-hop composition after successful routing as the remaining bottleneck.
 \end{abstract}
 
 \begin{keywords}
@@ -52,6 +49,8 @@ We study \method{} as a controlled answer to that question. It forms an answer-i
 
 Our contributions are:
 \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\topsep}{2pt}
     \item A parameter-free, gated activation operator that separates edit direction from edit scope and can be bypassed query by query.
     \item A controlled cross-model evaluation on Qwen2.5-7B and Llama-3.1-8B against explicit-fact, retrieval-plus-ICL, and \memit{} controls on the same frozen confirmation protocol.
     \item A 10,000-pair end-to-end locality audit and a failure decomposition showing that routing errors are distinct from downstream multi-hop entity errors.
@@ -232,7 +231,7 @@ The evidence supports a focused conclusion. Conditional activation intervention 
 The confirmation pool contains 100 cases and is not a broad pretraining-scale benchmark. The router uses lexical overlap with stored source-question templates and can miss paraphrases. The five-question parameter-editing locality protocol and 10,000-pair routed audit measure related but different quantities. Finally, the \memit{} comparison uses a documented hardware compatibility path (fp16 loading and CPU double solve) on a 24-GB GPU; it is not presented as an unmodified official \memit{} run. Future work should test relation-macro accuracy, independent seeds, semantic routing, matched end-to-end resource budgets, and a learned locality-regularized router. These limitations bound the claim; they do not change the observed separation between routing coverage and downstream composition.
 
 \section{Conclusion}
-We presented \method{}, a selective activation intervention for multi-hop factual adaptation. Its central design choice is to separate what changes from where it changes: an explicit-fact contrast supplies the direction, while a content router controls exposure and rejected queries retain the original path. Across Qwen and Llama, this improves over the base model but does not surpass explicit prompting on raw accuracy; the value of the method is the auditable locality boundary and the resulting failure decomposition. The next technical target is clear: replace lexical routing and improve multi-hop composition without sacrificing that boundary.
+We presented \method{}, a selective activation intervention that separates the edit direction from its scope: an explicit-fact contrast supplies the direction, while a content router controls exposure. Across Qwen and Llama, the method improves over the base model but not explicit prompting; its value is an auditable locality boundary and failure decomposition. The next target is to improve routing and multi-hop composition without sacrificing that boundary.
 
 \clearpage
 \section*{Acknowledgment}
