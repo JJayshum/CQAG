@@ -11,17 +11,17 @@
 
 \title{SELECTIVE ACTIVATION INTERVENTION FOR LOCALITY-AWARE MULTI-HOP FACTUAL ADAPTATION}
 
-\name{\small\begin{tabular}{c}
+\name{\begin{tabular}{c}
 Yujie Shen$^{1}$ \qquad Haowen Chen$^{2,*}$\\[-1pt]
 Yupeng Hu$^{2}$ \qquad Yuan Lei$^{1}$ \qquad Lu Fang$^{3}$
 \end{tabular}}
-\address{\small
+\address{\fontsize{10}{9}\selectfont
 $^{1}$School of Mathematics, Hunan University, Changsha, 410082, China\\
 $^{2}$College of Computer Science and Electronic Engineering,\\
 Hunan University, Changsha, 410082, China\\
 $^{3}$Modern Engineering Training Center, Hunan University, Changsha, 410082, China\\
-$^{*}$Corresponding author: hwchen@hnu.edu.cn\\
-eugeneshen2005@gmail.com; yleimath@hnu.edu.cn; yphu@hnu.edu.cn; fanglu@hnu.edu.cn\vspace{-1.5em}}
+$^{*}$Corresponding author: \texttt{hwchen@hnu.edu.cn}\\
+{\fontsize{8}{9}\selectfont\texttt{eugeneshen2005@gmail.com; yleimath@hnu.edu.cn; yphu@hnu.edu.cn; fanglu@hnu.edu.cn}}\vspace{-2.5em}}
 
 \begin{document}
 \ninept
@@ -214,10 +214,8 @@ The explicit-fact control reaches 95.0\% / 90.0\% question/case accuracy on Qwen
 
 \smallskip\noindent\textbf{Residual errors.} After routing, entity/composition errors dominate (133 Qwen; 96 Llama), while old-answer residuals account for 31 and 30 cases. Lowering $\tau$ may recover paraphrases but increases false routes and directly reduces locality through Equation~\ref{eq:locality}; improving composition is therefore safer.
 
-\smallskip\noindent\textbf{Baseline interpretation.} Explicit facts and retrieval show the task is solvable, while retrieval's 25.0\% exact locality and Llama MEMIT's 73.4\% locality expose the interference cost. Value-CQAG trades peak accuracy for a reversible, query-level scope decision.
-
 \subsection{Ablations and efficiency}
-The development and probe runs provide directional evidence for the operator in Equation~\ref{eq:intervention}. A single token gave 25\% new-answer preference on a 12-question probe, whereas a 4--16-token window reached 75\%. On the 30-case CF split, one layer (22) gave 46.67\% preference and 76.67\% mismatched locality; three layers (22,24,26) gave 66.67\% preference but 63.33\% locality. Continuing the injection for two decoding steps reduced confirmation question accuracy from 38.67\% to 34.67\%; a full token trajectory reached only 17.0\% on a development validation. These are ablations, not additional independent confirmation claims.
+The development and probe runs provide directional evidence for the operator in Equation~\ref{eq:intervention}. A single token gave 25\% new-answer preference on a 12-question probe, whereas a 4--16-token window reached 75\%. On the 30-case CF split, one layer (22) gave 46.67\% preference and 76.67\% mismatched locality; three layers (22,24,26) gave 66.67\% preference but 63.33\% locality. Continuing the injection for two decoding steps reduced confirmation question accuracy from 38.67\% to 34.67\%; these are ablations, not additional independent confirmation claims.
 
 In an 80-case audit, direction construction, base generation, and steered generation averaged 2.273~s/edit, 0.388~s/question, and 0.924~s/question. The 100-case locality audit required 3.584~s/edit to construct three direction sets; rejected pairs reused cached base outputs. Retrieval-plus-ICL required 4.655~s/case for retrieval and generation over three questions. These different workloads permit descriptive timing, not a matched speed claim. No-router exact locality was 3.33\%. Two-step continuation reduced question accuracy by 4.00 points on Qwen (95\% CI [--8.67, 0.33]) and 7.00 points on Llama ([--11.00, --3.33]).
 
